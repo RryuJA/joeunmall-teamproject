@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+
+/*  관리페이지 상단메뉴  */
+#top-menu-manage {
+/* background-color: aquamarine; */
+    padding: 40px 80px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.drop-box {
+    width: 150px;
+    height: 40px;
+    background: #ffffff;
+    border: 1px solid #999999;
+    font-size: 10pt;
+    padding-left: 2px;
+    margin-right: 10px;
+    color: #63717f;
+    border-radius: 5px;
+}
+
+input#search{
+    width: 648px;
+    height: 40px;
+    background: #ffffff;
+    border: 1px solid #999999;
+    font-size: 10pt;
+    color: #63717f;
+    padding-left: 7px;
+    border-radius: 5px;
+}
+
+#icon_search {
+    width: 33px;
+    height: 33px;
+    margin-left: 5px;
+}
+
+/* 상품관리 삭제 버튼 */
+#modify-button {
+    position: absolute;
+    right: 3%;
+    top: 17%;
+}
+
+/* ------------- table --------------- */
+/* 주문관리 테이블 */
+#bottom-menu-manage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 상품관리 테이블 */
+#bottom-menu-productmanage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 50px;
+}
+
+table {
+    font-size: 11pt;
+    border: 1px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #e0e0e0;
+    padding: 1px;
+    width: 120px;
+    height: 60px;
+    text-align: center;
+margin: 0;
+}
+
+th {
+    background-color: #ebebeb;
+    height: 35px;
+}
+
+/* 상품명 열 너비조절 */
+
+/* 고객 전화번호  */
+.th-width {
+    width: 200px;
+}
+/* 상품명 */
+.th2-width {
+    width: 300px;
+}
+/* 1:1 문의제목  */
+.th3-width {
+    width: 350px;
+}
+
+/* 상품관리 체크박스 */
+.th4-width {
+    width: 30px;
+}
+
+/* 상품관리 주문자명 */
+.th5-width {
+    width: 70px;
+}
+
+/* 상품관리 */
+.th6-width {
+    width: 170px;
+}
+
+
+/* 주문관리 테이블 드롭박스 */
+.drop-table {    
+    width: 110px;
+    height: 40px;
+    background: #ffffff;
+    border: 1px solid #999999;
+    font-size: 10pt;
+    padding-left: 2px;
+    color: #63717f;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* 1:1문의 문의처리여부  */
+.inquiry-button1 {
+    width: 100px;
+    border: 0;
+    line-height: 2.5;   
+    padding: 0 10px;
+    font-size: 1rem;
+    text-align: center;
+    color:#ffffff;
+    background-color: rgb(133, 133, 133);
+}
+
+.inquiry-button2 {
+    width: 100px;
+    border: 0;
+    line-height: 2.5;   
+    padding: 0 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: #dc143d;
+} 
+
+.inquiry-button3 {
+    width: 100px;
+    border: 0;
+    line-height: 2.5;   
+    padding: 0 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: #1E90FF;
+}
+
+/* table paging */
+.page-wrap {
+	text-align:center;
+	font-size:0;
+}
+.page-nation {
+	display:inline-block;
+}
+.page-nation .none {
+	display:none;
+}
+.page-nation a {
+	display:block;
+	margin: 5px 0px;
+	float:left;
+	border:1px solid #e6e6e6;
+	width:28px;
+	height:28px;
+	line-height:28px;
+	text-align:center;
+	background-color: #ffffff;
+	font-size:13px;
+	color:#999999;
+	text-decoration:none;
+}
+.page-nation .arrow {
+	border:1px solid #cccccc;
+    object-fit: cover;
+}
+.page-nation .pprev {
+	background:#f8f8f8 url('../images/icon/icon_page_prevprev.png') no-repeat center center;
+    background-repeat : no-repeat;
+    background-size:15px;
+}
+.page-nation .prev {
+	background:#f8f8f8 url('../images/icon/icon_page_prev.png') no-repeat center center;
+    background-repeat : no-repeat;
+    background-size:15px;
+}
+.page-nation .next {
+	background:#f8f8f8 url('../images/icon/icon_page_next.png') no-repeat center center;
+    background-repeat : no-repeat;
+    background-size:15px;
+}
+.page-nation .nnext {
+	background:#f8f8f8 url('../images/icon/icon_page_nextnext.png') no-repeat center center;
+    background-repeat : no-repeat;
+    background-size:15px;
+}
+.page-nation a.active {
+	background-color:#42454c;
+	color:#fff;
+	border:1px solid #42454c;
+}
+

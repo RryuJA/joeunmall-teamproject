@@ -1,0 +1,107 @@
+/*
+    관리자페이지 전체 틀 + nav 스타일
+*/
+
+@charset "utf-8";
+
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+    웹 페이지의 max-width가 1366px일 때 적용되는 스타일
+    == 웹 페이지의 width가 1366px보다 작을 때 적용되는 스타일
+*/
+@media (max-width: 1366px) {
+
+    /*
+        position: HTML 요소가 위치를 결정하는 방식
+            - absolute: 절대 위치 지정 방식, 위치가 설정된 상위 요소를 기준으로 위치를 설정
+        left: 왼쪽을 기준으로 멀어지는 거리를 지정
+        transform: X축과 Y축을 따라 지정된 거리만큼 요소를 이동시킴
+            - translateX(): 좌우(수평방향)의 이동거리 값을 지정 
+    */
+    #wrap {
+        position: absolute;
+        left: 0%;
+        transform: translateX(0%);
+        width: 1366px;
+        height: 768px;
+        background-color: #FBFBFB;
+        border-style: solid;
+        border-width: thin;
+        border-color: black;
+    }
+}
+
+/* 
+    웹 페이지의 min-width가 1366px일 때 적용되는 스타일
+    == 웹 페이지의 width가 1366px보다 클 때 적용되는 스타일
+*/
+@media (min-width: 1366px) {
+    #wrap {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1366px;
+        height: 768px;
+        background-color: #FBFBFB;
+        border-style: solid;
+        border-width: thin;
+        border-color: black;
+    }
+}
+
+
+  /*주문 통계표 */
+.order-table {
+    border-color :rgb(122, 122, 122);
+    border-style: solid;
+    border-width: 2px;
+    border-collapse: collapse;
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    width: 1000px;
+    height: 400px;
+    table-layout: fixed;
+}
+
+
+.order-table th {   /*테이블 헤더(?)*/
+    border-color: rgb(151, 151, 151);
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+}
+
+.order-table td {
+    border-color: rgb(150, 150, 150);
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    word-break: normal;
+    height: 50px;
+    padding-left: 3px;
+}
+
+.fixedCol-No{ /*No 칸 사이즈 고정*/
+    width: 40px;
+    height: 30px;
+}
+
+.fixedCol-Date{ /*Date 칸 사이즈 고정*/
+    width: 80px;
+    font-size: 10px;
+}
+
+.fixedCol-Merchandise{ /*상품명 칸 사이즈 고정*/
+    width: 300px;
+}

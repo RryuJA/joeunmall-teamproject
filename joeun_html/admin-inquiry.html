@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--title 페이지에 맞게 수정-->
+    <title>JoEun-admin 1:1문의</title>
+    
+    <!--javascript-->
+
+    <!--css-->
+    <!--admin-nav.css는 고정-->
+    <!--페이지별로 추가해야하는 css 파일은 admin-nav.css 아래에 추가-->
+    <link rel="stylesheet" type="text/css" href="css/admin-nav.css">
+</head>
+<body>
+    <div id="wrap">
+        <!--관리자 페이지 header 생략-->
+        <nav>
+            <!--a 태그 href는 추후 페이지 완성 후 수정-->
+            <a href="#"><img id="logo" src="images/logo/logo_transparent.png" alt="JoEunMall"></a>
+            <hr id="logohr"/>
+            <ul>
+                <!--html 페이지에 해당하는 li태그에 class="thispage" 지정-->
+                <!--class가 "li-lower"에 해당하는 경우, 상위 li에도 class="thispage" 지정-->
+                <!--ex) <li class="li-lower thispage"> -->
+                <li><a href="admin-orderManage.html">주문관리</a></li>
+                <li><a href="#">주문통계</a></li>
+                <li><a href="#">상품관리</a></li>
+                <ul class="ul-lower">
+                    <li class="li-lower"><a href="#">상품조회</a></li>
+                    <li class="li-lower"><a href="#">상품등록</a></li>
+                </ul>
+                <li><a href="#">고객관리</a></li>
+                <li class="thispage"><a href="admin-inquiry.html">1:1문의</a></li>
+            </ul>
+            <input type="button" value="로그아웃" id="logout-btn">
+        </nav>
+        <!--admin-nav.css 끝-->
+        
+        <!--section, article css 제작해야 함-->
+        <section>
+            <article id="search">
+                <form>
+                    <input type="search" name="searchText" placeholder="고객번호, 고객명 또는 문의번호" size="80">
+                    <input type="submit" value="검색">
+                </form>
+            </article>
+            <article>
+                <!--table border css로 수정-->
+                <table border="1">
+                    <tr>
+                        <th>문의번호</th>
+                        <th>문의일자</th>
+                        <th>고객명</th>
+                        <th>문의항목</th>
+                        <th>문의제목</th>
+                        <th>처리현황</th>
+                    </tr>
+                    <!--DB에서 데이터 가져와서 출력해야함-->
+                    <tr>
+                        <td>220915022</td>
+                        <td>2022-09-15<br />13:06:15</td>
+                        <td>박XX</td>
+                        <td>상품</td>
+                        <td>문의제목11111111111</td>
+                        <td><div class="box-gray"></div></td>
+                    </tr>
+                    <tr>
+                        <td>220915021</td>
+                        <td>2022-09-15<br />13:06:15</td>
+                        <td>김XX</td>
+                        <td>상품</td>
+                        <td>문의제목22222222222222</td>
+                        <td><div class="box-gray"></div></td>
+                    </tr>
+                    <tr>
+                        <td>220915020</td>   
+                        <td>2022-09-15<br />13:06:15</td>
+                        <td>이XX</td>
+                        <td>교환/환불</td>
+                        <td>문의제목33333333333</td>
+                        <td><div class="box-red"></div></td>
+                    </tr>
+                    <tr>
+                        <td>220915019</td>
+                        <td>2022-09-15<br />13:06:15</td>
+                        <td>박XX</td>
+                        <td>상품</td>
+                        <td>문의제목4444444444444444</td>
+                        <td><div class="box-red"></div></td>
+                    </tr>
+                    <tr>
+                        <td>220915018</td>
+                        <td>2022-09-15<br />13:06:15</td>
+                        <td>김XX</td>
+                        <td>교환/환불</td>
+                        <td>문의제목5555555</td>
+                        <td><div class="box-blue"></div></td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+    </div>
+    <!--관리자 페이지 footer 생략-->
+</body>
+</html>
