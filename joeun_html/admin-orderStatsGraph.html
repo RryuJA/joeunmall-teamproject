@@ -7,7 +7,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!--title 페이지에 맞게 수정-->
-        <title>JoEun-admin 주문관리</title>
+        <title>JoEun-admin 주문통계 그래프</title>
+
+        <!--javascript-->
+        <!-- 그래프에 필요한 스크립트 -->
+        <script src="js/jquery-3.6.1.min.js"></script>
+        <script src="js/highcharts.js"></script>
+        <script src="js/exporting.js"></script>
+        <script src="js/export-data.js"></script>
+        <script src="js/accessibility.js"></script>
+        
 
         <!--css-->
         <!--admin-nav.css는 고정-->
@@ -30,7 +39,7 @@
                     <!--class가 "li-lower"에 해당하는 경우, 상위 li에도 class="thispage" 지정-->
                     <!--ex) <li class="li-lower thispage"> -->
                     <li><a href="#">주문관리</a></li>
-                    <li onclick="location.href='admin-orderStats.html'"><a href="#">주문통계</a></li>
+                    <li class="thispage"><a href="admin-orderStats.html">주문통계</a></li>
                     <li><a href="#">상품관리</a></li>
                     <ul class="ul-lower">
                         <li class="li-lower"><a href="#">상품조회</a></li>
@@ -47,30 +56,16 @@
                 <div class="select">
                     <input type="radio" id="select" name="selectGraph" value="price"><label for="select">판매 금액</label>
                     <input type="radio" id="select2" name="selectGraph" value="quantity"><label for="select2">판매 수량</label>
-
-                    <!-- ---------------- 그래프 ---------------------->
-                    <!-- 그래프에 필요한 스크립트 -->
-                    <script src="js/jquery-3.6.1.min.js"></script>
-                    <script
-                        src="https://code.jquery.com/jquery-3.6.1.js"
-                        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-                        crossorigin="anonymous">
-                    </script>
-                    <script src="js/highcharts.js"></script>
-                    <script src="js/exporting.js"></script>
-                    <script src="js/export-data.js"></script>
-                    <script src="js/accessibility.js"></script>
-                    <!------------------------------------->
-                    <script src="js/getGraph.js"></script>
-                    <!------------------------------------->
+                    <!-- ---------------- 그래프 ---------------------->      
+                    <script src="js/getGraph.js"></script> <!-- 이 js파일 헤드로 올리면 그래프 작동 안함 -->              
                     <figure class="highcharts-figure">
                         <div id="container"></div>
                     </figure>
                 </div>
 
                 <div class="select3">  <!-- 기간 선택 select -->
-                    <select name="기간선택" id="select3">
-                        <option label="기간 선택"></option>
+                    <select name="selectPeriod" id="select3">
+                        <option hidden>기간 선택</option>
                         <option value="1">2022년 9월</option>
                         <option value="2">2022년 8월</option>
                         <option value="3">2022년 7월</option>
@@ -79,18 +74,14 @@
                 </div>
 
                 <div class="select4">  <!-- 종류 선택 select -->
-                    <select name="의류종류" id="select4" class="clothType-graph">
-                        <option disabled selected>항목별 통계</option>
-                        <option value="1">티셔츠</option>
-                        <option value="2">셔츠/블라우스</option>
-                        <option value="3">원피스</option>
-                        <option value="4">팬츠/스커트</option>
-                        <option value="5">니트/가디건</option>
-                        <option value="6">자켓</option>
-                        <option value="7">점퍼/다운</option>
-                        <option value="8">코트</option>
-                        <option value="9">ACC</option>
-                        <option value="10">전체 선택</option>
+                    <select name="clothType" id="select4" class="clothType-graph">
+                        <option hidden>항목별 통계</option>
+                        <option value="ct-1">티셔츠</option>
+                        <option value="ct-2">팬츠/스커트</option>
+                        <option value="ct-3">원피스</option>
+                        <option value="ct-4">니트/가디건</option>
+                        <option value="ct-5">자켓</option>
+                        <option value="ct-all">전체 선택</option>
                     </select>
                 </div>
 
@@ -99,7 +90,7 @@
                 </div>
 
                 <div><!-- 표 보기 버튼 -->
-                    <input type="button" value="&nbsp&nbsp표 보기&nbsp&nbsp" id="graph-btn" style="cursor:pointer" onclick="location.href='admin-orderStats.html'">
+                    <input type="button" value="표 보기" id="graph-btn" style="cursor:pointer" onclick="location.href='admin-orderStats.html'">
                 </div>
             </section>
         </div>
