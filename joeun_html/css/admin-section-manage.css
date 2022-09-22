@@ -130,39 +130,34 @@ th {
     border-radius: 5px;
 }
 
-/* 1:1문의 문의처리여부  */
-.inquiry-button1 {
+
+/* -------div 박스(처리현황 항목)------- */
+div[class|="box"] {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100px;
-    border: 0;
-    line-height: 2.5;   
-    padding: 0 10px;
-    font-size: 1rem;
+    height: 30px;
     text-align: center;
-    color:#ffffff;
-    background-color: rgb(133, 133, 133);
+    line-height: 200%;
+    font-weight: bolder;
+    color: white;
+    border-radius: 10px;
 }
 
-.inquiry-button2 {
-    width: 100px;
-    border: 0;
-    line-height: 2.5;   
-    padding: 0 10px;
-    font-size: 1rem;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    background-color: #dc143d;
-} 
-
-.inquiry-button3 {
-    width: 100px;
-    border: 0;
-    line-height: 2.5;   
-    padding: 0 10px;
-    font-size: 1rem;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    background-color: #1E90FF;
+div .box-gray {
+    color: black;
+    background-color: #bbbbbb;
 }
+
+div .box-red {
+    background-color: #E56565;
+}
+
+div .box-blue {
+    background-color: #3A83EE;
+}
+/* ----------------------------------- */
 
 /* table paging */
 .page-wrap {
