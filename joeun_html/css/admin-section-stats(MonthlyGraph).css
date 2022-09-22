@@ -1,0 +1,206 @@
+/*
+    관리자페이지 전체 틀 + nav 스타일
+*/
+
+@charset "utf-8";
+
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+    웹 페이지의 max-width가 1366px일 때 적용되는 스타일
+    == 웹 페이지의 width가 1366px보다 작을 때 적용되는 스타일
+*/
+@media (max-width: 1366px) {
+
+    /*
+        position: HTML 요소가 위치를 결정하는 방식
+            - absolute: 절대 위치 지정 방식, 위치가 설정된 상위 요소를 기준으로 위치를 설정
+        left: 왼쪽을 기준으로 멀어지는 거리를 지정
+        transform: X축과 Y축을 따라 지정된 거리만큼 요소를 이동시킴
+            - translateX(): 좌우(수평방향)의 이동거리 값을 지정 
+    */
+    #wrap {
+        position: absolute;
+        left: 0%;
+        transform: translateX(0%);
+        width: 1366px;
+        height: 768px;
+        background-color: #FBFBFB;
+        border-style: solid;
+        border-width: thin;
+        border-color: black;
+    }
+}
+
+/* 
+    웹 페이지의 min-width가 1366px일 때 적용되는 스타일
+    == 웹 페이지의 width가 1366px보다 클 때 적용되는 스타일
+*/
+@media (min-width: 1366px) {
+    #wrap {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1366px;
+        height: 768px;
+        background-color: #FBFBFB;
+        border-style: solid;
+        border-width: thin;
+        border-color: black;
+    }
+}
+
+
+/*월별 판매 비교 버튼*/
+#monthCompare-btn {
+    display: block;
+    background-color: #418cee;
+    font-family:'Nanumgothic';
+    font-size: 13pt;
+    font-weight: normal;
+    color: white;
+    position: absolute;
+    top: 70px;
+    left: 945px;
+    padding: 10px 30px;
+    border-radius: 4px;
+}
+
+/* 표 보기 버튼 */
+#graph-btn{
+    display: block;
+    background-color: #418cee;
+    font-family: 굴림;
+    font-size: 13pt;
+    font-weight: normal;
+    font-family:'Nanumgothic';
+    color: white;
+    position: absolute;
+    top: 70px;
+    left: 1145px;
+    padding: 10px 30px;
+    border-radius: 4px;
+}
+
+
+/* 판매금액, 판매수량라디오 버튼 */
+.select {
+    position: absolute;
+    top: 65px;
+    left: 290px;
+    padding: 15px 10px;
+}
+.select input[type=radio]{
+    display: none;
+}
+.select input[type=radio]+label{
+    display: inline-block;
+    cursor: pointer;
+    height: 30px;
+    width: 90px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    line-height: 30px;
+    text-align: center;
+    font-weight:bold;
+    font-size:13px;
+    font-family:'Nanumgothic';
+}
+.select input[type=radio]+label{
+    background-color: #fff;
+    color: #333;
+}
+.select input[type=radio]:checked+label{
+    background-color: #333;
+    color: #fff;
+}
+
+/* -----------기간 선택 select 박스 디자인 ---------------*/
+#select3 {
+    position: absolute;
+    top: 75px;
+    left: 580px;
+    width: 100px;
+    height: 40px;
+    padding:5px;
+    border:1px solid #999;
+    font-family:'Nanumgothic';
+    border-radius:3px;
+}
+
+
+/* ------------- select 박스 디자인 -----------------*/
+#select4 {
+    position: absolute;
+    top: 75px;
+    left: 700px;
+    width: 150px;
+    height: 40px;
+    padding:5px;
+    border:1px solid #999;
+    font-family:'Nanumgothic';
+    border-radius:3px;
+}
+
+.select::-ms-expand {
+  display: none;
+}
+
+/*---------------- 그래프 -------------------*/
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 400px; /*수치 커스텀*/
+    max-width: 800px; /*수치 커스텀*/
+    margin: 1em auto;
+}
+
+#container {
+    width: 1000px;
+    height: 500px;
+    /* background-color: #ee4141; 문제가 생길경우 배경/테두리 넣어서 확인하는게 좋음
+    border: solid 2px #000; */
+    margin-top: 50px;   /*PJM-220921위에 간격 주려고 커스텀함*/
+
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+/*-----------------그래프 끝----------------------*/
