@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--title 페이지에 맞게 수정-->
+        <title>JoEun-admin 주문관리</title>
+
+        <!--css-->
+        <!--admin-nav.css는 고정-->
+        <!--페이지별로 추가해야하는 css 파일은 admin-nav.css 아래에 추가-->
+        <link rel="stylesheet" type="text/css" href="css/admin-nav.css">
+        <link rel="stylesheet" type="text/css" href="css/admin-section-stats(graph).css">
+
+       
+    </head>
+
+    <body>
+        <div id="wrap">
+            <!--관리자 페이지 header 생략-->
+            <nav>
+                <!--a 태그 href는 추후 페이지 완성 후 수정-->
+                <a href="#"><img id="logo" src="images/logo/logo_transparent.png" alt="JoEunMall"></a>
+                <hr id="logohr" />
+                <ul>
+                    <!--html 페이지에 해당하는 li태그에 class="thispage" 지정-->
+                    <!--class가 "li-lower"에 해당하는 경우, 상위 li에도 class="thispage" 지정-->
+                    <!--ex) <li class="li-lower thispage"> -->
+                    <li><a href="#">주문관리</a></li>
+                    <li onclick="location.href='../좋은 몰/admin-orderStats.html'"><a href="#">주문통계</a></li>
+                    <li><a href="#">상품관리</a></li>
+                    <ul class="ul-lower">
+                        <li class="li-lower"><a href="#">상품조회</a></li>
+                        <li class="li-lower"><a href="#">상품등록</a></li>
+                    </ul>
+                    <li><a href="#">고객관리</a></li>
+                    <li><a href="#">1:1문의</a></li>
+                </ul>
+                <input type="button" value="로그아웃" id="logout-btn">
+            </nav>
+            <!--admin-nav.css 끝-->
+
+            <section>
+                <div class="select">
+                    <input type="radio" id="select" name="selectGraph" value="price"><label for="select">판매 금액</label>
+                    <input type="radio" id="select2" name="selectGraph" value="quantity"><label for="select2">판매 수량</label>
+
+                    <!-- ---------------- 그래프 ---------------------->
+                    <!-- 그래프에 필요한 스크립트 -->
+                    <script src="js/jquery-3.6.1.min.js"></script>
+                    <script
+                        src="https://code.jquery.com/jquery-3.6.1.js"
+                        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+                        crossorigin="anonymous">
+                    </script>
+                    <script src="js/highcharts.js"></script>
+                    <script src="js/exporting.js"></script>
+                    <script src="js/export-data.js"></script>
+                    <script src="js/accessibility.js"></script>
+                    <!------------------------------------->
+                    <script src="js/getGraph.js"></script>
+                    <!------------------------------------->
+                    <figure class="highcharts-figure">
+                        <div id="container"></div>
+                    </figure>
+                </div>
+
+                <div class="select3">  <!-- 기간 선택 select -->
+                    <select name="기간선택" id="select3">
+                        <option label="기간 선택"></option>
+                        <option value="1">2022년 9월</option>
+                        <option value="2">2022년 8월</option>
+                        <option value="3">2022년 7월</option>
+                        <option value="4">2022년 6월</option>
+                    </select>
+                </div>
+
+                <div class="select4">  <!-- 종류 선택 select -->
+                    <select name="의류종류" id="select4" class="clothType-graph">
+                        <option disabled selected>항목별 통계</option>
+                        <option value="1">티셔츠</option>
+                        <option value="2">셔츠/블라우스</option>
+                        <option value="3">원피스</option>
+                        <option value="4">팬츠/스커트</option>
+                        <option value="5">니트/가디건</option>
+                        <option value="6">자켓</option>
+                        <option value="7">점퍼/다운</option>
+                        <option value="8">코트</option>
+                        <option value="9">ACC</option>
+                        <option value="10">전체 선택</option>
+                    </select>
+                </div>
+
+                <div><!-- 월별 판매 비교 버튼 -->
+                    <input type="button" value="월별 판매 비교" id="monthCompare-btn" style="cursor:pointer" onclick="location.href='../좋은 몰/admin-orderStatsMonthly.html'">
+                </div>
+
+                <div><!-- 표 보기 버튼 -->
+                    <input type="button" value="&nbsp&nbsp표 보기&nbsp&nbsp" id="graph-btn" style="cursor:pointer" onclick="location.href='../좋은 몰/admin-orderStats.html'">
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
