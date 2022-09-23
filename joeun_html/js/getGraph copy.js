@@ -1,27 +1,5 @@
-// // 220923 PJM custom
-// $("select[name='selectPeriod']").change(function(){
-//     console.log("기간 선택");        /*selectPeriod select4 selectCloth*/
-//     console.log('선택된 기간(값):' + $('#select3').val());
-//     console.log('선택된 기간(타이틀):' + $('#select3 option').index($('#select3 option:selected')));
-
-//     console.log("의류 선택");        /*selectPeriod select4 selectCloth*/   
-//     console.log('선택된 기간(값):' + $('#select4').val());
-//     console.log('선택된 기간(타이틀):' + $('#select4 option').index($('#select4 option:selected')));
-    
-// });
-
-// $("select#select4").change(function(){
-
-// })
-
 $("input[name='selectGraph']").change(function(){ /*라디오 박스 선택 항목에 따라 바뀌게 설정*/
     if($("input[name='selectGraph']:checked").val() == 'quantity'){ /*판매 수량(quantity) 선택시 만들어지는 그래프*/
-    //상태변수 대시보드에 저장
-    if($('#selectQuantity_stat').val() == '미선택'){
-        $('#selectQuantity_stat').val('선택');
-        $('#selectPrice_stat').val('미선택');
-    };
-
     Highcharts.chart('container', {
         chart: {
             type: 'bar'
@@ -67,12 +45,6 @@ $("input[name='selectGraph']").change(function(){ /*라디오 박스 선택 항�
 
     else/*판매 금액(price) 선택시 만들어지는 그래프*/
     {
-        //상태변수 대시보드에 저장
-        if($('#selectPrice_stat').val() == '미선택'){
-            $('#selectPrice_stat').val('선택');
-            $('#selectQuantity_stat').val('미선택');
-        };
-
         Highcharts.chart('container', {
             chart: {
                 type: 'bar'
