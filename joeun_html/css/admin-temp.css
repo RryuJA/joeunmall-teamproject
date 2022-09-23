@@ -1,0 +1,147 @@
+div {
+  overflow-x: auto;
+}
+
+th,
+td {
+  border: 1px solid #444444;
+}
+
+table {
+  border: 1px solid #bcbcbc;
+  width: 870px;
+  height: 547px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.td_height {
+  height: 100px;
+}
+
+/*상품 이미지(플러스)*/
+.imageupload_pnl {
+  height: 100px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+/*표 첫번째 칸 가운데 정렬*/
+.first_center {
+  text-align: center;
+  width: 100px;
+}
+
+/*품절*/
+.sell_end {
+  position: absolute;
+  right: 22%;
+}
+
+/*사이즈칸 아래박스 움직임*/
+.move_square2 {
+  margin-left: 115px;
+}
+
+/*상세정보 이미지 칸늘리기*/
+.square_increase {
+  width: 500px;
+  padding: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/*파일선택 창 옮기기*/
+.left_push {
+  float: left;
+}
+
+/*이미지 업로드 버튼*/
+#image_upload_btn_pnl {
+  float: left;
+  width: 50px;
+  text-align: center;
+}
+
+/*이미지 업로드 박스패널*/
+#image_upload_boxes {
+  float: left;
+  width: 450px;
+  overflow: visible;
+}
+
+/*이미지 업로드 박스*/
+[id^="image_upload_box"] {
+  width: 400px;
+  height: 50px;
+}
+
+/*상품 이미지 업로드 패널(div)*/
+#image_upload_pnl {
+  width: 100%;
+  overflow: visible;
+  margin-top: 0;
+}
+
+/*상품 업로드 패널(td)*/
+#image_upload_td {
+  vertical-align: top;
+}
+
+/*색상 업로드 버튼*/
+#color_upload_btn_pnl {
+  float: left;
+  height: 30px;
+  width: 40px;
+  text-align: center;
+  /* background-color: aqua; */
+}
+
+/*색상 업로드 박스패널*/
+#color_upload_boxes {
+  float: left;
+  width: 450px;
+  overflow: visible;
+  /* background-color: pink; */
+}
+
+/*색상 업로드 박스*/
+[id^="color_upload_box"] {
+  width: 250px;
+  height: 40px;
+  /* border: solid 1px red; */
+  overflow: hidden;
+  /* background-color: peru; */
+}
+
+/*색상 이미지 업로드 패널(div)*/
+#color_upload_pnl {
+  width: 500px;
+  overflow: visible;
+  margin-top: 0;
+  background-color: aquamarine;
+}
+
+/*색상 업로드 패널(td)*/
+#color_upload_td {
+  vertical-align: top;
+  padding-top: 10px;
+  min-height: 40px;
+  height: 40px;
+}
+
+/* 사이즈 업로드 박스패널 */
+#size_upload_boxes {
+  width: 500px;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+/*사이즈 업로드 박스*/
+[id^="size_upload_box"] {
+  overflow: visible;
+  /* height: 100px;  */
+}
