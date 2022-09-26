@@ -3,9 +3,6 @@ $(function() {
     
     var cnt=1;//파일박스 개수
     
-    
-
-    
     //console.log('아무거나');
     //상품 이미지 추가 버튼 핸들러
     $('#image_upload_btn').click(function(){
@@ -28,7 +25,7 @@ $(function() {
                 $('#image_upload_boxes').append(
                     '<div id="image_upload_box'+fileIndex+'">'+
                     '<input type="file"  name="T5_'+fileIndex+'" id="upload_file' +fileIndex+'"  placeholder="이미지 파일을 첨부하세요." size="20">&nbsp;'+
-                    '<img id="upload_image_btn'+fileIndex+'" src="images/icon/icon_minus.png" width="25" height="25">'+
+                    '<img id="upload_image_btn'+fileIndex+'" src="images/icon/icon_minus.png">'+
                     '</div>');
 
                 $('td[id=image_upload_td]').height(td_height + 50);
@@ -96,7 +93,7 @@ $(function() {
                             '<input type="text"  name="T8_'+fileIndex+'" id="color_text' +fileIndex+'"  placeholder="색상을 입력하세요." size="20">'+
                         '</div>'+
                         '<div style="padding-left:5px">' +
-                            '<img id="color_image_btn'+fileIndex+'" src="images/icon/icon_minus.png" width="25" height="25">'+
+                            '<img id="color_image_btn'+fileIndex+'" src="images/icon/icon_minus.png">'+
                         '</div>' +
                     '</div>');
 
@@ -179,7 +176,7 @@ $(function() {
                     '<div style="float:left">' +
                         '&nbsp;&nbsp;' +
                         '<a href="#" id="size_upload_btn'+ fileIndex +'">' +
-                        '<img id="size'+ fileIndex +'" src="images/icon/icon_plus.png" width="25" height="25">' + 
+                        '<img id="size'+ fileIndex +'" src="images/icon/icon_plus.png">' + 
                         '</a>' +
                     '</div>' +
                     '<div id="size_upload_content'+ fileIndex +'" style="float: left;">' +
@@ -198,7 +195,7 @@ $(function() {
                     '<div id="size_upload_del_menu'+ fileIndex +'" style="float:left">' +
                         '&nbsp;&nbsp;' +
                         '<a href="#" id="size_upload_del_btn">' +
-                            '<img id="size_image_btn'+ fileIndex +'" src="images/icon/icon_minus.png" width="25" height="25">' + 
+                            '<img id="size_image_btn'+ fileIndex +'" src="images/icon/icon_minus.png">' + 
                         '</a>' +
                     '</div>' +
                 '</div>' 

@@ -1,26 +1,39 @@
-div {
-  overflow-x: auto;
+@charset "utf-8";
+
+
+input {
+  border: solid 1px #646464;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: 15px;
+  font-size: 12pt;
+  padding: 5px;
 }
 
-th,
-td {
-  border: 1px solid #444444;
+input[type="radio"] {
+  margin: 5px;
 }
 
-table {
-  border: 1px solid #bcbcbc;
-  width: 870px;
-  height: 547px;
-  margin-left: auto;
-  margin-right: auto;
+label {
+  margin-right: 10px;
 }
 
-.td_height {
+img[src*="icon_plus"], img[src*="icon_minus"] {
+  margin: 4px;
+  width: 23px;
+  height: 23px;
+}
+
+/* 상품 상세정보 입력란 */
+#table-row {
   height: 100px;
 }
 
+
 /*상품 이미지(플러스)*/
-.imageupload_pnl {
+#imageupload_pnl {
   height: 100px;
   width: 250px;
   display: flex;
@@ -29,33 +42,14 @@ table {
   padding-left: 20px;
 }
 
-/*표 첫번째 칸 가운데 정렬*/
-.first_center {
-  text-align: center;
-  width: 100px;
-}
-
-/*품절*/
-.sell_end {
-  position: absolute;
-  right: 22%;
-}
 
 /*사이즈칸 아래박스 움직임*/
 .move_square2 {
-  margin-left: 115px;
-}
-
-/*상세정보 이미지 칸늘리기*/
-.square_increase {
-  width: 500px;
-  padding: 0;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-left: 100px;
 }
 
 /*파일선택 창 옮기기*/
-.left_push {
+#left_push {
   float: left;
 }
 
@@ -110,7 +104,6 @@ table {
 
 /*색상 업로드 박스*/
 [id^="color_upload_box"] {
-  width: 250px;
   height: 40px;
   /* border: solid 1px red; */
   overflow: hidden;
@@ -135,7 +128,6 @@ table {
 
 /* 사이즈 업로드 박스패널 */
 #size_upload_boxes {
-  width: 500px;
   overflow-x: hidden;
   overflow-y: visible;
 }
