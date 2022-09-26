@@ -65,6 +65,8 @@ input#search{
     margin-top: 50px;
 }
 
+/* 테이블 디폴드 옵션 */
+
 table {
     font-size: 11pt;
     border: 1px;
@@ -81,12 +83,11 @@ margin: 0;
 }
 
 th {
-    background-color: #ebebeb;
+    background-color: #a7a7a7;
     height: 35px;
 }
 
-/* 상품명 열 너비조절 */
-
+/* 관리메뉴별 열 너비조절 */
 /* 고객 전화번호  */
 .th-width {
     width: 200px;
@@ -115,6 +116,20 @@ th {
     width: 170px;
 }
 
+/* 객상세정보팝업1 */
+.th7-width {
+    width: 180px;
+    height: 40px;
+    background-color: #afafaf;
+    font-weight: 700;
+}
+/* 객상세정보팝업2 */
+.th8-width {
+    width: 450px;
+    height: 40px;
+    background-color: #e6e6e6;
+
+}
 
 /* 주문관리 테이블 드롭박스 */
 .drop-table {    
@@ -131,40 +146,33 @@ th {
 }
 
 /* 1:1문의 문의처리여부  */
-.inquiry-button1 {
+div[class|="box"] {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100px;
-    border: 0;
-    line-height: 2.5;   
-    padding: 0 10px;
-    font-size: 1rem;
+    height: 30px;
     text-align: center;
-    color:#ffffff;
-    background-color: rgb(133, 133, 133);
+    line-height: 200%;
+    font-weight: bolder;
+    color: white;
+    border-radius: 10px;
 }
 
-.inquiry-button2 {
-    width: 100px;
-    border: 0;
-    line-height: 2.5;   
-    padding: 0 10px;
-    font-size: 1rem;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    background-color: #dc143d;
-} 
-
-.inquiry-button3 {
-    width: 100px;
-    border: 0;
-    line-height: 2.5;   
-    padding: 0 10px;
-    font-size: 1rem;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    background-color: #1E90FF;
+div .box-gray {
+    color: black;
+    background-color: #bbbbbb;
 }
 
-/* table paging */
+div .box-red {
+    background-color: #E56565;
+}
+
+div .box-blue {
+    background-color: #3A83EE;
+}
+
+/* 테이블 페이징  */
 .page-wrap {
 	text-align:center;
 	font-size:0;
@@ -194,22 +202,22 @@ th {
     object-fit: cover;
 }
 .page-nation .pprev {
-	background:#f8f8f8 url('../images/icon/icon_page_prevprev.png') no-repeat center center;
+	background:#f8f8f8 url('../images/icon/icon_page_prevprev.png') center center;
     background-repeat : no-repeat;
     background-size:15px;
 }
 .page-nation .prev {
-	background:#f8f8f8 url('../images/icon/icon_page_prev.png') no-repeat center center;
+	background:#f8f8f8 url('../images/icon/icon_page_prev.png') center center;
     background-repeat : no-repeat;
     background-size:15px;
 }
 .page-nation .next {
-	background:#f8f8f8 url('../images/icon/icon_page_next.png') no-repeat center center;
+	background:#f8f8f8 url('../images/icon/icon_page_next.png') center center;
     background-repeat : no-repeat;
     background-size:15px;
 }
 .page-nation .nnext {
-	background:#f8f8f8 url('../images/icon/icon_page_nextnext.png') no-repeat center center;
+	background:#f8f8f8 url('../images/icon/icon_page_nextnext.png') center center;
     background-repeat : no-repeat;
     background-size:15px;
 }
@@ -219,3 +227,80 @@ th {
 	border:1px solid #42454c;
 }
 
+/* 고객 상세정보 팝업창 */
+#customer-info-wrap {
+    width: 700px;
+    height: 500px;
+    margin: 0;
+    position: absolute;
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: thin;
+    border-color:#000000;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer-info-header {
+    background-color: #969696;
+    position: absolute;
+    font-weight: 700;
+    top: 0%;
+    width: 700px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.close-button {
+    position: fixed;
+    left: 678px;
+}
+
+#custom-info-button {
+    position: static;
+    width: 90%;
+    height: 30px;
+    margin: 5px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* 고객 상세정보 팝업창 테이블 input태그 설정 */
+input[type=text] {
+    width: 440px;
+    height: 30px;
+    border: 1px solid #8a8a8a;
+    border-radius: 4px;
+    margin: 2px 0;
+    outline: none;
+    padding: 2px;
+    box-sizing: border-box; 
+    transition: 0.2s;
+}
+
+input[type=date] {
+    width: 440px;
+    height: 30px;
+    border: 1px solid #8a8a8a;
+    border-radius: 4px;
+    margin: 2px 0;
+    outline: none;
+    padding: 2px;
+    box-sizing: border-box; 
+    transition: 0.2s;
+}
+
+input[type=text]:focus {
+    border-color: #1E90FF;
+    box-shadow: 0 0 8px 0 dodgerblue;
+}
+
+input[type=image] {
+    width: 18px;
+    height: 18px;
+}

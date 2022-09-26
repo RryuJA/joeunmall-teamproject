@@ -3,9 +3,6 @@ $(function() {
     
     var cnt=1;//파일박스 개수
     
-    
-
-    
     //console.log('아무거나');
     //상품 이미지 추가 버튼 핸들러
     $('#image_upload_btn').click(function(){
@@ -28,7 +25,7 @@ $(function() {
                 $('#image_upload_boxes').append(
                     '<div id="image_upload_box'+fileIndex+'">'+
                     '<input type="file"  name="T5_'+fileIndex+'" id="upload_file' +fileIndex+'"  placeholder="이미지 파일을 첨부하세요." size="20">&nbsp;'+
-                    '<img id="upload_image_btn'+fileIndex+'" src="./img/icon/icon_minus.png" width="25" height="25">'+
+                    '<img id="upload_image_btn'+fileIndex+'" src="images/icon/icon_minus.png">'+
                     '</div>');
 
                 $('td[id=image_upload_td]').height(td_height + 50);
@@ -96,7 +93,7 @@ $(function() {
                             '<input type="text"  name="T8_'+fileIndex+'" id="color_text' +fileIndex+'"  placeholder="색상을 입력하세요." size="20">'+
                         '</div>'+
                         '<div style="padding-left:5px">' +
-                            '<img id="color_image_btn'+fileIndex+'" src="./img/icon/icon_minus.png" width="25" height="25">'+
+                            '<img id="color_image_btn'+fileIndex+'" src="images/icon/icon_minus.png">'+
                         '</div>' +
                     '</div>');
 
@@ -137,9 +134,9 @@ $(function() {
         console.log("color_cnt:" + color_cnt);//현황
         console.log("color_upload_td: " +$('td[id=color_upload_td]').height());
         
-         var td_height=$('td[id=color_upload_td]').height();
-             $('td[id=color_upload_td]').height(td_height - 40);
-         
+        var td_height=$('td[id=color_upload_td]').height();
+            $('td[id=color_upload_td]').height(td_height - 40);
+        
     });
 
     
@@ -154,12 +151,11 @@ $(function() {
         
     //console.log('아무거나');
     //사이즈 이미지 추가 버튼 핸들러
-   
             // var len="size_upload_btn".length;
             // var target_id = e.currentTarget.id;
             // var btn_id = target_id.substring(len);
 
-             console.log('사이즈 추가');
+            console.log('사이즈 추가');
             // console.log('btn_id='+ btn_id);
 
             console.log("size_cnt:" + size_cnt);//현황
@@ -175,12 +171,12 @@ $(function() {
 		
                 console.log("fileIndex : "+fileIndex);
 
-                 $('#size_upload_boxes').append(
+                $('#size_upload_boxes').append(
                     '<div id="size_upload_box'+ fileIndex +'" style="background-color: pink;">' +                           
                     '<div style="float:left">' +
                         '&nbsp;&nbsp;' +
                         '<a href="#" id="size_upload_btn'+ fileIndex +'">' +
-                        '<img id="size'+ fileIndex +'" src="./img/icon/icon_plus.png" width="25" height="25">' + 
+                        '<img id="size'+ fileIndex +'" src="images/icon/icon_plus.png">' + 
                         '</a>' +
                     '</div>' +
                     '<div id="size_upload_content'+ fileIndex +'" style="float: left;">' +
@@ -199,13 +195,13 @@ $(function() {
                     '<div id="size_upload_del_menu'+ fileIndex +'" style="float:left">' +
                         '&nbsp;&nbsp;' +
                         '<a href="#" id="size_upload_del_btn">' +
-                            '<img id="size_image_btn'+ fileIndex +'" src="./img/icon/icon_minus.png" width="25" height="25">' + 
+                            '<img id="size_image_btn'+ fileIndex +'" src="images/icon/icon_minus.png">' + 
                         '</a>' +
                     '</div>' +
                 '</div>' 
-                 );
-                 
-                 
+                );
+                
+                
                 $('td[id=size_upload_td]').height(td_height + 30);
                 size_cnt++;
             } else {
@@ -225,7 +221,7 @@ $(function() {
         console.log('--size_cnt=' + size_cnt);
         console.log('size_file값=' + $('#size_text'+ num).val());
         //css변경
-       
+        
         if (size_cnt > 1) { 
             $('#'+box_id).remove(); //파일첨부 필드 삭제
             size_cnt--;//파일박스 개수 감소
@@ -238,10 +234,10 @@ $(function() {
         console.log("size_cnt:" + size_cnt);//현황
         console.log("size_upload_td: " +$('td[id=size_upload_td]').height());
         
-      
-         console.log("td_height:"+td_height);
-         
-         
+        
+        console.log("td_height:"+td_height);
+        
+        
     });
 
   
