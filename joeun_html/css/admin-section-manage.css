@@ -231,7 +231,7 @@ div .box-blue {
 #customer-info-wrap {
     width: 700px;
     height: 500px;
-    margin: 0;
+    margin: 3px;
     position: absolute;
     background-color: #ffffff;
     border-style: solid;
