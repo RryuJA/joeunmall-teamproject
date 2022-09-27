@@ -14,13 +14,14 @@
     <!--header와 footer는 고정-->
     <link rel="stylesheet" type="text/css" href="css/user-header-main.css">
     <link rel="stylesheet" type="text/css" href="css/user-footer.css">
+    <link rel="stylesheet" type="text/css" href="css/user-product-list.css"
 
 </head>
 <body>
     <div id="wrap">
         <header>
-            <a href="#"><img id="logo" src="images/logo/logo_transparent.png" alt="JoEunMall"></a>
-            <ul>
+            <a href="user-main.html"><img id="logo" src="images/logo/logo_transparent.png" alt="JoEunMall"></a>
+            <ul id="header">
                 <li>전상품</li>
                 <li>티셔츠</li>
                 <li>팬츠/스커트</li>
@@ -33,19 +34,80 @@
             <a href="#"><img src="images/icon/icon_shopping_bag.png"></a>
             <a href="#"><img src="images/icon/icon_search.png"></a>
         </header>
+        
+        <!--슬라이드 이미지(캐러셀)-->
+        <section>
+            <img id="carousel" src="" alt="carousel-image">
+        </section>
+        
+        <section>
+            <ul>
+                <li>
+                    <div class="thumbnail-box">
+                        <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                        <div class="thumbnail-title">레이스 블라우스 티셔츠<br>35,000</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="thumbnail-box">
+                        <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                        <div class="thumbnail-title">소매 턱 티셔츠<br>15,000</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="thumbnail-box">
+                        <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                        <div class="thumbnail-title">RN 후드<br>20,000</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="thumbnail-box">
+                        <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                        <div class="thumbnail-title">시스루 캐주얼 점퍼<br>50,000</div>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <div class="thumbnail-box">
+                        <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                        <div class="thumbnail-title">레이스 블라우스 티셔츠<br>35,000</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="thumbnail-box">
+                        <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                        <div class="thumbnail-title">소매 턱 티셔츠<br>15,000</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="thumbnail-box">
+                        <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                        <div class="thumbnail-title">RN 후드<br>20,000</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="thumbnail-box">
+                        <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                        <div class="thumbnail-title">시스루 캐주얼 점퍼<br>50,000</div>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
         <footer>
-            <hr>
             <ul>
                 <li>이용약관</li>
                 <li>개인정보취급방침</li>
                 <a href="#"><li>1:1문의</li></a>
             </ul>
             <hr>
-            <p>법인명(상호) : 조은몰</p>
-            <p>사업자 등록번호 안내 : 000-00-00000</p>
-            <p>주소 : 서울특별시 강남구 강남대로78길 8 (한국빌딩 8층) 804호</p>
-            <p>팀원 : 류정아, 이승은, 조규성, 박재민</p>
+            <div id="footer-info">
+                <p>법인명(상호) : 조은몰</p>
+                <p>사업자 등록번호 안내 : 000-00-00000</p>
+                <p>주소 : 서울특별시 강남구 강남대로78길 8 (한국빌딩 8층) 804호</p>
+                <p>팀원 : 류정아, 이승은, 조규성, 박재민</p>
+            </div>
         </footer>
     </div>
 </body>
