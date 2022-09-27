@@ -12,17 +12,17 @@
         <!--javascript-->
         <!----------------그래프---------------->
         <script src="js/jquery-3.6.1.min.js"></script>                
-        <script src="js/highcharts.js"></script>
-        <script src="js/exporting.js"></script>
-        <script src="js/export-data.js"></script>
-        <script src="js/accessibility.js"></script>
+        <script src="js/charts/highcharts.js"></script>
+        <script src="js/charts/exporting.js"></script>
+        <script src="js/charts/export-data.js"></script>
+        <script src="js/charts/accessibility.js"></script>
 
 
         <!--css-->
         <!--admin-nav.css는 고정-->
         <!--페이지별로 추가해야하는 css 파일은 admin-nav.css 아래에 추가-->
         <link rel="stylesheet" type="text/css" href="css/admin-nav.css">
-        <link rel="stylesheet" type="text/css" href="css/admin-section-stats(graph).css">
+        <link rel="stylesheet" type="text/css" href="css/admin-stats-graph.css">
     </head>
 
     <body>
@@ -36,15 +36,15 @@
                     <!--html 페이지에 해당하는 li태그에 class="thispage" 지정-->
                     <!--class가 "li-lower"에 해당하는 경우, 상위 li에도 class="thispage" 지정-->
                     <!--ex) <li class="li-lower thispage"> -->
-                    <li><a href="#">주문관리</a></li>
+                    <li><a href="admin-orderManage.html">주문관리</a></li>
                     <li class="thispage"><a href="admin-orderStats.html">주문통계</a></li>
-                    <li><a href="#">상품관리</a></li>
+                    <li><a href="admin-productManage.html">상품관리</a></li>
                     <ul class="ul-lower">
-                        <li class="li-lower"><a href="#">상품조회</a></li>
-                        <li class="li-lower"><a href="#">상품등록</a></li>
+                        <li class="li-lower"><a href="admin-productManage.html">상품조회</a></li>
+                        <li class="li-lower"><a href="admin-productRegistration.html">상품등록</a></li>
                     </ul>
-                    <li><a href="#">고객관리</a></li>
-                    <li><a href="#">1:1문의</a></li>
+                    <li><a href="admin-customerManage.html">고객관리</a></li>
+                    <li><a href="admin-inquiryManage.html">1:1문의</a></li>
                 </ul>
                 <input type="button" value="로그아웃" id="logout-btn">
             </nav>

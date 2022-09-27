@@ -9,11 +9,16 @@
     <!--title 페이지에 맞게 수정-->
     <title>JoEun-admin 주문통계표</title>
 
+    <!-- javascript -->
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/orderTable.js"></script>
+    <script src="js/orderStats.js"></script>
+
     <!--css-->
     <!--admin-nav.css는 고정-->
     <!--페이지별로 추가해야하는 css 파일은 admin-nav.css 아래에 추가-->
     <link rel="stylesheet" type="text/css" href="css/admin-nav.css">
-    <link rel="stylesheet" type="text/css" href="css/admin-section-stats.css">
+    <link rel="stylesheet" type="text/css" href="css/admin-stats.css">
     
 </head>
 
@@ -28,15 +33,15 @@
                 <!--html 페이지에 해당하는 li태그에 class="thispage" 지정-->
                 <!--class가 "li-lower"에 해당하는 경우, 상위 li에도 class="thispage" 지정-->
                 <!--ex) <li class="li-lower thispage"> -->
-                <li><a href="#">주문관리</a></li>
-                <li class="thispage"><a href="#">주문통계</a></li>
-                <li><a href="#">상품관리</a></li>
+                <li><a href="admin-orderManage.html">주문관리</a></li>
+                <li class="thispage"><a href="admin-orderStats.html">주문통계</a></li>
+                <li><a href="admin-productManage.html">상품관리</a></li>
                 <ul class="ul-lower">
-                    <li class="li-lower"><a href="#">상품조회</a></li>
-                    <li class="li-lower"><a href="#">상품등록</a></li>
+                    <li class="li-lower"><a href="admin-productManage.html">상품조회</a></li>
+                    <li class="li-lower"><a href="admin-productRegistration.html">상품등록</a></li>
                 </ul>
-                <li><a href="#">고객관리</a></li>
-                <li><a href="#">1:1문의</a></li>
+                <li><a href="admin-customerManage.html">고객관리</a></li>
+                <li><a href="admin-inquiryManage.html">1:1문의</a></li>
             </ul>
             <input type="button" value="로그아웃" id="logout-btn">
         </nav>
@@ -47,11 +52,11 @@
             <!-- 기간 선택 드랍박스 -->
             <div class="select3">  <!-- 기간 선택 select -->
                 <select name="selectPeriod" id="select3">
-                    <option hidden>기간 선택</option>
-                    <option value="1">2022년 9월</option>
-                    <option value="2">2022년 8월</option>
-                    <option value="3">2022년 7월</option>
-                    <option value="4">2022년 6월</option>
+                    <option selected>전체 기간</option>
+                    <option value="2209">2022년 9월</option>
+                    <option value="2208">2022년 8월</option>
+                    <option value="2207">2022년 7월</option>
+                    <option value="2206">2022년 6월</option>
                 </select>
             </div>
             <div>
@@ -61,7 +66,6 @@
         </section>
             <!-- 주문 통계 표 -->
             <table class="order-table">
-                <script src="js/orderTable.js"></script>
                 <thead>
                     <tr>
                         <th class = fixedCol-No>No</th>
