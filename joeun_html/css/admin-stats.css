@@ -13,6 +13,7 @@
     left: 1145px;
     padding: 10px 30px;
     border-radius: 4px;
+    border-width: 1px;
 }
 
 /*월별 판매 비교 버튼*/
@@ -29,14 +30,15 @@
     left: 945px;
     padding: 10px 30px;
     border-radius: 10px;
+    border-width: 1px;
 }
 
 
 /*주문 통계표 */
 .order-table {
-    border-color :rgb(122, 122, 122);
+    border-color :#e0e0e0;
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
     border-collapse: collapse;
     position: absolute;
     top: 150px;
@@ -48,10 +50,10 @@
 
 
 .order-table th {   /*테이블 헤더(?)*/
-    border-color: rgb(151, 151, 151);
+    border-color: #e0e0e0;
     border-style: solid;
     border-width: 1px;
-    background-color: #d8d8d8;
+    background-color: #a7a7a7;
     font-family: Arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
@@ -60,7 +62,7 @@
 }
 
 .order-table td {
-    border-color: rgb(150, 150, 150);
+    border-color: #e0e0e0;
     border-style: solid;
     border-width: 1px;
     font-family: Arial, sans-serif;
@@ -156,5 +158,13 @@
     border:1px solid #999;
     font-family:'Nanumgothic';
     border-radius:3px;
+}
 
+#select4{
+    width: 120px;
+    height: 40px;
+    padding: 5px;
+    border:1px solid #999;
+    font-family:'Nanumgothic';
+    border-radius:3px;
 }

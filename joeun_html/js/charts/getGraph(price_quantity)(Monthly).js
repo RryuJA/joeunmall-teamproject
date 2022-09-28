@@ -1,5 +1,21 @@
 $("input[name='selectGraph']").click(function(){ /*라디오 박스 선택 항목에 따라 바뀌게 설정*/
+
+    console.log("선택된 기간: " + $('#select3').val());
+    console.log("선택된 의류: " + $('#select4').val());
+
+    $('#select3_stat').val($('#select3').val());
+    $('#select4_stat').val($('#select4').val());
+    
+
     if($("input[name='selectGraph']:checked").val() == 'quantity'){ /*판매 수량(quantity) 선택시 만들어지는 그래프*/
+
+
+    //상태변수 대시보드에 저장
+    if($('#selectQuantity_stat').val() == '미선택'){
+        $('#selectQuantity_stat').val('선택');
+        $('#selectPrice_stat').val('미선택');
+    };
+
     Highcharts.chart('container', {
         chart: {
             type: 'column'
@@ -57,6 +73,12 @@ $("input[name='selectGraph']").click(function(){ /*라디오 박스 선택 항�
 
     else/*판매 금액(price) 선택시 만들어지는 그래프*/
     {
+        //상태변수 대시보드에 저장
+        if($('#selectPrice_stat').val() == '미선택'){
+            $('#selectPrice_stat').val('선택');
+            $('#selectQuantity_stat').val('미선택');
+        };
+        
         Highcharts.chart('container', {
             chart: {
                 type: 'column'
