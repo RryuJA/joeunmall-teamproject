@@ -1,21 +1,17 @@
 table {
-    width: 100%;
-    border-top: 1px solid #444444;
-    border-collapse: collapse;
-  }
-th, td {
-    border-bottom: 1px solid #444444;
-    padding: 10px;
-  }
-  
-#sh-basket{
-    text-align: center;
+  width: 100%;
+  border-top: 1px solid #444444;
+  border-collapse: collapse;
+}
+th,
+td {
+  border-bottom: 1px solid #444444;
+  padding: 10px;
 }
 
-/* 상품 정보 */
-/* .th2-width {
-  width: 300px;
-} */
+#sh-basket {
+  text-align: center;
+}
 
 #bt1 {
   float: left;
