@@ -1,0 +1,24 @@
+table {
+  width: 100%;
+  border-top: 1px solid #444444;
+  border-collapse: collapse;
+}
+th,
+td {
+  border-bottom: 1px solid #444444;
+  padding: 10px;
+}
+
+#sh-basket {
+  text-align: center;
+}
+
+#bt1 {
+  float: left;
+  font-size: 17px;
+}
+
+#bt2 {
+  float: right;
+  font-size: 17px;
+}
