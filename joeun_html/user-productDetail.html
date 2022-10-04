@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--title 페이지에 맞게 수정-->
+    <title>JoEunMall</title>
+
+    <!--javascript-->
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/user-productDetail-topBtn.js"></script> <!-- topButton -->
+    <script src="js/user-productDetail-zoom.js"></script> <!-- 이미지 돋보기 -->
+
+    <!--css-->
+    <!--header와 footer는 고정-->
+    <link rel="stylesheet" type="text/css" href="css/user-header-main.css">
+    <link rel="stylesheet" type="text/css" href="css/user-footer.css">
+    <link rel="stylesheet" type="text/css" href="css/user-product-list.css">
+    <link rel="stylesheet" type="text/css" href="css/user-product-detail.css">
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header><!-- 위에 배너 -->
+            <a href="user-productlist-all.html"><img id="logo" src="images/logo/logo_transparent.png" alt="JoEunMall"></a>
+            <ul id="header">
+                <li><a href="#">전상품</a></li>
+                <li><a href="#">티셔츠</a></li>
+                <li><a href="#">팬츠/스커트</a></li>
+                <li><a href="#">원피스</a></li>
+                <li><a href="#">니트/가디건</a></li>
+                <li><a href="#">자켓</a></li>
+            </ul>
+            <input type="button" value="로그인">
+            <a href="#"><img src="images/icon/icon_user.png"></a>
+            <a href="#"><img src="images/icon/icon_shopping_bag.png"></a>
+            <a href="#"><img src="images/icon/icon_search.png"></a>
+        </header>
+        
+        <article>
+            <!-- 사진 넣는 칸 여기임 -->
+            <section><!-- 마우스 올리면 확대되는거 하고싶어서 section으로 함 -->
+                <div class="product-img">
+                    <div class="main-img">
+                        <img class="target" src="images/logo/logo_mark.png" data-zoom="2">
+                    </div>
+                    <div id="sub-img">
+                        <p><img id="sub-img1" src="images/logo/logo_mark.png"></p>
+                        <p><img id="sub-img2" src="images/logo/logo_mark.png"></p>
+                        <p><img id="sub-img3" src="images/logo/logo_mark.png"></p>
+                        <p><img id="sub-img4" src="images/logo/logo_mark.png"></p>
+                        <p><img id="sub-img5" src="images/logo/logo_mark.png"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 상품 가격 및 옵션 선택 -->
+            <section class="product-select">
+                <!-- 상품명 -->
+                <div class="productName">
+                    상품명(data) <!-- 상품명 데이터 들어가야 됨 -->
+                </div>
+                <hr width="100%" color="grey">
+
+                <!-- 판매 가격 -->
+                <div class="productPrice">
+                    판매가<span class="productPriceData">100,100</span><span class="won1">원</span>    <!-- 판매가격 데이터 들어가야 됨 -->
+                </div>
+
+                <!-- 배송비 -->
+                <div class="deliveryFee">
+                    배송비<span class="deliveryFeeDetail">3,000원 (50,000원 이상 구매 시 무료)</span><!-- 5만원 이상일시 배송비 계산 안되는거 까지 포함시켜야 됨-->
+                </div>
+                <hr width="100%" color="grey">
+
+                <!-- 옵션 -->
+                <div class="option">
+                    옵션
+                    <select class="optionSelect"> <!-- 옵션 선택시 이벤트 javascript -->
+                        <option value="1">1</option>
+                    </select> 
+                    <div>   <!-- 옵션 선택한 목록 상자 -->
+                        <hr style="height: 100px">
+                    </div>
+                </div>
+
+                <!-- 총 상품 가격 -->
+                <div class="totalPrice">
+                    총 상품 가격
+                    <span class="finalPrice"> 100,000 </span><span class="won2">원</span> <!-- 합산 결과 이거도 javascript? -->
+                </div>
+
+                <!-- 장바구니 담기 버튼, 구매하기 버튼 -->
+                <div>
+                <hr width="100%" color="grey">
+                    <input type="button" value="장바구니 담기" id="shoppingList-btn" style="cursor:pointer" onclick="location.href=''">
+                    <input type="button" value="구매하기" id="purchase-btn" style="cursor:pointer" onclick="location.href=''">
+                </div>
+            </section>
+
+            <!-- 상품 상세 정보 텍스트 박스 -->
+            <section class="productInfo-textBox">
+                <div class="productInfo"><!-- 얘만 글시체 다르게 적용해야됨 -->
+                    PRODUCT INFO
+                </div>
+                <div>                    
+                    <p>
+                        <br>
+                        SIZE :  90, 95, 100<br>
+                        COLOR :  검정(black), 하양(white)<br>
+                        소재 :  나일론(nylon)100%<br>
+                        제조국 :  한국/협력업체<br>
+                        제조연월 :  당월제조<br>
+                        품질보증기준 :  교환/반품 공지사항참조<br><br>
+                    </p>    
+                        안감: 없음<br>
+                        두께감: 보통<br>
+                        계절감: 봄, 가을<br>
+                        비침: 없음<br>
+                        신축성: 없음<br>
+                </div>
+            </section>
+
+            <!-- 리뷰 칸 -->
+            <section class="review-textBox">
+                <div class="review">
+                    REVIEW
+                    
+                </div>
+            <hr width="100%" color="grey" id="review-line">
+                <div>
+
+                </div>
+            </section>
+
+            <!-- Top Button -->
+            <a href="#"><img id="topButton" src="images/icon/topbutton.png"></a>
+
+        </article>
+
+        <footer>
+            <ul>
+                <li>이용약관</li>
+                <li>개인정보취급방침</li>
+                <a href="#"><li>1:1문의</li></a>
+            </ul>
+            <div id="horizontal-line"></div>
+            <div id="footer-info">
+                <p>법인명(상호) : 조은몰</p>
+                <p>사업자 등록번호 안내 : 000-00-00000</p>
+                <p>주소 : 서울특별시 강남구 강남대로78길 8 (한국빌딩 8층) 804호</p>
+                <p>팀원 : 류정아, 이승은, 조규성, 박재민</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
