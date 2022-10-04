@@ -92,10 +92,12 @@ th {
 .th-width {
     width: 200px;
 }
+
 /* 상품명 */
 .th2-width {
     width: 300px;
 }
+
 /* 1:1 문의제목  */
 .th3-width {
     width: 350px;
@@ -157,11 +159,6 @@ div[class|="box"] {
     font-weight: bolder;
     color: white;
     border-radius: 10px;
-}
-
-div .box-gray {
-    color: black;
-    background-color: #bbbbbb;
 }
 
 div .box-red {
