@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+.magnifier{ /*---돋보기---*/
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.85), 0 0 0 3px 3px rgba(0, 0, 0, 0.25);
+    display: none;
+}
+
+.target{    /*---내부 사진(확대할 대상)---*/
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 3px solid red;
+}
+
+.product-img{   /*---제품 큰 이미지---*/
+    border: 3px solid rgb(0, 55, 128);
+    width: 530px;
+    margin-left: 50px;
+    margin-top: 70px;
+}
+
+.main-img, #sub-img1, #sub-img2, #sub-img3, #sub-img4, #sub-img5{
+    border: 3px solid green;
+}
+
+.main-img{
+    position: relative; /*-------질문) 왜 이걸 안넣으면 돋보기가 이상한 위치로 가는가?---------*/
+    height: 600px;
+    width: 400px;
+}
+
+#sub-img{
+    border: 3px solid green;
+    height: 600px;
+    width: 105px;
+    margin-left: 420px;
+    margin-top: -607px;
+}
+
+#sub-img1, #sub-img2, #sub-img3, #sub-img4, #sub-img5{
+    height: 100px;
+    width: 100px;
+    margin-top: -7px;
+}
+
+.product-select{    /*--- 상품명, 판매가, 배송비, 옵션, 총 상품 가격 표 ---*/
+    margin-left: 600px;
+    margin-top: -607px;
+    width: 450px;
+    height: 600px;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    font-family: "Nanumgothic";
+    border-collapse: collapse;
+}
+
+.productName{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.productPrice{
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.productPriceData{    
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 180px;
+    margin-right: 10px;
+}
+
+.deliveryFee{
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.deliveryFeeDetail{
+    margin-left: 90px;
+}
+
+.option{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.optionSelect{
+    margin-left: 100px;
+}
+
+.totalPrice{
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.finalPrice{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: right;
+    margin-left: 140px;
+}
+
+
+.won1{
+    position: absolute;
+    top: 315px;
+    left: 1000px;
+}
+
+.won2{
+    position: absolute;
+    top: 640px;
+    left: 1000px;
+}
+
+.optionSelect {
+    width: 250px;
+    height: 40px;
+    padding:5px;
+    border:1px solid #999;
+    font-family:'Nanumgothic';
+    border-radius:3px;
+}
+
+#shoppingList-btn, #purchase-btn{
+    display: block;
+    font-family:'Nanumgothic';
+    font-size: 14pt;
+    font-weight: normal;
+    width: 180px;
+    height: 50px;
+    border: none;
+}
+
+#shoppingList-btn{
+    background-color: rgb(204, 204, 204);
+    font-weight: bold;
+    position: absolute;
+    top: 720px;
+    left: 630px;
+}
+
+#purchase-btn{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 720px;
+    left: 845px;
+}
+
+
+
+.productInfo-textBox{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 1000px;
+    background-color: rgb(214, 214, 214);
+    font-family:'Nanumgothic';
+    padding: 30px 25px;
+}
+
+.productInfo{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.review-textBox{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 1000px;
+    font-family:'Nanumgothic';
+    padding: 30px 25px;
+}
+
+
+
+/*TopButton*/
+#topButton{
+    border: 3px solid green;
+    height: 30px;
+    width: 30px;
+    position: fixed;   /* 포지션 고정 */
+    right: 10px;
+    bottom: 10px;
+    display: none;     /* 보여지지 없음 - 기본적으로  안보여지게 */
+    z-index: 99;     /* 포지션을 먼저 지정후 z-좌표(레이어) : 99 */
+ }

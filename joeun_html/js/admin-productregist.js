@@ -90,7 +90,7 @@ $(function() {
                 $('#color_upload_boxes').append(
                     '<div id="color_upload_box' +fileIndex +'">' +
                         '<div style="float:left; height: 50px;  padding:0;">'+
-                            '<input type="text"  name="T8_'+fileIndex+'" id="color_text' +fileIndex+'"  placeholder="옵션을 입력하세요." size="20">'+
+                            '<input type="text"  name="T8_'+fileIndex+'" id="color_text' +fileIndex+'"  placeholder="색상을 입력하세요." size="20">'+
                         '</div>'+
                         '<div style="padding-left:5px">' +
                             '<img id="color_image_btn'+fileIndex+'" src="images/icon/icon_minus.png">'+
@@ -100,7 +100,7 @@ $(function() {
                 $('td[id=color_upload_td]').height(td_height + 40);
                 color_cnt++;
             } else {
-                alert('옵션은 5개까지만 추가가 됩니다.');
+                alert('색상은 5개까지만 추가가 됩니다.');
             }
         }//function
     ); 

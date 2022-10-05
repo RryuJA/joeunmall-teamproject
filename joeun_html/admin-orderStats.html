@@ -11,8 +11,8 @@
 
     <!-- javascript -->
     <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="js/orderTable.js"></script>
-    <script src="js/orderStats.js"></script>
+    <script src="js/admin-orderStats.js"></script>
+    <script src="js/admin-orderTable.js"></script>
 
     <!--css-->
     <!--admin-nav.css는 고정-->
@@ -72,14 +72,13 @@
                         <th class = fixedCol-Date>날짜</th>
                         <th class = fixedCol-Merchandise>상품명</th>
                         <th>
-                            <select name="clothType" class="clothType">
-                                <option hidden>의류 종류 선택</option>
+                            <select name="clothType" class="clothType" id="select4">
+                                <option selected>전체 의류</option>
                                 <option value="ct-1">티셔츠</option>
                                 <option value="ct-2">팬츠/스커트</option>
                                 <option value="ct-3">원피스</option>
                                 <option value="ct-4">니트/가디건</option>
                                 <option value="ct-5">자켓</option>
-                                <option value="ct-all">전체 선택</option>
                             </select>
                         </th>
                         <th style="cursor: pointer;" onclick="sortTable(0)">판매수량&nbsp&nbsp&nbsp<img src="images/icon/icon_sort.png" width=20 height=15></th>
