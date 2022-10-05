@@ -1,0 +1,24 @@
+table {
+  width: 100%;
+  border-top: 1px solid #444444;
+  border-collapse: collapse;
+  text-align: center;
+}
+th,
+td {
+  border-bottom: 1px solid #444444;
+  padding: 10px;
+}
+
+#bt1 {
+  float: left;
+  font-size: 17px;
+}
+
+#bt2 {
+  float: right;
+  font-size: 17px;
+}
+#p-size {
+  font-size: 25px;
+}
