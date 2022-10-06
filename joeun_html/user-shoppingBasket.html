@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--title 페이지에 맞게 수정-->
-    <title>장바구니</title>
+    <title>JoEunMall 장바구니</title>
 
 
     <!-- js-->
@@ -37,14 +37,14 @@
             <a href="#"><img src="images/icon/icon_shopping_bag.png"></a>
             <a href="#"><img src="images/icon/icon_search.png"></a>
         </header>
-        <h1>장바구니</h1>
+        <h1 class="h1-move">장바구니<hr></h1>
         <hr>
         <!--테이블-->
         <article>
             <div>
                 <table>
                     <thead>
-                            <tr>
+                            <tr class="tr1">
                                 <th><input type="checkbox" id="all_select"></th>
                                 <th colspan="2">상품정보</th>
                                 <th>수량</th>
@@ -55,7 +55,7 @@
                     <tbody>
                             <tr>
                                 <td><input type="checkbox"></td>
-                                <td><img src="images/icon/icon_preloader.png" width="100" height="100"></td>
+                                <td class="pd-1"><img src="images/icon/icon_preloader.png" width="100" height="100"></td>
                                 <td>여기에 글추가!!</td>
                                 <td>
                                     <input type='button'
@@ -72,7 +72,7 @@
                             </tr>
                             <tr>
                                 <td><input type="checkbox"></td>
-                                <td><img src="images/icon/icon_preloader.png" width="100" height="100"></td>
+                                <td class="pd-1"><img src="images/icon/icon_preloader.png" width="100" height="100"></td>
                                 <td></td>
                                 <td>
                                     <input type='button'
@@ -89,7 +89,7 @@
                             </tr>
                             <tr>
                                 <td><input type="checkbox"></td>
-                                <td><img src="images/icon/icon_preloader.png" width="100" height="100"></td>
+                                <td class="pd-1"><img src="images/icon/icon_preloader.png" width="100" height="100"></td>
                                 <td></td>
                                 <td>
                                     <input type='button'
@@ -106,7 +106,7 @@
                             </tr>
                             <tr>
                                 <td><input type="checkbox"></td>
-                                <td><img src="images/icon/icon_preloader.png" width="100" height="100"></td>
+                                <td class="pd-1"><img src="images/icon/icon_preloader.png" width="100" height="100"></td>
                                 <td></td>
                                 <td>
                                     <input type='button'
@@ -123,7 +123,7 @@
                             </tr>
                             <tr>
                                 <td><input type="checkbox"></td>
-                                <td><img src="images/icon/icon_preloader.png" width="100" height="100"></td>
+                                <td class="pd-1"><img src="images/icon/icon_preloader.png" width="100" height="100"></td>
                                 <td></td>
                                 <td>
                                     <input type='button'
@@ -143,32 +143,34 @@
             </div>
         </article>
         <table>
-            <tr>
+            <tr class="tr2">
                 <td rowspan="2"></td>
-                <td rowspan="2">*쇼핑백에 담긴 상품은 7일간 보관됩니다.
+                <td rowspan="2">*쇼핑백에 담긴 상품은 7일간 보관됩니다.<br>
                     5만원 이상 구매 시 배송비가 무료입니다.</td>
                 <td></td>
-                <td>총상품금액</td>
+                <td class="fs-1">총 상품금액</td>
                 <td></td>
-                <td>배송비</td>
+                <td class="fs-1">배송비</td>
                 <td></td>
-                <td>총주문금액</td>
+                <td class="fs-1">총 주문금액</td>
             </tr>
-            <tr>
+            <tr class="tr3">
                 <td></td>
-                <td>175,000</td>
-                <td>+</td>
-                <td>0</td>
-                <td>=</td>
-                <td>175,000원</td>
+                <td class="fs-2">175,000</td>
+                <td class="fs-2">+</td>
+                <td class="fs-2">0</td>
+                <td class="fs-2">=</td>
+                <td class="fs-2">175,000원</td>
             </tr>
         </table>
         <!-- 선택 버튼 -->
         <article>
+            <div id="pd-1">
             <button id="bt1" type="button">선택상품 삭제</button>
             <button id="bt1" type="button">전체상품 삭제</button>
             <button id="bt2" type="button">선택상품 주문</button>
             <button id="bt2" type="button">전체상품 주문</button>
+            </div>
         </article>
         <!-- 하단 -->
         <footer>
