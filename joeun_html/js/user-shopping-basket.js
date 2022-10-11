@@ -9,7 +9,9 @@ function count1(type) {
   if (type === "plus") {
     number = parseInt(number) + 1;
   } else if (type === "minus") {
-    number = parseInt(number) - 1;
+    if (number >1){
+      number = parseInt(number) - 1;
+    }
   }
 
   // 결과 출력
@@ -27,7 +29,9 @@ function count2(type) {
   if (type === "plus") {
     number = parseInt(number) + 1;
   } else if (type === "minus") {
-    number = parseInt(number) - 1;
+    if (number >1){
+      number = parseInt(number) - 1;
+    }
   }
 
   // 결과 출력
@@ -45,7 +49,9 @@ function count3(type) {
   if (type === "plus") {
     number = parseInt(number) + 1;
   } else if (type === "minus") {
-    number = parseInt(number) - 1;
+    if (number >1){
+      number = parseInt(number) - 1;
+    }
   }
 
   // 결과 출력
@@ -63,7 +69,9 @@ function count4(type) {
   if (type === "plus") {
     number = parseInt(number) + 1;
   } else if (type === "minus") {
-    number = parseInt(number) - 1;
+    if (number >1){
+      number = parseInt(number) - 1;
+    }
   }
 
   // 결과 출력
@@ -81,9 +89,12 @@ function count5(type) {
   if (type === "plus") {
     number = parseInt(number) + 1;
   } else if (type === "minus") {
-    number = parseInt(number) - 1;
+    if (number >1){
+      number = parseInt(number) - 1;
+    }
   }
 
   // 결과 출력
   resultElement.innerText = number;
 }
+
