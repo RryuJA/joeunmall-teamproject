@@ -2,16 +2,50 @@ table {
   width: 100%;
   border-top: 1px solid #444444;
   border-collapse: collapse;
+  text-align: center;
 }
-th,
-td {
+th, td {
   border-bottom: 1px solid #444444;
   padding: 10px;
 }
 
-#sh-basket {
+#p-size {
+  font-size: 25px;
+}
+
+/* h1 위치 옮기기 */
+.h1-move {
   text-align: center;
 }
+
+/* 테이블에 색상입히기 */
+.tr1 {
+  background-color:  #9c9c9c;
+}
+
+.tr2 {
+  background-color:  #9c9c9c;
+}
+
+.tr3 {
+  background-color:  #9c9c9c;
+}
+
+/* 테이블 공간 */
+.pd-1 {
+  width: 100px;
+}
+
+/* 폰트 사이즈 */
+.fs-1 {
+  font-size: 15px;
+}
+
+.fs-2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 
 #bt1 {
   float: left;
@@ -21,4 +55,21 @@ td {
 #bt2 {
   float: right;
   font-size: 17px;
+}
+
+
+/* 여백 만들기 */
+#pd-1 {
+  padding: 25px 0 0 0 ;
+}
+
+.result {
+  display: inline-block;
+}
+
+.button-center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
 }
