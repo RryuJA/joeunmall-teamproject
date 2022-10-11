@@ -9,22 +9,20 @@
     display: none;
 }
 
-.target{    /*---내부 사진(확대할 대상)---*/
+.target1, .target2, .target3, .target4, .target5{    /*---내부 사진(확대할 대상)---*/
     display: block;
     width: 100%;
-    height: 100%;
-    border: 3px solid red;
+    height: 100%;;
 }
 
 .product-img{   /*---제품 큰 이미지---*/
-    border: 3px solid rgb(0, 55, 128);
     width: 530px;
     margin-left: 50px;
     margin-top: 70px;
 }
 
 .main-img, #sub-img1, #sub-img2, #sub-img3, #sub-img4, #sub-img5{
-    border: 3px solid green;
+    border: 2px solid grey;
 }
 
 .main-img{
@@ -34,17 +32,16 @@
 }
 
 #sub-img{
-    border: 3px solid green;
     height: 600px;
     width: 105px;
     margin-left: 420px;
-    margin-top: -607px;
+    margin-top: -617px;
 }
 
 #sub-img1, #sub-img2, #sub-img3, #sub-img4, #sub-img5{
     height: 100px;
     width: 100px;
-    margin-top: -7px;
+    margin-top: 0px;
 }
 
 .product-select{    /*--- 상품명, 판매가, 배송비, 옵션, 총 상품 가격 표 ---*/
@@ -68,8 +65,8 @@
 
 .productPrice{
     margin-left: 30px;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 25px;
+    margin-bottom: 30px;
 }
 
 .productPriceData{    
@@ -81,8 +78,8 @@
 
 .deliveryFee{
     margin-left: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
 .deliveryFeeDetail{
@@ -114,13 +111,13 @@
 
 .won1{
     position: absolute;
-    top: 315px;
+    top: 310px;
     left: 1000px;
 }
 
 .won2{
     position: absolute;
-    top: 640px;
+    top: 645px;
     left: 1000px;
 }
 
@@ -160,12 +157,14 @@
     left: 845px;
 }
 
-
+.layer{
+    display: none;
+}
 
 .productInfo-textBox{
     margin-top: 50px;
     margin-left: 50px;
-    width: 1000px;
+    width: 950px;
     background-color: rgb(214, 214, 214);
     font-family:'Nanumgothic';
     padding: 30px 25px;
@@ -179,7 +178,7 @@
 .review-textBox{
     margin-top: 50px;
     margin-left: 50px;
-    width: 1000px;
+    width: 950px;
     font-family:'Nanumgothic';
     padding: 30px 25px;
 }
@@ -188,12 +187,11 @@
 
 /*TopButton*/
 #topButton{
-    border: 3px solid green;
-    height: 30px;
-    width: 30px;
-    position: fixed;   /* 포지션 고정 */
-    right: 10px;
-    bottom: 10px;
+    height: 40px;
+    width: 40px;
+    position: sticky;   /* 포지션 고정 */
+    bottom: 5%;
+    left: 105.5%;
     display: none;     /* 보여지지 없음 - 기본적으로  안보여지게 */
     z-index: 99;     /* 포지션을 먼저 지정후 z-좌표(레이어) : 99 */
  }
