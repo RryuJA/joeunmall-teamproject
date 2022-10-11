@@ -9,7 +9,7 @@ function count1(type) {
   if (type === "plus") {
     number = parseInt(number) + 1;
   } else if (type === "minus") {
-    if (number >0){
+    if (number >1){
       number = parseInt(number) - 1;
     }
   }
@@ -29,7 +29,7 @@ function count2(type) {
   if (type === "plus") {
     number = parseInt(number) + 1;
   } else if (type === "minus") {
-    if (number >0){
+    if (number >1){
       number = parseInt(number) - 1;
     }
   }
@@ -49,7 +49,7 @@ function count3(type) {
   if (type === "plus") {
     number = parseInt(number) + 1;
   } else if (type === "minus") {
-    if (number >0){
+    if (number >1){
       number = parseInt(number) - 1;
     }
   }
@@ -69,7 +69,7 @@ function count4(type) {
   if (type === "plus") {
     number = parseInt(number) + 1;
   } else if (type === "minus") {
-    if (number >0){
+    if (number >1){
       number = parseInt(number) - 1;
     }
   }
@@ -89,7 +89,7 @@ function count5(type) {
   if (type === "plus") {
     number = parseInt(number) + 1;
   } else if (type === "minus") {
-    if (number >0){
+    if (number >1){
       number = parseInt(number) - 1;
     }
   }
