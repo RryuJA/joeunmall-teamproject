@@ -1,0 +1,11 @@
+
+10월 19, 2022 09:43:20.69 NEW SESSION
+10월 19, 2022 09:43:20.69 [864:11016:1019/094320.690:ERROR:device_event_log_impl.cc(214)] [09:43:20.690] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+10월 19, 2022 09:44:15.77 [864:5520:1019/094415.773:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+10월 19, 2022 12:09:29.55 [6492:6008:1019/120929.556:ERROR:device_event_log_impl.cc(214)] [12:09:29.559] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+10월 19, 2022 12:10:27.31 [6492:10788:1019/121027.311:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+10월 19, 2022 13:22:15.26 [6492:6048:1019/132215.262:ERROR:cert_verify_proc_builtin.cc(670)] CertVerifyProcBuiltin for www.joeunmadi.co.kr failed:
+10월 19, 2022 13:22:15.26 ----- Certificate i=0 (O=My Company Ltd,L=Newbury,ST=Berkshire,C=GB) -----
+10월 19, 2022 13:22:15.26 ERROR: No matching issuer found
+10월 19, 2022 13:22:15.26 
+10월 19, 2022 13:22:15.26 

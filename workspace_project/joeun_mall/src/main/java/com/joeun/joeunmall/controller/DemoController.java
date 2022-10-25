@@ -1,0 +1,86 @@
+/**
+ * 
+ */
+package com.joeun.joeunmall.controller;
+
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.joeun.joeunmall.vo.ProductVO;
+
+import lombok.extern.slf4j.Slf4j;
+
+/**
+ * @author Team3
+ *
+ */
+@Controller
+@Slf4j
+public class DemoController {
+	
+	@GetMapping("/")
+	public String demo(Model model) {
+		log.info("demo");
+		model.addAttribute("demo", "team3");
+		return "redirect:/admin/admin-productManage.do";
+//		return "demo";
+	}
+
+	@GetMapping("/admin/admin-productManage.do")
+	public String adminProductManage(Model model) {
+		log.info("admin-productManage");
+		
+		List<ProductVO> productList = new ArrayList<>();
+		ProductVO productVO;
+		
+		
+		productVO = new ProductVO("22_01_001", "202210_001", "일승은", "파란티셔츠1", 
+				"파랑_100", 50000, Date.valueOf("2022-10-21"));
+		productList.add(productVO);
+
+		productVO = new ProductVO("22_01_002", "202210_002", "이승은", "파란티셔츠2", 
+				"파랑_100", 50000, Date.valueOf("2022-10-21"));
+		productList.add(productVO);
+
+		productVO = new ProductVO("22_01_003", "202210_003", "삼승은", "파란티셔츠3", 
+				"파랑_100", 50000, Date.valueOf("2022-10-21"));
+		productList.add(productVO);
+		
+		productVO = new ProductVO("22_01_004", "202210_004", "사승은", "파란티셔츠4", 
+				"파랑_100", 50000, Date.valueOf("2022-10-21"));
+		productList.add(productVO);
+		
+		productVO = new ProductVO("22_01_005", "202210_005", "오승은", "파란티셔츠5", 
+				"파랑_100", 500000000, Date.valueOf("2022-10-21"));
+		productList.add(productVO);
+		
+		productVO = new ProductVO("22_01_006", "202210_006", "육승은", "파란티셔츠6", 
+				"파랑_100", 50000, Date.valueOf("2022-10-21"));
+		productList.add(productVO);
+		
+		productVO = new ProductVO("22_01_007", "202210_007", "칠승은", "파란티셔츠7", 
+				"파랑_100", 50000, Date.valueOf("2022-10-21"));
+		productList.add(productVO);
+		
+		productVO = new ProductVO("22_01_008", "202210_008", "팔승은", "파란티셔츠8", 
+				"파랑_100", 50000, Date.valueOf("2022-10-21"));
+		productList.add(productVO);
+		
+		productVO = new ProductVO("22_01_009", "202210_008", "팔승은", "파란티셔츠8", 
+				"파랑_100", 50000, Date.valueOf("2022-10-21"));
+		productList.add(productVO);
+		
+		productVO = new ProductVO("22_01_010", "202210_008", "팔승은", "파란티셔츠8", 
+				"파랑_100", 50000, Date.valueOf("2022-10-21"));
+		productList.add(productVO);
+		
+		model.addAttribute("productList", productList);
+		
+		return "/admin/admin-productManage";
+	}
+}

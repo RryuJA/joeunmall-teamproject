@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue May 19 15:42:38 KST 2020
+postgresql-9.4.1208-sources.jar>mvn2s=
+postgresql-9.4.1208.jar>mvn2s=
+postgresql-9.4.1208-javadoc.jar>mvn2s=
+postgresql-9.4.1208.pom>mvn2s=

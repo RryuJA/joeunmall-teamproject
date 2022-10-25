@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri May 08 12:31:44 KST 2020
+junit-4.12-javadoc.jar>mvn2s=
+junit-4.12.jar>mvn2s=
+junit-4.12.pom>mvn2s=
+junit-4.12-sources.jar>mvn2s=

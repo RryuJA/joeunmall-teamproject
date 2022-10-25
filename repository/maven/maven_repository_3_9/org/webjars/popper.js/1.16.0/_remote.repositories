@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Oct 24 17:10:12 KST 2022
+popper.js-1.16.0.jar>central=
+popper.js-1.16.0.pom>central=
+popper.js-1.16.0-javadoc.jar>central=

@@ -1,0 +1,49 @@
+/**
+ * 
+ */
+package com.joeun.joeunmall.controller;
+
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.joeun.joeunmall.vo.ProductVO;
+
+import lombok.extern.slf4j.Slf4j;
+
+/**
+ * @author Team3
+ *
+ */
+@Controller
+@Slf4j
+public class DemoController {
+	
+	@GetMapping("/")
+	public String demo(Model model) {
+		log.info("demo");
+		model.addAttribute("demo", "team3");
+		return "redirect:/admin/admin-productManage.do";
+//		return "demo";
+	}
+
+	@GetMapping("/admin/admin-productManage.do")
+	public String adminProductManage() {
+		log.info("admin-productManage");
+		
+		List<ProductVO> productList = new ArrayList<>();
+		ProductVO productVO;
+		
+		
+		productVO = new ProductVO("22_01_001", "202210_001", "이승은", "파란티셔츠", 
+				"파랑_100", 50000, Date.valueOf("2022-10-21"));
+		productList.add(productVO);
+		
+			
+		return "/admin/admin-productManage";
+	}
+}
