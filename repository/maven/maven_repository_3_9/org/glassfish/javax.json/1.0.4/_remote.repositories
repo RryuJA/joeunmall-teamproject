@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue May 19 15:42:35 KST 2020
+javax.json-1.0.4.jar>mvn2s=
+javax.json-1.0.4-sources.jar>mvn2s=
+javax.json-1.0.4-javadoc.jar>mvn2s=
+javax.json-1.0.4.pom>mvn2s=

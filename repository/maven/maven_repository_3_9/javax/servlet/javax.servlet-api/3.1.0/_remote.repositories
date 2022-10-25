@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri May 08 12:32:07 KST 2020
+javax.servlet-api-3.1.0-sources.jar>mvn2s=
+javax.servlet-api-3.1.0.pom>mvn2s=
+javax.servlet-api-3.1.0-javadoc.jar>mvn2s=
+javax.servlet-api-3.1.0.jar>mvn2s=

@@ -1,0 +1,11 @@
+1666057858829	Rename resource 'log4j.xml'
+1666057862477	Delete element
+1666058388372	Delete element
+1666058390444	Delete element
+1666161921802	Delete element
+1666161956307	Extract interface 'speaker'
+1666162115446	Delete element
+1666162149257	Extract interface 'speaker'
+1666162555708	Rename type 'speaker'
+1666248831467	Rename type 'BoardVO'
+1666249890387	Rename compilation unit 'BoardVO1.java'

@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue May 19 15:42:32 KST 2020
+httpclient-4.3.4-javadoc.jar>mvn2s=
+httpclient-4.3.4.pom>mvn2s=
+httpclient-4.3.4.jar>mvn2s=
+httpclient-4.3.4-sources.jar>mvn2s=
