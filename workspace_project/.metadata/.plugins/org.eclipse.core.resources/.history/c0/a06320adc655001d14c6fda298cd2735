@@ -1,0 +1,48 @@
+package com.javateam.dummyProject.service;
+
+import java.io.BufferedInputStream;
+
+import org.springframework.stereotype.Service;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Service
+@Slf4j
+
+public class InquiryTBLDummy {
+	
+	int month = 1 + (int)Math.random()*12;
+	int date = 1 + (int)Math.random()*31;
+	
+	//문의번호 dummy 
+	private String makeInquiryIndex(int i) {
+		return "22" + String.format("%02d", month) + String.format("%02d", date) + String.format("%03d", i);
+	}
+	
+	//고객번호 dummy
+	private String makeUserindex(int i) {
+		
+		String result ="2022";
+		
+		return result + String.format("%03d", i);
+	}
+	
+	//문의일자 dummy
+	private String makeInquiryDate() {
+		
+		int inqMonth;
+		int inqDate;
+		
+		do {inqMonth = this.month + (int)Math.random()*12; //전역변수 month에  0-11 사이 아무 숫자를 더함
+		} while(inqMonth > 12);
+		
+		do {inqDate = this.date + (int)Math.random()*31; //전역변수 date에 0-30 사이 아무 숫자를 더함
+		} while(inqDate > 31);
+		
+		String result = "2022" + String.format("%02d", inqMonth) + String.format("%02d", inqDate);
+		
+
+	}
+	
+
+}

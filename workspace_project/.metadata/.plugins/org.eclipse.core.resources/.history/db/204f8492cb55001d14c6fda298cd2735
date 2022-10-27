@@ -1,0 +1,66 @@
+package com.joeun.joeunmall.service;
+
+import java.io.BufferedInputStream;
+
+import org.springframework.stereotype.Service;
+
+import lombok.extern.slf4j.Slf4j;
+
+
+import com.joeun.joeunmall.vo.InquiryTBLVO;
+
+@Service
+@Slf4j
+
+public class InquiryTBLDummy {
+	
+	int month = 1 + (int)Math.random()*12;
+	int date = 1 + (int)Math.random()*31;
+	
+	//문의번호 dummy 
+	private String makeInquiryIndex(int i) {
+		return "22" + String.format("%02d", month) + String.format("%02d", date) + String.format("%03d", i);
+	}
+	
+	//고객번호 dummy
+	private String makeUserindex(int i) {
+		
+		String result ="2022";
+		
+		return result + String.format("%03d", i);
+	}
+	
+	//문의일자 dummy
+	private String makeInquiryDate() {
+		return "2022" + String.format("%02d", month) + String.format("%02d", date);
+	}
+	
+	//문의항목 dummy
+	
+	//문의처리상태 dummy
+	private String makeInquiryState() {
+		int randomNum = (int)Math.random()*10;
+		//무작위 숫자가 짝수 일 경우 문의접수 return, 홀수 일 경우 답변완료 return
+		if(randomNum %2 == 1){
+			return "문의접수";
+		} else {
+			return "답변완료";
+		}
+		
+	}
+	
+	/** 
+	 * 크롤링 항목 : 문의 항목(상품명), 문의제목, 문의 답변
+	 * @return
+	 * @throws IOException
+	 */
+
+	////////////////////////////////////////////////////////////////////
+	
+	InquiryTBLDummy = new InquiryTBLVO();
+	
+	
+	
+	
+	
+}
