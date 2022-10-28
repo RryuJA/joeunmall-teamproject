@@ -1,0 +1,629 @@
+2022-10-27 19:04:44.591 [INFO ] [org.springframework.test.context.support.AbstractTestContextBootstrapper] [main] [org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:248)] -- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2022-10-27 19:04:44.638 [INFO ] [org.springframework.test.context.support.AbstractTestContextBootstrapper] [main] [org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:177)] -- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@45ca843, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@11c9af63, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@757acd7b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@36b4fe2a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@574b560f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ba54932, org.springframework.test.context.event.EventPublishingTestExecutionListener@28975c28, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@3943a2be, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@343570b7]
+2022-10-27 19:04:46.184 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [main] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customProvider': Unsatisfied dependency expressed through method 'setDataSource' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-10-27 19:04:46.188 [ERROR] [org.springframework.test.context.TestContextManager] [main] [org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:252)] -- Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@45ca843] to prepare test instance [com.joeun.joeunmall.service.InquiryTBLDummyTest@27a0a5a2]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206) [.cp/:?]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customProvider': Unsatisfied dependency expressed through method 'setDataSource' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:720) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1425) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:129) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:275) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:243) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 25 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1717) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1273) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:760) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:720) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1425) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:129) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:275) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:243) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 25 more
+2022-10-27 19:08:22.171 [INFO ] [com.joeun.joeunmall.DemoTest] [main] [com.joeun.joeunmall.DemoTest.test(DemoTest.java:14)] -- demotest
+2022-10-27 19:08:22.402 [INFO ] [org.springframework.test.context.support.AbstractTestContextBootstrapper] [main] [org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:248)] -- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2022-10-27 19:08:22.434 [INFO ] [org.springframework.test.context.support.AbstractTestContextBootstrapper] [main] [org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:177)] -- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@20ccf40b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2fb3536e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@169e6180, org.springframework.test.context.support.DirtiesContextTestExecutionListener@35aea049, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7205765b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@47987356, org.springframework.test.context.event.EventPublishingTestExecutionListener@22ef9844, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@6283d8b8, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@3b6ddd1d]
+2022-10-27 19:08:23.894 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [main] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customProvider': Unsatisfied dependency expressed through method 'setDataSource' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-10-27 19:08:23.898 [ERROR] [org.springframework.test.context.TestContextManager] [main] [org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:252)] -- Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@20ccf40b] to prepare test instance [com.joeun.joeunmall.service.InquiryTBLDummyTest@4e7095ac]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.13.2.jar:4.13.2]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) [junit-4.13.2.jar:4.13.2]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) [junit-4.13.2.jar:4.13.2]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) [surefire-junit4-2.12.4.jar:2.12.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_332]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) [surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) [surefire-booter-2.12.4.jar:2.12.4]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customProvider': Unsatisfied dependency expressed through method 'setDataSource' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:720) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1425) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:129) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:275) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:243) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 32 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1717) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1273) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:760) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:720) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1425) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:129) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:275) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:243) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 32 more
+2022-10-27 19:09:20.497 [INFO ] [com.joeun.joeunmall.DemoTest] [main] [com.joeun.joeunmall.DemoTest.test(DemoTest.java:14)] -- demotest
+2022-10-27 19:09:45.663 [INFO ] [org.springframework.test.context.support.AbstractTestContextBootstrapper] [main] [org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:248)] -- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2022-10-27 19:09:45.711 [INFO ] [org.springframework.test.context.support.AbstractTestContextBootstrapper] [main] [org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:177)] -- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@45ca843, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@11c9af63, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@757acd7b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@36b4fe2a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@574b560f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ba54932, org.springframework.test.context.event.EventPublishingTestExecutionListener@28975c28, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@3943a2be, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@343570b7]
+2022-10-27 19:09:47.191 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [main] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customProvider': Unsatisfied dependency expressed through method 'setDataSource' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-10-27 19:09:47.194 [ERROR] [org.springframework.test.context.TestContextManager] [main] [org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:252)] -- Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@45ca843] to prepare test instance [com.joeun.joeunmall.service.InquiryTBLDummyTest@27a0a5a2]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460) [.cp/:?]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206) [.cp/:?]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customProvider': Unsatisfied dependency expressed through method 'setDataSource' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:720) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1425) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:129) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:275) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:243) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 25 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1717) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1273) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:760) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:720) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1425) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:129) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:275) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:243) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 25 more
+2022-10-27 19:15:59.344 [INFO ] [org.springframework.test.context.support.AbstractTestContextBootstrapper] [main] [org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:248)] -- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2022-10-27 19:15:59.427 [INFO ] [org.springframework.test.context.support.AbstractTestContextBootstrapper] [main] [org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:177)] -- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@45ca843, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@11c9af63, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@757acd7b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@36b4fe2a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@574b560f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ba54932, org.springframework.test.context.event.EventPublishingTestExecutionListener@28975c28, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@3943a2be, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@343570b7]
+2022-10-27 19:16:01.088 [INFO ] [com.zaxxer.hikari.HikariDataSource] [main] [com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80)] -- HikariPool-1 - Starting...
+2022-10-27 19:16:01.656 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [main] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 1. Connection opened
+2022-10-27 19:16:01.657 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [main] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.new Connection returned 
+2022-10-27 19:16:01.657 [INFO ] [com.zaxxer.hikari.pool.PoolBase] [main] [com.zaxxer.hikari.pool.PoolBase.getAndSetNetworkTimeout(PoolBase.java:541)] -- HikariPool-1 - Driver does not support get/set network timeout for connections. (net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy.getNetworkTimeout()I)
+2022-10-27 19:16:01.658 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [main] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.isReadOnly() returned false
+2022-10-27 19:16:01.658 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [main] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.getAutoCommit() returned true
+2022-10-27 19:16:01.665 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [main] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.isValid(1) returned true
+2022-10-27 19:16:01.666 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [main] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.getTransactionIsolation() returned 2
+2022-10-27 19:16:01.671 [INFO ] [com.zaxxer.hikari.HikariDataSource] [main] [com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:82)] -- HikariPool-1 - Start completed.
+2022-10-27 19:16:01.819 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 2. Connection opened
+2022-10-27 19:16:01.820 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 2. Connection.new Connection returned 
+2022-10-27 19:16:01.820 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 2. Connection.isReadOnly() returned false
+2022-10-27 19:16:01.821 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 2. Connection.getAutoCommit() returned true
+2022-10-27 19:16:01.849 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 3. Connection opened
+2022-10-27 19:16:01.849 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 3. Connection.new Connection returned 
+2022-10-27 19:16:01.850 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 3. Connection.isReadOnly() returned false
+2022-10-27 19:16:01.850 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 3. Connection.getAutoCommit() returned true
+2022-10-27 19:16:01.880 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 4. Connection opened
+2022-10-27 19:16:01.880 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 4. Connection.new Connection returned 
+2022-10-27 19:16:01.880 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 4. Connection.isReadOnly() returned false
+2022-10-27 19:16:01.881 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 4. Connection.getAutoCommit() returned true
+2022-10-27 19:16:01.912 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 5. Connection opened
+2022-10-27 19:16:01.913 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 5. Connection.new Connection returned 
+2022-10-27 19:16:01.913 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 5. Connection.isReadOnly() returned false
+2022-10-27 19:16:01.913 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 5. Connection.getAutoCommit() returned true
+2022-10-27 19:16:01.946 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 6. Connection opened
+2022-10-27 19:16:01.948 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 6. Connection.new Connection returned 
+2022-10-27 19:16:01.949 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 6. Connection.isReadOnly() returned false
+2022-10-27 19:16:01.949 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 6. Connection.getAutoCommit() returned true
+2022-10-27 19:16:01.981 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 7. Connection opened
+2022-10-27 19:16:01.981 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 7. Connection.new Connection returned 
+2022-10-27 19:16:01.982 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 7. Connection.isReadOnly() returned false
+2022-10-27 19:16:01.982 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 7. Connection.getAutoCommit() returned true
+2022-10-27 19:16:01.996 [WARN ] [org.mybatis.logging.Logger] [main] [org.mybatis.logging.Logger.warn(Logger.java:44)] -- Property 'mapperLocations' was specified but matching resources are not found.
+2022-10-27 19:16:02.015 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 8. Connection opened
+2022-10-27 19:16:02.016 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 8. Connection.new Connection returned 
+2022-10-27 19:16:02.016 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 8. Connection.isReadOnly() returned false
+2022-10-27 19:16:02.016 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 8. Connection.getAutoCommit() returned true
+2022-10-27 19:16:02.045 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 9. Connection opened
+2022-10-27 19:16:02.046 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 9. Connection.new Connection returned 
+2022-10-27 19:16:02.046 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 9. Connection.isReadOnly() returned false
+2022-10-27 19:16:02.046 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 9. Connection.getAutoCommit() returned true
+2022-10-27 19:16:02.084 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 10. Connection opened
+2022-10-27 19:16:02.085 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 10. Connection.new Connection returned 
+2022-10-27 19:16:02.085 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 10. Connection.isReadOnly() returned false
+2022-10-27 19:16:02.086 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 10. Connection.getAutoCommit() returned true
+2022-10-27 19:16:02.372 [INFO ] [org.hibernate.validator.internal.util.Version] [main] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
+2022-10-27 19:16:03.976 [INFO ] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69)] -- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-10-27 19:16:04.092 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:160)] -- Context refreshed
+2022-10-27 19:16:04.170 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:163)] -- Found 1 custom documentation plugin(s)
+2022-10-27 19:16:04.245 [INFO ] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41)] -- Scanning for api listing references
+2022-10-27 19:16:04.435 [INFO ] [com.joeun.joeunmall.service.InquiryTBLDummyTest] [main] [com.joeun.joeunmall.service.InquiryTBLDummyTest.setup(InquiryTBLDummyTest.java:27)] -- inqCategory 테스트:교환
+2022-10-27 19:16:04.438 [INFO ] [com.joeun.joeunmall.service.InquiryTBLDummyTest] [main] [com.joeun.joeunmall.service.InquiryTBLDummyTest.test(InquiryTBLDummyTest.java:32)] -- test
+2022-10-27 19:16:04.515 [INFO ] [com.zaxxer.hikari.HikariDataSource] [SpringContextShutdownHook] [com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350)] -- HikariPool-1 - Shutdown initiated...
+2022-10-27 19:16:04.519 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 1. Connection closed
+2022-10-27 19:16:04.519 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.close() returned 
+2022-10-27 19:16:04.521 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 2. Connection closed
+2022-10-27 19:16:04.522 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 2. Connection.close() returned 
+2022-10-27 19:16:04.523 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 3. Connection closed
+2022-10-27 19:16:04.524 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 3. Connection.close() returned 
+2022-10-27 19:16:04.525 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 4. Connection closed
+2022-10-27 19:16:04.525 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 4. Connection.close() returned 
+2022-10-27 19:16:04.528 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 5. Connection closed
+2022-10-27 19:16:04.528 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 5. Connection.close() returned 
+2022-10-27 19:16:04.530 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 6. Connection closed
+2022-10-27 19:16:04.530 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 6. Connection.close() returned 
+2022-10-27 19:16:04.531 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 7. Connection closed
+2022-10-27 19:16:04.532 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 7. Connection.close() returned 
+2022-10-27 19:16:04.533 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 8. Connection closed
+2022-10-27 19:16:04.533 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 8. Connection.close() returned 
+2022-10-27 19:16:04.535 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 9. Connection closed
+2022-10-27 19:16:04.535 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 9. Connection.close() returned 
+2022-10-27 19:16:04.538 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 10. Connection closed
+2022-10-27 19:16:04.539 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 10. Connection.close() returned 
+2022-10-27 19:16:04.540 [INFO ] [com.zaxxer.hikari.HikariDataSource] [SpringContextShutdownHook] [com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352)] -- HikariPool-1 - Shutdown completed.
+2022-10-27 19:18:11.356 [INFO ] [org.springframework.test.context.support.AbstractTestContextBootstrapper] [main] [org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:248)] -- Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2022-10-27 19:18:11.409 [INFO ] [org.springframework.test.context.support.AbstractTestContextBootstrapper] [main] [org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:177)] -- Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@45ca843, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@11c9af63, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@757acd7b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@36b4fe2a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@574b560f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ba54932, org.springframework.test.context.event.EventPublishingTestExecutionListener@28975c28, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@3943a2be, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@343570b7]
+2022-10-27 19:18:13.023 [INFO ] [com.zaxxer.hikari.HikariDataSource] [main] [com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80)] -- HikariPool-1 - Starting...
+2022-10-27 19:18:13.570 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [main] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 1. Connection opened
+2022-10-27 19:18:13.571 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [main] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.new Connection returned 
+2022-10-27 19:18:13.571 [INFO ] [com.zaxxer.hikari.pool.PoolBase] [main] [com.zaxxer.hikari.pool.PoolBase.getAndSetNetworkTimeout(PoolBase.java:541)] -- HikariPool-1 - Driver does not support get/set network timeout for connections. (net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy.getNetworkTimeout()I)
+2022-10-27 19:18:13.572 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [main] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.isReadOnly() returned false
+2022-10-27 19:18:13.572 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [main] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.getAutoCommit() returned true
+2022-10-27 19:18:13.580 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [main] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.isValid(1) returned true
+2022-10-27 19:18:13.580 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [main] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.getTransactionIsolation() returned 2
+2022-10-27 19:18:13.584 [INFO ] [com.zaxxer.hikari.HikariDataSource] [main] [com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:82)] -- HikariPool-1 - Start completed.
+2022-10-27 19:18:13.734 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 2. Connection opened
+2022-10-27 19:18:13.734 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 2. Connection.new Connection returned 
+2022-10-27 19:18:13.736 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 2. Connection.isReadOnly() returned false
+2022-10-27 19:18:13.736 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 2. Connection.getAutoCommit() returned true
+2022-10-27 19:18:13.760 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 3. Connection opened
+2022-10-27 19:18:13.760 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 3. Connection.new Connection returned 
+2022-10-27 19:18:13.761 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 3. Connection.isReadOnly() returned false
+2022-10-27 19:18:13.761 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 3. Connection.getAutoCommit() returned true
+2022-10-27 19:18:13.787 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 4. Connection opened
+2022-10-27 19:18:13.788 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 4. Connection.new Connection returned 
+2022-10-27 19:18:13.788 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 4. Connection.isReadOnly() returned false
+2022-10-27 19:18:13.789 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 4. Connection.getAutoCommit() returned true
+2022-10-27 19:18:13.828 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 5. Connection opened
+2022-10-27 19:18:13.829 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 5. Connection.new Connection returned 
+2022-10-27 19:18:13.829 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 5. Connection.isReadOnly() returned false
+2022-10-27 19:18:13.829 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 5. Connection.getAutoCommit() returned true
+2022-10-27 19:18:13.868 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 6. Connection opened
+2022-10-27 19:18:13.868 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 6. Connection.new Connection returned 
+2022-10-27 19:18:13.868 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 6. Connection.isReadOnly() returned false
+2022-10-27 19:18:13.868 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 6. Connection.getAutoCommit() returned true
+2022-10-27 19:18:13.925 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 7. Connection opened
+2022-10-27 19:18:13.925 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 7. Connection.new Connection returned 
+2022-10-27 19:18:13.925 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 7. Connection.isReadOnly() returned false
+2022-10-27 19:18:13.926 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 7. Connection.getAutoCommit() returned true
+2022-10-27 19:18:13.952 [WARN ] [org.mybatis.logging.Logger] [main] [org.mybatis.logging.Logger.warn(Logger.java:44)] -- Property 'mapperLocations' was specified but matching resources are not found.
+2022-10-27 19:18:13.984 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 8. Connection opened
+2022-10-27 19:18:13.985 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 8. Connection.new Connection returned 
+2022-10-27 19:18:13.985 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 8. Connection.isReadOnly() returned false
+2022-10-27 19:18:13.986 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 8. Connection.getAutoCommit() returned true
+2022-10-27 19:18:14.023 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 9. Connection opened
+2022-10-27 19:18:14.024 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 9. Connection.new Connection returned 
+2022-10-27 19:18:14.024 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 9. Connection.isReadOnly() returned false
+2022-10-27 19:18:14.024 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 9. Connection.getAutoCommit() returned true
+2022-10-27 19:18:14.053 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 10. Connection opened
+2022-10-27 19:18:14.053 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 10. Connection.new Connection returned 
+2022-10-27 19:18:14.053 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 10. Connection.isReadOnly() returned false
+2022-10-27 19:18:14.053 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 10. Connection.getAutoCommit() returned true
+2022-10-27 19:18:14.354 [INFO ] [org.hibernate.validator.internal.util.Version] [main] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
+2022-10-27 19:18:15.912 [INFO ] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69)] -- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-10-27 19:18:16.109 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:160)] -- Context refreshed
+2022-10-27 19:18:16.164 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:163)] -- Found 1 custom documentation plugin(s)
+2022-10-27 19:18:16.256 [INFO ] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41)] -- Scanning for api listing references
+2022-10-27 19:18:16.567 [INFO ] [com.joeun.joeunmall.service.InquiryTBLDummyTest] [main] [com.joeun.joeunmall.service.InquiryTBLDummyTest.setup(InquiryTBLDummyTest.java:27)] -- inqCategory 테스트:교환
+2022-10-27 19:18:16.571 [INFO ] [com.joeun.joeunmall.service.InquiryTBLDummyTest] [main] [com.joeun.joeunmall.service.InquiryTBLDummyTest.test(InquiryTBLDummyTest.java:32)] -- test
+2022-10-27 19:18:16.573 [INFO ] [com.joeun.joeunmall.service.InquiryTBLDummyTest] [main] [com.joeun.joeunmall.service.InquiryTBLDummyTest.test(InquiryTBLDummyTest.java:34)] -- 결과: 교환 해드리겠습니다.
+2022-10-27 19:18:16.685 [INFO ] [com.zaxxer.hikari.HikariDataSource] [SpringContextShutdownHook] [com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350)] -- HikariPool-1 - Shutdown initiated...
+2022-10-27 19:18:16.735 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 1. Connection closed
+2022-10-27 19:18:16.736 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.close() returned 
+2022-10-27 19:18:16.740 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 2. Connection closed
+2022-10-27 19:18:16.744 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 2. Connection.close() returned 
+2022-10-27 19:18:16.748 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 3. Connection closed
+2022-10-27 19:18:16.748 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 3. Connection.close() returned 
+2022-10-27 19:18:16.757 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 4. Connection closed
+2022-10-27 19:18:16.767 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 4. Connection.close() returned 
+2022-10-27 19:18:16.773 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 5. Connection closed
+2022-10-27 19:18:16.773 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 5. Connection.close() returned 
+2022-10-27 19:18:16.782 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 6. Connection closed
+2022-10-27 19:18:16.783 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 6. Connection.close() returned 
+2022-10-27 19:18:16.788 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 7. Connection closed
+2022-10-27 19:18:16.788 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 7. Connection.close() returned 
+2022-10-27 19:18:16.797 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 8. Connection closed
+2022-10-27 19:18:16.798 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 8. Connection.close() returned 
+2022-10-27 19:18:16.804 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 9. Connection closed
+2022-10-27 19:18:16.804 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 9. Connection.close() returned 
+2022-10-27 19:18:16.812 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 10. Connection closed
+2022-10-27 19:18:16.813 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-1 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 10. Connection.close() returned 
+2022-10-27 19:18:16.814 [INFO ] [com.zaxxer.hikari.HikariDataSource] [SpringContextShutdownHook] [com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352)] -- HikariPool-1 - Shutdown completed.
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2a266d09, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5ab9e72c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@186f8716, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1d8bd0de, org.springframework.test.context.transaction.TransactionalTestExecutionListener@45ca843, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@11c9af63, org.springframework.test.context.event.EventPublishingTestExecutionListener@757acd7b, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@36b4fe2a, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@574b560f]
+HikariPool-1 - Starting...
+1. Connection opened
+1. Connection.new Connection returned 
+HikariPool-1 - Driver does not support get/set network timeout for connections. (net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy.getNetworkTimeout()I)
+1. Connection.isReadOnly() returned false
+1. Connection.getAutoCommit() returned true
+1. Connection.isValid(1) returned true
+1. Connection.getTransactionIsolation() returned 2
+HikariPool-1 - Start completed.
+2. Connection opened
+2. Connection.new Connection returned 
+2. Connection.isReadOnly() returned false
+2. Connection.getAutoCommit() returned true
+3. Connection opened
+3. Connection.new Connection returned 
+3. Connection.isReadOnly() returned false
+3. Connection.getAutoCommit() returned true
+4. Connection opened
+4. Connection.new Connection returned 
+4. Connection.isReadOnly() returned false
+4. Connection.getAutoCommit() returned true
+5. Connection opened
+5. Connection.new Connection returned 
+5. Connection.isReadOnly() returned false
+5. Connection.getAutoCommit() returned true
+6. Connection opened
+6. Connection.new Connection returned 
+6. Connection.isReadOnly() returned false
+6. Connection.getAutoCommit() returned true
+7. Connection opened
+7. Connection.new Connection returned 
+7. Connection.isReadOnly() returned false
+7. Connection.getAutoCommit() returned true
+8. Connection opened
+8. Connection.new Connection returned 
+8. Connection.isReadOnly() returned false
+8. Connection.getAutoCommit() returned true
+Property 'mapperLocations' was specified but matching resources are not found.
+9. Connection opened
+9. Connection.new Connection returned 
+9. Connection.isReadOnly() returned false
+9. Connection.getAutoCommit() returned true
+10. Connection opened
+10. Connection.new Connection returned 
+10. Connection.isReadOnly() returned false
+10. Connection.getAutoCommit() returned true
+HV000001: Hibernate Validator 6.2.0.Final
+Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+Context refreshed
+Found 1 custom documentation plugin(s)
+Scanning for api listing references
+inqCategory 테스트:교환
+test
+결과: 교환 해드리겠습니다.
+HikariPool-1 - Shutdown initiated...
+1. Connection closed
+1. Connection.close() returned 
+2. Connection closed
+2. Connection.close() returned 
+3. Connection closed
+3. Connection.close() returned 
+4. Connection closed
+4. Connection.close() returned 
+5. Connection closed
+5. Connection.close() returned 
+6. Connection closed
+6. Connection.close() returned 
+7. Connection closed
+7. Connection.close() returned 
+8. Connection closed
+8. Connection.close() returned 
+9. Connection closed
+9. Connection.close() returned 
+10. Connection closed
+10. Connection.close() returned 
+HikariPool-1 - Shutdown completed.
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2a266d09, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5ab9e72c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@186f8716, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1d8bd0de, org.springframework.test.context.transaction.TransactionalTestExecutionListener@45ca843, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@11c9af63, org.springframework.test.context.event.EventPublishingTestExecutionListener@757acd7b, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@36b4fe2a, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@574b560f]
+HikariPool-1 - Starting...
+1. Connection opened
+1. Connection.new Connection returned 
+HikariPool-1 - Driver does not support get/set network timeout for connections. (net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy.getNetworkTimeout()I)
+1. Connection.isReadOnly() returned false
+1. Connection.getAutoCommit() returned true
+1. Connection.isValid(1) returned true
+1. Connection.getTransactionIsolation() returned 2
+HikariPool-1 - Start completed.
+2. Connection opened
+2. Connection.new Connection returned 
+2. Connection.isReadOnly() returned false
+2. Connection.getAutoCommit() returned true
+3. Connection opened
+3. Connection.new Connection returned 
+3. Connection.isReadOnly() returned false
+3. Connection.getAutoCommit() returned true
+4. Connection opened
+4. Connection.new Connection returned 
+4. Connection.isReadOnly() returned false
+4. Connection.getAutoCommit() returned true
+5. Connection opened
+5. Connection.new Connection returned 
+5. Connection.isReadOnly() returned false
+5. Connection.getAutoCommit() returned true
+6. Connection opened
+6. Connection.new Connection returned 
+6. Connection.isReadOnly() returned false
+6. Connection.getAutoCommit() returned true
+7. Connection opened
+7. Connection.new Connection returned 
+7. Connection.isReadOnly() returned false
+7. Connection.getAutoCommit() returned true
+Property 'mapperLocations' was specified but matching resources are not found.
+8. Connection opened
+8. Connection.new Connection returned 
+8. Connection.isReadOnly() returned false
+8. Connection.getAutoCommit() returned true
+9. Connection opened
+9. Connection.new Connection returned 
+9. Connection.isReadOnly() returned false
+9. Connection.getAutoCommit() returned true
+10. Connection opened
+10. Connection.new Connection returned 
+10. Connection.isReadOnly() returned false
+10. Connection.getAutoCommit() returned true
+HV000001: Hibernate Validator 6.2.0.Final
+Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+Context refreshed
+Found 1 custom documentation plugin(s)
+Scanning for api listing references
+inqCategory 테스트:교환
+test
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+HikariPool-1 - Shutdown initiated...
+1. Connection closed
+1. Connection.close() returned 
+2. Connection closed
+2. Connection.close() returned 
+3. Connection closed
+3. Connection.close() returned 
+4. Connection closed
+4. Connection.close() returned 
+5. Connection closed
+5. Connection.close() returned 
+6. Connection closed
+6. Connection.close() returned 
+7. Connection closed
+7. Connection.close() returned 
+8. Connection closed
+8. Connection.close() returned 
+9. Connection closed
+9. Connection.close() returned 
+10. Connection closed
+10. Connection.close() returned 
+HikariPool-1 - Shutdown completed.
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3571b748, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3e96bacf, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@484970b0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4470f8a6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7c83dc97, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7748410a, org.springframework.test.context.event.EventPublishingTestExecutionListener@740773a3, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@37f1104d, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@55740540]
+HikariPool-1 - Starting...
+1. Connection opened
+1. Connection.new Connection returned 
+HikariPool-1 - Driver does not support get/set network timeout for connections. (net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy.getNetworkTimeout()I)
+1. Connection.isReadOnly() returned false
+1. Connection.getAutoCommit() returned true
+1. Connection.isValid(1) returned true
+1. Connection.getTransactionIsolation() returned 2
+HikariPool-1 - Start completed.
+2. Connection opened
+2. Connection.new Connection returned 
+2. Connection.isReadOnly() returned false
+2. Connection.getAutoCommit() returned true
+3. Connection opened
+3. Connection.new Connection returned 
+3. Connection.isReadOnly() returned false
+3. Connection.getAutoCommit() returned true
+4. Connection opened
+4. Connection.new Connection returned 
+4. Connection.isReadOnly() returned false
+4. Connection.getAutoCommit() returned true
+5. Connection opened
+5. Connection.new Connection returned 
+5. Connection.isReadOnly() returned false
+5. Connection.getAutoCommit() returned true
+6. Connection opened
+6. Connection.new Connection returned 
+6. Connection.isReadOnly() returned false
+6. Connection.getAutoCommit() returned true
+Property 'mapperLocations' was specified but matching resources are not found.
+7. Connection opened
+7. Connection.new Connection returned 
+7. Connection.isReadOnly() returned false
+7. Connection.getAutoCommit() returned true
+8. Connection opened
+8. Connection.new Connection returned 
+8. Connection.isReadOnly() returned false
+8. Connection.getAutoCommit() returned true
+9. Connection opened
+9. Connection.new Connection returned 
+9. Connection.isReadOnly() returned false
+9. Connection.getAutoCommit() returned true
+10. Connection opened
+10. Connection.new Connection returned 
+10. Connection.isReadOnly() returned false
+10. Connection.getAutoCommit() returned true
+HV000001: Hibernate Validator 6.2.0.Final
+Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+Context refreshed
+Found 1 custom documentation plugin(s)
+Scanning for api listing references
+inqCategory 테스트:교환
+test
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+결과: 교환 해드리겠습니다.
+HikariPool-1 - Shutdown initiated...

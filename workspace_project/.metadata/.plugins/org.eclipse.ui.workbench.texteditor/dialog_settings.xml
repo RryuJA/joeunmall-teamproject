@@ -9,12 +9,18 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="arrow" key="selection"/>
+		<item value="InquiryCategory" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="inquiryCategory"/>
+			<item value="spring-test"/>
+			<item value="Date"/>
+			<item value="productV"/>
+			<item value="productVO"/>
+			<item value="int"/>
 			<item value="arrow"/>
 			<item value="icon"/>
 			<item value="images/logo/"/>
@@ -24,14 +30,9 @@
 			<item value="h2database"/>
 			<item value="unique"/>
 			<item value="apple"/>
-			<item value="sony"/>
-			<item value="pettern"/>
-			<item value="pattern"/>
-			<item value="mybatis"/>
-			<item value="ibatis"/>
-			<item value="boot"/>
 		</list>
 		<list key="replacehistory">
+			<item value="String"/>
 			<item value="&lt;c:url value =&apos;/images/logo/"/>
 			<item value=""/>
 		</list>

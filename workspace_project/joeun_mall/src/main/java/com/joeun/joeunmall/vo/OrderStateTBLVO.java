@@ -20,6 +20,10 @@ public class OrderStateTBLVO implements Serializable {
 	/** 진행 상태 정보 */
 	private String orderStateInfo;
 	
+	public OrderStateTBLVO() {
+		
+	}
+	
 	public OrderStateTBLVO(String orderStateIndex, String orderStateInfo) {
 		this.orderStateIndex = orderStateIndex;
 		this.orderStateInfo = orderStateInfo;

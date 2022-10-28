@@ -1,0 +1,48 @@
+// JSON 송신 인자
+// 중요 인자
+/*
+ "itemid":"269672",
+ "cateid":"054002",
+ "cat1id":"054",
+ "cat2id":"054002",
+ "cat3id":"", 
+ */
+/*
+ {  "sf_isshowsimilar":true,
+	"sf_isshowhistory":false,
+	"sf_get_bodyinfo_from":1,
+	"sf_is_live":1,
+	"logoimg":"%2F%2Fsnapvi.ecn.cdn.infralab.net%2Fsnapfit%2Fstores%2Fcommon%2Flogo%2Fsnapfit_logo_3.png",
+	"logoimg_m":"",
+	"is_use_history_sizecur_size":"0",
+	"similarskin_rec_type":"rank",
+	"viewname":"f_c_t",
+	"categender":"f",
+	"device_type":"pc",
+	"itemid":"269672",
+	"cateid":"054002",
+	"cat1id":"054",
+	"cat2id":"054002",
+	"cat3id":"",
+	"is_use_order_buylist":"1",
+	"is_use_similarskin_satisfaction_ratio":"1",
+	"is_use_chartpopup":"0",
+	"isupotheruserbuyframe":"0",
+	"float_img_type":"%2F%2Fcdn.snapfit.co.kr%2Fcommon%2Fbtn2.png",
+	"is_use_rec_item":"0",
+	"domain":"ely-sia.net",
+	"store_type":"makeshop",
+	"use_sync":true,
+	"result":"success",
+	"is_show_main":true,
+	"ac":"",
+	"sf_store_username":"elysia",
+	"thumbnail_type":"1",
+	"float_img_use":"1",
+	"fit_version":"2",
+	"draw_target":"iframe",
+	"main_frame_id":"snapfit_resultview_iframe",
+	"constant_main_frame_id":"snapfit_resultview_iframe",
+	"constant_main_popup_frame_id":"snapfit_resultview_iframe_popup"
+} 
+*/

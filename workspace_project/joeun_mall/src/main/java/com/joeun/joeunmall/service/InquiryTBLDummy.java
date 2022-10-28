@@ -15,6 +15,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -30,16 +32,29 @@ import com.joeun.joeunmall.vo.InquiryTBLVO;
 
 @Service
 @Slf4j
-
 public class InquiryTBLDummy {
 	
 	int month = 1 + (int)Math.random()*12;
 	int date = 1 + (int)Math.random()*31;
 	
-	Random random = new Random();
-	String inqCategories[] = {"교환", "환불", "기타"};
-	String inqCategory = inqCategories[random.nextInt(1)];
+	public String inqCategories[] = {"교환", "환불", "기타"};
+	public String inqCategory = inqCategories[(int)(Math.random()*2)];
 	
+	
+//	public String getInqCategory() {
+//		return inqCategory;
+//	}
+//
+//	public void setInqCategory(String inqCategory) {
+//		this.inqCategory = inqCategory;
+//	}
+//	
+//	public void setInqCategory(int ranNum) {
+////		ranNum = (int)Math.random()*2;
+//		log.info("setter 랜덤값 : " + ranNum);
+//		this.inqCategory = inqCategories[ranNum];
+//	}
+
 	//문의번호 dummy 
 	private String makeInquiryIndex(int i) {
 		return "22" + String.format("%02d", month) + String.format("%02d", date) + String.format("%03d", i);
@@ -66,7 +81,7 @@ public class InquiryTBLDummy {
 	
 	//문의처리상태 dummy
 	private String makeInquiryState() {
-		int randomNum = (int)Math.random()*10;
+		int randomNum = (int)(Math.random()*10);
 		//무작위 숫자가 짝수 일 경우 문의접수 return, 홀수 일 경우 답변완료 return
 		if(randomNum %2 == 1){
 			return "문의접수";
@@ -84,16 +99,16 @@ public class InquiryTBLDummy {
 		String inqContent1[] = {
 				"사이즈가 안맞아서 교환 요청",
 				"옷에 얼룩이 묻어있어서 교환 요청",
-				"",
-				"",
-				
+				"단순 변심에 의한 교환 요청",
+				"옵션 착오로 인한 교환 요청"
 		};
 		
 		// 환불 요청문의 내용
 		String inqContent2[] = {
 				"디자인이 마음에 들지 않아 환불 요청",
 				"옷에 얼룩이 묻어있어서 환불 요청",
-				"옷이 찍어져 있어서 환불 요청"
+				"옷이 찍어져 있어서 환불 요청",
+				"배송이 너무 늦어서 환불 요청"
 		};
 		
 		
@@ -106,21 +121,27 @@ public class InquiryTBLDummy {
 		};
 	
 		if(inqCategory.equals("교환")) {
-			randomContent = inqContent1[random.nextInt(1)];
+			randomContent = inqContent1[(int)(Math.random()*inqContent1.length)];
 		} 
 		else if(inqCategory.equals("환불")) {
-			randomContent = inqContent2[random.nextInt(1)];
+			randomContent = inqContent2[(int)(Math.random()*inqContent2.length)];
 		} 
 		else if(inqCategory.equals("기타")) {
-			randomContent = inqContent3[random.nextInt(1)];
+			randomContent = inqContent3[(int)(Math.random()*inqContent3.length)];
 		}
 		
 		return randomContent;
 	}
 	
 	//문의답변 dummy --> 예제 몇개 만들어서 랜덤으로 그중 추출되도록
-	private String makeInquiryAnswer() {
+	public String makeInquiryAnswer() {
 		String randomAnswer = null;
+		List<String> list = Arrays.asList(inqCategories);
+		Collections.shuffle(list);
+		this.inqCategory = list.get(0);
+		
+		log.info("inqCategory: " + inqCategory);
+		
 		
 		// 교환 문의 결과
 		String inqAnswer1[] = {
@@ -142,14 +163,15 @@ public class InquiryTBLDummy {
 				"입고 예정 없습니다. 죄송합니다."
 		};
 		
+		log.info("inqCategory: " + inqCategory);
 		if(inqCategory.equals("교환")) {
-			randomAnswer = inqAnswer1[random.nextInt(1)];
+			randomAnswer = inqAnswer1[(int)(Math.random()*inqAnswer1.length)];
 		}
 		else if(inqCategory.equals("환불")) {
-			randomAnswer = inqAnswer2[random.nextInt(1)];
+			randomAnswer = inqAnswer2[(int)(Math.random()*inqAnswer2.length)];
 		}
 		else if(inqCategory.equals("기타")) {
-			randomAnswer = inqAnswer3[random.nextInt(1)];
+			randomAnswer = inqAnswer3[(int)(Math.random()*inqAnswer3.length)];
 		}
 		
 		return randomAnswer;
@@ -173,10 +195,7 @@ public class InquiryTBLDummy {
 		
 		// 의류몰 사이트
 		String siteLink1 = "http://www.midasb.co.kr/shop/bestseller.html?xcode=BEST&type=Y";
-		// 의류몰 QnA 목록
-		String siteLink2 = "https://www.midasb.co.kr/board/board.html?code=midasb_board11";
 		Document doc1 = Jsoup.connect(siteLink1).get();
-		Document doc2 = Jsoup.connect(siteLink2).get();
 		
 		
 		log.info("상품명 크롤");
@@ -193,7 +212,7 @@ public class InquiryTBLDummy {
 								.html()
 								.split(">")[2];
 			
-			///////////////////////////////////////////////////////////
+			/////////////////////////////////////////////////////////////
 			
 			inquiryVO = new InquiryTBLVO();
 			
@@ -208,6 +227,9 @@ public class InquiryTBLDummy {
 			
 			//문의항목
 			inquiryVO.setInquiryContent(this.makeInquiryCategory());
+			
+			//문의 처리 상태
+			inquiryVO.setInquiryState(this.makeInquiryState());
 			
 			//문의제목(상품명)
 			inquiryVO.setInquiryTitle(prName);
