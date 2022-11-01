@@ -1,0 +1,193 @@
+/* user-header-login : 로그인/회원가입 페이지 header */
+
+@charset "utf-8";
+
+/* 기본 웹스타일 초기화 */
+body {
+    margin: 0px;
+    width: 100%;
+    min-height: 100%;
+    font-family: 돋움;
+}
+
+/* 
+    웹 페이지의 max-width가 1366px일 때 적용되는 스타일
+    == 웹 페이지의 width가 1366px보다 작을 때 적용되는 스타일
+*/
+@media (max-width: 1100px) {
+    /*
+        position: HTML 요소가 위치를 결정하는 방식
+            - absolute: 절대 위치 지정 방식, 위치가 설정된 상위 요소를 기준으로 위치를 설정
+        left: 왼쪽을 기준으로 멀어지는 거리를 지정
+        transform: X축과 Y축을 따라 지정된 거리만큼 요소를 이동시킴
+            - translateX(): 좌우(수평방향)의 이동거리 값을 지정 
+    */
+    #wrap {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0%;
+        transform: translateX(0%);
+        width: 1100px;
+        background-color: #FBFBFB;
+        /*
+        border-style: solid;
+        border-width: thin;
+        border-color: black;
+        */
+    }
+}
+
+/* 
+    웹 페이지의 min-width가 1366px일 때 적용되는 스타일
+    == 웹 페이지의 width가 1366px보다 클 때 적용되는 스타일
+*/
+@media (min-width: 1100px) {
+    #wrap {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1100px;
+        background-color: #FBFBFB;
+        /*
+        border-style: solid;
+        border-width: thin;
+        border-color: black;
+        */
+    }
+}
+
+
+/* ---------쇼핑몰 로고--------- */
+#logo {
+    float: left;
+    width: 150px;
+    height: auto;
+    margin: 30px;
+}
+/* ---------------------------- */
+
+
+header {
+    display: flex;
+    flex-wrap: nowrap;      /* flex 항목을 한줄로 배치 */
+    align-items: center;    /* 교차축을 기준으로 하는 배치방법 : 중앙을 기준으로 배치*/
+    justify-content: space-between;     /* 주축 방향으로 배치할 때의 기준 : 시작점과 끝점에 배치한 후 중앙 항목들은 같은 간격으로 배치 */
+    z-index: 1;     /* 숫자가 높을수록 앞에 보여짐 */
+    top: 0%;
+    width: 100%;
+    height: 110px;
+    float: left;
+}
+
+
+/* ul 기본 padding 제거 */
+ul {
+    -webkit-padding-start: 0px;
+}
+
+
+div#header-icon {
+    display: flex;
+    align-items: center; 
+}
+
+
+/* ------------로그인 버튼------------ */
+header input[type="button"] {
+    background-color: #F4F4F4;
+    border-width: thin;
+    border-radius: 5px;
+    margin-left: 20px;
+    width: 80px;
+    height: 30px;
+    font-size: 13pt;
+}
+
+header input[type="button"]:hover {
+    background-color: #4d4d4d;
+    color: white;
+    font-weight: bold;    
+}
+/* ---------------------------------- */
+
+
+/* ------------마이페이지, 장바구니, 검색 아이콘------------ */
+header img {
+    display: flex;
+    height: auto;
+}
+
+header img[src*="user"] {
+    margin-left: 3px;
+    width: 50px;
+}
+
+header img[src*="shopping_bag"] {
+    margin-left: 3px;
+    width: 43px;
+}
+
+header img[src*="search"] {
+    margin-left: 10px;
+    margin-right: 30px;
+    width: 35px;
+}
+/* ------------------------------------------------------- */
+
+
+/* ---------------페이지 이동 버튼(관리페이지와 동일)--------------- */
+.page-wrap {
+	text-align:center;
+	font-size:0;
+}
+.page-nation {
+	display:inline-block;
+}
+
+.page-nation a {
+	display:block;
+	margin: 5px 0px;
+	float:left;
+	border:1px solid #e6e6e6;
+	width:28px;
+	height:28px;
+	line-height:28px;
+	text-align:center;
+	background-color: #ffffff;
+	font-size:13px;
+	color:#999999;
+	text-decoration:none;
+}
+.page-nation .arrow {
+	border:1px solid #cccccc;
+    object-fit: cover;
+}
+.page-nation .pprev {
+	background:#f8f8f8 url('../images/icon/icon_page_prevprev.png') center center;
+    background-repeat : no-repeat;
+    background-size:15px;
+}
+.page-nation .prev {
+	background:#f8f8f8 url('../images/icon/icon_page_prev.png') center center;
+    background-repeat : no-repeat;
+    background-size:15px;
+}
+.page-nation .next {
+	background:#f8f8f8 url('../images/icon/icon_page_next.png') center center;
+    background-repeat : no-repeat;
+    background-size:15px;
+}
+.page-nation .nnext {
+	background:#f8f8f8 url('../images/icon/icon_page_nextnext.png') center center;
+    background-repeat : no-repeat;
+    background-size:15px;
+}
+.page-nation a.active {
+	background-color:#42454c;
+	color:#fff;
+	border:1px solid #42454c;
+}
+/* -------------------------------------------------------------------- */

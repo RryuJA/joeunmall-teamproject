@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+
+input {
+  border: solid 1px #646464;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: 15px;
+  font-size: 12pt;
+  padding: 5px;
+}
+
+input[type="radio"] {
+  margin: 5px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+img[src*="icon_plus"], img[src*="icon_minus"] {
+  margin: 4px;
+  width: 23px;
+  height: 23px;
+}
+
+/* 상품 상세정보 입력란 */
+#table-row {
+  height: 100px;
+}
+
+
+/*상품 이미지(플러스)*/
+#imageupload_pnl {
+  height: 100px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+
+/*사이즈칸 아래박스 움직임*/
+.move_square2 {
+  margin-left: 100px;
+}
+
+/*파일선택 창 옮기기*/
+#left_push {
+  float: left;
+}
+
+/*이미지 업로드 버튼*/
+#image_upload_btn_pnl {
+  float: left;
+  width: 50px;
+  text-align: center;
+}
+
+/*이미지 업로드 박스패널*/
+#image_upload_boxes {
+  float: left;
+  width: 450px;
+  overflow: visible;
+}
+
+/*이미지 업로드 박스*/
+[id^="image_upload_box"] {
+  width: 400px;
+  height: 50px;
+}
+
+/*상품 이미지 업로드 패널(div)*/
+#image_upload_pnl {
+  width: 100%;
+  overflow: visible;
+  margin-top: 0;
+}
+
+/*상품 업로드 패널(td)*/
+#image_upload_td {
+  vertical-align: top;
+}
+
+/*색상 업로드 버튼*/
+#color_upload_btn_pnl {
+  float: left;
+  height: 30px;
+  width: 40px;
+  text-align: center;
+  /* background-color: aqua; */
+}
+
+/*색상 업로드 박스패널*/
+#color_upload_boxes {
+  float: left;
+  width: 450px;
+  overflow: visible;
+  /* background-color: pink; */
+}
+
+/*색상 업로드 박스*/
+[id^="color_upload_box"] {
+  height: 40px;
+  /* border: solid 1px red; */
+  overflow: hidden;
+  /* background-color: peru; */
+}
+
+/*색상 이미지 업로드 패널(div)*/
+#color_upload_pnl {
+  width: 500px;
+  overflow: visible;
+  margin-top: 0;
+  background-color: aquamarine;
+}
+
+/*색상 업로드 패널(td)*/
+#color_upload_td {
+  vertical-align: top;
+  padding-top: 10px;
+  min-height: 40px;
+  height: 40px;
+}
+
+/* 사이즈 업로드 박스패널 */
+#size_upload_boxes {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+/*사이즈 업로드 박스*/
+[id^="size_upload_box"] {
+  overflow: visible;
+  /* height: 100px;  */
+}
