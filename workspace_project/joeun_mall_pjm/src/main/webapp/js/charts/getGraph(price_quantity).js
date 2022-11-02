@@ -15,7 +15,7 @@
 // })
 
 //$("input[name='selectGraph']").change(function(){ /*라디오 박스 선택 항목에 따라 바뀌게 설정*/
-$("input[name='selectGraph']").click(function(e){ /*라디오 박스 선택 항목에 따라 바뀌게 설정*/
+$("input[name='selectGraph']").change(function(e){ /*라디오 박스 선택 항목에 따라 바뀌게 설정*/
 
 	var id = e.currentTarget.id;	//특정 이벤트(e = click)의 대상 태그의 id를 가져옴.
 	
@@ -348,8 +348,10 @@ $("input[name='selectGraph']").click(function(e){ /*라디오 박스 선택 항�
 			//js 배열 객체 api doc(라이브러리 덩어리): https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array
 			
 			
+			console.log("판매금액/판매수량: " + id);
+			
 			var chart_categories = [];
-			var chart_quantityData = [];
+			var chart_Data = [];
 			 
 			//arr 원본 데이터 사용
 			for(var i=0; i<json.length; i++){
@@ -358,10 +360,33 @@ $("input[name='selectGraph']").click(function(e){ /*라디오 박스 선택 항�
 				console.log("json 요소의" + (i+1) + "번째 key: " + key);
 				chart_categories.push(key);
 				
-				var value = parseInt(json[i].quantity);
+				var value;
+				var price_quantity;
+				var unit;
+				
+				if(id == "selectQuantity"){
+					$('#selectQuantity_stat').val('선택');
+					$('#selectPrice_stat').val('미선택');
+					value = parseInt(json[i].quantity);
+					price_quantity = "판매 수량";
+					unit = "벌";
+					console.log("판매금액/판매수량: " + price_quantity);
+					console.log(unit);
+				} else{
+					$('#selectQuantity_stat').val('미선택');
+					$('#selectPrice_stat').val('선택');
+					value = parseInt(json[i].price);
+					price_quantity = "판매 금액";
+					unit = "원";
+					console.log("판매금액/판매수량: " + price_quantity);
+					console.log(unit);
+				}
+				
 				console.log("json 요소의" + (i+1) + "번째 value: " + value);
-				chart_quantityData.push(value);
+				chart_Data.push(value);
 			}
+			console.log("판매수량 선택여부: " + $('#selectQuantity_stat').val());
+			console.log("판매금액 선택여부: " + $('#selectPrice_stat').val());
 			
 			//차트 그리기
 			Highcharts.chart('container', {
@@ -381,7 +406,7 @@ $("input[name='selectGraph']").click(function(e){ /*라디오 박스 선택 항�
 	            yAxis: {
 	                min: 0,
 	                title: {
-	                    text: '벌',
+	                    text: unit,
 	                    align: 'high'
 	                },
 	                labels: {
@@ -389,7 +414,7 @@ $("input[name='selectGraph']").click(function(e){ /*라디오 박스 선택 항�
 	                }
 	            },
 	            tooltip: {
-	                valueSuffix: ' 벌'
+	                valueSuffix: unit
 	            },
 	            plotOptions: {
 	                bar: {
@@ -402,8 +427,8 @@ $("input[name='selectGraph']").click(function(e){ /*라디오 박스 선택 항�
 	                enabled: false
 	            },
 	            series: [{ //-------------------- 나중에 서버에서 데이터 불러오는 값 여기에 넣어야 됨----------------------------
-	                    name: '판매 수량',
-	                data: chart_quantityData
+	                name: price_quantity,
+	                data: chart_Data
 	            }]
 	        });
 	        
