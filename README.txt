@@ -1,4 +1,5 @@
 # joeunmall-teamproject
+# joeunmall 프로젝트 제작 문서: https://github.com/RryuJA/joeunmall-teamproject2
 
 * 개발환경: 전자정부 표준프레임워크 3.9
 * DB: Oracle 11g
