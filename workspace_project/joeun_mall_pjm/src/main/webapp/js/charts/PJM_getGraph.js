@@ -57,6 +57,8 @@ $(function(){
         } else if(selectedPeriod == '2206'){
             $('#select3_stat').val("2206");
             pjm_data = [1211, 11118, 111115, 112, 1114]; 
+        } else if(selectedPeriod == "전체기간"){
+        	$('#select3_stat').val("전체기간");
         };
 
 
@@ -125,6 +127,8 @@ $(function(){
             $('#select4_stat').val('니트/가디건');
         } else if($('#select4').val() == 'ct-5'){
             $('#select4_stat').val('자켓');
+        } else if(selectedCloth == '전체의류'){
+        	$('#select4_stat').val('전체의류');
         };
 
         if($("input[name='selectGraph']:checked").val() == 'quantity'){

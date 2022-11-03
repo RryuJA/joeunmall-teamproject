@@ -26,7 +26,7 @@
         <link rel="stylesheet" type="text/css" href="css/admin-stats-graph.css">
 
         <!-- PJM 220923 -->
-        <script src = 'js/charts/PJM_getGraph.js'></script>
+        <!-- <script src = 'js/charts/PJM_getGraph.js'></script> -->
        
     </head>
 
@@ -66,11 +66,12 @@
                 </div>
 
                 <div class="select">    
-                    <input type="radio" id="selectPrice" name="selectGraph" value="price"><label for="selectPrice">판매 금액</label>
+                    <input type="radio" id="selectPrice" name="selectGraph" value="price" checked="checked"><label for="selectPrice">판매 금액</label>
                     <input type="radio" id="selectQuantity" name="selectGraph" value="quantity"><label for="selectQuantity">판매 수량</label>
                                         
                     <!-- ---------------- 그래프 ---------------------->      
-                    <script src="js/charts/getGraph(price_quantity).js"></script> <!-- 이 js파일 헤드로 올리면 그래프 작동 안함 -->              
+                    <script src="js/charts/chartAJAX.js" charset="utf8"></script>
+                    <script src="js/charts/getGraph(price_quantity).js" charset="utf8"></script> <!-- 이 js파일 헤드로 올리면 그래프 작동 안함 -->
                     <figure class="highcharts-figure">
                         <div id="container"></div>
                     </figure>
@@ -78,7 +79,7 @@
 
                 <div class="select3">  <!-- 기간 선택 select -->
                     <select name="selectPeriod" id="select3">
-                        <option selected>전체 기간</option>
+                        <option selected value="allPeriod">전체 기간</option>
                         <option value="2209">2022년 9월</option>
                         <option value="2208">2022년 8월</option>
                         <option value="2207">2022년 7월</option>
@@ -89,7 +90,7 @@
                 <div class="select4">  <!-- 종류 선택 select -->
                     <select name="clothType" id="select4" class="clothType-graph">
                         <!-- <option hidden>항목별 통계</option> -->
-                        <option selected>전체 의류</option>
+                        <option selected value="ct-all">전체 의류</option>
                         <option value="ct-1">티셔츠</option>
                         <option value="ct-2">팬츠/스커트</option>
                         <option value="ct-3">원피스</option>
