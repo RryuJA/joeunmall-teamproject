@@ -66,10 +66,11 @@
                 </div>
 
                 <div class="select">    
-                    <input type="radio" id="selectPrice" name="selectGraph" value="price" checked="checked"><label for="selectPrice">판매 금액</label>
-                    <input type="radio" id="selectQuantity" name="selectGraph" value="quantity"><label for="selectQuantity">판매 수량</label>
+                    <input type="radio" id="selectPrice" name="selectGraph" value="Price" checked="checked"><label for="selectPrice">판매 금액</label>
+                    <input type="radio" id="selectQuantity" name="selectGraph" value="Quantity"><label for="selectQuantity">판매 수량</label>
                                         
-                    <!-- ---------------- 그래프 ---------------------->      
+                    <!-- ---------------- 그래프 ---------------------->
+                    <script src="js/charts/getGraph(price_quantity)_onLoad.js" charset="utf-8"></script>      
                     <script src="js/charts/chartAJAX.js" charset="utf8"></script>
                     <script src="js/charts/chartCreator.js" charset="utf8"></script>
                     <script src="js/charts/getGraph(price_quantity).js" charset="utf8"></script> <!-- 이 js파일 헤드로 올리면 그래프 작동 안함 -->

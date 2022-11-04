@@ -19,33 +19,44 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class GraphDataRestController {
 	
+	//sellPeriod와 clothType이 둘다 전체기간/전체종류가 아닐경우 선별하는 함수
 	private List<GraphDataVO> searchList(List<GraphDataVO> listAll, String clothType, String sellPeriod){
 		
 		List<GraphDataVO> resultList = new ArrayList<>();  
 		for(int i=0; i<listAll.size(); i++) {
 			GraphDataVO graphdataVO = listAll.get(i);
-			
 			if(graphdataVO.getCt().equals(clothType) && graphdataVO.getPeriod().equals(sellPeriod)) {
 				resultList.add(graphdataVO);
 			}
 		}
-		
 		return resultList;
 	}
 	
-	private List<GraphDataVO> searchList_All(List<GraphDataVO> listAll, String sellPeriod){
+	//clothType이 전체종류일 경우 선별하는 함수
+	private List<GraphDataVO> searchList_typeAll(List<GraphDataVO> listAll, String sellPeriod){
 		
-		List<GraphDataVO> resultListAll = new ArrayList<>();  
+		List<GraphDataVO> resultListTypeAll = new ArrayList<>();  
 		for(int i=0; i<listAll.size(); i++) {
 			GraphDataVO graphdataVO = listAll.get(i);
-			
 			if(graphdataVO.getPeriod().equals(sellPeriod)) {
-				resultListAll.add(graphdataVO);
+				resultListTypeAll.add(graphdataVO);
 			}
 		}
-		
-		return resultListAll;
+		return resultListTypeAll;
 	}
+	
+	//sellPeriod가 전체기간일 경우 선별하는 함수
+		private List<GraphDataVO> searchList_periodAll(List<GraphDataVO> listAll, String clothType){
+			
+			List<GraphDataVO> resultListPeriodAll = new ArrayList<>();  
+			for(int i=0; i<listAll.size(); i++) {
+				GraphDataVO graphdataVO = listAll.get(i);
+				if(graphdataVO.getCt().equals(clothType)) {
+					resultListPeriodAll.add(graphdataVO);
+				}
+			}
+			return resultListPeriodAll;
+		}
 	
 	/**
 	 * ex) http://localhost:8282/joeunmall_pjm/graphJson/priceQuantity?selectGraph=price
@@ -143,10 +154,8 @@ public class GraphDataRestController {
 	 * @return
 	 */
 	@GetMapping(value = "/graphJsonVO/priceQuantity", produces = "application/json; charset=UTF-8")//value는 controller의 가상 주소라고 할 수 있음
-	public ResponseEntity<List<GraphDataVO>> getGraphJsonVO(@RequestParam("graphType") String graphType, 
-			@RequestParam("sellPeriod") String sellPeriod, @RequestParam("clothType") String clothType) {
+	public ResponseEntity<List<GraphDataVO>> getGraphJsonVO(@RequestParam("sellPeriod") String sellPeriod, @RequestParam("clothType") String clothType) {
 		log.info("getGraphJsonList");
-		log.info("graphType: " + graphType);
 		log.info("sellPeriod: " + sellPeriod);
 		log.info("clothType: " + clothType);
 		
@@ -174,16 +183,23 @@ public class GraphDataRestController {
 		listAll.add(new GraphDataVO("j-004", 23213, "2208", "ct-5"));
 		listAll.add(new GraphDataVO("j-003", 13213, "2207", "ct-5"));
 		
-		//Json 생성인데 배열구조임 -> ["티셔츠,23321","팬츠/스커트,232127","원피스,132312","니트/가디건,121212","자켓,82110"] ("키, 값", "키, 값",) 이런 구조
-		if(clothType.equals("ct-all")) {
-			log.info("getGraphJsonList");
-			List<GraphDataVO> resultListAll = this.searchList_All(listAll, sellPeriod);
-			return new ResponseEntity<> (resultListAll, HttpStatus.OK);
-		} else {
-			log.info("getGraphJsonList");
+		//Json 생성인데 배열구조임
+		if(clothType.equals("ct-all") && !sellPeriod.equals("allPeriod")) {
+			List<GraphDataVO> resultListTypeAll = this.searchList_typeAll(listAll, sellPeriod);
+			return new ResponseEntity<> (resultListTypeAll, HttpStatus.OK);
+		} 
+		else if(sellPeriod.equals("allPeriod") && !clothType.equals("ct-all")) {
+			List<GraphDataVO> resultListPeriodAll = this.searchList_periodAll(listAll, clothType);
+			return new ResponseEntity<> (resultListPeriodAll, HttpStatus.OK);
+		} 
+		else if(!sellPeriod.equals("allPeriod") && !clothType.equals("ct-all")) {
 			List<GraphDataVO> resultList = this.searchList(listAll, clothType, sellPeriod);
 			return new ResponseEntity<> (resultList, HttpStatus.OK);
-		} //if문 끝
+		} 
+		else {
+			return new ResponseEntity<> (listAll, HttpStatus.OK);
+		}
+		//if문 끝
 		
 	}
 	

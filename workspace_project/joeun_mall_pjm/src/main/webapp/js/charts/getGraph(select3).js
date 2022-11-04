@@ -4,11 +4,11 @@ $(function(){
 	
 	var chart_categories = [];
 	
-	$("input[name='selectGraph']").change(function(e){ /*라디오 박스 선택 항목에 따라 바뀌게 설정*/
+	$('#select3').change(function(e){ /*라디오 박스 선택 항목에 따라 바뀌게 설정*/
 	
-		var graphType = e.currentTarget.id;	//특정 이벤트(e = click)의 대상 태그(name이 selectPraph)의 id를 가져옴.
+		var graphType = e.currentTarget.val();	//특정 이벤트(e = click)의 대상 태그(name이 selectPraph)의 id를 가져옴.
 		
-//		graphTypeId = "selectQuantity"
+		console.log("선택된 차트 종류: " + $())
 	    console.log("선택된 기간: " + $('#select3').val());
 	    console.log("선택된 의류: " + $('#select4').val());
 	
