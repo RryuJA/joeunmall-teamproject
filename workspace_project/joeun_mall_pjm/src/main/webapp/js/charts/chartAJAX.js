@@ -20,41 +20,94 @@ function chartAJAX(graphType, sellPeriod, clothType){
 			var sellPeriod = $('#select3').val();
 			var clothType = $('#select4').val();
 			
-			//chart data 유형 
+			//controller에서 받는 data정보 
 			var json = JSON.parse(msg);
-			console.log(json);
+			//console.log(json[1].price);
 			
-			var price_quantity;
-			var unit;
-			
-			var chartCategories;
 			//y축 결정 -> 정렬해서 가장 많이 팔린 상위 5개 항목 y축 이름으로 넣어야 함
-			if($('#select4').val() == "ct-all"){
+			var chartCategories;
+			if(clothType == "ct-all"){
 				chartCategories = ["티셔츠", "팬츠/스커트", "원피스", "니트/가디건", "자켓"];
-			} else if($('#select4').val() == "ct-1"){
+			} else if(clothType == "ct-1"){
 				chartCategories = ["t1", "t2", "t3", "t4", "t5"];
-			} else if($('#select4').val() == "ct-2"){
+			} else if(clothType == "ct-2"){
 				chartCategories = ["p1", "p2", "p3", "p4", "p5"];
-			} else if($('#select4').val() == "ct-3"){
+			} else if(clothType == "ct-3"){
 				chartCategories = ["o1", "o2", "o3", "o4", "o5"];
-			} else if($('#select4').val() == "ct-4"){
+			} else if(clothType == "ct-4"){
 				chartCategories = ["n1", "n2", "n3", "n4", "n5"];
-			} else if($('#select4').val() == "ct-5"){
+			} else if(clothType == "ct-5"){
 				chartCategories = ["j1", "j2", "j3", "j4", "j5"];
 			}
 			
-			//chartData(x축 정보)
-			if(sellPeriod == "allPeriod" && clothType == "ct-all"){
+			//차트 데이터
+			var price_quantity;
+			var unit;
+			var chartData = [];
+			
+			//ct-n에 해당하는 가격들 ct"n"PriceList에 넣어서 배열 생성
+			var ct1PriceList =[0];
+			var ct2PriceList =[0];
+			var ct3PriceList =[0];
+			var ct4PriceList =[0];
+			var ct5PriceList =[0];
+			for(var i=0; i<json.length; i++){
+				if(json[i].ct == "ct-1"){
+					ct1PriceList.push(json[i].price);
+				} else if(json[i].ct == "ct-2"){
+					ct2PriceList.push(json[i].price);
+				} else if(json[i].ct == "ct-3"){
+					ct3PriceList.push(json[i].price);
+				} else if(json[i].ct == "ct-4"){
+					ct4PriceList.push(json[i].price);
+				} else if(json[i].ct == "ct-5"){
+					ct5PriceList.push(json[i].price);
+				}//if문 끝
+			}//for문 끝
+			console.log("ct1List: " + ct1PriceList);
+			console.log("ct2List: " + ct2PriceList);
+			console.log("ct3List: " + ct3PriceList);
+			console.log("ct4List: " + ct4PriceList);
+			console.log("ct5List: " + ct5PriceList);
+			
+			if(graphType == "selectQuantity"){//판매수량 선택시 차트
+				//스탯 박스
+				$('#selectQuantity_stat').val('선택');
+				$('#selectPrice_stat').val('미선택');
+				//차트이름(아래에 뜨는거)
+				price_quantity = "판매 수량";
+				unit = "벌";
 				
-			}
+				//chartData(x축 정보)
+				if(clothType == "ct-all"){
+					chartData = [ct1PriceList.length, ct2PriceList.length, ct3PriceList.length, ct4PriceList.length, ct5PriceList.length];
+					console.log("차트 데이터: " + chartData);
+				} else if(sellPeriod == "ct-1"){
+					
+				}//chartData(x축 정보) if문 끝
+				
+			} else {//판매금액 선택시 차트
+				$('#selectQuantity_stat').val('미선택');
+				$('#selectPrice_stat').val('선택');
+				price_quantity = "판매 금액";
+				unit = "원";
+				
+				//chartData(x축 정보)
+				if(clothType == "ct-all"){
+					const ct1PriceListSum = ct1PriceList.reduce((a,b) => (a+b));
+					const ct2PriceListSum = ct2PriceList.reduce((a,b) => (a+b));
+					const ct3PriceListSum = ct3PriceList.reduce((a,b) => (a+b));
+					const ct4PriceListSum = ct4PriceList.reduce((a,b) => (a+b));
+					const ct5PriceListSum = ct5PriceList.reduce((a,b) => (a+b));
+					chartData = [ct1PriceListSum, ct2PriceListSum, ct3PriceListSum, ct4PriceListSum, ct5PriceListSum];
+					console.log("차트 데이터: " + chartData);
+				}//chartData(x축 정보) if문 끝
+			}//graphType if문 끝
 			
+			//차트 그리기
+			chartCreator(chartData, chartCategories, price_quantity, unit);
 			
-			
-			
-			
-			
-			
-			//ct-n(clothType) 포함하는 항목의 Dictionary
+/*			//ct-n(clothType) 포함하는 항목의 Dictionary
 			var dict_Chart_Data_ct1 = {};
 			var dict_Chart_Data_ct2 = {};
 			var dict_Chart_Data_ct3 = {};
@@ -122,17 +175,9 @@ function chartAJAX(graphType, sellPeriod, clothType){
 				chartData = [ct_1_price, ct_2_price, ct_3_price, ct_4_price, ct_5_price];
 				
 			}//if문 끝
-				
-			console.log("차트 데이터: " + chartData);	
-			console.log("선택된 기간: " + $('#select3').val());
-		    console.log("선택된 의류: " + $('#select4').val());
-			console.log("판매금액/판매수량: " + price_quantity);
-			console.log(unit);
-			console.log("판매수량 선택여부: " + $('#selectQuantity_stat').val());
-			console.log("판매금액 선택여부: " + $('#selectPrice_stat').val());
+*/				
 			
-			//차트 그리기
-			chartCreator(chartData, chartCategories, price_quantity, unit);
+			
 			
 //			//차트 그리기
 //			Highcharts.chart('container', {

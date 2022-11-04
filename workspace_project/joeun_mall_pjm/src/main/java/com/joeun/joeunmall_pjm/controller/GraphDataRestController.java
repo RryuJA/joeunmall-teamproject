@@ -33,6 +33,20 @@ public class GraphDataRestController {
 		return resultList;
 	}
 	
+	private List<GraphDataVO> searchList_All(List<GraphDataVO> listAll, String sellPeriod){
+		
+		List<GraphDataVO> resultListAll = new ArrayList<>();  
+		for(int i=0; i<listAll.size(); i++) {
+			GraphDataVO graphdataVO = listAll.get(i);
+			
+			if(graphdataVO.getPeriod().equals(sellPeriod)) {
+				resultListAll.add(graphdataVO);
+			}
+		}
+		
+		return resultListAll;
+	}
+	
 	/**
 	 * ex) http://localhost:8282/joeunmall_pjm/graphJson/priceQuantity?selectGraph=price
 	 * @param selectGraph
@@ -156,14 +170,17 @@ public class GraphDataRestController {
 		listAll.add(new GraphDataVO("p-003", 13013, "2206", "ct-2"));
 		listAll.add(new GraphDataVO("p-004", 43213, "2209", "ct-2"));
 		listAll.add(new GraphDataVO("p-003", 10213, "2209", "ct-2"));
-		listAll.add(new GraphDataVO("t-002", 13313, "2208", "ct-1"));
+		listAll.add(new GraphDataVO("t-002", 23213, "2208", "ct-1"));
 		listAll.add(new GraphDataVO("j-004", 23213, "2208", "ct-5"));
 		listAll.add(new GraphDataVO("j-003", 13213, "2207", "ct-5"));
 		
 		//Json 생성인데 배열구조임 -> ["티셔츠,23321","팬츠/스커트,232127","원피스,132312","니트/가디건,121212","자켓,82110"] ("키, 값", "키, 값",) 이런 구조
-		if(clothType.equals("ct-all") && sellPeriod.equals("allPeriod")) {
-			return new ResponseEntity<> (listAll, HttpStatus.OK);
+		if(clothType.equals("ct-all")) {
+			log.info("getGraphJsonList");
+			List<GraphDataVO> resultListAll = this.searchList_All(listAll, sellPeriod);
+			return new ResponseEntity<> (resultListAll, HttpStatus.OK);
 		} else {
+			log.info("getGraphJsonList");
 			List<GraphDataVO> resultList = this.searchList(listAll, clothType, sellPeriod);
 			return new ResponseEntity<> (resultList, HttpStatus.OK);
 		} //if문 끝
