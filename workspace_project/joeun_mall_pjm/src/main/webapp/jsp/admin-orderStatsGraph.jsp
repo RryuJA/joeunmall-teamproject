@@ -71,6 +71,7 @@
                                         
                     <!-- ---------------- 그래프 ---------------------->      
                     <script src="js/charts/chartAJAX.js" charset="utf8"></script>
+                    <script src="js/charts/chartCreator.js" charset="utf8"></script>
                     <script src="js/charts/getGraph(price_quantity).js" charset="utf8"></script> <!-- 이 js파일 헤드로 올리면 그래프 작동 안함 -->
                     <figure class="highcharts-figure">
                         <div id="container"></div>

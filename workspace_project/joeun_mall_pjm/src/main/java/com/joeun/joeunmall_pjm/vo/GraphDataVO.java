@@ -7,6 +7,9 @@ import lombok.Data;
 @AllArgsConstructor
 public class GraphDataVO {
 	
+	/** 상품명 */
+	private String pn;
+	
 	/** 판매 금액 */
 	private int price;
 	

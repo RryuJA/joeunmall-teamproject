@@ -1,336 +1,11 @@
-2022-11-03 14:24:23.330 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-24] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String, String, String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
-	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String, String, String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	... 36 more
-2022-11-03 14:24:23.469 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-21] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:24:23.893 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-21] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String, String, String) mapped.
-2022-11-03 14:24:23.894 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-21] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String, String, String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
-	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String, String, String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	... 36 more
-2022-11-03 14:24:23.902 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-17] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:24:24.128 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-17] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String, String, String) mapped.
-2022-11-03 14:24:24.128 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-17] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String, String, String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
-	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String, String, String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	... 36 more
-2022-11-03 14:24:24.798 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-25] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:24:25.023 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-25] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String, String, String) mapped.
-2022-11-03 14:24:25.029 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-25] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String, String, String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
-	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String, String, String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	... 36 more
-2022-11-03 14:24:28.802 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-22] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:24:29.041 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-22] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String, String, String) mapped.
-2022-11-03 14:24:29.042 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-22] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String, String, String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
-	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String, String, String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	... 36 more
-2022-11-03 14:24:44.472 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
-2022-11-03 14:24:44.842 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 356 ms
-2022-11-03 14:24:45.001 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:24:46.528 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [Catalina-utility-2] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
+2022-11-03 14:25:20.841 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
+2022-11-03 14:25:21.243 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 370 ms
+2022-11-03 14:25:21.453 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:25:23.164 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [Catalina-utility-2] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
 to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-2022-11-03 14:24:46.530 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+2022-11-03 14:25:23.164 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
 to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
@@ -392,12 +67,12 @@ com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonV
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
 	... 37 more
-2022-11-03 14:24:50.664 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-18] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:24:51.037 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-18] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
+2022-11-03 14:25:24.368 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-28] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:25:24.740 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-28] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
 to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-2022-11-03 14:24:51.038 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-18] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+2022-11-03 14:25:24.741 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-28] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
 to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
@@ -458,12 +133,12 @@ com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonV
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
 	... 36 more
-2022-11-03 14:25:07.094 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-17] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:25:08.178 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-17] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
+2022-11-03 14:25:32.869 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-31] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:25:33.259 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-31] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
 to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-2022-11-03 14:25:08.179 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-17] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+2022-11-03 14:25:33.259 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-31] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
 to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
@@ -524,12 +199,12 @@ com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonV
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
 	... 36 more
-2022-11-03 14:25:09.198 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-19] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:25:09.717 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-19] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
+2022-11-03 14:25:38.256 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-26] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:25:38.873 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-26] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
 to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-2022-11-03 14:25:09.718 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-19] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+2022-11-03 14:25:38.874 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-26] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
 to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
@@ -590,12 +265,12 @@ com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonV
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
 	... 36 more
-2022-11-03 14:25:10.580 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-25] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:25:10.943 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-25] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
+2022-11-03 14:25:41.515 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-21] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:25:41.710 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-21] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
 to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-2022-11-03 14:25:10.944 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-25] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+2022-11-03 14:25:41.711 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-21] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
 to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
@@ -656,12 +331,12 @@ com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonV
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
 	... 36 more
-2022-11-03 14:25:11.571 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-23] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:25:11.996 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-23] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
+2022-11-03 14:25:51.407 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-32] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:25:52.184 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-32] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
 to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-2022-11-03 14:25:11.997 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-23] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+2022-11-03 14:25:52.184 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-32] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
 com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
 to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
@@ -722,3 +397,247 @@ com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonV
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
 	... 36 more
+2022-11-03 14:25:52.190 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-24] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:25:52.426 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-24] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
+to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
+2022-11-03 14:25:52.433 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-24] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
+to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
+to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 36 more
+2022-11-03 14:26:37.640 [INFO ] [org.springframework.web.context.ContextLoader] [main] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
+2022-11-03 14:26:38.089 [INFO ] [org.springframework.web.context.ContextLoader] [main] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 436 ms
+2022-11-03 14:26:38.259 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [main] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:26:40.062 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [main] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
+to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
+2022-11-03 14:26:40.064 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [main] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
+to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1010) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4958) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5265) [catalina.jar:9.0.68]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386) [catalina.jar:9.0.68]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) [tomcat-util.jar:9.0.68]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) [?:1.8.0_332]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835) [catalina.jar:9.0.68]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386) [catalina.jar:9.0.68]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) [tomcat-util.jar:9.0.68]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) [?:1.8.0_332]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:265) [catalina.jar:9.0.68]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432) [catalina.jar:9.0.68]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) [catalina.jar:9.0.68]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:9.0.68]
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:772) [catalina.jar:9.0.68]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_332]
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345) [bootstrap.jar:9.0.68]
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476) [bootstrap.jar:9.0.68]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
+to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 49 more
+2022-11-03 14:26:40.770 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:26:41.626 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-2] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
+to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
+2022-11-03 14:26:41.627 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
+to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
+to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
+com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 36 more
+2022-11-03 14:27:14.530 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
+2022-11-03 14:27:14.921 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 377 ms
+2022-11-03 14:27:15.077 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:27:16.999 [INFO ] [org.hibernate.validator.internal.util.Version] [Catalina-utility-2] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
+2022-11-03 14:27:19.532 [INFO ] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [Catalina-utility-2] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69)] -- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-03 14:27:19.553 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-2] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:160)] -- Context refreshed
+2022-11-03 14:27:19.661 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-2] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:163)] -- Found 1 custom documentation plugin(s)
+2022-11-03 14:27:19.777 [INFO ] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [Catalina-utility-2] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41)] -- Scanning for api listing references
+2022-11-03 14:27:19.964 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingGET_1
+2022-11-03 14:27:19.966 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingHEAD_1
+2022-11-03 14:27:19.969 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPOST_1
+2022-11-03 14:27:19.971 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPUT_1
+2022-11-03 14:27:19.973 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPATCH_1
+2022-11-03 14:27:19.977 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingDELETE_1
+2022-11-03 14:27:19.978 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingOPTIONS_1
+2022-11-03 14:27:19.980 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingTRACE_1
+2022-11-03 14:27:20.203 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] -- Completed initialization in 5126 ms
+2022-11-03 14:28:11.822 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-3] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 14:28:25.832 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
+2022-11-03 14:28:27.213 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 1354 ms
+2022-11-03 14:28:27.480 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:28:31.093 [INFO ] [org.hibernate.validator.internal.util.Version] [Catalina-utility-1] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
+2022-11-03 14:28:33.748 [INFO ] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [Catalina-utility-1] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69)] -- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-03 14:28:33.768 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-1] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:160)] -- Context refreshed
+2022-11-03 14:28:33.897 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-1] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:163)] -- Found 1 custom documentation plugin(s)
+2022-11-03 14:28:34.063 [INFO ] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [Catalina-utility-1] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41)] -- Scanning for api listing references
+2022-11-03 14:28:34.288 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingGET_1
+2022-11-03 14:28:34.290 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingHEAD_1
+2022-11-03 14:28:34.296 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPOST_1
+2022-11-03 14:28:34.298 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPUT_1
+2022-11-03 14:28:34.304 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPATCH_1

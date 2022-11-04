@@ -1,17 +1,138 @@
-2022-11-03 14:25:20.841 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
-2022-11-03 14:25:21.243 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 370 ms
-2022-11-03 14:25:21.453 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:25:23.164 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [Catalina-utility-2] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-2022-11-03 14:25:23.164 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+2022-11-03 14:28:34.313 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingDELETE_1
+2022-11-03 14:28:34.385 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingOPTIONS_1
+2022-11-03 14:28:34.390 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingTRACE_1
+2022-11-03 14:28:34.629 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] -- Completed initialization in 7148 ms
+2022-11-03 14:29:08.660 [INFO ] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController] [http-nio-8282-exec-5] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController.getGraphJsonVO(SellPriceQuantityRestController.java:119)] -- getGraphJsonList
+2022-11-03 14:29:08.661 [INFO ] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController] [http-nio-8282-exec-5] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController.getGraphJsonVO(SellPriceQuantityRestController.java:120)] -- selectGraph: quantity
+2022-11-03 14:29:08.661 [INFO ] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController] [http-nio-8282-exec-5] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController.getGraphJsonVO(SellPriceQuantityRestController.java:121)] -- selectPeriod: 2209
+2022-11-03 14:29:08.661 [INFO ] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController] [http-nio-8282-exec-5] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController.getGraphJsonVO(SellPriceQuantityRestController.java:122)] -- selectCloth: ct-1
+2022-11-03 14:29:38.225 [WARN ] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8282-exec-14] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:200)] -- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'selectGraph' is not present]
+2022-11-03 14:29:50.728 [WARN ] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8282-exec-12] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:200)] -- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'selectCloth' is not present]
+2022-11-03 14:29:57.230 [INFO ] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController] [http-nio-8282-exec-9] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController.getGraphJsonVO(SellPriceQuantityRestController.java:119)] -- getGraphJsonList
+2022-11-03 14:29:57.233 [INFO ] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController] [http-nio-8282-exec-9] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController.getGraphJsonVO(SellPriceQuantityRestController.java:120)] -- selectGraph: quantity
+2022-11-03 14:29:57.234 [INFO ] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController] [http-nio-8282-exec-9] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController.getGraphJsonVO(SellPriceQuantityRestController.java:121)] -- selectPeriod: 2209
+2022-11-03 14:29:57.234 [INFO ] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController] [http-nio-8282-exec-9] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController.getGraphJsonVO(SellPriceQuantityRestController.java:122)] -- selectCloth: ct-1
+2022-11-03 14:31:33.318 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
+2022-11-03 14:31:33.691 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 356 ms
+2022-11-03 14:31:33.855 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:31:35.476 [INFO ] [org.hibernate.validator.internal.util.Version] [Catalina-utility-2] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
+2022-11-03 14:31:37.685 [INFO ] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [Catalina-utility-2] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69)] -- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-03 14:31:37.705 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-2] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:160)] -- Context refreshed
+2022-11-03 14:31:37.829 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-2] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:163)] -- Found 1 custom documentation plugin(s)
+2022-11-03 14:31:37.935 [INFO ] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [Catalina-utility-2] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41)] -- Scanning for api listing references
+2022-11-03 14:31:38.072 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingGET_1
+2022-11-03 14:31:38.073 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingHEAD_1
+2022-11-03 14:31:38.074 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPOST_1
+2022-11-03 14:31:38.076 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPUT_1
+2022-11-03 14:31:38.077 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPATCH_1
+2022-11-03 14:31:38.078 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingDELETE_1
+2022-11-03 14:31:38.079 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingOPTIONS_1
+2022-11-03 14:31:38.081 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingTRACE_1
+2022-11-03 14:31:38.266 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] -- Completed initialization in 4411 ms
+2022-11-03 14:33:10.075 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
+2022-11-03 14:33:10.453 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 366 ms
+2022-11-03 14:33:10.621 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:33:12.305 [INFO ] [org.hibernate.validator.internal.util.Version] [Catalina-utility-2] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
+2022-11-03 14:33:14.600 [INFO ] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [Catalina-utility-2] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69)] -- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-03 14:33:14.619 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-2] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:160)] -- Context refreshed
+2022-11-03 14:33:14.781 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-2] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:163)] -- Found 1 custom documentation plugin(s)
+2022-11-03 14:33:14.930 [INFO ] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [Catalina-utility-2] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41)] -- Scanning for api listing references
+2022-11-03 14:33:15.065 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingGET_1
+2022-11-03 14:33:15.067 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingHEAD_1
+2022-11-03 14:33:15.068 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPOST_1
+2022-11-03 14:33:15.069 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPUT_1
+2022-11-03 14:33:15.072 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPATCH_1
+2022-11-03 14:33:15.073 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingDELETE_1
+2022-11-03 14:33:15.074 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingOPTIONS_1
+2022-11-03 14:33:15.075 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingTRACE_1
+2022-11-03 14:33:15.274 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] -- Completed initialization in 4653 ms
+2022-11-03 14:33:15.931 [INFO ] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController.getGraphJsonVO(SellPriceQuantityRestController.java:119)] -- getGraphJsonList
+2022-11-03 14:33:15.932 [INFO ] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController.getGraphJsonVO(SellPriceQuantityRestController.java:120)] -- selectGraph: quantity
+2022-11-03 14:33:15.932 [INFO ] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController.getGraphJsonVO(SellPriceQuantityRestController.java:121)] -- selectPeriod: 2209
+2022-11-03 14:33:15.932 [INFO ] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController.getGraphJsonVO(SellPriceQuantityRestController.java:122)] -- selectCloth: ct-1
+2022-11-03 14:35:00.830 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
+2022-11-03 14:35:01.197 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 354 ms
+2022-11-03 14:35:01.346 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:35:02.944 [INFO ] [org.hibernate.validator.internal.util.Version] [Catalina-utility-2] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
+2022-11-03 14:35:05.218 [INFO ] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [Catalina-utility-2] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69)] -- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-03 14:35:05.241 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-2] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:160)] -- Context refreshed
+2022-11-03 14:35:05.369 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-2] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:163)] -- Found 1 custom documentation plugin(s)
+2022-11-03 14:35:05.497 [INFO ] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [Catalina-utility-2] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41)] -- Scanning for api listing references
+2022-11-03 14:35:05.662 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingGET_1
+2022-11-03 14:35:05.664 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingHEAD_1
+2022-11-03 14:35:05.665 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPOST_1
+2022-11-03 14:35:05.667 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPUT_1
+2022-11-03 14:35:05.669 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPATCH_1
+2022-11-03 14:35:05.672 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingDELETE_1
+2022-11-03 14:35:05.674 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingOPTIONS_1
+2022-11-03 14:35:05.676 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingTRACE_1
+2022-11-03 14:35:05.891 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] -- Completed initialization in 4545 ms
+2022-11-03 14:42:58.083 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
+2022-11-03 14:42:58.469 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 373 ms
+2022-11-03 14:42:58.617 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:43:00.186 [INFO ] [org.hibernate.validator.internal.util.Version] [Catalina-utility-1] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
+2022-11-03 14:43:02.519 [INFO ] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [Catalina-utility-1] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69)] -- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-03 14:43:02.546 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-1] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:160)] -- Context refreshed
+2022-11-03 14:43:02.698 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-1] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:163)] -- Found 1 custom documentation plugin(s)
+2022-11-03 14:43:02.845 [INFO ] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [Catalina-utility-1] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41)] -- Scanning for api listing references
+2022-11-03 14:43:03.001 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingGET_1
+2022-11-03 14:43:03.002 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingHEAD_1
+2022-11-03 14:43:03.004 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPOST_1
+2022-11-03 14:43:03.007 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPUT_1
+2022-11-03 14:43:03.009 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPATCH_1
+2022-11-03 14:43:03.010 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingDELETE_1
+2022-11-03 14:43:03.011 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingOPTIONS_1
+2022-11-03 14:43:03.012 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingTRACE_1
+2022-11-03 14:43:03.229 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] -- Completed initialization in 4611 ms
+2022-11-03 14:48:48.125 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
+2022-11-03 14:48:48.523 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 384 ms
+2022-11-03 14:48:48.669 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:48:50.242 [INFO ] [org.hibernate.validator.internal.util.Version] [Catalina-utility-1] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
+2022-11-03 14:55:03.989 [INFO ] [org.springframework.web.context.ContextLoader] [main] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
+2022-11-03 14:55:04.503 [INFO ] [org.springframework.web.context.ContextLoader] [main] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 497 ms
+2022-11-03 14:55:04.689 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [main] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:55:06.761 [INFO ] [org.hibernate.validator.internal.util.Version] [main] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
+2022-11-03 14:55:09.241 [INFO ] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69)] -- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-03 14:55:09.265 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:160)] -- Context refreshed
+2022-11-03 14:55:09.390 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:163)] -- Found 1 custom documentation plugin(s)
+2022-11-03 14:55:09.535 [INFO ] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41)] -- Scanning for api listing references
+2022-11-03 14:55:09.846 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingGET_1
+2022-11-03 14:55:09.848 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingHEAD_1
+2022-11-03 14:55:09.849 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPOST_1
+2022-11-03 14:55:09.851 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPUT_1
+2022-11-03 14:55:09.852 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPATCH_1
+2022-11-03 14:55:09.854 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingDELETE_1
+2022-11-03 14:55:09.857 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingOPTIONS_1
+2022-11-03 14:55:09.861 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingTRACE_1
+2022-11-03 14:55:09.906 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [main] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] -- Completed initialization in 5217 ms
+2022-11-03 14:55:10.132 [WARN ] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8282-exec-2] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:200)] -- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'selectGraph' is not present]
+2022-11-03 14:55:10.682 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-3] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 14:55:14.929 [WARN ] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8282-exec-4] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:200)] -- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'sellPeriod' is not present]
+2022-11-03 14:55:22.969 [WARN ] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8282-exec-4] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:200)] -- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'sellPeriod' is not present]
+2022-11-03 14:55:23.735 [WARN ] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8282-exec-10] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:200)] -- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'sellPeriod' is not present]
+2022-11-03 14:55:25.005 [WARN ] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8282-exec-6] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:200)] -- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'sellPeriod' is not present]
+2022-11-03 14:55:33.183 [WARN ] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8282-exec-9] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:200)] -- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'sellPeriod' is not present]
+2022-11-03 14:55:34.278 [WARN ] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8282-exec-1] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:200)] -- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'sellPeriod' is not present]
+2022-11-03 14:55:34.686 [WARN ] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8282-exec-8] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:200)] -- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'sellPeriod' is not present]
+2022-11-03 14:55:47.335 [WARN ] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8282-exec-7] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:200)] -- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'selectGraph' is not present]
+2022-11-03 14:57:12.850 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
+2022-11-03 14:57:13.608 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 743 ms
+2022-11-03 14:57:13.859 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:57:16.106 [INFO ] [org.hibernate.validator.internal.util.Version] [Catalina-utility-1] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
+2022-11-03 14:57:17.861 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [Catalina-utility-1] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'graphDataRestController' defined in file [C:\joeunmall-teamproject\workspace_project\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\joeun_mall_pjm\WEB-INF\classes\com\joeun\joeunmall_pjm\controller\GraphDataRestController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.joeun.joeunmall_pjm.controller.GraphDataRestController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "}" to complete ClassBody
+	Syntax error, insert "Type VariableDeclaratorId" to complete FormalParameter
+	Syntax error on token "}", delete this token
+
+2022-11-03 14:57:17.863 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'graphDataRestController' defined in file [C:\joeunmall-teamproject\workspace_project\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\joeun_mall_pjm\WEB-INF\classes\com\joeun\joeunmall_pjm\controller\GraphDataRestController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.joeun.joeunmall_pjm.controller.GraphDataRestController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "}" to complete ClassBody
+	Syntax error, insert "Type VariableDeclaratorId" to complete FormalParameter
+	Syntax error on token "}", delete this token
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1323) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
@@ -48,596 +169,252 @@ com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonV
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_332]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
 	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	... 37 more
-2022-11-03 14:25:24.368 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-28] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:25:24.740 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-28] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-2022-11-03 14:25:24.741 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-28] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
-	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	... 36 more
-2022-11-03 14:25:32.869 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-31] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:25:33.259 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-31] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-2022-11-03 14:25:33.259 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-31] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
-	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	... 36 more
-2022-11-03 14:25:38.256 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-26] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:25:38.873 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-26] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-2022-11-03 14:25:38.874 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-26] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
-	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	... 36 more
-2022-11-03 14:25:41.515 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-21] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:25:41.710 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-21] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-2022-11-03 14:25:41.711 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-21] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
-	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	... 36 more
-2022-11-03 14:25:51.407 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-32] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:25:52.184 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-32] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-2022-11-03 14:25:52.184 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-32] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
-	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	... 36 more
-2022-11-03 14:25:52.190 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-24] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:25:52.426 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-24] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-2022-11-03 14:25:52.433 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-24] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
-	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	... 36 more
-2022-11-03 14:26:37.640 [INFO ] [org.springframework.web.context.ContextLoader] [main] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
-2022-11-03 14:26:38.089 [INFO ] [org.springframework.web.context.ContextLoader] [main] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 436 ms
-2022-11-03 14:26:38.259 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [main] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:26:40.062 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [main] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-2022-11-03 14:26:40.064 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [main] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1010) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4958) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5265) [catalina.jar:9.0.68]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386) [catalina.jar:9.0.68]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_332]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) [tomcat-util.jar:9.0.68]
-	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) [?:1.8.0_332]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835) [catalina.jar:9.0.68]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386) [catalina.jar:9.0.68]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_332]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) [tomcat-util.jar:9.0.68]
-	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134) [?:1.8.0_332]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:265) [catalina.jar:9.0.68]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432) [catalina.jar:9.0.68]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) [catalina.jar:9.0.68]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:9.0.68]
-	at org.apache.catalina.startup.Catalina.start(Catalina.java:772) [catalina.jar:9.0.68]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_332]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_332]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_332]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_332]
-	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345) [bootstrap.jar:9.0.68]
-	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476) [bootstrap.jar:9.0.68]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	... 49 more
-2022-11-03 14:26:40.770 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:26:41.626 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-2] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-2022-11-03 14:26:41.627 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
-	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
-	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
-	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'sellPriceQuantityRestController_bk' method 
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController_bk#getGraphJsonVO(String)
-to {GET /graphJsonVO/priceQuantity, produces [application/json;charset=UTF-8]}: There is already 'sellPriceQuantityRestController' bean method
-com.joeun.joeunmall_pjm.controller.SellPriceQuantityRestController#getGraphJsonVO(String) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
-	... 36 more
-2022-11-03 14:27:14.530 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
-2022-11-03 14:27:14.921 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 377 ms
-2022-11-03 14:27:15.077 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:27:16.999 [INFO ] [org.hibernate.validator.internal.util.Version] [Catalina-utility-2] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
-2022-11-03 14:27:19.532 [INFO ] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [Catalina-utility-2] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69)] -- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-11-03 14:27:19.553 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-2] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:160)] -- Context refreshed
-2022-11-03 14:27:19.661 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-2] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:163)] -- Found 1 custom documentation plugin(s)
-2022-11-03 14:27:19.777 [INFO ] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [Catalina-utility-2] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41)] -- Scanning for api listing references
-2022-11-03 14:27:19.964 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingGET_1
-2022-11-03 14:27:19.966 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingHEAD_1
-2022-11-03 14:27:19.969 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPOST_1
-2022-11-03 14:27:19.971 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPUT_1
-2022-11-03 14:27:19.973 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPATCH_1
-2022-11-03 14:27:19.977 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingDELETE_1
-2022-11-03 14:27:19.978 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingOPTIONS_1
-2022-11-03 14:27:19.980 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingTRACE_1
-2022-11-03 14:27:20.203 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] -- Completed initialization in 5126 ms
-2022-11-03 14:28:11.822 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-3] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
-2022-11-03 14:28:25.832 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
-2022-11-03 14:28:27.213 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 1354 ms
-2022-11-03 14:28:27.480 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
-2022-11-03 14:28:31.093 [INFO ] [org.hibernate.validator.internal.util.Version] [Catalina-utility-1] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
-2022-11-03 14:28:33.748 [INFO ] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [Catalina-utility-1] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69)] -- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2022-11-03 14:28:33.768 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-1] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:160)] -- Context refreshed
-2022-11-03 14:28:33.897 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-1] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:163)] -- Found 1 custom documentation plugin(s)
-2022-11-03 14:28:34.063 [INFO ] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [Catalina-utility-1] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41)] -- Scanning for api listing references
-2022-11-03 14:28:34.288 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingGET_1
-2022-11-03 14:28:34.290 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingHEAD_1
-2022-11-03 14:28:34.296 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPOST_1
-2022-11-03 14:28:34.298 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPUT_1
-2022-11-03 14:28:34.304 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPATCH_1
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.joeun.joeunmall_pjm.controller.GraphDataRestController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "}" to complete ClassBody
+	Syntax error, insert "Type VariableDeclaratorId" to complete FormalParameter
+	Syntax error on token "}", delete this token
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:220) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1315) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 38 more
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "}" to complete ClassBody
+	Syntax error, insert "Type VariableDeclaratorId" to complete FormalParameter
+	Syntax error on token "}", delete this token
+
+	at com.joeun.joeunmall_pjm.controller.GraphDataRestController.<init>(GraphDataRestController.java:20) ~[classes/:?]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_332]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_332]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_332]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_332]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:207) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1315) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 38 more
+2022-11-03 14:57:41.334 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
+2022-11-03 14:57:41.726 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-2] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 377 ms
+2022-11-03 14:57:41.989 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 14:57:43.703 [INFO ] [org.hibernate.validator.internal.util.Version] [Catalina-utility-2] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
+2022-11-03 14:57:46.090 [INFO ] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [Catalina-utility-2] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69)] -- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-03 14:57:46.110 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-2] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:160)] -- Context refreshed
+2022-11-03 14:57:46.227 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-2] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:163)] -- Found 1 custom documentation plugin(s)
+2022-11-03 14:57:46.351 [INFO ] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [Catalina-utility-2] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41)] -- Scanning for api listing references
+2022-11-03 14:57:46.712 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingGET_1
+2022-11-03 14:57:46.714 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingHEAD_1
+2022-11-03 14:57:46.715 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPOST_1
+2022-11-03 14:57:46.717 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPUT_1
+2022-11-03 14:57:46.719 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPATCH_1
+2022-11-03 14:57:46.721 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingDELETE_1
+2022-11-03 14:57:46.725 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingOPTIONS_1
+2022-11-03 14:57:46.728 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-2] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingTRACE_1
+2022-11-03 14:57:46.793 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] -- Completed initialization in 4804 ms
+2022-11-03 14:57:47.301 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-3] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 14:57:47.301 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-3] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:00:00.491 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
+2022-11-03 15:00:00.870 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 366 ms
+2022-11-03 15:00:01.020 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 15:00:02.899 [INFO ] [org.hibernate.validator.internal.util.Version] [Catalina-utility-1] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
+2022-11-03 15:00:05.032 [INFO ] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [Catalina-utility-1] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69)] -- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-03 15:00:05.053 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-1] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:160)] -- Context refreshed
+2022-11-03 15:00:05.162 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-1] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:163)] -- Found 1 custom documentation plugin(s)
+2022-11-03 15:00:05.287 [INFO ] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [Catalina-utility-1] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41)] -- Scanning for api listing references
+2022-11-03 15:00:05.633 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingGET_1
+2022-11-03 15:00:05.634 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingHEAD_1
+2022-11-03 15:00:05.635 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPOST_1
+2022-11-03 15:00:05.637 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPUT_1
+2022-11-03 15:00:05.637 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPATCH_1
+2022-11-03 15:00:05.638 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingDELETE_1
+2022-11-03 15:00:05.639 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingOPTIONS_1
+2022-11-03 15:00:05.640 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingTRACE_1
+2022-11-03 15:00:05.681 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] -- Completed initialization in 4660 ms
+2022-11-03 15:00:10.343 [WARN ] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver] [http-nio-8282-exec-14] [org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:200)] -- Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'selectGraph' is not present]
+2022-11-03 15:00:16.667 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-7] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:00:17.878 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-11] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:00:17.879 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-11] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:00:29.215 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-1] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:00:29.216 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-1] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:00:30.670 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-4] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:00:30.671 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-4] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:00:31.245 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-16] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:00:31.246 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-16] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:00:32.126 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:00:32.126 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:04:49.667 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-20] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:04:50.734 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:04:50.734 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:05:06.273 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-23] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:05:06.978 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:05:06.979 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:05:20.891 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:05:21.825 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:05:21.826 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:06:58.362 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-19] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:06:59.134 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:06:59.136 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:06:59.999 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-16] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:06:59.999 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-16] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:07:03.547 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:07:04.009 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-24] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:07:04.744 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:07:04.745 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:07:05.910 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-21] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:07:05.910 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-21] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:07:06.686 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-19] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:07:06.686 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-19] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:07:07.798 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:07:07.799 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:11:26.338 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-16] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:11:27.944 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-23] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:11:27.945 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-23] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:11:50.451 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-16] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:11:50.583 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:11:50.711 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-20] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:11:51.395 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-24] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:11:51.396 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-24] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:12:42.415 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-23] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:43.721 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-19] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:12:43.721 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-19] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:12:47.160 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:12:47.160 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:12:48.277 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:48.492 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:48.672 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:48.875 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:49.004 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-23] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:49.169 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:49.340 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-21] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:49.484 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:49.640 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:49.831 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:49.970 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:50.164 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:50.301 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:50.438 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-21] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:50.605 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:50.750 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:51.880 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:12:51.881 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:12:55.508 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:12:56.033 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-24] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:12:56.034 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-24] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:13:09.018 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:13:09.691 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-16] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:13:09.692 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-16] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:13:11.701 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:13:11.702 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:13:32.715 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:13:33.849 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:13:33.849 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:13:37.887 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-24] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:13:37.888 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-24] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:13:38.995 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-21] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:13:42.938 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-20] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:13:44.335 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:13:44.336 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:14:03.396 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-19] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:14:03.396 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-19] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:14:11.833 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:14:13.177 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-16] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:14:13.178 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-16] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:17:40.220 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-23] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:17:40.972 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:17:40.974 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:17:52.872 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-21] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:17:53.952 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:17:53.952 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:20:21.515 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:20:22.536 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-24] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:20:22.537 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-24] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:20:49.132 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-23] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:20:50.172 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:20:50.172 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:21:01.615 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-21] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:21:02.792 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:21:02.792 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:22:04.806 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-23] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:22:06.088 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-21] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:22:06.089 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-21] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:30:53.749 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:30:54.635 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-23] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:30:54.636 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-23] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:30:56.422 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-24] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:30:57.713 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:30:57.714 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:31:17.020 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-23] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:31:17.791 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-16] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:31:17.793 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-16] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:37:25.465 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:37:26.248 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:37:26.249 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-17] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:40:14.734 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-20] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:40:14.735 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-20] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:40:16.014 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-19] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:40:16.014 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-19] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:40:16.902 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-16] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:40:16.902 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-16] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:45:20.224 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-18] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:45:21.432 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-20] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:45:21.432 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-20] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:45:33.197 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-19] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:45:34.268 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:45:34.269 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-25] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:45:40.943 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-23] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:45:41.431 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-21] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:45:41.432 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-21] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:47:11.748 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
+2022-11-03 15:47:12.133 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 372 ms
+2022-11-03 15:47:12.290 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-03 15:47:13.987 [INFO ] [org.hibernate.validator.internal.util.Version] [Catalina-utility-1] [org.hibernate.validator.internal.util.Version.<clinit>(Version.java:21)] -- HV000001: Hibernate Validator 6.2.0.Final
+2022-11-03 15:47:16.357 [INFO ] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [Catalina-utility-1] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69)] -- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-03 15:47:16.377 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-1] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:160)] -- Context refreshed
+2022-11-03 15:47:16.479 [INFO ] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [Catalina-utility-1] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:163)] -- Found 1 custom documentation plugin(s)
+2022-11-03 15:47:16.583 [INFO ] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [Catalina-utility-1] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner.scan(ApiListingReferenceScanner.java:41)] -- Scanning for api listing references
+2022-11-03 15:47:16.875 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingGET_1
+2022-11-03 15:47:16.877 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingHEAD_1
+2022-11-03 15:47:16.880 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPOST_1
+2022-11-03 15:47:16.882 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPUT_1
+2022-11-03 15:47:16.883 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingPATCH_1
+2022-11-03 15:47:16.890 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingDELETE_1
+2022-11-03 15:47:16.891 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingOPTIONS_1
+2022-11-03 15:47:16.893 [INFO ] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [Catalina-utility-1] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator.startingWith(CachingOperationNameGenerator.java:40)] -- Generating unique operation named: homeUsingTRACE_1
+2022-11-03 15:47:16.945 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] -- Completed initialization in 4655 ms
+2022-11-03 15:50:36.821 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-26] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:50:37.679 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:50:37.679 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-22] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:51:40.088 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-27] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:51:40.991 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-31] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:51:40.992 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-31] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:51:41.756 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-21] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:51:41.756 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-21] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:51:42.592 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-32] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:51:46.788 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-28] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:51:47.496 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-32] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:51:47.496 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-32] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:51:49.213 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-35] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:51:49.213 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-35] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:52:08.288 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-33] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:52:08.288 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-33] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:52:09.644 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-31] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:52:09.644 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-31] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:52:10.676 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-34] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:52:14.645 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-28] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:52:15.465 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-35] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:52:15.465 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-35] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:54:10.358 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-29] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:54:11.217 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-30] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:54:11.218 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-30] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:57:31.573 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-29] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home
+2022-11-03 15:57:32.736 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-30] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:57:32.737 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-30] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:57:34.013 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-28] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:57:34.014 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-28] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:57:46.668 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-27] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:57:46.669 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-27] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:57:47.163 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-26] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:57:47.163 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-26] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 15:57:51.948 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-29] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:57:51.949 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-29] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: price
+2022-11-03 15:57:52.675 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-33] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:119)] -- getGraphJsonList
+2022-11-03 15:57:52.675 [INFO ] [com.joeun.joeunmall_pjm.controller.GraphDataRestController] [http-nio-8282-exec-33] [com.joeun.joeunmall_pjm.controller.GraphDataRestController.getGraphJsonVO(GraphDataRestController.java:120)] -- selectGraph: quantity
+2022-11-03 16:00:11.469 [INFO ] [com.joeun.joeunmall_pjm.controller.HomeController] [http-nio-8282-exec-30] [com.joeun.joeunmall_pjm.controller.HomeController.home(HomeController.java:14)] -- home

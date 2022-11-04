@@ -1,4 +1,5 @@
 //명시적 함수 만들기
+//graphType이 나올 수 있는 애들 : quantity price select3(기간) select4(의류 종류)
 function chartAJAX(graphType, sellPeriod, clothType){
 	
 	alert(graphType);
@@ -17,42 +18,9 @@ function chartAJAX(graphType, sellPeriod, clothType){
 			console.log("msg: " + msg);	
 			//msg에 배열이 넘어온것 -> 배열에서 key와 값을 구분해줘야 함
 			
-			var sellPeriod = $('#select3').val();
-			var clothType = $('#select4').val();
-			
 			//chart data 유형 
 			var json = JSON.parse(msg);
 			console.log(json);
-			
-			var price_quantity;
-			var unit;
-			
-			var chartCategories;
-			//y축 결정 -> 정렬해서 가장 많이 팔린 상위 5개 항목 y축 이름으로 넣어야 함
-			if($('#select4').val() == "ct-all"){
-				chartCategories = ["티셔츠", "팬츠/스커트", "원피스", "니트/가디건", "자켓"];
-			} else if($('#select4').val() == "ct-1"){
-				chartCategories = ["t1", "t2", "t3", "t4", "t5"];
-			} else if($('#select4').val() == "ct-2"){
-				chartCategories = ["p1", "p2", "p3", "p4", "p5"];
-			} else if($('#select4').val() == "ct-3"){
-				chartCategories = ["o1", "o2", "o3", "o4", "o5"];
-			} else if($('#select4').val() == "ct-4"){
-				chartCategories = ["n1", "n2", "n3", "n4", "n5"];
-			} else if($('#select4').val() == "ct-5"){
-				chartCategories = ["j1", "j2", "j3", "j4", "j5"];
-			}
-			
-			//chartData(x축 정보)
-			if(sellPeriod == "allPeriod" && clothType == "ct-all"){
-				
-			}
-			
-			
-			
-			
-			
-			
 			
 			//ct-n(clothType) 포함하는 항목의 Dictionary
 			var dict_Chart_Data_ct1 = {};
@@ -82,6 +50,26 @@ function chartAJAX(graphType, sellPeriod, clothType){
 			console.log(dict_Chart_Data_ct5);
 		
 			var chartData;
+			var chartCategories;
+			var price_quantity;
+			var unit;
+			
+			//y축 결정 -> 정렬해서 가장 많이 팔린 상위 5개 항목 y축 이름으로 넣어야 함
+			if($('#select4').val() == "ct-all"){
+				chartCategories = ["티셔츠", "팬츠/스커트", "원피스", "니트/가디건", "자켓"];
+			} else if($('#select4').val() == "ct-1"){
+				chartCategories = ["t1", "t2", "t3", "t4", "t5"];
+			} else if($('#select4').val() == "ct-2"){
+				chartCategories = ["p1", "p2", "p3", "p4", "p5"];
+			} else if($('#select4').val() == "ct-3"){
+				chartCategories = ["o1", "o2", "o3", "o4", "o5"];
+			} else if($('#select4').val() == "ct-4"){
+				chartCategories = ["n1", "n2", "n3", "n4", "n5"];
+			} else if($('#select4').val() == "ct-5"){
+				chartCategories = ["j1", "j2", "j3", "j4", "j5"];
+			}
+			
+			
 			
 			
 			if(graphType == "selectQuantity"){
