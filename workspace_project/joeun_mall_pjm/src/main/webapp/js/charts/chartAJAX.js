@@ -7,7 +7,7 @@ function chartAJAX(graphType, sellPeriod, clothType){
 		 type : 'get',
 		 dataType:'text',
 		 data : {
-			 graphType: $("#" + graphType).val(),
+			 //graphType: $("#" + graphType).val(),
 			 sellPeriod: $('#select3').val(),
 			 clothType: $('#select4').val()
 		 }, // data 

@@ -9,29 +9,35 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="id" key="selection"/>
+		<item value="JanList" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="JanList"/>
+			<item value="/graphJsonVO/priceQuantity"/>
+			<item value="/graphJsonVO/monthlyGraphData"/>
+			<item value="ct"/>
+			<item value="ct-5"/>
+			<item value="ct-4"/>
+			<item value="ct-3"/>
+			<item value="ct-2"/>
+			<item value="ct-1"/>
 			<item value="id"/>
 			<item value="categories"/>
 			<item value="필터"/>
 			<item value="selectGraph"/>
 			<item value="타이틀"/>
 			<item value="값`"/>
-			<item value="값"/>
-			<item value="inquiryCategory"/>
-			<item value="spring-test"/>
-			<item value="Date"/>
-			<item value="productV"/>
-			<item value="productVO"/>
-			<item value="int"/>
-			<item value="arrow"/>
-			<item value="icon"/>
 		</list>
 		<list key="replacehistory">
+			<item value="period"/>
+			<item value="05"/>
+			<item value="04"/>
+			<item value="03"/>
+			<item value="02"/>
+			<item value="01"/>
 			<item value="ct"/>
 			<item value="String"/>
 			<item value="&lt;c:url value =&apos;/images/logo/"/>

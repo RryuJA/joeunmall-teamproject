@@ -19,7 +19,7 @@
         <script src="js/charts/accessibility.js"></script>
 
         <!-- PJM 220923 -->
-        <script src = 'js/charts/PJM_getGraph(Monthly).js'></script>
+        <!-- <script src = 'js/charts/PJM_getGraph(Monthly).js'></script> -->
        
 
         <!--css-->
@@ -64,10 +64,14 @@
                 </div>
                 
                 <div class="select">
-                    <input type="radio" id="selectPrice" name="selectGraph" value="price"><label for="selectPrice">판매 금액</label>
+                    <input type="radio" id="selectPrice" name="selectGraph" value="price" checked="checked"><label for="selectPrice">판매 금액</label>
                     <input type="radio" id="selectQuantity" name="selectGraph" value="quantity"><label for="selectQuantity">판매 수량</label>
+                    
                     <!-- ---------------- 그래프 ---------------------->
-                    <script src="js/charts/getGraph(price_quantity)(Monthly).js"></script><!-- 이 js 파일 헤드로 올리면 그래프 작동 안함 -->
+                    <script src="js/charts/PJM_getGraph(Monthly).js"></script><!-- 이 js 파일 헤드로 올리면 그래프 작동 안함 -->
+                    <script src="js/charts/monthlyChartAJAX.js"></script>
+                    <script src="js/charts/monthlyChartCreator.js"></script>
+                    
                     <figure class="highcharts-figure">
                         <div id="container"></div>
                     </figure>
@@ -75,7 +79,7 @@
 
                 <div class="select3">  <!-- 기간 선택 select -->
                     <select name="selectYear" id="select3">
-                        <option selected>전체 기간</option>
+                        <option selected value="allPeriod">전체 기간</option>
                         <option value="2022">2022</option>
                         <option value="2021">2021</option>
                         <option value="2020">2020</option>
@@ -85,12 +89,12 @@
 
                 <div class="select4">  <!-- 종류 선택 select -->
                     <select name="clothType" id="select4" class="clothType-graph">
-                        <option selected>전체 의류</option>
-                        <option value="ct-1">티셔츠</option>
-                        <option value="ct-2">팬츠/스커트</option>
-                        <option value="ct-3">원피스</option>
-                        <option value="ct-4">니트/가디건</option>
-                        <option value="ct-5">자켓</option>                        
+                        <option selected value="ct-all">전체 의류</option>
+                        <option value="01">티셔츠</option>
+                        <option value="02">팬츠/스커트</option>
+                        <option value="03">원피스</option>
+                        <option value="04">니트/가디건</option>
+                        <option value="05">자켓</option>                        
                     </select>
                 </div>
 

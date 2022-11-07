@@ -70,10 +70,13 @@
                     <input type="radio" id="selectQuantity" name="selectGraph" value="Quantity"><label for="selectQuantity">판매 수량</label>
                                         
                     <!-- ---------------- 그래프 ---------------------->
-                    <script src="js/charts/getGraph(price_quantity)_onLoad.js" charset="utf-8"></script>      
+                    <script src="js/charts/getGraph(price_quantity)_onLoad.js" charset="utf-8"></script>
+                    <script src="js/charts/getGraph(price_quantity).js" charset="utf8"></script> <!-- 이 js파일 헤드로 올리면 그래프 작동 안함 -->
+                    <script src="js/charts/getGraph(select3).js" charset="utf8"></script>     
+                    <script src="js/charts/getGraph(select4).js" charset="utf8"></script>     
                     <script src="js/charts/chartAJAX.js" charset="utf8"></script>
                     <script src="js/charts/chartCreator.js" charset="utf8"></script>
-                    <script src="js/charts/getGraph(price_quantity).js" charset="utf8"></script> <!-- 이 js파일 헤드로 올리면 그래프 작동 안함 -->
+                    
                     <figure class="highcharts-figure">
                         <div id="container"></div>
                     </figure>
@@ -102,7 +105,7 @@
                 </div>
 
                 <div><!-- 월별 판매 비교 버튼 -->
-                    <input type="button" value="월별 판매 비교" id="monthCompare-btn" style="cursor:pointer" onclick="location.href='admin-orderStatsMonthly.jsp'">
+                    <input type="button" value="월별 판매 비교" id="monthCompare-btn" style="cursor:pointer" onclick="location.href='admin-orderStatsMonthly.do'">
                 </div>
 
                 <div><!-- 표 보기 버튼 -->

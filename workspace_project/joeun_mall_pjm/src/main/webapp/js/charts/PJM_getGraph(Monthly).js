@@ -1,12 +1,23 @@
-//select 3: 기간 선택
-//select 4: 의류 선택
-
 $(function(){
-
+	
+	$("input[name=selectGraph]").change(function(e){
+		
+		var graphType = e.currentTarget.value;
+		var sellYear = $('#select3').val();
+		var clothType = $('#select4').val();
+		
+		console.log("판매금액/판매수량: " + graphType);
+		console.log("판매년도: " + sellYear);
+		console.log("의류종류: " + clothType);
+		
+		monthlyChartAJAX(graphType, sellYear, clothType);
+		
+	})//
+/*	
     var selectedPeriod = '';    //선택된 기간
     var selectedCloth = '';     //선택된 의류
 
-    /* 기간 선택 값 불러오기 */
+    // 기간 선택 값 불러오기 
     $('#select3').change(function(e){
 
         console.log("--------기간 선택--------");        
@@ -106,7 +117,7 @@ $(function(){
         });
     });    
 
-    /* 의류 선택 값 불러오기*/
+    // 의류 선택 값 불러오기
     $('#select4').change(function(e){
         console.log("--------의류 선택--------");        
         console.log('선택된 의류(값):' + $('#select4').val());
@@ -190,4 +201,5 @@ $(function(){
             }]
         });    
     });
+    */
 });    

@@ -7,11 +7,11 @@ $(function(){
 		var clothType = $('#select4').val();
 		
 		console.log("판매금액/판매수량: " + graphType);
-		console.log("선택된 기간: " + $('#select3').val());
-	    console.log("선택된 의류: " + $('#select4').val());
+		console.log("선택된 기간: " + sellPeriod);
+	    console.log("선택된 의류: " + clothType);
 	    
-	    $('#select3_stat').val($('#select3').val());
-	    $('#select4_stat').val($('#select4').val());
+	    $('#select3_stat').val(sellPeriod);
+	    $('#select4_stat').val(clothType);
 	    
 	    chartAJAX(graphType, sellPeriod, clothType);
 		
