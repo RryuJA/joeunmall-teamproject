@@ -18,14 +18,12 @@ function monthlyChartAJAX(graphType, sellYear, clothType){
 					
 			//controller에서 받는 data정보 
 			var json = JSON.parse(msg);
-			//console.log(json[1].price);
-			
+			console.log("json 첫번째 요소의 price값: " + json[1].price);
+			console.log(json[1]);
 			//y축 -> 월별 판매 그래프에선 y축 데이터는 필요없음
-			
 			//차트 데이터
 			var price_quantity;
 			var unit;
-			var chartData = [];
 			
 			//ct-n에 해당하는 가격들 ct"n"PriceList에 넣어서 배열 생성
 			//이 배열들이 비어있을 경우 reduce해서 배열내 수들의 합을 구할때 오류 발생 -> 그래서 0을 하나씩 넣어줌
@@ -41,14 +39,16 @@ function monthlyChartAJAX(graphType, sellYear, clothType){
 			var OctList = [0];
 			var NovList = [0];
 			var DecList = [0];
+			var chartData = [];
 			
 			console.log(JanList);
+			
 			console.log(json.length);
 			console.log(parseInt(json[1].period.slice(2)));
 			console.log(parseInt(json[0].period.slice(2)));
 			
 			for(var i=0; i<json.length; i++){
-				if(100 < parseInt(json[i].period.slice(2)) <131){
+				if(100 < parseInt(json[i].period.slice(2)) < 131){
 					JanList.push(json[i].price);
 				} else if(200 < parseInt(json[i].period.slice(2)) < 231){
 					FebList.push(json[i].price);

@@ -6,6 +6,9 @@ $(function(){
 		var sellYear = $('#select3').val();
 		var clothType = $('#select4').val();
 		
+		$('#select3_stat').val(sellYear);
+		$('#select4_stat').val(clothType);
+		
 		console.log("판매금액/판매수량: " + graphType);
 		console.log("판매년도: " + sellYear);
 		console.log("의류종류: " + clothType);
