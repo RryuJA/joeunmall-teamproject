@@ -20,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MonthlyGraphDataRestController {
 	
-	//sellPeriod와 clothType이 둘다 전체기간/전체종류가 아닐경우 선별하는 함수
+/*	//sellPeriod와 clothType이 둘다 전체기간/전체종류가 아닐경우 선별하는 함수
 	private List<GraphDataVO> searchList(List<GraphDataVO> listAll, String clothType, String sellPeriod){
 		
 		List<GraphDataVO> resultList = new ArrayList<>();  
@@ -32,32 +32,47 @@ public class MonthlyGraphDataRestController {
 		}
 		return resultList;
 	}
+*/
+	//sellPeriod와 clothType이 둘다 전체기간/전체종류가 아닐경우 선별하는 함수
+		private List<GraphDataVO> searchList(List<GraphDataVO> listAll, String clothType, String sellPeriod){
+			
+			List<GraphDataVO> resultList = new ArrayList<>();  
+			for(int i=0; i<listAll.size(); i++) {
+				GraphDataVO graphdataVO = listAll.get(i);
+				if(graphdataVO.getCt().equals(clothType) && graphdataVO.getPeriod().substring(0, 2).equals(sellPeriod.substring(2))) {
+					resultList.add(graphdataVO);
+				}
+			}
+			return resultList;
+		}
 	
-	//clothType이 전체종류일 경우 선별하는 함수
+	
+	//clothType이 전체종류일 경우 선별하는 함수(판매기간만 선별하는 함수)
 	private List<GraphDataVO> searchList_typeAll(List<GraphDataVO> listAll, String sellPeriod){
 		
 		List<GraphDataVO> resultListTypeAll = new ArrayList<>();  
 		for(int i=0; i<listAll.size(); i++) {
 			GraphDataVO graphdataVO = listAll.get(i);
-			if(graphdataVO.getPeriod().equals(sellPeriod)) {
+			if(graphdataVO.getPeriod().substring(0, 2).equals(sellPeriod.substring(2))) {
 				resultListTypeAll.add(graphdataVO);
 			}
 		}
 		return resultListTypeAll;
 	}
 	
-	//sellPeriod가 전체기간일 경우 선별하는 함수
-		private List<GraphDataVO> searchList_periodAll(List<GraphDataVO> listAll, String clothType){
-			
-			List<GraphDataVO> resultListPeriodAll = new ArrayList<>();  
-			for(int i=0; i<listAll.size(); i++) {
-				GraphDataVO graphdataVO = listAll.get(i);
-				if(graphdataVO.getCt().equals(clothType)) {
-					resultListPeriodAll.add(graphdataVO);
-				}
+	//sellPeriod가 전체기간일 경우 선별하는 함수(clothType만 선별하는 함수)
+	private List<GraphDataVO> searchList_periodAll(List<GraphDataVO> listAll, String clothType){
+		
+		List<GraphDataVO> resultListPeriodAll = new ArrayList<>();  
+		for(int i=0; i<listAll.size(); i++) {
+			GraphDataVO graphdataVO = listAll.get(i);
+			if(graphdataVO.getCt().equals(clothType)) {
+				resultListPeriodAll.add(graphdataVO);
 			}
-			return resultListPeriodAll;
 		}
+		return resultListPeriodAll;
+	}
+
 	
 	/**
 	 * ex) http://localhost:8282/joeunmall_pjm/graphJson/priceQuantity?selectGraph=price
@@ -159,7 +174,7 @@ public class MonthlyGraphDataRestController {
 		log.info("getGraphJsonList");
 		log.info("sellPeriod: " + sellPeriod);
 		log.info("clothType: " + clothType);
-		
+		log.info("판매년도: " + sellPeriod.substring(2)); //allPeriod일 경우 앞에 두글자 짤려서 log에 나오긴 함
 		
 		List<GraphDataVO> listAll = new ArrayList<>();
 		GraphDataVO graphDataVO;
@@ -183,6 +198,25 @@ public class MonthlyGraphDataRestController {
 		listAll.add(new GraphDataVO("t-002", 23213, "220817", "01"));
 		listAll.add(new GraphDataVO("j-004", 23213, "220819", "05"));
 		listAll.add(new GraphDataVO("j-003", 13213, "220711", "05"));
+		listAll.add(new GraphDataVO("t-001", 232131, "210908", "01"));
+		listAll.add(new GraphDataVO("p-001", 13213, "210620", "02"));
+		listAll.add(new GraphDataVO("o-001", 23113, "210821", "03"));
+		listAll.add(new GraphDataVO("n-001", 31213, "210913", "04"));
+		listAll.add(new GraphDataVO("j-001", 13213, "210715", "05"));
+		listAll.add(new GraphDataVO("j-002", 13113, "210630", "05"));
+		listAll.add(new GraphDataVO("j-003", 23213, "210708", "05"));
+		listAll.add(new GraphDataVO("n-001", 33213, "210601", "04"));
+		listAll.add(new GraphDataVO("n-002", 11213, "210816", "04"));
+		listAll.add(new GraphDataVO("o-002", 12113, "210907", "03"));
+		listAll.add(new GraphDataVO("o-003", 12113, "210927", "03"));
+		listAll.add(new GraphDataVO("p-002", 13203, "210824", "02"));
+		listAll.add(new GraphDataVO("p-001", 10213, "210721", "02"));
+		listAll.add(new GraphDataVO("p-003", 13013, "210606", "02"));
+		listAll.add(new GraphDataVO("p-004", 43213, "210903", "02"));
+		listAll.add(new GraphDataVO("p-003", 10213, "210929", "02"));
+		listAll.add(new GraphDataVO("t-002", 23213, "210817", "01"));
+		listAll.add(new GraphDataVO("j-004", 23213, "210819", "05"));
+		listAll.add(new GraphDataVO("j-003", 13213, "210711", "05"));
 		
 		//Json 생성인데 배열구조임
 		if(clothType.equals("ct-all") && !sellPeriod.equals("allPeriod")) {
@@ -191,18 +225,16 @@ public class MonthlyGraphDataRestController {
 		} 
 		else if(sellPeriod.equals("allPeriod") && !clothType.equals("ct-all")) {
 			List<GraphDataVO> resultListPeriodAll = this.searchList_periodAll(listAll, clothType);
-			return new ResponseEntity<> (resultListPeriodAll, HttpStatus.OK);
+			return new ResponseEntity<> (resultListPeriodAll, HttpStatus.OK);//
 		} 
 		else if(!sellPeriod.equals("allPeriod") && !clothType.equals("ct-all")) {
 			List<GraphDataVO> resultList = this.searchList(listAll, clothType, sellPeriod);
 			return new ResponseEntity<> (resultList, HttpStatus.OK);
-		} 
+		}
 		else {
 			return new ResponseEntity<> (listAll, HttpStatus.OK);
 		}
 		//if문 끝
-		
-		
-	}
 	
-}//
+	}
+}	//

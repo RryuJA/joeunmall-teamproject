@@ -1,4 +1,7 @@
 <%@ page language = "java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.util.Calendar" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -83,12 +86,30 @@
                 </div>
 
                 <div class="select3">  <!-- 기간 선택 select -->
+                	<%
+                	Date now = new Date();
+               		Calendar cal1 = Calendar.getInstance();
+               		Calendar cal2 = Calendar.getInstance();
+               		Calendar cal3 = Calendar.getInstance();
+               		Calendar cal4 = Calendar.getInstance();
+               		Calendar cal5 = Calendar.getInstance();
+               		Calendar cal6 = Calendar.getInstance();
+                	SimpleDateFormat sf = new SimpleDateFormat("yyyy년 MM월");
+                	SimpleDateFormat sf2 = new SimpleDateFormat("yyMM");
+                    cal2.add(Calendar.MONTH, -1);
+                    cal3.add(Calendar.MONTH, -2);
+                    cal4.add(Calendar.MONTH, -3);
+                    cal5.add(Calendar.MONTH, -4);
+                    cal6.add(Calendar.MONTH, -5);
+                    %>
                     <select name="selectPeriod" id="select3">
                         <option selected value="allPeriod">전체 기간</option>
-                        <option value="2209">2022년 9월</option>
-                        <option value="2208">2022년 8월</option>
-                        <option value="2207">2022년 7월</option>
-                        <option value="2206">2022년 6월</option>
+                        <option value=<%=sf2.format(cal1.getTime())%>><%=sf.format(cal1.getTime())%></option>
+                        <option value=<%=sf2.format(cal2.getTime())%>><%=sf.format(cal2.getTime())%></option>
+                        <option value=<%=sf2.format(cal3.getTime())%>><%=sf.format(cal3.getTime())%></option>
+                        <option value=<%=sf2.format(cal4.getTime())%>><%=sf.format(cal4.getTime())%></option>
+                        <option value=<%=sf2.format(cal5.getTime())%>><%=sf.format(cal5.getTime())%></option>
+                        <option value=<%=sf2.format(cal6.getTime())%>><%=sf.format(cal6.getTime())%></option>
                     </select>
                 </div>
 

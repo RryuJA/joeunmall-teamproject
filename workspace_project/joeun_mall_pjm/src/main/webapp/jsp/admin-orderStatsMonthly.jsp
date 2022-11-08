@@ -1,4 +1,6 @@
 <%@ page language = "java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -69,6 +71,9 @@
                     
                     <!-- ---------------- 그래프 ---------------------->
                     <script src="js/charts/PJM_getGraph(Monthly).js"></script><!-- 이 js 파일 헤드로 올리면 그래프 작동 안함 -->
+                    <script src="js/charts/PJM_getGraph(Monthly)_onLoad.js"></script>
+                    <script src="js/charts/PJM_getGraph(Monthly)(select3).js"></script>
+                    <script src="js/charts/PJM_getGraph(Monthly)(select4).js"></script>
                     <script src="js/charts/monthlyChartAJAX.js"></script>
                     <script src="js/charts/monthlyChartCreator.js"></script>
                     
@@ -78,12 +83,17 @@
                 </div>
 
                 <div class="select3">  <!-- 기간 선택 select -->
+                	<%
+                	Date now = new Date();
+                	SimpleDateFormat sf = new SimpleDateFormat("yyyy");
+                    String today = sf.format(now);
+                    %>
                     <select name="selectYear" id="select3">
                         <option selected value="allPeriod">전체 기간</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                        <option value="2019">2019</option>
+                        <option value=<%=today%>><%=today%></option>
+                        <option value=<%=Integer.toString(Integer.parseInt(today)-1)%>><%=Integer.parseInt(today)-1%></option>
+                        <option value=<%=Integer.toString(Integer.parseInt(today)-2)%>><%=Integer.parseInt(today)-2%></option>
+                        <option value=<%=Integer.toString(Integer.parseInt(today)-3)%>><%=Integer.parseInt(today)-3%></option>
                     </select>
                 </div>
 
@@ -99,7 +109,7 @@
                 </div>
 
                 <div><!-- 전체 항목 보기 버튼 -->
-                    <input type="button" value="전체 항목 보기" id="monthCompare-btn" style="cursor:pointer" onclick="location.href='admin-orderStatsGraph.jsp'">
+                    <input type="button" value="전체 항목 보기" id="monthCompare-btn" style="cursor:pointer" onclick="location.href='admin-orderStatsGraph.do'">
                 </div>
 
                 <div><!-- 표 보기 버튼 -->
