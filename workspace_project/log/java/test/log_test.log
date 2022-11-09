@@ -1,0 +1,781 @@
+HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14h3m33s42ms248µs400ns).
+4. Connection closed
+4. Connection.close() returned 
+3. Connection closed
+3. Connection.close() returned 
+6. Connection closed
+6. Connection.close() returned 
+8. Connection closed
+8. Connection.close() returned 
+1. Connection closed
+1. Connection.close() returned 
+9. Connection closed
+9. Connection.close() returned 
+10. Connection closed
+10. Connection.close() returned 
+7. Connection closed
+7. Connection.close() returned 
+2. Connection closed
+2. Connection.close() returned 
+5. Connection closed
+5. Connection.close() returned 
+11. Connection opened
+11. Connection.new Connection returned 
+11. Connection.isReadOnly() returned false
+11. Connection.getAutoCommit() returned true
+12. Connection opened
+12. Connection.new Connection returned 
+12. Connection.isReadOnly() returned false
+12. Connection.getAutoCommit() returned true
+13. Connection opened
+13. Connection.new Connection returned 
+13. Connection.isReadOnly() returned false
+13. Connection.getAutoCommit() returned true
+14. Connection opened
+14. Connection.new Connection returned 
+14. Connection.isReadOnly() returned false
+14. Connection.getAutoCommit() returned true
+15. Connection opened
+15. Connection.new Connection returned 
+15. Connection.isReadOnly() returned false
+15. Connection.getAutoCommit() returned true
+16. Connection opened
+16. Connection.new Connection returned 
+16. Connection.isReadOnly() returned false
+16. Connection.getAutoCommit() returned true
+17. Connection opened
+17. Connection.new Connection returned 
+17. Connection.isReadOnly() returned false
+17. Connection.getAutoCommit() returned true
+18. Connection opened
+18. Connection.new Connection returned 
+18. Connection.isReadOnly() returned false
+18. Connection.getAutoCommit() returned true
+19. Connection opened
+19. Connection.new Connection returned 
+19. Connection.isReadOnly() returned false
+19. Connection.getAutoCommit() returned true
+20. Connection opened
+20. Connection.new Connection returned 
+20. Connection.isReadOnly() returned false
+20. Connection.getAutoCommit() returned true
+15. Connection closed
+15. Connection.close() returned 
+21. Connection opened
+21. Connection.new Connection returned 
+21. Connection.isReadOnly() returned false
+21. Connection.getAutoCommit() returned true
+20. Connection closed
+20. Connection.close() returned 
+22. Connection opened
+22. Connection.new Connection returned 
+22. Connection.isReadOnly() returned false
+22. Connection.getAutoCommit() returned true
+11. Connection closed
+11. Connection.close() returned 
+23. Connection opened
+23. Connection.new Connection returned 
+23. Connection.isReadOnly() returned false
+23. Connection.getAutoCommit() returned true
+13. Connection closed
+13. Connection.close() returned 
+24. Connection opened
+24. Connection.new Connection returned 
+24. Connection.isReadOnly() returned false
+24. Connection.getAutoCommit() returned true
+17. Connection closed
+17. Connection.close() returned 
+25. Connection opened
+25. Connection.new Connection returned 
+25. Connection.isReadOnly() returned false
+25. Connection.getAutoCommit() returned true
+19. Connection closed
+19. Connection.close() returned 
+26. Connection opened
+26. Connection.new Connection returned 
+26. Connection.isReadOnly() returned false
+26. Connection.getAutoCommit() returned true
+14. Connection closed
+14. Connection.close() returned 
+27. Connection opened
+27. Connection.new Connection returned 
+27. Connection.isReadOnly() returned false
+27. Connection.getAutoCommit() returned true
+18. Connection closed
+18. Connection.close() returned 
+28. Connection opened
+28. Connection.new Connection returned 
+28. Connection.isReadOnly() returned false
+28. Connection.getAutoCommit() returned true
+12. Connection closed
+12. Connection.close() returned 
+29. Connection opened
+29. Connection.new Connection returned 
+29. Connection.isReadOnly() returned false
+29. Connection.getAutoCommit() returned true
+16. Connection closed
+16. Connection.close() returned 
+30. Connection opened
+30. Connection.new Connection returned 
+30. Connection.isReadOnly() returned false
+30. Connection.getAutoCommit() returned true
+24. Connection closed
+24. Connection.close() returned 
+31. Connection opened
+31. Connection.new Connection returned 
+31. Connection.isReadOnly() returned false
+31. Connection.getAutoCommit() returned true
+25. Connection closed
+25. Connection.close() returned 
+32. Connection opened
+32. Connection.new Connection returned 
+32. Connection.isReadOnly() returned false
+32. Connection.getAutoCommit() returned true
+26. Connection closed
+26. Connection.close() returned 
+33. Connection opened
+33. Connection.new Connection returned 
+33. Connection.isReadOnly() returned false
+33. Connection.getAutoCommit() returned true
+22. Connection closed
+22. Connection.close() returned 
+34. Connection opened
+34. Connection.new Connection returned 
+34. Connection.isReadOnly() returned false
+34. Connection.getAutoCommit() returned true
+21. Connection closed
+21. Connection.close() returned 
+35. Connection opened
+35. Connection.new Connection returned 
+35. Connection.isReadOnly() returned false
+35. Connection.getAutoCommit() returned true
+29. Connection closed
+29. Connection.close() returned 
+36. Connection opened
+36. Connection.new Connection returned 
+36. Connection.isReadOnly() returned false
+36. Connection.getAutoCommit() returned true
+23. Connection closed
+23. Connection.close() returned 
+37. Connection opened
+37. Connection.new Connection returned 
+37. Connection.isReadOnly() returned false
+37. Connection.getAutoCommit() returned true
+28. Connection closed
+28. Connection.close() returned 
+38. Connection opened
+38. Connection.new Connection returned 
+38. Connection.isReadOnly() returned false
+38. Connection.getAutoCommit() returned true
+27. Connection closed
+27. Connection.close() returned 
+39. Connection opened
+39. Connection.new Connection returned 
+39. Connection.isReadOnly() returned false
+39. Connection.getAutoCommit() returned true
+30. Connection closed
+30. Connection.close() returned 
+40. Connection opened
+40. Connection.new Connection returned 
+40. Connection.isReadOnly() returned false
+40. Connection.getAutoCommit() returned true
+31. Connection closed
+31. Connection.close() returned 
+41. Connection opened
+41. Connection.new Connection returned 
+41. Connection.isReadOnly() returned false
+41. Connection.getAutoCommit() returned true
+34. Connection closed
+34. Connection.close() returned 
+42. Connection opened
+42. Connection.new Connection returned 
+42. Connection.isReadOnly() returned false
+42. Connection.getAutoCommit() returned true
+33. Connection closed
+33. Connection.close() returned 
+43. Connection opened
+43. Connection.new Connection returned 
+43. Connection.isReadOnly() returned false
+43. Connection.getAutoCommit() returned true
+37. Connection closed
+37. Connection.close() returned 
+44. Connection opened
+44. Connection.new Connection returned 
+44. Connection.isReadOnly() returned false
+44. Connection.getAutoCommit() returned true
+36. Connection closed
+36. Connection.close() returned 
+45. Connection opened
+45. Connection.new Connection returned 
+45. Connection.isReadOnly() returned false
+45. Connection.getAutoCommit() returned true
+32. Connection closed
+32. Connection.close() returned 
+46. Connection opened
+46. Connection.new Connection returned 
+46. Connection.isReadOnly() returned false
+46. Connection.getAutoCommit() returned true
+38. Connection closed
+38. Connection.close() returned 
+47. Connection opened
+47. Connection.new Connection returned 
+47. Connection.isReadOnly() returned false
+47. Connection.getAutoCommit() returned true
+35. Connection closed
+35. Connection.close() returned 
+48. Connection opened
+48. Connection.new Connection returned 
+48. Connection.isReadOnly() returned false
+48. Connection.getAutoCommit() returned true
+39. Connection closed
+39. Connection.close() returned 
+49. Connection opened
+49. Connection.new Connection returned 
+49. Connection.isReadOnly() returned false
+49. Connection.getAutoCommit() returned true
+40. Connection closed
+40. Connection.close() returned 
+50. Connection opened
+50. Connection.new Connection returned 
+50. Connection.isReadOnly() returned false
+50. Connection.getAutoCommit() returned true
+41. Connection closed
+41. Connection.close() returned 
+51. Connection opened
+51. Connection.new Connection returned 
+51. Connection.isReadOnly() returned false
+51. Connection.getAutoCommit() returned true
+45. Connection closed
+45. Connection.close() returned 
+52. Connection opened
+52. Connection.new Connection returned 
+52. Connection.isReadOnly() returned false
+52. Connection.getAutoCommit() returned true
+42. Connection closed
+42. Connection.close() returned 
+53. Connection opened
+53. Connection.new Connection returned 
+53. Connection.isReadOnly() returned false
+53. Connection.getAutoCommit() returned true
+43. Connection closed
+43. Connection.close() returned 
+54. Connection opened
+54. Connection.new Connection returned 
+54. Connection.isReadOnly() returned false
+54. Connection.getAutoCommit() returned true
+46. Connection closed
+46. Connection.close() returned 
+55. Connection opened
+55. Connection.new Connection returned 
+55. Connection.isReadOnly() returned false
+55. Connection.getAutoCommit() returned true
+49. Connection closed
+49. Connection.close() returned 
+56. Connection opened
+56. Connection.new Connection returned 
+56. Connection.isReadOnly() returned false
+56. Connection.getAutoCommit() returned true
+44. Connection closed
+44. Connection.close() returned 
+57. Connection opened
+57. Connection.new Connection returned 
+57. Connection.isReadOnly() returned false
+57. Connection.getAutoCommit() returned true
+47. Connection closed
+47. Connection.close() returned 
+58. Connection opened
+58. Connection.new Connection returned 
+58. Connection.isReadOnly() returned false
+58. Connection.getAutoCommit() returned true
+48. Connection closed
+48. Connection.close() returned 
+59. Connection opened
+59. Connection.new Connection returned 
+59. Connection.isReadOnly() returned false
+59. Connection.getAutoCommit() returned true
+50. Connection closed
+50. Connection.close() returned 
+60. Connection opened
+60. Connection.new Connection returned 
+60. Connection.isReadOnly() returned false
+60. Connection.getAutoCommit() returned true
+51. Connection closed
+51. Connection.close() returned 
+61. Connection opened
+61. Connection.new Connection returned 
+61. Connection.isReadOnly() returned false
+61. Connection.getAutoCommit() returned true
+53. Connection closed
+53. Connection.close() returned 
+62. Connection opened
+62. Connection.new Connection returned 
+62. Connection.isReadOnly() returned false
+62. Connection.getAutoCommit() returned true
+52. Connection closed
+52. Connection.close() returned 
+63. Connection opened
+63. Connection.new Connection returned 
+63. Connection.isReadOnly() returned false
+63. Connection.getAutoCommit() returned true
+57. Connection closed
+57. Connection.close() returned 
+64. Connection opened
+64. Connection.new Connection returned 
+64. Connection.isReadOnly() returned false
+64. Connection.getAutoCommit() returned true
+54. Connection closed
+54. Connection.close() returned 
+65. Connection opened
+65. Connection.new Connection returned 
+65. Connection.isReadOnly() returned false
+65. Connection.getAutoCommit() returned true
+58. Connection closed
+58. Connection.close() returned 
+66. Connection opened
+66. Connection.new Connection returned 
+66. Connection.isReadOnly() returned false
+66. Connection.getAutoCommit() returned true
+56. Connection closed
+56. Connection.close() returned 
+67. Connection opened
+67. Connection.new Connection returned 
+67. Connection.isReadOnly() returned false
+67. Connection.getAutoCommit() returned true
+55. Connection closed
+55. Connection.close() returned 
+68. Connection opened
+68. Connection.new Connection returned 
+68. Connection.isReadOnly() returned false
+68. Connection.getAutoCommit() returned true
+59. Connection closed
+59. Connection.close() returned 
+69. Connection opened
+69. Connection.new Connection returned 
+69. Connection.isReadOnly() returned false
+69. Connection.getAutoCommit() returned true
+60. Connection closed
+60. Connection.close() returned 
+70. Connection opened
+70. Connection.new Connection returned 
+70. Connection.isReadOnly() returned false
+70. Connection.getAutoCommit() returned true
+61. Connection closed
+61. Connection.close() returned 
+71. Connection opened
+71. Connection.new Connection returned 
+71. Connection.isReadOnly() returned false
+71. Connection.getAutoCommit() returned true
+62. Connection closed
+62. Connection.close() returned 
+72. Connection opened
+72. Connection.new Connection returned 
+72. Connection.isReadOnly() returned false
+72. Connection.getAutoCommit() returned true
+65. Connection closed
+65. Connection.close() returned 
+73. Connection opened
+73. Connection.new Connection returned 
+73. Connection.isReadOnly() returned false
+73. Connection.getAutoCommit() returned true
+64. Connection closed
+64. Connection.close() returned 
+74. Connection opened
+74. Connection.new Connection returned 
+74. Connection.isReadOnly() returned false
+74. Connection.getAutoCommit() returned true
+63. Connection closed
+63. Connection.close() returned 
+75. Connection opened
+75. Connection.new Connection returned 
+75. Connection.isReadOnly() returned false
+75. Connection.getAutoCommit() returned true
+67. Connection closed
+67. Connection.close() returned 
+76. Connection opened
+76. Connection.new Connection returned 
+76. Connection.isReadOnly() returned false
+76. Connection.getAutoCommit() returned true
+68. Connection closed
+68. Connection.close() returned 
+77. Connection opened
+77. Connection.new Connection returned 
+77. Connection.isReadOnly() returned false
+77. Connection.getAutoCommit() returned true
+66. Connection closed
+66. Connection.close() returned 
+78. Connection opened
+78. Connection.new Connection returned 
+78. Connection.isReadOnly() returned false
+78. Connection.getAutoCommit() returned true
+70. Connection closed
+70. Connection.close() returned 
+79. Connection opened
+79. Connection.new Connection returned 
+79. Connection.isReadOnly() returned false
+79. Connection.getAutoCommit() returned true
+69. Connection closed
+69. Connection.close() returned 
+80. Connection opened
+80. Connection.new Connection returned 
+80. Connection.isReadOnly() returned false
+80. Connection.getAutoCommit() returned true
+71. Connection closed
+71. Connection.close() returned 
+81. Connection opened
+81. Connection.new Connection returned 
+81. Connection.isReadOnly() returned false
+81. Connection.getAutoCommit() returned true
+72. Connection closed
+72. Connection.close() returned 
+82. Connection opened
+82. Connection.new Connection returned 
+82. Connection.isReadOnly() returned false
+82. Connection.getAutoCommit() returned true
+73. Connection closed
+73. Connection.close() returned 
+83. Connection opened
+83. Connection.new Connection returned 
+83. Connection.isReadOnly() returned false
+83. Connection.getAutoCommit() returned true
+74. Connection closed
+74. Connection.close() returned 
+84. Connection opened
+84. Connection.new Connection returned 
+84. Connection.isReadOnly() returned false
+84. Connection.getAutoCommit() returned true
+75. Connection closed
+75. Connection.close() returned 
+85. Connection opened
+85. Connection.new Connection returned 
+85. Connection.isReadOnly() returned false
+85. Connection.getAutoCommit() returned true
+77. Connection closed
+77. Connection.close() returned 
+86. Connection opened
+86. Connection.new Connection returned 
+86. Connection.isReadOnly() returned false
+86. Connection.getAutoCommit() returned true
+78. Connection closed
+78. Connection.close() returned 
+87. Connection opened
+87. Connection.new Connection returned 
+87. Connection.isReadOnly() returned false
+87. Connection.getAutoCommit() returned true
+76. Connection closed
+76. Connection.close() returned 
+88. Connection opened
+88. Connection.new Connection returned 
+88. Connection.isReadOnly() returned false
+88. Connection.getAutoCommit() returned true
+79. Connection closed
+79. Connection.close() returned 
+89. Connection opened
+89. Connection.new Connection returned 
+89. Connection.isReadOnly() returned false
+89. Connection.getAutoCommit() returned true
+80. Connection closed
+80. Connection.close() returned 
+90. Connection opened
+90. Connection.new Connection returned 
+90. Connection.isReadOnly() returned false
+90. Connection.getAutoCommit() returned true
+82. Connection closed
+82. Connection.close() returned 
+91. Connection opened
+91. Connection.new Connection returned 
+91. Connection.isReadOnly() returned false
+91. Connection.getAutoCommit() returned true
+83. Connection closed
+83. Connection.close() returned 
+92. Connection opened
+92. Connection.new Connection returned 
+92. Connection.isReadOnly() returned false
+92. Connection.getAutoCommit() returned true
+81. Connection closed
+81. Connection.close() returned 
+93. Connection opened
+93. Connection.new Connection returned 
+93. Connection.isReadOnly() returned false
+93. Connection.getAutoCommit() returned true
+84. Connection closed
+84. Connection.close() returned 
+94. Connection opened
+94. Connection.new Connection returned 
+94. Connection.isReadOnly() returned false
+94. Connection.getAutoCommit() returned true
+85. Connection closed
+85. Connection.close() returned 
+95. Connection opened
+95. Connection.new Connection returned 
+95. Connection.isReadOnly() returned false
+95. Connection.getAutoCommit() returned true
+86. Connection closed
+86. Connection.close() returned 
+96. Connection opened
+96. Connection.new Connection returned 
+96. Connection.isReadOnly() returned false
+96. Connection.getAutoCommit() returned true
+88. Connection closed
+88. Connection.close() returned 
+97. Connection opened
+97. Connection.new Connection returned 
+97. Connection.isReadOnly() returned false
+97. Connection.getAutoCommit() returned true
+87. Connection closed
+87. Connection.close() returned 
+98. Connection opened
+98. Connection.new Connection returned 
+98. Connection.isReadOnly() returned false
+98. Connection.getAutoCommit() returned true
+89. Connection closed
+89. Connection.close() returned 
+99. Connection opened
+99. Connection.new Connection returned 
+99. Connection.isReadOnly() returned false
+99. Connection.getAutoCommit() returned true
+90. Connection closed
+90. Connection.close() returned 
+100. Connection opened
+100. Connection.new Connection returned 
+100. Connection.isReadOnly() returned false
+100. Connection.getAutoCommit() returned true
+91. Connection closed
+91. Connection.close() returned 
+101. Connection opened
+101. Connection.new Connection returned 
+101. Connection.isReadOnly() returned false
+101. Connection.getAutoCommit() returned true
+92. Connection closed
+92. Connection.close() returned 
+102. Connection opened
+102. Connection.new Connection returned 
+102. Connection.isReadOnly() returned false
+102. Connection.getAutoCommit() returned true
+93. Connection closed
+93. Connection.close() returned 
+103. Connection opened
+103. Connection.new Connection returned 
+103. Connection.isReadOnly() returned false
+103. Connection.getAutoCommit() returned true
+96. Connection closed
+96. Connection.close() returned 
+104. Connection opened
+104. Connection.new Connection returned 
+104. Connection.isReadOnly() returned false
+104. Connection.getAutoCommit() returned true
+95. Connection closed
+95. Connection.close() returned 
+105. Connection opened
+105. Connection.new Connection returned 
+105. Connection.isReadOnly() returned false
+105. Connection.getAutoCommit() returned true
+94. Connection closed
+94. Connection.close() returned 
+106. Connection opened
+106. Connection.new Connection returned 
+106. Connection.isReadOnly() returned false
+106. Connection.getAutoCommit() returned true
+98. Connection closed
+98. Connection.close() returned 
+107. Connection opened
+107. Connection.new Connection returned 
+107. Connection.isReadOnly() returned false
+107. Connection.getAutoCommit() returned true
+97. Connection closed
+97. Connection.close() returned 
+108. Connection opened
+108. Connection.new Connection returned 
+108. Connection.isReadOnly() returned false
+108. Connection.getAutoCommit() returned true
+99. Connection closed
+99. Connection.close() returned 
+109. Connection opened
+109. Connection.new Connection returned 
+109. Connection.isReadOnly() returned false
+109. Connection.getAutoCommit() returned true
+100. Connection closed
+100. Connection.close() returned 
+110. Connection opened
+110. Connection.new Connection returned 
+110. Connection.isReadOnly() returned false
+110. Connection.getAutoCommit() returned true
+101. Connection closed
+101. Connection.close() returned 
+111. Connection opened
+111. Connection.new Connection returned 
+111. Connection.isReadOnly() returned false
+111. Connection.getAutoCommit() returned true
+103. Connection closed
+103. Connection.close() returned 
+112. Connection opened
+112. Connection.new Connection returned 
+112. Connection.isReadOnly() returned false
+112. Connection.getAutoCommit() returned true
+102. Connection closed
+102. Connection.close() returned 
+113. Connection opened
+113. Connection.new Connection returned 
+113. Connection.isReadOnly() returned false
+113. Connection.getAutoCommit() returned true
+105. Connection closed
+105. Connection.close() returned 
+114. Connection opened
+114. Connection.new Connection returned 
+114. Connection.isReadOnly() returned false
+114. Connection.getAutoCommit() returned true
+106. Connection closed
+106. Connection.close() returned 
+115. Connection opened
+115. Connection.new Connection returned 
+115. Connection.isReadOnly() returned false
+115. Connection.getAutoCommit() returned true
+107. Connection closed
+107. Connection.close() returned 
+116. Connection opened
+116. Connection.new Connection returned 
+116. Connection.isReadOnly() returned false
+116. Connection.getAutoCommit() returned true
+104. Connection closed
+104. Connection.close() returned 
+117. Connection opened
+117. Connection.new Connection returned 
+117. Connection.isReadOnly() returned false
+117. Connection.getAutoCommit() returned true
+108. Connection closed
+108. Connection.close() returned 
+118. Connection opened
+118. Connection.new Connection returned 
+118. Connection.isReadOnly() returned false
+118. Connection.getAutoCommit() returned true
+109. Connection closed
+109. Connection.close() returned 
+119. Connection opened
+119. Connection.new Connection returned 
+119. Connection.isReadOnly() returned false
+119. Connection.getAutoCommit() returned true
+110. Connection closed
+110. Connection.close() returned 
+120. Connection opened
+120. Connection.new Connection returned 
+120. Connection.isReadOnly() returned false
+120. Connection.getAutoCommit() returned true
+111. Connection closed
+111. Connection.close() returned 
+121. Connection opened
+121. Connection.new Connection returned 
+121. Connection.isReadOnly() returned false
+121. Connection.getAutoCommit() returned true
+113. Connection closed
+113. Connection.close() returned 
+122. Connection opened
+122. Connection.new Connection returned 
+122. Connection.isReadOnly() returned false
+122. Connection.getAutoCommit() returned true
+112. Connection closed
+112. Connection.close() returned 
+123. Connection opened
+123. Connection.new Connection returned 
+123. Connection.isReadOnly() returned false
+123. Connection.getAutoCommit() returned true
+115. Connection closed
+115. Connection.close() returned 
+124. Connection opened
+124. Connection.new Connection returned 
+124. Connection.isReadOnly() returned false
+124. Connection.getAutoCommit() returned true
+116. Connection closed
+116. Connection.close() returned 
+125. Connection opened
+125. Connection.new Connection returned 
+125. Connection.isReadOnly() returned false
+125. Connection.getAutoCommit() returned true
+114. Connection closed
+114. Connection.close() returned 
+126. Connection opened
+126. Connection.new Connection returned 
+126. Connection.isReadOnly() returned false
+126. Connection.getAutoCommit() returned true
+117. Connection closed
+117. Connection.close() returned 
+127. Connection opened
+127. Connection.new Connection returned 
+127. Connection.isReadOnly() returned false
+127. Connection.getAutoCommit() returned true
+118. Connection closed
+118. Connection.close() returned 
+128. Connection opened
+128. Connection.new Connection returned 
+128. Connection.isReadOnly() returned false
+128. Connection.getAutoCommit() returned true
+120. Connection closed
+120. Connection.close() returned 
+129. Connection opened
+129. Connection.new Connection returned 
+129. Connection.isReadOnly() returned false
+129. Connection.getAutoCommit() returned true
+119. Connection closed
+119. Connection.close() returned 
+130. Connection opened
+130. Connection.new Connection returned 
+130. Connection.isReadOnly() returned false
+130. Connection.getAutoCommit() returned true
+121. Connection closed
+121. Connection.close() returned 
+131. Connection opened
+131. Connection.new Connection returned 
+131. Connection.isReadOnly() returned false
+131. Connection.getAutoCommit() returned true
+123. Connection closed
+123. Connection.close() returned 
+132. Connection opened
+132. Connection.new Connection returned 
+132. Connection.isReadOnly() returned false
+132. Connection.getAutoCommit() returned true
+122. Connection closed
+122. Connection.close() returned 
+133. Connection opened
+133. Connection.new Connection returned 
+133. Connection.isReadOnly() returned false
+133. Connection.getAutoCommit() returned true
+124. Connection closed
+124. Connection.close() returned 
+134. Connection opened
+134. Connection.new Connection returned 
+134. Connection.isReadOnly() returned false
+134. Connection.getAutoCommit() returned true
+125. Connection closed
+125. Connection.close() returned 
+135. Connection opened
+135. Connection.new Connection returned 
+135. Connection.isReadOnly() returned false
+135. Connection.getAutoCommit() returned true
+127. Connection closed
+127. Connection.close() returned 
+136. Connection opened
+136. Connection.new Connection returned 
+136. Connection.isReadOnly() returned false
+136. Connection.getAutoCommit() returned true
+126. Connection closed
+126. Connection.close() returned 
+137. Connection opened
+137. Connection.new Connection returned 
+137. Connection.isReadOnly() returned false
+137. Connection.getAutoCommit() returned true
+128. Connection closed
+128. Connection.close() returned 
+138. Connection opened
+138. Connection.new Connection returned 
+138. Connection.isReadOnly() returned false
+138. Connection.getAutoCommit() returned true
+129. Connection closed
+129. Connection.close() returned 
+139. Connection opened
+139. Connection.new Connection returned 
+139. Connection.isReadOnly() returned false
+139. Connection.getAutoCommit() returned true
+130. Connection closed
+130. Connection.close() returned 
+140. Connection opened
+140. Connection.new Connection returned 
+140. Connection.isReadOnly() returned false
+140. Connection.getAutoCommit() returned true

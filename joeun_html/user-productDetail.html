@@ -11,7 +11,8 @@
     <!--javascript-->
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/user-productDetail-topBtn.js"></script> <!-- topButton -->
-    <script src="js/user-productDetail-zoom.js"></script> <!-- 이미지 돋보기 -->
+    <script src="js/user-imageChange.js"></script>
+    <script src="js/user-productDetail-optionSelect.js"></script>
 
     <!--css-->
     <!--header와 footer는 고정-->
@@ -42,18 +43,22 @@
         </header>
         
         <article>
-            <!-- 사진 넣는 칸 여기임 -->
-            <section><!-- 마우스 올리면 확대되는거 하고싶어서 section으로 함 -->
+            <!-- 사진 넣는 칸 -->
+            <section>
                 <div class="product-img">
                     <div class="main-img">
-                        <img class="target" src="images/logo/logo_mark.png" data-zoom="2">
+                        <img id="img1" class="target1" src="images/logo/logo_mark.png" data-zoom="2">
+                        <img id="img2" class="target2" src="images/icon/icon_minus.png" data-zoom="2">
+                        <img id="img3" class="target3" src="images/icon/icon_page_next.png" data-zoom="2">
+                        <img id="img4" class="target4" src="images/icon/icon_page_nextnext.png" data-zoom="2">
+                        <img id="img5" class="target5" src="images/icon/icon_page_prev.png" data-zoom="2">
                     </div>
                     <div id="sub-img">
                         <p><img id="sub-img1" src="images/logo/logo_mark.png"></p>
-                        <p><img id="sub-img2" src="images/logo/logo_mark.png"></p>
-                        <p><img id="sub-img3" src="images/logo/logo_mark.png"></p>
-                        <p><img id="sub-img4" src="images/logo/logo_mark.png"></p>
-                        <p><img id="sub-img5" src="images/logo/logo_mark.png"></p>
+                        <p><img id="sub-img2" src="images/icon/icon_minus.png"></p>
+                        <p><img id="sub-img3" src="images/icon/icon_page_next.png"></p>
+                        <p><img id="sub-img4" src="images/icon/icon_page_nextnext.png"></p>
+                        <p><img id="sub-img5" src="images/icon/icon_page_prev.png"></p>
                     </div>
                 </div>
             </section>
@@ -80,10 +85,12 @@
                 <!-- 옵션 -->
                 <div class="option">
                     옵션
-                    <select class="optionSelect"> <!-- 옵션 선택시 이벤트 javascript -->
+                    <select class="optionSelect" id="optionSelect"> <!-- 옵션 선택시 이벤트 javascript -->
                         <option value="1">1</option>
+                        <option value="2">2</option>
                     </select> 
-                    <div>   <!-- 옵션 선택한 목록 상자 -->
+                    <div class="layer">   <!-- 옵션 선택한 목록 상자 -->
+                        asdf
                         <hr style="height: 100px">
                     </div>
                 </div>

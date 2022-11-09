@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: 돋움;
+}
+
+/* 
+    웹 페이지의 max-width가 1366px일 때 적용되는 스타일
+    == 웹 페이지의 width가 1366px보다 작을 때 적용되는 스타일
+*/
+@media (max-width: 1366px) {
+    /*
+        position: HTML 요소가 위치를 결정하는 방식
+            - absolute: 절대 위치 지정 방식, 위치가 설정된 상위 요소를 기준으로 위치를 설정
+        left: 왼쪽을 기준으로 멀어지는 거리를 지정
+        transform: X축과 Y축을 따라 지정된 거리만큼 요소를 이동시킴
+            - translateX(): 좌우(수평방향)의 이동거리 값을 지정 
+    */
+    #wrap {
+        position: absolute;
+        left: 0%;
+        transform: translateX(0%);
+        width: 1366px;
+        height: 768px;
+        background-color: #FBFBFB;
+        border-style: solid;
+        border-width: thin;
+        border-color: black;
+    }
+}
+
+/* 
+    웹 페이지의 min-width가 1366px일 때 적용되는 스타일
+    == 웹 페이지의 width가 1366px보다 클 때 적용되는 스타일
+*/
+@media (min-width: 1366px) {
+    #wrap {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1366px;
+        height: 768px;
+        background-color: #FBFBFB;
+        border-style: solid;
+        border-width: thin;
+        border-color: black;
+    }
+
+#logo {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+#first-login {
+    display: block;
+    background-color: #818181;
+    font-family: 돋움;
+    font-size: 20pt;
+    font-weight: normal;
+    color: white;
+    margin: 60px auto 0px;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+#first-login:hover {
+    background-color: #646464;
+    font-weight: bold;
+}

@@ -9,29 +9,38 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="arrow" key="selection"/>
+		<item value="06" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="arrow"/>
-			<item value="icon"/>
-			<item value="images/logo/"/>
-			<item value="COMMENT"/>
-			<item value="`"/>
-			<item value="&apos;"/>
-			<item value="h2database"/>
-			<item value="unique"/>
-			<item value="apple"/>
-			<item value="sony"/>
-			<item value="pettern"/>
-			<item value="pattern"/>
-			<item value="mybatis"/>
-			<item value="ibatis"/>
-			<item value="boot"/>
+			<item value="06"/>
+			<item value="22"/>
+			<item value="JanList"/>
+			<item value="/graphJsonVO/priceQuantity"/>
+			<item value="/graphJsonVO/monthlyGraphData"/>
+			<item value="ct"/>
+			<item value="ct-5"/>
+			<item value="ct-4"/>
+			<item value="ct-3"/>
+			<item value="ct-2"/>
+			<item value="ct-1"/>
+			<item value="id"/>
+			<item value="categories"/>
+			<item value="필터"/>
+			<item value="selectGraph"/>
 		</list>
 		<list key="replacehistory">
+			<item value="21"/>
+			<item value="period"/>
+			<item value="05"/>
+			<item value="04"/>
+			<item value="03"/>
+			<item value="02"/>
+			<item value="01"/>
+			<item value="ct"/>
+			<item value="String"/>
 			<item value="&lt;c:url value =&apos;/images/logo/"/>
 			<item value=""/>
 		</list>

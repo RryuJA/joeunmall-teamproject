@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Nov 01 16:13:29 KST 2022
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1667286809988
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact junit\:junit\:jar\:4.7 from/to central (https\://repo.maven.apache.org/maven2)\: C\:\\joeunmall-teamproject\\repository\\maven\\maven_repository_3_9\\junit\\junit\\4.7\\aether-a47a65c2-d0d6-4916-aea8-3d7662bf46a3-junit-4.7.jar-in-progress (\uC9C0\uC815\uB41C \uD30C\uC77C\uC744 \uCC3E\uC744 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4)

@@ -1,0 +1,132 @@
+package com.joeun.joeunmall.vo;
+
+import java.io.Serializable;
+import java.util.Date;
+
+/**
+ * 1:1문의 VO(값 객체)
+ * 
+ * @author PJM
+ */ 
+
+public class InquiryTBLVO implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/** 문의 번호 : '문의일자 6자리' + '해당년도 문의순서 3자리' */
+	private String inquiryIndex;
+	
+	/** 고객 번호 : '가입년도 4자리' + '해당년도 가입순서 3자리' */
+	private String userIndex;
+	
+	/** 문의 일자 */
+	private Date inquiryDate;
+	
+	/** 문의 항목 */
+	private String inquiryCategory;
+	
+	/** 문의 처리 상태 */
+	private String inquiryState;
+	
+	/** 문의 제목 */
+	private String inquiryTitle;
+	
+	/** 문의 내용 */
+	private String inquiryContent;
+	
+	/** 문의 답변 */
+	private String inquiryAnswer;
+	
+	public InquiryVO() {
+		
+	}
+	
+	public InquiryTBLVO(String inquiryIndex, String userIndex, Date inquiryDate, String inquiryCategory, String inquiryState, String inquiryTitle, String inquiryContent, String inquiryAnswer) {
+		this.inquiryIndex = inquiryIndex;
+		this.userIndex = userIndex;
+		this.inquiryDate = inquiryDate;
+		this.inquiryCategory = inquiryCategory;
+		this.inquiryState = inquiryState;
+		this.inquiryTitle = inquiryTitle;
+		this.inquiryContent = inquiryContent;
+		this.inquiryAnswer = inquiryAnswer;
+	}
+
+	public String getInquiryIndex() {
+		return inquiryIndex;
+	}
+
+	public void setInquiryIndex(String inquiryIndex) {
+		this.inquiryIndex = inquiryIndex;
+	}
+
+	public String getUserIndex() {
+		return userIndex;
+	}
+
+	public void setUserIndex(String userIndex) {
+		this.userIndex = userIndex;
+	}
+
+	public Date getInquiryDate() {
+		return inquiryDate;
+	}
+
+	public void setInquiryDate(Date inquiryDate) {
+		this.inquiryDate = inquiryDate;
+	}
+
+	public String getInquiryCategory() {
+		return inquiryCategory;
+	}
+
+	public void setInquiryCategory(String inquiryCategory) {
+		this.inquiryCategory = inquiryCategory;
+	}
+
+	public String getInquiryState() {
+		return inquiryState;
+	}
+
+	public void setInquiryState(String inquiryState) {
+		this.inquiryState = inquiryState;
+	}
+
+	public String getInquiryTitle() {
+		return inquiryTitle;
+	}
+
+	public void setInquiryTitle(String inquiryTitle) {
+		this.inquiryTitle = inquiryTitle;
+	}
+
+	public String getInquiryContent() {
+		return inquiryContent;
+	}
+
+	public void setInquiryContent(String inquiryContent) {
+		this.inquiryContent = inquiryContent;
+	}
+
+	public String getInquiryAnswer() {
+		return inquiryAnswer;
+	}
+
+	public void setInquiryAnswer(String inquiryAnswer) {
+		this.inquiryAnswer = inquiryAnswer;
+	}
+
+	@Override
+	public String toString() {
+		return "InquiryTBLVO [inquiryIndex=" + inquiryIndex + ", userIndex=" + userIndex + ", inquiryDate="
+				+ inquiryDate + ", inquiryCategory=" + inquiryCategory + ", inquiryState=" + inquiryState
+				+ ", inquiryTitle=" + inquiryTitle + ", inquiryContent=" + inquiryContent + ", inquiryAnswer="
+				+ inquiryAnswer + "]";
+	}
+	
+	
+	
+}

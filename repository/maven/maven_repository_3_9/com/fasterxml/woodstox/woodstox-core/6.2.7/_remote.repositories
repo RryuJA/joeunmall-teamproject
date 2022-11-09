@@ -1,5 +1,6 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Mon Oct 24 17:09:44 KST 2022
+#Tue Nov 01 11:19:00 KST 2022
+woodstox-core-6.2.7-javadoc.jar>central=
 woodstox-core-6.2.7-sources.jar>central=
 woodstox-core-6.2.7.jar>central=
 woodstox-core-6.2.7.pom>central=
