@@ -1,0 +1,5 @@
+package com.joeun.joeunmall.vo;
+
+public class InquiryManageVO {
+
+}

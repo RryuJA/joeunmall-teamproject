@@ -1,0 +1,19 @@
+package com.joeun.joeunmall.controller2;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+//서버가 올라올 때 이 클레스는 메모리에 자동으로 로딩됨.
+
+public class MainController {
+
+	@RequestMapping("/")
+	//url과 method를 연결해주는 역활
+	public String main(Model model) {
+		model.addAttribute("message", "welcome");
+		return "main";
+	}
+	
+}

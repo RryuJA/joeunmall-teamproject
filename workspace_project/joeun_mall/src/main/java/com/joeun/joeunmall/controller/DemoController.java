@@ -55,58 +55,6 @@ public class DemoController {
 		return "mypage";
 	}
 
-	@GetMapping("/admin/admin-productManage.do")
-	public String adminProductManage(Model model) {
-		log.info("admin-productManage");
-		
-		List<ProductVO> productList = new ArrayList<>();
-		ProductVO productVO;
-		
-		
-		productVO = new ProductVO("22_01_001", "202210_001", "일승은", "파란티셔츠1", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-
-		productVO = new ProductVO("22_01_002", "202210_002", "이승은", "파란티셔츠2", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-
-		productVO = new ProductVO("22_01_003", "202210_003", "삼승은", "파란티셔츠3", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-		
-		productVO = new ProductVO("22_01_004", "202210_004", "사승은", "파란티셔츠4", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-		
-		productVO = new ProductVO("22_01_005", "202210_005", "오승은", "파란티셔츠5", 
-				"파랑_100", 500000000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-		
-		productVO = new ProductVO("22_01_006", "202210_006", "육승은", "파란티셔츠6", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-		
-		productVO = new ProductVO("22_01_007", "202210_007", "칠승은", "파란티셔츠7", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-		
-		productVO = new ProductVO("22_01_008", "202210_008", "팔승은", "파란티셔츠8", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-		
-		productVO = new ProductVO("22_01_009", "202210_008", "팔승은", "파란티셔츠8", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-		
-		productVO = new ProductVO("22_01_010", "202210_008", "팔승은", "파란티셔츠8", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-		
-		model.addAttribute("productList", productList);
-		
-		return "/admin/admin-productManage";
-	}
 	@GetMapping("/admin/admin-productRegistration.do")
 	public String adminProductRegistration() {
 		log.info("admin-productRegistration");
@@ -198,12 +146,7 @@ public class DemoController {
 		log.info("OrderVO = " + orderVO);
 		return "/admin/admin-orderManage";
 	}
-	
-	@GetMapping("/admin/admin-inquiryManage.do")
-	public String adminInquiryManage() {
-		log.info("admin-inquiryManage");
-		return "/admin/admin-inquiryManage";
-	}
+
 	
 	@GetMapping("/admin/admin-inquiryDetails.do")
 	public String adminInquiryDetails(Model model) throws ParseException {
@@ -231,18 +174,6 @@ public class DemoController {
 		log.info("inquiryDTO = " + inquiryDTO);
 		return "/admin/admin-inquiryManage";
 	}
-	
-	@GetMapping("/admin/admin-orderManage.do")
-	public String adminOrderManage() {
-		log.info("admin-orderManage");
-		return "/admin/admin-orderManage";
-	}
-	
-	@GetMapping("/admin/admin-customerManage.do")
-	public String adminCustomerManage() {
-		log.info("admin-customerManage");
-		return "/admin/admin-customerManage";
-	}
-	
+
 	
 }
