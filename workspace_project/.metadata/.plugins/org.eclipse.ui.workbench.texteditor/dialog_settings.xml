@@ -9,12 +9,14 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="JanList" key="selection"/>
+		<item value="06" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="06"/>
+			<item value="22"/>
 			<item value="JanList"/>
 			<item value="/graphJsonVO/priceQuantity"/>
 			<item value="/graphJsonVO/monthlyGraphData"/>
@@ -28,10 +30,9 @@
 			<item value="categories"/>
 			<item value="필터"/>
 			<item value="selectGraph"/>
-			<item value="타이틀"/>
-			<item value="값`"/>
 		</list>
 		<list key="replacehistory">
+			<item value="21"/>
 			<item value="period"/>
 			<item value="05"/>
 			<item value="04"/>

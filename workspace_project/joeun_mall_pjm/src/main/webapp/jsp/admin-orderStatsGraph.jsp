@@ -96,11 +96,12 @@
                		Calendar cal6 = Calendar.getInstance();
                 	SimpleDateFormat sf = new SimpleDateFormat("yyyy년 MM월");
                 	SimpleDateFormat sf2 = new SimpleDateFormat("yyMM");
-                    cal2.add(Calendar.MONTH, -1);
-                    cal3.add(Calendar.MONTH, -2);
-                    cal4.add(Calendar.MONTH, -3);
-                    cal5.add(Calendar.MONTH, -4);
-                    cal6.add(Calendar.MONTH, -5);
+                	cal1.add(Calendar.MONTH, -1);
+                    cal2.add(Calendar.MONTH, -2);
+                    cal3.add(Calendar.MONTH, -3);
+                    cal4.add(Calendar.MONTH, -4);
+                    cal5.add(Calendar.MONTH, -5);
+                    cal6.add(Calendar.MONTH, -6);
                     %>
                     <select name="selectPeriod" id="select3">
                         <option selected value="allPeriod">전체 기간</option>
