@@ -28,7 +28,8 @@ body {
         left: 0%;
         transform: translateX(0%);
         width: 1366px;
-        height: 768px;
+        /*height: 768px;*/
+        height: 100vh;
         background-color: #FBFBFB;
         border-style: solid;
         border-width: thin;
@@ -46,7 +47,8 @@ body {
         left: 50%;
         transform: translateX(-50%);
         width: 1366px;
-        height: 768px;
+        /*height: 768px;*/
+        height: 100vh;
         background-color: #FBFBFB;
         border-style: solid;
         border-width: thin;

@@ -8,7 +8,7 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<!-- <param-value>/WEB-INF/spring/root-context.xml</param-value> -->
-		<param-value>classpath:spring/*-context.xml,/WEB-INF/spring/appServlet/security-context.xml
+		<param-value>classpath:spring/*-context.xml
 		</param-value>
 		
 	</context-param>
@@ -27,8 +27,7 @@
 			
 			<!-- swagger metadata 추가 -->
 			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml,
-						 /WEB-INF/spring/appServlet/swagger-context.xml,
-					 	/WEB-INF/spring/appServlet/security-context.xml
+						 /WEB-INF/spring/appServlet/swagger-context.xml
 			</param-value>
 		</init-param>
 		
@@ -68,7 +67,7 @@
     </filter-mapping>
     
     <!-- Spring Security Filter -->
-	<filter>
+	<!-- <filter>
 	  <filter-name>springSecurityFilterChain</filter-name>
 	  <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
 	</filter>
@@ -76,7 +75,7 @@
 	<filter-mapping>
 	  <filter-name>springSecurityFilterChain</filter-name>
 	  <url-pattern>/*</url-pattern>
-	</filter-mapping>
+	</filter-mapping> -->
     
     <!-- page error patch -->
     <error-page>

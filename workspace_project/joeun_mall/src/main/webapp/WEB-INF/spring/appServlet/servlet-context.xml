@@ -38,6 +38,16 @@
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
 	</context:component-scan>
 	
+	<!-- 관리자 인증 interceptor -->
+	<interceptors>
+		<interceptor>
+			<mapping path="/admin/**"/>
+			<exclude-mapping path="/admin/admin-login.do"/>
+			<exclude-mapping path="/admin/admin-loginProc.do"/>
+			<exclude-mapping path="/logout.do"/>
+			<beans:bean class="com.joeun.joeunmall.interceptor.AdminInterceptor"/>
+		</interceptor>
+	</interceptors>
 	
 	
 </beans:beans>

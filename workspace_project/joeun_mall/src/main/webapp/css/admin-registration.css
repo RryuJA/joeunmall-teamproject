@@ -137,3 +137,9 @@ img[src*="icon_plus"], img[src*="icon_minus"] {
   overflow: visible;
   /* height: 100px;  */
 }
+
+/*상품 등록 내용*/
+#regist-section {
+	overflow-y:auto;
+	height: 100vh;
+}

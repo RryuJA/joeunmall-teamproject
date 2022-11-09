@@ -48,11 +48,12 @@ body {
         border-width: thin;
         border-color: black;
     }
+}
 
 #logo {
     display: block;
     width: 200px;
-    height: auto;
+    height: 80px;
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: auto;
@@ -78,4 +79,13 @@ body {
 #first-login:hover {
     background-color: #646464;
     font-weight: bold;
+}
+
+.login {
+	text-align: center;
+}
+
+#login-box {
+	width:220px;
+	margin:auto;
 }

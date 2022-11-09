@@ -30,15 +30,15 @@
             <!--html 페이지에 해당하는 li태그에 class="thispage" 지정-->
             <!--class가 "li-lower"에 해당하는 경우, 상위 li에도 class="thispage" 지정-->
             <!--ex) <li class="li-lower thispage"> -->
-            <li><a href="admin-orderManage.html">주문관리</a></li>
+            <li><a href="admin-orderDetails.do">주문관리</a></li>
             <li><a href="admin-orderStats.html">주문통계</a></li>
-            <li class="thispage"><a href="admin-productManage.html">상품관리</a></li>
+            <li class="thispage"><a href="admin-productManage.do">상품관리</a></li>
             <ul class="ul-lower">
-                <li class="li-lower thispage"><a href="admin-productManage.html">상품조회</a></li>
-                <li class="li-lower"><a href="admin-productRegistration.html">상품등록</a></li>
+                <li class="li-lower thispage"><a href="admin-productManage.do">상품조회</a></li>
+                <li class="li-lower"><a href="admin-productRegistration.do">상품등록</a></li>
             </ul>
             <li><a href="admin-customerManage.html">고객관리</a></li>
-            <li><a href="admin-inquiryManage.html">1:1문의</a></li>
+            <li><a href="admin-inquiryDetails.do">1:1문의</a></li>
         </ul>
         <input type="button" value="로그아웃" id="logout-btn">
     </nav>
