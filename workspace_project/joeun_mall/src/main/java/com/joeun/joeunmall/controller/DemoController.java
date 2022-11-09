@@ -23,7 +23,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class DemoController {
 	
-	@GetMapping("/")
+	@GetMapping("/demo")
 	public String demo(Model model) {
 		log.info("demo");
 		model.addAttribute("demo", "team3");
