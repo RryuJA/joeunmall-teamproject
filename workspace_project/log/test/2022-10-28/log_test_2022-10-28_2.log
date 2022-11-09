@@ -1,0 +1,970 @@
+특수 유형
+1 :  L(66-88),XL(99-110)
+2 :  차콜(charcoal),검정(balck)
+모델 정보 : <b>MODEL</b>: L(66-88),차콜(charcoal)
+모델 정보 있음
+3 :  L(66-88),차콜(charcoal)
+4 :  아크릴(acrylic)
+5 :  한국/협력업체
+6 :  2021년 당월제조
+cnt : 6
+limit : 7
+7 :  교환/반품 공지사항참조
+상품 상세정보 : ShopProductDTO(size= L(66-88),XL(99-110), colors= 차콜(charcoal),검정(balck), model= L(66-88),차콜(charcoal), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+상품(267021) 상세정보 : ShopProductDTO(size= L(66-88),XL(99-110), colors= 차콜(charcoal),검정(balck), model= L(66-88),차콜(charcoal), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_003_039, orderIndex=220101_039, userName=류갑빈, productName=단가라카라가디건, productOption={"size":" L(66-88),XL(99-110)","colors":" 차콜(charcoal),검정(balck)","model":" L(66-88),차콜(charcoal)","materials":" 아크릴(acrylic)","country":" 한국/협력업체","yom":" 2021년 당월제조","qas":" 교환/반품 공지사항참조"}, productPrice=36000, productDate=2022-01-01]
+번호 : 41
+페이지 전환(다음 2페이지)
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=003&type=X&mcode=006&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2
+상품 고유번호 (branduid) : 266901
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 266901
+상품명 : 금장카라가디건
+상품가(정가) : 39600
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 5
+상품 옵션(사이즈)-1 : 밤색
+상품 옵션(사이즈)-2 : 핑크
+상품 옵션(사이즈)-3 : 아이보리
+상품 옵션(사이즈)-4 : 베이지
+상품 옵션(사이즈)-5 : 검정
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(색상)-1 : 1(66-88)
+상품 옵션(색상)-2 : 2(99-120)
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540020006022.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540020006022.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 5
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2021/1015/so_1015_4_19.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2021/1015/so_1015_4_20.jpg
+좌측 썸네일 이미지-3 : http://park6594.jpg3.kr/2021/1015/so_1015_4_21.jpg
+좌측 썸네일 이미지-4 : http://park6594.jpg3.kr/2021/1015/so_1015_4_22.jpg
+좌측 썸네일 이미지-5 : http://park6594.jpg3.kr/2021/1015/so_1015_4_23.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22266901%22%2C%22cateid%22%3A%22003006%22%2C%22cat1id%22%3A%22003%22%2C%22cat2id%22%3A%22006%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+특수 유형
+1 :  1(66-88),2(99-120)
+2 :  밤색(brown),핑크(pink),아이보리(ivory),베이지(beige),검정(black)
+모델 정보 : <b>MODEL</b>: 1(66-88),2(99-120)
+모델 정보 있음
+3 :  1(66-88),2(99-120)
+4 :  캐시미어(cashmere)
+5 :  한국/협력업체
+6 :  2021년 당월제조
+cnt : 6
+limit : 7
+7 :  교환/반품 공지사항참조
+상품 상세정보 : ShopProductDTO(size= 1(66-88),2(99-120), colors= 밤색(brown),핑크(pink),아이보리(ivory),베이지(beige),검정(black), model= 1(66-88),2(99-120), materials= 캐시미어(cashmere), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+상품(266901) 상세정보 : ShopProductDTO(size= 1(66-88),2(99-120), colors= 밤색(brown),핑크(pink),아이보리(ivory),베이지(beige),검정(black), model= 1(66-88),2(99-120), materials= 캐시미어(cashmere), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_003_040, orderIndex=220101_040, userName=성운정, productName=금장카라가디건, productOption={"size":" 1(66-88),2(99-120)","colors":" 밤색(brown),핑크(pink),아이보리(ivory),베이지(beige),검정(black)","model":" 1(66-88),2(99-120)","materials":" 캐시미어(cashmere)","country":" 한국/협력업체","yom":" 2021년 당월제조","qas":" 교환/반품 공지사항참조"}, productPrice=39600, productDate=2022-01-01]
+번호 : 42
+페이지 전환(다음 2페이지)
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=003&type=X&mcode=006&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2
+상품 고유번호 (branduid) : 266712
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 266712
+상품명 : 투바이가디건
+상품가(정가) : 34500
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : L(66-88)
+상품 옵션(사이즈)-2 : XL(99-110)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 4
+상품 옵션(색상)-1 : 차콜
+상품 옵션(색상)-2 : 브릭
+상품 옵션(색상)-3 : 와인
+상품 옵션(색상)-4 : 검정
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540020005782.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540020005782.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 4
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2021/0916/cs_0916_4_15.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2021/0916/cs_0916_4_16.jpg
+좌측 썸네일 이미지-3 : http://park6594.jpg3.kr/2021/0916/cs_0916_4_17.jpg
+좌측 썸네일 이미지-4 : http://park6594.jpg3.kr/2021/0916/cs_0916_4_18.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22266712%22%2C%22cateid%22%3A%22003006%22%2C%22cat1id%22%3A%22003%22%2C%22cat2id%22%3A%22006%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+특수 유형
+1 :  L(66-88),XL(99-110)
+2 :  차콜(charcoal),브릭(brick),와인(wine),검정(black)
+모델 정보 : <b>MODEL</b>: L(66-88),차콜(charcoal)
+모델 정보 있음
+3 :  L(66-88),차콜(charcoal)
+4 :  아크릴(acrylic)
+5 :  한국/협력업체
+6 :  2021년 당월제조
+cnt : 6
+limit : 7
+7 :  교환/반품 공지사항참조
+상품 상세정보 : ShopProductDTO(size= L(66-88),XL(99-110), colors= 차콜(charcoal),브릭(brick),와인(wine),검정(black), model= L(66-88),차콜(charcoal), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+상품(266712) 상세정보 : ShopProductDTO(size= L(66-88),XL(99-110), colors= 차콜(charcoal),브릭(brick),와인(wine),검정(black), model= L(66-88),차콜(charcoal), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_003_041, orderIndex=220101_041, userName=김순빈, productName=투바이가디건, productOption={"size":" L(66-88),XL(99-110)","colors":" 차콜(charcoal),브릭(brick),와인(wine),검정(black)","model":" L(66-88),차콜(charcoal)","materials":" 아크릴(acrylic)","country":" 한국/협력업체","yom":" 2021년 당월제조","qas":" 교환/반품 공지사항참조"}, productPrice=34500, productDate=2022-01-01]
+번호 : 43
+페이지 전환(다음 2페이지)
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=003&type=X&mcode=006&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2
+상품 고유번호 (branduid) : 266530
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 266530
+상품명 : 카라박시가디건
+상품가(정가) : 28800
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : L(66-88)
+상품 옵션(사이즈)-2 : XL(99-110)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 3
+상품 옵션(색상)-1 : 갈색
+상품 옵션(색상)-2 : 빨강
+상품 옵션(색상)-3 : 검정
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540020006812.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540020006812.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 3
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2021/0825/so_0825_3_19.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2021/0825/so_0825_3_20.jpg
+좌측 썸네일 이미지-3 : http://park6594.jpg3.kr/2021/0825/so_0825_3_21.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22266530%22%2C%22cateid%22%3A%22003006%22%2C%22cat1id%22%3A%22003%22%2C%22cat2id%22%3A%22006%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+특수 유형
+1 :  L(66-88),XL(99-110)
+2 :  갈색(brown),빨강(red),검정(black)
+모델 정보 : <b>MODEL</b>: L(66-88),갈색(brown)
+모델 정보 있음
+3 :  L(66-88),갈색(brown)
+4 :  아크릴(acrylic)
+5 :  한국/협력업체
+6 :  2021년 당월제조
+cnt : 6
+limit : 7
+7 :  교환/반품 공지사항참조
+상품 상세정보 : ShopProductDTO(size= L(66-88),XL(99-110), colors= 갈색(brown),빨강(red),검정(black), model= L(66-88),갈색(brown), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+상품(266530) 상세정보 : ShopProductDTO(size= L(66-88),XL(99-110), colors= 갈색(brown),빨강(red),검정(black), model= L(66-88),갈색(brown), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_003_042, orderIndex=220101_042, userName=유원영, productName=카라박시가디건, productOption={"size":" L(66-88),XL(99-110)","colors":" 갈색(brown),빨강(red),검정(black)","model":" L(66-88),갈색(brown)","materials":" 아크릴(acrylic)","country":" 한국/협력업체","yom":" 2021년 당월제조","qas":" 교환/반품 공지사항참조"}, productPrice=28800, productDate=2022-01-01]
+번호 : 44
+페이지 전환(다음 2페이지)
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=003&type=X&mcode=006&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2
+상품 고유번호 (branduid) : 265576
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 265576
+상품명 : 메리골지가디건
+상품가(정가) : 26800
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : 2(66-88)
+상품 옵션(사이즈)-2 : 3(99-120)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 3
+상품 옵션(색상)-1 : 검정
+상품 옵션(색상)-2 : 스카이블루
+상품 옵션(색상)-3 : 회베이지
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540020006532.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540020006532.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 3
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2021/emade/emade_0407_2_24.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2021/emade/emade_0407_2_25.jpg
+좌측 썸네일 이미지-3 : http://park6594.jpg3.kr/2021/emade/emade_0407_2_26.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22265576%22%2C%22cateid%22%3A%22003006%22%2C%22cat1id%22%3A%22003%22%2C%22cat2id%22%3A%22006%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+특수 유형
+1 :  2(66-88),3(99-120)
+2 :  검정(black),스카이블루(skyblue),회베이지(gray beige)
+모델 정보 : <b>MODEL</b>: 2(66-88),스카이블루(skyblue),회베이지(gray beige)
+모델 정보 있음
+3 :  2(66-88),스카이블루(skyblue),회베이지(gray beige)
+4 :  폴리(poly),린넨(linen)
+5 :  한국/협력업체
+6 :  2021년 당월제조
+cnt : 6
+limit : 7
+7 :  교환/반품 공지사항참조
+상품 상세정보 : ShopProductDTO(size= 2(66-88),3(99-120), colors= 검정(black),스카이블루(skyblue),회베이지(gray beige), model= 2(66-88),스카이블루(skyblue),회베이지(gray beige), materials= 폴리(poly),린넨(linen), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+상품(265576) 상세정보 : ShopProductDTO(size= 2(66-88),3(99-120), colors= 검정(black),스카이블루(skyblue),회베이지(gray beige), model= 2(66-88),스카이블루(skyblue),회베이지(gray beige), materials= 폴리(poly),린넨(linen), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_003_043, orderIndex=220101_043, userName=추운민, productName=메리골지가디건, productOption={"size":" 2(66-88),3(99-120)","colors":" 검정(black),스카이블루(skyblue),회베이지(gray beige)","model":" 2(66-88),스카이블루(skyblue),회베이지(gray beige)","materials":" 폴리(poly),린넨(linen)","country":" 한국/협력업체","yom":" 2021년 당월제조","qas":" 교환/반품 공지사항참조"}, productPrice=26800, productDate=2022-01-01]
+번호 : 45
+페이지 전환(다음 2페이지)
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=003&type=X&mcode=006&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2
+상품 고유번호 (branduid) : 265275
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 265275
+상품명 : 박스단추가디건
+상품가(정가) : 38000
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : 2(66-88)
+상품 옵션(사이즈)-2 : 3(99-110)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 4
+상품 옵션(색상)-1 : 검정
+상품 옵션(색상)-2 : 회색
+상품 옵션(색상)-3 : 곤색
+상품 옵션(색상)-4 : 딥그린
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540020005162.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540020005162.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 5
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2021/0303/ys_0303_5_15.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2021/0303/ys_0303_5_16.jpg
+좌측 썸네일 이미지-3 : http://park6594.jpg3.kr/2021/0303/ys_0303_5_17.jpg
+좌측 썸네일 이미지-4 : http://park6594.jpg3.kr/2021/0303/ys_0303_5_18.jpg
+좌측 썸네일 이미지-5 : http://park6594.jpg3.kr/2021/0303/ys_0303_5_19.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22265275%22%2C%22cateid%22%3A%22003006%22%2C%22cat1id%22%3A%22003%22%2C%22cat2id%22%3A%22006%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+특수 유형
+1 :  2(66-88),3(99-110)
+2 :  검정(black),회색(gray),곤색(navy),딥그린(deepgreen)
+모델 정보 : <b>MODEL</b>: 2(66-88),딥그린(deepgreen)
+모델 정보 있음
+3 :  2(66-88),딥그린(deepgreen)
+4 :  아크릴(acrylic)
+5 :  한국/협력업체
+6 :  2021년 당월제조
+cnt : 6
+limit : 7
+7 :  교환/반품 공지사항참조
+상품 상세정보 : ShopProductDTO(size= 2(66-88),3(99-110), colors= 검정(black),회색(gray),곤색(navy),딥그린(deepgreen), model= 2(66-88),딥그린(deepgreen), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+상품(265275) 상세정보 : ShopProductDTO(size= 2(66-88),3(99-110), colors= 검정(black),회색(gray),곤색(navy),딥그린(deepgreen), model= 2(66-88),딥그린(deepgreen), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_003_044, orderIndex=220101_044, userName=김영, productName=박스단추가디건, productOption={"size":" 2(66-88),3(99-110)","colors":" 검정(black),회색(gray),곤색(navy),딥그린(deepgreen)","model":" 2(66-88),딥그린(deepgreen)","materials":" 아크릴(acrylic)","country":" 한국/협력업체","yom":" 2021년 당월제조","qas":" 교환/반품 공지사항참조"}, productPrice=38000, productDate=2022-01-01]
+번호 : 46
+페이지 전환(다음 2페이지)
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=003&type=X&mcode=006&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2
+상품 고유번호 (branduid) : 265265
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 265265
+상품명 : 보봄가디건
+상품가(정가) : 35000
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : 2(66-88)
+상품 옵션(사이즈)-2 : 3(99-110)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 4
+상품 옵션(색상)-1 : 검정
+상품 옵션(색상)-2 : 베이지
+상품 옵션(색상)-3 : 차콜
+상품 옵션(색상)-4 : 딥그린
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540020006222.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540020006222.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 4
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2022/0208/so_0209_3_17.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2022/0208/so_0209_3_18.jpg
+좌측 썸네일 이미지-3 : http://park6594.jpg3.kr/2021/0303/ys_0303_8_20.jpg
+좌측 썸네일 이미지-4 : http://park6594.jpg3.kr/2022/0208/so_0209_3_19.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22265265%22%2C%22cateid%22%3A%22003006%22%2C%22cat1id%22%3A%22003%22%2C%22cat2id%22%3A%22006%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+특수 유형
+1 :  2(66-88),3(99-110)
+2 :  검정(black),베이지(beige),차콜(charcoal),민트(mint)
+모델 정보 : <b>MODEL</b>: 2(66-88),베이지(beige)
+모델 정보 있음
+3 :  2(66-88),베이지(beige)
+4 :  아크릴(acrylic)
+5 :  한국/협력업체
+6 :  2021년 당월제조
+cnt : 6
+limit : 7
+7 :  교환/반품 공지사항참조
+상품 상세정보 : ShopProductDTO(size= 2(66-88),3(99-110), colors= 검정(black),베이지(beige),차콜(charcoal),민트(mint), model= 2(66-88),베이지(beige), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+상품(265265) 상세정보 : ShopProductDTO(size= 2(66-88),3(99-110), colors= 검정(black),베이지(beige),차콜(charcoal),민트(mint), model= 2(66-88),베이지(beige), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_003_045, orderIndex=220101_045, userName=황순정, productName=보봄가디건, productOption={"size":" 2(66-88),3(99-110)","colors":" 검정(black),베이지(beige),차콜(charcoal),민트(mint)","model":" 2(66-88),베이지(beige)","materials":" 아크릴(acrylic)","country":" 한국/협력업체","yom":" 2021년 당월제조","qas":" 교환/반품 공지사항참조"}, productPrice=35000, productDate=2022-01-01]
+번호 : 47
+페이지 전환(다음 2페이지)
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=003&type=X&mcode=006&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2
+상품 고유번호 (branduid) : 265142
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 265142
+상품명 : 베이직미니가디건
+상품가(정가) : 28000
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : 2(55-88)
+상품 옵션(사이즈)-2 : 3(99-110)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 6
+상품 옵션(색상)-1 : 검정
+상품 옵션(색상)-2 : 곤색
+상품 옵션(색상)-3 : 아이보리
+상품 옵션(색상)-4 : 딥핑크
+상품 옵션(색상)-5 : 라이트핑크
+상품 옵션(색상)-6 : 노랑
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540020005072.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540020005072.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 5
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2021/0205/so_0205_2_14.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2021/0205/so_0205_2_15.jpg
+좌측 썸네일 이미지-3 : http://park6594.jpg3.kr/2021/0205/so_0205_2_16.jpg
+좌측 썸네일 이미지-4 : http://park6594.jpg3.kr/2021/0205/so_0205_2_17.jpg
+좌측 썸네일 이미지-5 : http://park6594.jpg3.kr/2021/0205/so_0205_2_18.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22265142%22%2C%22cateid%22%3A%22003006%22%2C%22cat1id%22%3A%22003%22%2C%22cat2id%22%3A%22006%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+특수 유형
+1 :  2(55-88),3(99-110)
+2 :  검정(black),곤색(navy),아이보리(ivory),진핑크(deeppink),연핑크(lightpink),노랑(yellow)
+모델 정보 : <b>MODEL</b>: 2(55-88),연핑크(lightpink),곤색(navy)
+모델 정보 있음
+3 :  2(55-88),연핑크(lightpink),곤색(navy)
+4 :  아크릴(acrylic)
+5 :  한국/협력업체
+6 :  2021년 당월제조
+cnt : 6
+limit : 7
+7 :  교환/반품 공지사항참조
+상품 상세정보 : ShopProductDTO(size= 2(55-88),3(99-110), colors= 검정(black),곤색(navy),아이보리(ivory),진핑크(deeppink),연핑크(lightpink),노랑(yellow), model= 2(55-88),연핑크(lightpink),곤색(navy), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+상품(265142) 상세정보 : ShopProductDTO(size= 2(55-88),3(99-110), colors= 검정(black),곤색(navy),아이보리(ivory),진핑크(deeppink),연핑크(lightpink),노랑(yellow), model= 2(55-88),연핑크(lightpink),곤색(navy), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_003_046, orderIndex=220101_046, userName=장이순, productName=베이직미니가디건, productOption={"size":" 2(55-88),3(99-110)","colors":" 검정(black),곤색(navy),아이보리(ivory),진핑크(deeppink),연핑크(lightpink),노랑(yellow)","model":" 2(55-88),연핑크(lightpink),곤색(navy)","materials":" 아크릴(acrylic)","country":" 한국/협력업체","yom":" 2021년 당월제조","qas":" 교환/반품 공지사항참조"}, productPrice=28000, productDate=2022-01-01]
+번호 : 48
+페이지 전환(다음 2페이지)
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=003&type=X&mcode=006&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2
+상품 고유번호 (branduid) : 265033
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 265033
+상품명 : 스프링골지가디건
+상품가(정가) : 37000
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : L(66-88)
+상품 옵션(사이즈)-2 : XL(99-110)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 5
+상품 옵션(색상)-1 : 검정
+상품 옵션(색상)-2 : 베이지
+상품 옵션(색상)-3 : 곤색
+상품 옵션(색상)-4 : 라이트그린
+상품 옵션(색상)-5 : 핑크
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540020006202.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540020006202.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 5
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2021/0121/ys_0121_3_19.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2021/0121/ys_0121_3_20.jpg
+좌측 썸네일 이미지-3 : http://park6594.jpg3.kr/2021/0121/ys_0121_3_21.jpg
+좌측 썸네일 이미지-4 : http://park6594.jpg3.kr/2021/0121/ys_0121_3_22.jpg
+좌측 썸네일 이미지-5 : http://park6594.jpg3.kr/2021/0121/ys_0121_3_23.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22265033%22%2C%22cateid%22%3A%22003006%22%2C%22cat1id%22%3A%22003%22%2C%22cat2id%22%3A%22006%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+특수 유형
+1 :  L(66-88),XL(99-110)
+2 :  검정(black),베이지(beige),곤색(navy),라이트그린(light green),핑크(pink)
+모델 정보 : <b>MODEL</b>: L(66-88),라이트그린(light green)
+모델 정보 있음
+3 :  L(66-88),라이트그린(light green)
+4 :  아크릴(acrylic)
+5 :  한국/협력업체
+6 :  2021년 당월제조
+cnt : 6
+limit : 7
+7 :  교환/반품 공지사항참조
+상품 상세정보 : ShopProductDTO(size= L(66-88),XL(99-110), colors= 검정(black),베이지(beige),곤색(navy),라이트그린(light green),핑크(pink), model= L(66-88),라이트그린(light green), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+상품(265033) 상세정보 : ShopProductDTO(size= L(66-88),XL(99-110), colors= 검정(black),베이지(beige),곤색(navy),라이트그린(light green),핑크(pink), model= L(66-88),라이트그린(light green), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2021년 당월제조, qas= 교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_003_047, orderIndex=220101_047, userName=박운민, productName=스프링골지가디건, productOption={"size":" L(66-88),XL(99-110)","colors":" 검정(black),베이지(beige),곤색(navy),라이트그린(light green),핑크(pink)","model":" L(66-88),라이트그린(light green)","materials":" 아크릴(acrylic)","country":" 한국/협력업체","yom":" 2021년 당월제조","qas":" 교환/반품 공지사항참조"}, productPrice=37000, productDate=2022-01-01]
+번호 : 49
+페이지 전환(다음 2페이지)
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=003&type=X&mcode=006&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2
+상품 고유번호 (branduid) : 264238
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 264238
+상품명 : 리주가디건
+상품가(정가) : 32500
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : L(55-88)
+상품 옵션(사이즈)-2 : XL(99-110)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 4
+상품 옵션(색상)-1 : 검정
+상품 옵션(색상)-2 : 차콜
+상품 옵션(색상)-3 : 와인
+상품 옵션(색상)-4 : 밤색
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540020006752.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540020006752.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 5
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2020/1012/ys_1012_4_12.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2020/1012/ys_1012_4_13.jpg
+좌측 썸네일 이미지-3 : http://park6594.jpg3.kr/2020/1012/ys_1012_4_14.jpg
+좌측 썸네일 이미지-4 : http://park6594.jpg3.kr/2020/1012/ys_1012_4_15.jpg
+좌측 썸네일 이미지-5 : http://park6594.jpg3.kr/2020/1012/ys_1012_4_16.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22264238%22%2C%22cateid%22%3A%22003006%22%2C%22cat1id%22%3A%22003%22%2C%22cat2id%22%3A%22006%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+특수 유형
+1 :  L(55-88),XL(99-110)
+2 :  검정(black),차콜(charcoal),와인(wine),밤색(brown)
+모델 정보 : <b>MODEL</b>: L(55-88),밤색(brown)
+모델 정보 있음
+3 :  L(55-88),밤색(brown)
+4 :  아크릴(acrylic)
+5 :  한국/협력업체
+6 :  2020년 당월제조
+cnt : 6
+limit : 7
+7 :  교환/반품 공지사항참조
+상품 상세정보 : ShopProductDTO(size= L(55-88),XL(99-110), colors= 검정(black),차콜(charcoal),와인(wine),밤색(brown), model= L(55-88),밤색(brown), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2020년 당월제조, qas= 교환/반품 공지사항참조)
+상품(264238) 상세정보 : ShopProductDTO(size= L(55-88),XL(99-110), colors= 검정(black),차콜(charcoal),와인(wine),밤색(brown), model= L(55-88),밤색(brown), materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2020년 당월제조, qas= 교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_003_048, orderIndex=220101_048, userName=윤정, productName=리주가디건, productOption={"size":" L(55-88),XL(99-110)","colors":" 검정(black),차콜(charcoal),와인(wine),밤색(brown)","model":" L(55-88),밤색(brown)","materials":" 아크릴(acrylic)","country":" 한국/협력업체","yom":" 2020년 당월제조","qas":" 교환/반품 공지사항참조"}, productPrice=32500, productDate=2022-01-01]
+번호 : 50
+페이지 전환(다음 2페이지)
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=003&type=X&mcode=006&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2&sort=&page=2
+상품 고유번호 (branduid) : 261240
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 261240
+상품명 : 골지브이넥가디건
+상품가(정가) : 25500
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 3
+상품 옵션(사이즈)-1 : L(55-77)
+상품 옵션(사이즈)-2 : XL(88-99)
+상품 옵션(사이즈)-3 : 2XL(100-120)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 4
+상품 옵션(색상)-1 : 검정
+상품 옵션(색상)-2 : 곤색
+상품 옵션(색상)-3 : 와인
+상품 옵션(색상)-4 : 베이지
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540020006822.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540020006822.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 5
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2020/0928/ys_0928_5_09.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2020/0928/ys_0928_5_10.jpg
+좌측 썸네일 이미지-3 : http://park6594.jpg3.kr/2020/0928/ys_0928_5_11.jpg
+좌측 썸네일 이미지-4 : http://park6594.jpg3.kr/2020/0928/ys_0928_5_12.jpg
+좌측 썸네일 이미지-5 : http://park6594.jpg3.kr/2020/0928/ys_0928_5_13.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22261240%22%2C%22cateid%22%3A%22003006%22%2C%22cat1id%22%3A%22003%22%2C%22cat2id%22%3A%22006%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+특수 유형
+1 :  L(66-77),XL(88-99),2XL(100-110)
+2 :  검정(black),곤색(navy),와인(wine),진베이지(dark beige)
+모델 정보 : <b>소재</b>: 아크릴(acrylic)
+모델 정보 없음
+3 :  아크릴(acrylic)
+4 :  한국/협력업체
+5 :  2020년 당월제조
+cnt : 5
+limit : 6
+6 :  교환/반품 공지사항참조
+상품 상세정보 : ShopProductDTO(size= L(66-77),XL(88-99),2XL(100-110), colors= 검정(black),곤색(navy),와인(wine),진베이지(dark beige), model=모델 정보 없음, materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2020년 당월제조, qas= 교환/반품 공지사항참조)
+상품(261240) 상세정보 : ShopProductDTO(size= L(66-77),XL(88-99),2XL(100-110), colors= 검정(black),곤색(navy),와인(wine),진베이지(dark beige), model=모델 정보 없음, materials= 아크릴(acrylic), country= 한국/협력업체, yom= 2020년 당월제조, qas= 교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_003_049, orderIndex=220101_049, userName=황보원주, productName=골지브이넥가디건, productOption={"size":" L(66-77),XL(88-99),2XL(100-110)","colors":" 검정(black),곤색(navy),와인(wine),진베이지(dark beige)","model":"모델 정보 없음","materials":" 아크릴(acrylic)","country":" 한국/협력업체","yom":" 2020년 당월제조","qas":" 교환/반품 공지사항참조"}, productPrice=25500, productDate=2022-01-01]
+직렬화 시작
+직렬화 종료
+crawlProducts
+수집할 상품 수 : 50
+번호 : 1
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=054&type=X&mcode=003
+상품 고유번호 (branduid) : 269673
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 269673
+상품명 : 벨트투버튼JK
+상품가(정가) : 88500
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : F(66-88)
+상품 옵션(사이즈)-2 : XL(99-110)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(색상)-1 : 밤색
+상품 옵션(색상)-2 : 검정
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540030011492.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540030011492.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 2
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2022/1024/so_1024_4_15.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2022/1024/so_1024_4_16.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22269673%22%2C%22cateid%22%3A%22054003%22%2C%22cat1id%22%3A%22054%22%2C%22cat2id%22%3A%22003%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+일반 유형
+상품 상세정보 : ShopProductDTO(size= :  F(66-88),XL(99-110), colors= :  밤색(brown),검정(black), model= :  F(66-88),밤색(brown), materials= :  폴리(poly)100%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+상품(269673) 상세정보 : ShopProductDTO(size= :  F(66-88),XL(99-110), colors= :  밤색(brown),검정(black), model= :  F(66-88),밤색(brown), materials= :  폴리(poly)100%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_054_000, orderIndex=220101_000, userName=황보숙영, productName=벨트투버튼JK, productOption={"size":" :  F(66-88),XL(99-110)","colors":" :  밤색(brown),검정(black)","model":" :  F(66-88),밤색(brown)","materials":" :  폴리(poly)100%","country":" :  한국/협력업체","yom":" :  당월제조","qas":" :  교환/반품 공지사항참조"}, productPrice=88500, productDate=2022-01-01]
+번호 : 2
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=054&type=X&mcode=003
+상품 고유번호 (branduid) : 269671
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 269671
+상품명 : 하운드진주JK
+상품가(정가) : 88500
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : F(66-88)
+상품 옵션(사이즈)-2 : XL(99-110)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(색상)-1 : 밤색
+상품 옵션(색상)-2 : 차콜
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540030011482.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540030011482.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 2
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2022/1024/so_1024_2_17.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2022/1024/so_1024_2_18.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22269671%22%2C%22cateid%22%3A%22054003%22%2C%22cat1id%22%3A%22054%22%2C%22cat2id%22%3A%22003%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+일반 유형
+상품 상세정보 : ShopProductDTO(size= :  F(66-88),XL(99-110), colors= :  밤색(brown),차콜(charcoal), model= :  F(66-88),밤색(brown), materials= :  폴리(poly)70%,아크릴(acrtlic)30%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+상품(269671) 상세정보 : ShopProductDTO(size= :  F(66-88),XL(99-110), colors= :  밤색(brown),차콜(charcoal), model= :  F(66-88),밤색(brown), materials= :  폴리(poly)70%,아크릴(acrtlic)30%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_054_001, orderIndex=220101_001, userName=류원희, productName=하운드진주JK, productOption={"size":" :  F(66-88),XL(99-110)","colors":" :  밤색(brown),차콜(charcoal)","model":" :  F(66-88),밤색(brown)","materials":" :  폴리(poly)70%,아크릴(acrtlic)30%","country":" :  한국/협력업체","yom":" :  당월제조","qas":" :  교환/반품 공지사항참조"}, productPrice=88500, productDate=2022-01-01]
+번호 : 3
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=054&type=X&mcode=003
+상품 고유번호 (branduid) : 269670
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 269670
+상품명 : 모던울싱글JK
+상품가(정가) : 104500
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : 1(66-88)
+상품 옵션(사이즈)-2 : 2(99-110)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(색상)-1 : 베이지
+상품 옵션(색상)-2 : 검정
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540030011472.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540030011472.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 2
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2022/1024/so_1024_1_15.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2022/1024/so_1024_1_16.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22269670%22%2C%22cateid%22%3A%22054003%22%2C%22cat1id%22%3A%22054%22%2C%22cat2id%22%3A%22003%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+일반 유형
+상품 상세정보 : ShopProductDTO(size= :  1(66-88),2(99-110), colors= :  베이지(beige),검정(black), model= :  1(66-88),베이지(beige), materials= :  울(wool)50%,폴리(poly)30%,아크릴(acrylic)20%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+상품(269670) 상세정보 : ShopProductDTO(size= :  1(66-88),2(99-110), colors= :  베이지(beige),검정(black), model= :  1(66-88),베이지(beige), materials= :  울(wool)50%,폴리(poly)30%,아크릴(acrylic)20%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_054_002, orderIndex=220101_002, userName=엄우빈, productName=모던울싱글JK, productOption={"size":" :  1(66-88),2(99-110)","colors":" :  베이지(beige),검정(black)","model":" :  1(66-88),베이지(beige)","materials":" :  울(wool)50%,폴리(poly)30%,아크릴(acrylic)20%","country":" :  한국/협력업체","yom":" :  당월제조","qas":" :  교환/반품 공지사항참조"}, productPrice=104500, productDate=2022-01-01]
+번호 : 4
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=054&type=X&mcode=003
+상품 고유번호 (branduid) : 269640
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 269640
+상품명 : 더블미디코트
+상품가(정가) : 104500
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : L(66-88)
+상품 옵션(사이즈)-2 : XL(99-110)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(색상)-1 : 베이지
+상품 옵션(색상)-2 : 회색
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540030011452.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540030011452.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 2
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2022/1018/so_1018_3_17.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2022/1018/so_1018_3_18.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22269640%22%2C%22cateid%22%3A%22054003%22%2C%22cat1id%22%3A%22054%22%2C%22cat2id%22%3A%22003%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+일반 유형
+상품 상세정보 : ShopProductDTO(size= :  L(66-88),XL(99-110), colors= :  베이지(beige),회색(gray), model= :  L(66-88),베이지(beige), materials= :  폴리(poly)100%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+상품(269640) 상세정보 : ShopProductDTO(size= :  L(66-88),XL(99-110), colors= :  베이지(beige),회색(gray), model= :  L(66-88),베이지(beige), materials= :  폴리(poly)100%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_054_003, orderIndex=220101_003, userName=박숙주, productName=더블미디코트, productOption={"size":" :  L(66-88),XL(99-110)","colors":" :  베이지(beige),회색(gray)","model":" :  L(66-88),베이지(beige)","materials":" :  폴리(poly)100%","country":" :  한국/협력업체","yom":" :  당월제조","qas":" :  교환/반품 공지사항참조"}, productPrice=104500, productDate=2022-01-01]
+번호 : 5
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=054&type=X&mcode=003
+상품 고유번호 (branduid) : 269660
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 269660
+상품명 : 양털배색후드코트
+상품가(정가) : 62000
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 1
+상품 옵션(사이즈)-1 : F(66-120)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(색상)-1 : 밤색
+상품 옵션(색상)-2 : 검정
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540030011462.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540030011462.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 2
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2022/1021/so_1021_1_18.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2022/1021/so_1021_1_19.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22269660%22%2C%22cateid%22%3A%22054003%22%2C%22cat1id%22%3A%22054%22%2C%22cat2id%22%3A%22003%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+일반 유형
+상품 상세정보 : ShopProductDTO(size= :  F(66-120), colors= :  밤색(brown),검정(black), model= :  F(66-120),밤색(brown), materials= :  폴리(poly)100%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+상품(269660) 상세정보 : ShopProductDTO(size= :  F(66-120), colors= :  밤색(brown),검정(black), model= :  F(66-120),밤색(brown), materials= :  폴리(poly)100%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_054_004, orderIndex=220101_004, userName=박주, productName=양털배색후드코트, productOption={"size":" :  F(66-120)","colors":" :  밤색(brown),검정(black)","model":" :  F(66-120),밤색(brown)","materials":" :  폴리(poly)100%","country":" :  한국/협력업체","yom":" :  당월제조","qas":" :  교환/반품 공지사항참조"}, productPrice=62000, productDate=2022-01-01]
+번호 : 6
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=054&type=X&mcode=003
+상품 고유번호 (branduid) : 267889
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 267889
+상품명 : 하프더블JK
+상품가(정가) : 88000
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 3
+상품 옵션(사이즈)-1 : 1(66-77)
+상품 옵션(사이즈)-2 : 2(88-99)
+상품 옵션(사이즈)-3 : 3(100-120)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 1
+상품 옵션(색상)-1 : 검정
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540030010332.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540030010332.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 1
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2022/emade/emade_0228_2_17.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22267889%22%2C%22cateid%22%3A%22054003%22%2C%22cat1id%22%3A%22054%22%2C%22cat2id%22%3A%22003%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+특수 유형
+1 :  1(66-77),2(88-99),3(100-120)
+2 :  검정(black)
+모델 정보 : <b>MODEL</b>: 1(66-77),검정(black)
+모델 정보 있음
+3 :  1(66-77),검정(black)
+4 :  폴리(poly)
+5 :  한국/협력업체
+6 :  2022년 당월제조
+cnt : 6
+limit : 7
+7 :  교환/반품 공지사항참조
+상품 상세정보 : ShopProductDTO(size= 1(66-77),2(88-99),3(100-120), colors= 검정(black), model= 1(66-77),검정(black), materials= 폴리(poly), country= 한국/협력업체, yom= 2022년 당월제조, qas= 교환/반품 공지사항참조)
+상품(267889) 상세정보 : ShopProductDTO(size= 1(66-77),2(88-99),3(100-120), colors= 검정(black), model= 1(66-77),검정(black), materials= 폴리(poly), country= 한국/협력업체, yom= 2022년 당월제조, qas= 교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_054_005, orderIndex=220101_005, userName=이영연, productName=하프더블JK, productOption={"size":" 1(66-77),2(88-99),3(100-120)","colors":" 검정(black)","model":" 1(66-77),검정(black)","materials":" 폴리(poly)","country":" 한국/협력업체","yom":" 2022년 당월제조","qas":" 교환/반품 공지사항참조"}, productPrice=88000, productDate=2022-01-01]
+번호 : 7
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=054&type=X&mcode=003
+상품 고유번호 (branduid) : 267030
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 267030
+상품명 : 레이어드후드자켓
+상품가(정가) : 69500
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 1
+상품 옵션(사이즈)-1 : F(66-120)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(색상)-1 : 베이지
+상품 옵션(색상)-2 : 검정
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540030011362.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540030011362.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 2
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2021/1029/so_1029_2_17.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2021/1029/so_1029_2_18.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22267030%22%2C%22cateid%22%3A%22054003%22%2C%22cat1id%22%3A%22054%22%2C%22cat2id%22%3A%22003%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+특수 유형
+1 :  F(66-120)
+2 :  밤색(brown),검정(black)
+모델 정보 : <b>MODEL</b>: F(66-120)
+모델 정보 있음
+3 :  F(66-120)
+4 :  폴리(poly)/안감-패딩
+5 :  협력업체
+6 :  2022년 당월제조
+cnt : 6
+limit : 7
+7 :  교환/반품 공지사항참조
+상품 상세정보 : ShopProductDTO(size= F(66-120), colors= 밤색(brown),검정(black), model= F(66-120), materials= 폴리(poly)/안감-패딩, country= 협력업체, yom= 2022년 당월제조, qas= 교환/반품 공지사항참조)
+상품(267030) 상세정보 : ShopProductDTO(size= F(66-120), colors= 밤색(brown),검정(black), model= F(66-120), materials= 폴리(poly)/안감-패딩, country= 협력업체, yom= 2022년 당월제조, qas= 교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_054_006, orderIndex=220101_006, userName=오운수, productName=레이어드후드자켓, productOption={"size":" F(66-120)","colors":" 밤색(brown),검정(black)","model":" F(66-120)","materials":" 폴리(poly)/안감-패딩","country":" 협력업체","yom":" 2022년 당월제조","qas":" 교환/반품 공지사항참조"}, productPrice=69500, productDate=2022-01-01]
+번호 : 8
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=054&type=X&mcode=003
+상품 고유번호 (branduid) : 269603
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 269603
+상품명 : 헨리싱글울JK
+상품가(정가) : 86500
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : L(66-88)
+상품 옵션(사이즈)-2 : XL(99-110)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(색상)-1 : 밤색
+상품 옵션(색상)-2 : 카키베이지
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540030011432.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540030011432.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 2
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2022/1013/so_1013_4_16.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2022/1013/so_1013_4_17.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22269603%22%2C%22cateid%22%3A%22054003%22%2C%22cat1id%22%3A%22054%22%2C%22cat2id%22%3A%22003%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+일반 유형
+상품 상세정보 : ShopProductDTO(size= :  L(66-88),XL(99-110), colors= :  밤색(brwon),카키베이지(khaki beige), model= :  L(66-88),밤색(brwon), materials= :  폴리(poly)65%,울(wool)35%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+상품(269603) 상세정보 : ShopProductDTO(size= :  L(66-88),XL(99-110), colors= :  밤색(brwon),카키베이지(khaki beige), model= :  L(66-88),밤색(brwon), materials= :  폴리(poly)65%,울(wool)35%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_054_007, orderIndex=220101_007, userName=유우영, productName=헨리싱글울JK, productOption={"size":" :  L(66-88),XL(99-110)","colors":" :  밤색(brwon),카키베이지(khaki beige)","model":" :  L(66-88),밤색(brwon)","materials":" :  폴리(poly)65%,울(wool)35%","country":" :  한국/협력업체","yom":" :  당월제조","qas":" :  교환/반품 공지사항참조"}, productPrice=86500, productDate=2022-01-01]
+번호 : 9
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=054&type=X&mcode=003
+상품 고유번호 (branduid) : 269365
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 269365
+상품명 : 레이싱글JK
+상품가(정가) : 72000
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 3
+상품 옵션(사이즈)-1 : 1(66-77)
+상품 옵션(사이즈)-2 : 2(88-99)
+상품 옵션(사이즈)-3 : 3(100-120)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(색상)-1 : 베이지
+상품 옵션(색상)-2 : 검정
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540030011082.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540030011082.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 2
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2022/emade/emade_0913_3_24.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2022/emade/emade_0913_3_25.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22269365%22%2C%22cateid%22%3A%22054003%22%2C%22cat1id%22%3A%22054%22%2C%22cat2id%22%3A%22003%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+일반 유형
+상품 상세정보 : ShopProductDTO(size= :  1(66-77),2(88-99),3(100-120), colors= :  베이지(beige),검정(black), model= :  1(66-77),베이지(beige),검정(black), materials= : 폴리(poly)65%,레이온(rayon)30%,스판(span)5%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+상품(269365) 상세정보 : ShopProductDTO(size= :  1(66-77),2(88-99),3(100-120), colors= :  베이지(beige),검정(black), model= :  1(66-77),베이지(beige),검정(black), materials= : 폴리(poly)65%,레이온(rayon)30%,스판(span)5%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_054_008, orderIndex=220101_008, userName=장영빈, productName=레이싱글JK, productOption={"size":" :  1(66-77),2(88-99),3(100-120)","colors":" :  베이지(beige),검정(black)","model":" :  1(66-77),베이지(beige),검정(black)","materials":" : 폴리(poly)65%,레이온(rayon)30%,스판(span)5%","country":" :  한국/협력업체","yom":" :  당월제조","qas":" :  교환/반품 공지사항참조"}, productPrice=72000, productDate=2022-01-01]
+번호 : 10
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=054&type=X&mcode=003
+상품 고유번호 (branduid) : 269600
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 269600
+상품명 : 잭체크싱글JK
+상품가(정가) : 77500
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : 1(66-88)
+상품 옵션(사이즈)-2 : 2(99-110)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(색상)-1 : 밤색
+상품 옵션(색상)-2 : 카키
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540030011412.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540030011412.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 2
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2022/1013/cs_1013_3_12.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2022/1013/cs_1013_3_13.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22269600%22%2C%22cateid%22%3A%22054003%22%2C%22cat1id%22%3A%22054%22%2C%22cat2id%22%3A%22003%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+일반 유형
+상품 상세정보 : ShopProductDTO(size= :  1(66-88),2(99-110), colors= :  밤색(brown),카키(khaki), model= :  1(66-88),밤색(brown), materials= :  폴리(poly)95%,스판(spna)5%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+상품(269600) 상세정보 : ShopProductDTO(size= :  1(66-88),2(99-110), colors= :  밤색(brown),카키(khaki), model= :  1(66-88),밤색(brown), materials= :  폴리(poly)95%,스판(spna)5%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_054_009, orderIndex=220101_009, userName=성갑수, productName=잭체크싱글JK, productOption={"size":" :  1(66-88),2(99-110)","colors":" :  밤색(brown),카키(khaki)","model":" :  1(66-88),밤색(brown)","materials":" :  폴리(poly)95%,스판(spna)5%","country":" :  한국/협력업체","yom":" :  당월제조","qas":" :  교환/반품 공지사항참조"}, productPrice=77500, productDate=2022-01-01]
+번호 : 11
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=054&type=X&mcode=003
+상품 고유번호 (branduid) : 267888
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 267888
+상품명 : 투버튼싱글JK
+상품가(정가) : 82000
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 3
+상품 옵션(사이즈)-1 : 1(66-77)
+상품 옵션(사이즈)-2 : 2(88-99)
+상품 옵션(사이즈)-3 : 3(100-120)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 1
+상품 옵션(색상)-1 : 검정
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540030010322.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540030010322.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 1
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2022/emade/emade_0228_1_18.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22267888%22%2C%22cateid%22%3A%22054003%22%2C%22cat1id%22%3A%22054%22%2C%22cat2id%22%3A%22003%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+특수 유형
+1 :  1(66-77),2(88-99),3(100-120)
+2 :  검정(black)
+모델 정보 : <b>MODEL</b>: 1(66-77),검정(black)
+모델 정보 있음
+3 :  1(66-77),검정(black)
+4 :  폴리(poly)
+5 :  한국/협력업체
+6 :  2022년 당월제조
+cnt : 6
+limit : 7
+7 :  교환/반품 공지사항참조
+상품 상세정보 : ShopProductDTO(size= 1(66-77),2(88-99),3(100-120), colors= 검정(black), model= 1(66-77),검정(black), materials= 폴리(poly), country= 한국/협력업체, yom= 2022년 당월제조, qas= 교환/반품 공지사항참조)
+상품(267888) 상세정보 : ShopProductDTO(size= 1(66-77),2(88-99),3(100-120), colors= 검정(black), model= 1(66-77),검정(black), materials= 폴리(poly), country= 한국/협력업체, yom= 2022년 당월제조, qas= 교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_054_010, orderIndex=220101_010, userName=김갑순, productName=투버튼싱글JK, productOption={"size":" 1(66-77),2(88-99),3(100-120)","colors":" 검정(black)","model":" 1(66-77),검정(black)","materials":" 폴리(poly)","country":" 한국/협력업체","yom":" 2022년 당월제조","qas":" 교환/반품 공지사항참조"}, productPrice=82000, productDate=2022-01-01]
+번호 : 12
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=054&type=X&mcode=003
+상품 고유번호 (branduid) : 269639
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 269639
+상품명 : 골드버튼트위드JK
+상품가(정가) : 70500
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : 1(66-88)
+상품 옵션(사이즈)-2 : 2(99-110)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(색상)-1 : 밤색
+상품 옵션(색상)-2 : 곤색
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540030011442.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540030011442.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 2
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2022/1018/so_1018_2_15.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2022/1018/so_1018_2_16.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22269639%22%2C%22cateid%22%3A%22054003%22%2C%22cat1id%22%3A%22054%22%2C%22cat2id%22%3A%22003%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D
+일반 유형
+상품 상세정보 : ShopProductDTO(size= :  1(66-88),2(99-110), colors= :  밤색(brown),곤색(navy), model= :  1(66-88), 밤색(brown), materials= :  폴리(poly)100%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+상품(269639) 상세정보 : ShopProductDTO(size= :  1(66-88),2(99-110), colors= :  밤색(brown),곤색(navy), model= :  1(66-88), 밤색(brown), materials= :  폴리(poly)100%, country= :  한국/협력업체, yom= :  당월제조, qas= :  교환/반품 공지사항참조)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ProductVO [productIndex=22_054_011, orderIndex=220101_011, userName=황운빈, productName=골드버튼트위드JK, productOption={"size":" :  1(66-88),2(99-110)","colors":" :  밤색(brown),곤색(navy)","model":" :  1(66-88), 밤색(brown)","materials":" :  폴리(poly)100%","country":" :  한국/협력업체","yom":" :  당월제조","qas":" :  교환/반품 공지사항참조"}, productPrice=70500, productDate=2022-01-01]
+번호 : 13
+siteLink : https://www.ely-sia.net/shop/shopbrand.html?xcode=054&type=X&mcode=003
+상품 고유번호 (branduid) : 269577
+///--------------------------------------------------------------------------------
+개별 상품 정보 조회 : 269577
+상품명 : 울체크더블JK
+상품가(정가) : 79500
+상품 옵션(사이즈) : 첫번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(사이즈)-1 : 1(66-88)
+상품 옵션(사이즈)-2 : 2(99-110)
+///--------------------------------------------------------------------------------
+상품 옵션(색상) : 두번째  선택 상자 요소(option) 요소 갯수 : 2
+상품 옵션(색상)-1 : 밤색
+상품 옵션(색상)-2 : 검정
+///--------------------------------------------------------------------------------
+이미지  경로 : https://www.ely-sia.net/shopimages/park6594//0540030011342.jpg
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+저장 폴더 점검 및 생성
+썸네일(우측 큰 상품 이미지) (원파일명) : 0540030011342.jpg
+좌측 개별 상품 썸네일 이미지(원화 축소 사용) 갯수 : 2
+좌측 썸네일 이미지-1 : http://park6594.jpg3.kr/2022/1007/so_1007_9_17.jpg
+좌측 썸네일 이미지-2 : http://park6594.jpg3.kr/2022/1007/so_1007_9_18.jpg
+//-----------------------------------------------------------------------
+searchProductContent
+iframe Site : https://snapfit.co.kr/Resultview_new/renderSnapfitMain/%7B%22sf_isshowsimilar%22%3Atrue%2C%22sf_isshowhistory%22%3Afalse%2C%22sf_get_bodyinfo_from%22%3A1.0%2C%22sf_is_live%22%3A1.0%2C%22logoimg%22%3A%22%252F%252Fsnapvi.ecn.cdn.infralab.net%252Fsnapfit%252Fstores%252Fcommon%252Flogo%252Fsnapfit_logo_3.png%22%2C%22logoimg_m%22%3A%22%22%2C%22is_use_history_sizecur_size%22%3A%220%22%2C%22similarskin_rec_type%22%3A%22rank%22%2C%22viewname%22%3A%22f_c_t%22%2C%22categender%22%3A%22f%22%2C%22device_type%22%3A%22pc%22%2C%22itemid%22%3A%22269577%22%2C%22cateid%22%3A%22054003%22%2C%22cat1id%22%3A%22054%22%2C%22cat2id%22%3A%22003%22%2C%22cat3id%22%3A%22%22%2C%22is_use_order_buylist%22%3A%221%22%2C%22is_use_similarskin_satisfaction_ratio%22%3A%221%22%2C%22is_use_chartpopup%22%3A%220%22%2C%22isupotheruserbuyframe%22%3A%220%22%2C%22float_img_type%22%3A%22%252F%252Fcdn.snapfit.co.kr%252Fcommon%252Fbtn2.png%22%2C%22is_use_rec_item%22%3A%220%22%2C%22domain%22%3A%22ely-sia.net%22%2C%22store_type%22%3A%22makeshop%22%2C%22use_sync%22%3Atrue%2C%22result%22%3A%22success%22%2C%22is_show_main%22%3Atrue%2C%22ac%22%3A%22%22%2C%22sf_store_username%22%3A%22elysia%22%2C%22thumbnail_type%22%3A%221%22%2C%22float_img_use%22%3A%221%22%2C%22fit_version%22%3A%222%22%2C%22draw_target%22%3A%22iframe%22%2C%22main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_frame_id%22%3A%22snapfit_resultview_iframe%22%2C%22constant_main_popup_frame_id%22%3A%22snapfit_resultview_iframe_popup%22%7D

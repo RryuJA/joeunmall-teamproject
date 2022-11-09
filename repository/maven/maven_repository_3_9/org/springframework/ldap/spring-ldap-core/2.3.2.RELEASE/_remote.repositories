@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue May 19 15:42:35 KST 2020
+spring-ldap-core-2.3.2.RELEASE-javadoc.jar>mvn2s=
+spring-ldap-core-2.3.2.RELEASE.pom>mvn2s=
+spring-ldap-core-2.3.2.RELEASE.jar>mvn2s=
+spring-ldap-core-2.3.2.RELEASE-sources.jar>mvn2s=

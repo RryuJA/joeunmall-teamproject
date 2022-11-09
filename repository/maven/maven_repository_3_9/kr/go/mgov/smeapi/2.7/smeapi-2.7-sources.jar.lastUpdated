@@ -1,0 +1,10 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue May 19 15:42:40 KST 2020
+@default-egovframe2-http\://www.egovframe.go.kr/maven/.lastUpdated=1589870559360
+http\://www.egovframe.go.kr/maven/.error=Could not transfer artifact kr.go.mgov\:smeapi\:jar\:sources\:2.7 from/to egovframe2 (http\://www.egovframe.go.kr/maven/)\: sun.security.validator.ValidatorException\: PKIX path building failed\: sun.security.provider.certpath.SunCertPathBuilderException\: unable to find valid certification path to requested target
+https\://repo.maven.apache.org/maven2/.lastUpdated=1589870560107
+http\://maven.egovframe.kr\:8080/maven/.error=
+https\://repo1.maven.org/maven2/.error=
+http\://maven.egovframe.kr\:8080/maven/.lastUpdated=1589870558593
+https\://repo1.maven.org/maven2/.lastUpdated=1589870558582
+https\://repo.maven.apache.org/maven2/.error=

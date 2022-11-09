@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri May 08 12:31:25 KST 2020
+mysql-connector-java-5.1.31.jar>mvn2s=
+mysql-connector-java-5.1.31-sources.jar>mvn2s=
+mysql-connector-java-5.1.31.pom>mvn2s=

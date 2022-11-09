@@ -1,0 +1,41 @@
+/**
+ * 
+ */
+package com.joeun.joeunmall.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.joeun.joeunmall.vo.ProductVO;
+
+import lombok.extern.slf4j.Slf4j;
+
+/**
+ * @author Team3
+ *
+ */
+@Controller
+@Slf4j
+public class DemoController {
+	
+	@GetMapping("/")
+	public String demo(Model model) {
+		log.info("demo");
+		model.addAttribute("demo", "team3");
+		return "redirect:/admin/admin-productManage.do";
+//		return "demo";
+	}
+
+	@GetMapping("/admin/admin-productManage.do")
+	public String adminProductManage() {
+		log.info("admin-productManage");
+		
+		List<ProductVO> products = new ArrayList<>();
+		
+		return "/admin/admin-productManage";
+	}
+}

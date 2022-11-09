@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue May 19 15:42:36 KST 2020
+jackson-core-asl-1.9.2.jar>mvn2s=
+jackson-core-asl-1.9.2-sources.jar>mvn2s=
+jackson-core-asl-1.9.2.pom>mvn2s=
