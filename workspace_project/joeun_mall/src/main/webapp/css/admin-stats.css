@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+/*그래프 버튼*/
+#graph-btn {
+    display: block;
+    background-color: #418cee;
+    font-family:'Nanumgothic';
+    font-size: 13pt;
+    font-weight: normal;
+    color: white;
+    position: absolute;
+    top: 70px;
+    left: 1145px;
+    padding: 10px 30px;
+    border-radius: 4px;
+    border-width: 1px;
+}
+
+/*월별 판매 비교 버튼*/
+#monthCompare-btn {
+    display: block;
+    background-color: #418cee;
+    font-family: 굴림;
+    font-size: 13pt;
+    font-family:'Nanumgothic';
+    font-weight: normal;
+    color: white;
+    position: absolute;
+    top: 70px;
+    left: 945px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+
+/*주문 통계표 */
+.order-table {
+    border-color :#e0e0e0;
+    border-style: solid;
+    border-width: 1px;
+    border-collapse: collapse;
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    width: 1000px;
+    height: 400px;
+    table-layout: fixed;
+}
+
+
+.order-table th {   /*테이블 헤더(?)*/
+    border-color: #e0e0e0;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #a7a7a7;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+    height: 50px;
+}
+
+.order-table td {
+    border-color: #e0e0e0;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    word-break: normal;
+    height: 50px;
+    padding-left: 3px;
+}
+
+.fixedCol-No{ /*No 칸 사이즈 고정*/
+    width: 40px;
+    height: 30px;
+}
+
+.fixedCol-Date{ /*Date 칸 사이즈 고정*/
+    width: 80px;
+    font-size: 10px;
+}
+
+.fixedCol-Merchandise{ /*상품명 칸 사이즈 고정*/
+    width: 300px;
+}
+
+/* ------------------- table paging 시작 -------------------- */
+.page-wrap {
+	text-align:center;
+	font-size:0;
+    position: absolute;
+    top: 600px;
+    left: 47%;
+}
+.page-nation {
+	display:inline-block;
+}
+.page-nation .none {
+	display:none;
+}
+.page-nation a {
+	display:block;
+	margin: 5px 0px;
+	float:left;
+	border:1px solid #e6e6e6;
+	width:28px;
+	height:28px;
+	line-height:28px;
+	text-align:center;
+	background-color: #ffffff;
+	font-size:13px;
+	color:#999999;
+	text-decoration:none;
+}
+.page-nation .arrow {
+	border:1px solid #cccccc;
+    object-fit: cover;
+}
+.page-nation .pprev {
+	background:#f8f8f8 url('../images/icon/icon_page_prevprev.png') no-repeat center center;
+    background-repeat : no-repeat;
+    background-size:15px;
+}
+.page-nation .prev {
+	background:#f8f8f8 url('../images/icon/icon_page_prev.png') no-repeat center center;
+    background-repeat : no-repeat;
+    background-size:15px;
+}
+.page-nation .next {
+	background:#f8f8f8 url('../images/icon/icon_page_next.png') no-repeat center center;
+    background-repeat : no-repeat;
+    background-size:15px;
+}
+.page-nation .nnext {
+	background:#f8f8f8 url('../images/icon/icon_page_nextnext.png') no-repeat center center;
+    background-repeat : no-repeat;
+    background-size:15px;
+}
+.page-nation a.active {
+	background-color:#42454c;
+	color:#fff;
+	border:1px solid #42454c;
+}
+
+/* ------------------- table paging 끝 -------------------- */
+
+/* -----------기간 선택 select 박스 디자인 ---------------*/
+#select3 {
+    position: absolute;
+    top: 75px;
+    left: 300px;
+    width: 100px;
+    height: 40px;
+    padding:5px;
+    border:1px solid #999;
+    font-family:'Nanumgothic';
+    border-radius:3px;
+}
+
+#select4{
+    width: 120px;
+    height: 40px;
+    padding: 5px;
+    border:1px solid #999;
+    font-family:'Nanumgothic';
+    border-radius:3px;
+}

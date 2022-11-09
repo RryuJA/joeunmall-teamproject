@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri May 08 12:29:00 KST 2020
+mybatis-3.4.6-sources.jar>mvn2s=
+mybatis-3.4.6-javadoc.jar>mvn2s=
+mybatis-3.4.6.pom>mvn2s=
+mybatis-3.4.6.jar>mvn2s=

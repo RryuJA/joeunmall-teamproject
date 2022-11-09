@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri May 08 12:31:33 KST 2020
+icu4j-53.1-sources.jar>mvn2s=
+icu4j-53.1.pom>mvn2s=
+icu4j-53.1.jar>mvn2s=
+icu4j-53.1-javadoc.jar>mvn2s=

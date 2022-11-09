@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri May 08 12:28:33 KST 2020
+spring-modules-validation-0.9.jar>egovframe=
+spring-modules-validation-0.9-sources.jar>egovframe=
+spring-modules-validation-0.9.pom>egovframe=

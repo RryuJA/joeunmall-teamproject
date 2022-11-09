@@ -1,0 +1,43 @@
+package com.joeun.joeunmall.vo;
+
+/** 
+ * 주문 진행상태 
+ * @author PJM
+ */
+
+public class OrderStateTBLVO{
+	
+	/** 진행 상태 번호 */
+	private int orderStateIndex;
+	
+	/** 진행 상태 정보 */
+	private String orderStateInfo;
+	
+	public OrderStateTBLVO(int orderStateIndex, String orderStateInfo) {
+		this.orderStateIndex = orderStateIndex;
+		this.orderStateInfo = orderStateInfo;
+	}
+
+	public int getOrderStateIndex() {
+		return orderStateIndex;
+	}
+
+	public void setOrderStateIndex(int orderStateIndex) {
+		this.orderStateIndex = orderStateIndex;
+	}
+
+	public String getOrderStateInfo() {
+		return orderStateInfo;
+	}
+
+	public void setOrderStateInfo(String orderStateInfo) {
+		this.orderStateInfo = orderStateInfo;
+	}
+
+	@Override
+	public String toString() {
+		return "OrderStateTBOVL [orderStateIndex=" + orderStateIndex + ", orderStateInfo=" + orderStateInfo + "]";
+	}
+	
+	
+}

@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Oct 24 16:58:30 KST 2022
+commons-logging-1.2-javadoc.jar>mvn2s=
+commons-logging-1.2.pom>mvn2s=
+commons-logging-1.2.jar>mvn2s=
+commons-logging-1.2.pom>central=
