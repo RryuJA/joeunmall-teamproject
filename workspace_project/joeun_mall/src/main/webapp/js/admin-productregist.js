@@ -25,7 +25,7 @@ $(function() {
                 $('#image_upload_boxes').append(
                     '<div id="image_upload_box'+fileIndex+'">'+
                     '<input type="file"  name="T5_'+fileIndex+'" id="upload_file' +fileIndex+'"  placeholder="이미지 파일을 첨부하세요." size="20">&nbsp;'+
-                    '<img id="upload_image_btn'+fileIndex+'" src="images/icon/icon_minus.png">'+
+                    '<img id="upload_image_btn'+fileIndex+'" src="/joeunmall/images/icon/icon_minus.png">'+
                     '</div>');
 
                 $('td[id=image_upload_td]').height(td_height + 50);
@@ -90,17 +90,17 @@ $(function() {
                 $('#color_upload_boxes').append(
                     '<div id="color_upload_box' +fileIndex +'">' +
                         '<div style="float:left; height: 50px;  padding:0;">'+
-                            '<input type="text"  name="T8_'+fileIndex+'" id="color_text' +fileIndex+'"  placeholder="색상을 입력하세요." size="20">'+
+                            '<input type="text"  name="T8_'+fileIndex+'" id="color_text' +fileIndex+'"  placeholder="옵션을 입력하세요." size="20">'+
                         '</div>'+
                         '<div style="padding-left:5px">' +
-                            '<img id="color_image_btn'+fileIndex+'" src="images/icon/icon_minus.png">'+
+                            '<img id="color_image_btn'+fileIndex+'" src="/joeunmall/images/icon/icon_minus.png">'+
                         '</div>' +
                     '</div>');
 
                 $('td[id=color_upload_td]').height(td_height + 40);
                 color_cnt++;
             } else {
-                alert('색상은 5개까지만 추가가 됩니다.');
+                alert('옵션은 5개까지만 추가가 됩니다.');
             }
         }//function
     ); 
@@ -176,7 +176,7 @@ $(function() {
                     '<div style="float:left">' +
                         '&nbsp;&nbsp;' +
                         '<a href="#" id="size_upload_btn'+ fileIndex +'">' +
-                        '<img id="size'+ fileIndex +'" src="images/icon/icon_plus.png">' + 
+                        '<img id="size'+ fileIndex +'" src="/joeunmall/images/icon/icon_plus.png">' + 
                         '</a>' +
                     '</div>' +
                     '<div id="size_upload_content'+ fileIndex +'" style="float: left;">' +
@@ -195,7 +195,7 @@ $(function() {
                     '<div id="size_upload_del_menu'+ fileIndex +'" style="float:left">' +
                         '&nbsp;&nbsp;' +
                         '<a href="#" id="size_upload_del_btn">' +
-                            '<img id="size_image_btn'+ fileIndex +'" src="images/icon/icon_minus.png">' + 
+                            '<img id="size_image_btn'+ fileIndex +'" src="/joeunmall/images/icon/icon_minus.png">' + 
                         '</a>' +
                     '</div>' +
                 '</div>' 
