@@ -14,8 +14,8 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
-			<item value="C:\joeunmall-teamproject\workspace_project"/>
 			<item value="C:\joeunmall-teamproject\workspace_project\joeun_mall"/>
+			<item value="C:\joeunmall-teamproject\workspace_project"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
