@@ -1,0 +1,13 @@
+package com.joeun.joeunmall.vo;
+
+import java.util.Date;
+
+/**
+ * OrderStats 주문통계정보 VO(값 객체)
+ * 
+ * @author Team3
+ * */
+
+public class OrderstatsVO {
+
+}

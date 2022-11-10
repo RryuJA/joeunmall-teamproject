@@ -84,7 +84,7 @@ CREATE TABLE product_image_tbl(
 CREATE TABLE product_option_tbl (
     product_option_index   		NCHAR(13) NOT NULL PRIMARY KEY,
     product_index 				CHAR(9) NOT NULL,
-    product_option_value    	VARCHAR2(10 CHAR) NOT NULL,
+    product_option_value    	VARCHAR2(15 CHAR) NOT NULL,
 
     -- 외래키(FK) 등록 코드
     CONSTRAINTS fk_product_option_tbl_1 FOREIGN KEY(product_index) REFERENCES product_tbl (product_index)
