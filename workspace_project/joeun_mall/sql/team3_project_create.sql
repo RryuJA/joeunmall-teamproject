@@ -1,6 +1,6 @@
 -- 고객
 CREATE TABLE user_tbl (
-	user_index	            CHAR(7) NOT NULL PRIMARY KEY,
+	user_index	            NCHAR(7) NOT NULL PRIMARY KEY,
 	user_id	                VARCHAR2(50) NOT NULL,
 	user_name	            VARCHAR2(10 CHAR) NOT NULL,
 	user_pw 	            VARCHAR2(60) NOT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE user_tbl (
 
 -- 판매상태정보 (1) 
 CREATE TABLE product_state_tbl (
-    product_state_index     CHAR(1) NOT NULL PRIMARY KEY,
+    product_state_index     NCHAR(1) NOT NULL PRIMARY KEY,
     product_state_info      VARCHAR2(10 CHAR) NOT NULL
 );
 
@@ -33,7 +33,7 @@ SELECT * FROM DUAL;
 
 -- 상품 카테고리 (1)
 CREATE TABLE product_category_tbl (
-    product_category_index	CHAR(2) NOT NULL PRIMARY KEY,
+    product_category_index	NCHAR(2) NOT NULL PRIMARY KEY,
     product_category_name	NVARCHAR2(10) NOT NULL
 );
 
@@ -50,9 +50,9 @@ SELECT * FROM DUAL;
 
 -- 상품
 CREATE TABLE product_tbl (
-    product_index           CHAR(9) NOT NULL PRIMARY KEY,
-	product_category_index 	CHAR(2) NOT NULL,
-	product_state_index 	CHAR(1) NOT NULL,
+    product_index           NCHAR(9) NOT NULL PRIMARY KEY,
+	product_category_index 	NCHAR(2) NOT NULL,
+	product_state_index 	NCHAR(1) NOT NULL,
     product_name 			NVARCHAR2(50) NOT NULL,
     product_price			NUMBER NOT NULL,
     product_image			VARCHAR2(1000) NOT NULL,
@@ -69,8 +69,8 @@ CREATE TABLE product_tbl (
 
 -- 상품 이미지
 CREATE TABLE product_image_tbl(
-    product_image_index         CHAR(11) NOT NULL PRIMARY KEY,
-    product_index 				CHAR(9) NOT NULL,
+    product_image_index         NCHAR(11) NOT NULL PRIMARY KEY,
+    product_index 				NCHAR(9) NOT NULL,
     product_detail_image     	VARCHAR2(1000) NOT NULL,
     
     -- 외래키(FK) 등록 코드
@@ -83,7 +83,7 @@ CREATE TABLE product_image_tbl(
 -- 상품 옵션
 CREATE TABLE product_option_tbl (
     product_option_index   		NCHAR(13) NOT NULL PRIMARY KEY,
-    product_index 				CHAR(9) NOT NULL,
+    product_index 				NCHAR(9) NOT NULL,
     product_option_value    	VARCHAR2(15 CHAR) NOT NULL,
 
     -- 외래키(FK) 등록 코드
@@ -95,8 +95,8 @@ CREATE TABLE product_option_tbl (
 -- 장바구니
 CREATE TABLE cart_tbl (
     cart_index    				NCHAR(11) NOT NULL PRIMARY KEY,
-    user_index 					CHAR(7) NOT NULL,
-    product_index 				CHAR(9) NOT NULL,
+    user_index 					NCHAR(7) NOT NULL,
+    product_index 				NCHAR(9) NOT NULL,
     product_option_index		NCHAR(13) NOT NULL,
     product_count 		        NUMBER NOT NULL,
 
@@ -146,8 +146,8 @@ SELECT * FROM DUAL;
 
 -- 주문
 CREATE TABLE order_tbl (
-    order_index  			 CHAR(10) NOT NULL PRIMARY KEY,
-    user_index 				 CHAR(7) NOT NULL,
+    order_index  			 NCHAR(16) NOT NULL PRIMARY KEY,
+    user_index 				 NCHAR(7) NOT NULL,
     order_state_index		 NCHAR(4) NOT NULL,
     payment_index			 NCHAR(4) NOT NULL,
     order_date 				 DATE DEFAULT SYSDATE NOT NULL,
@@ -169,14 +169,14 @@ CREATE TABLE order_tbl (
 
 -- 주문 상품
 CREATE TABLE order_product_tbl (
-    order_product_index 	CHAR(12) NOT NULL PRIMARY KEY,
-    order_index 			CHAR(10) NOT NULL,
-    product_index 			CHAR(9) NOT NULL,
+    order_product_index 	NCHAR(20) NOT NULL PRIMARY KEY,
+    user_index 				 NCHAR(7) NOT NULL,
+    product_index 			NCHAR(9) NOT NULL,
     product_option_index 	NCHAR(13) NOT NULL,
     product_count			NUMBER NOT NULL,
     
     -- 외래키(FK) 등록 코드
-    CONSTRAINTS fk_order_product_tbl_1 FOREIGN KEY(order_index) REFERENCES order_tbl (order_index),
+    CONSTRAINTS fk_order_product_tbl_1 FOREIGN KEY(user_index) REFERENCES user_tbl (user_index),
     CONSTRAINTS fk_order_product_tbl_2 FOREIGN KEY(product_index) REFERENCES product_tbl (product_index),
     CONSTRAINTS fk_order_product_tbl_3 FOREIGN KEY(product_option_index) REFERENCES product_option_tbl (product_option_index)
 );
@@ -185,8 +185,8 @@ CREATE TABLE order_product_tbl (
 
 -- 1:1 문의
 CREATE TABLE inquiry_tbl (
-    inquiry_index   		CHAR(9)	NOT NULL PRIMARY KEY,
-    user_index 				CHAR(7) NOT NULL,
+    inquiry_index   		NCHAR(9)	NOT NULL PRIMARY KEY,
+    user_index 				NCHAR(7) NOT NULL,
     inquiry_date   			DATE DEFAULT SYSDATE NOT NULL,
     inquiry_category  		VARCHAR2(10 CHAR) NOT NULL,
     inquiry_state   		VARCHAR2(10 CHAR) NOT NULL,
@@ -204,8 +204,8 @@ CREATE TABLE inquiry_tbl (
 -- 리뷰
 CREATE TABLE review_tbl (
     review_index    		NCHAR(16) NOT NULL PRIMARY KEY,
-    product_index 			CHAR(9) NOT NULL,
-    order_index 			CHAR(10) NOT NULL,
+    product_index 			NCHAR(9) NOT NULL,
+    order_index  			 NCHAR(16) NOT NULL PRIMARY KEY,
     review_date   			DATE DEFAULT SYSDATE NOT NULL,
     review_content 			VARCHAR2(100 CHAR) NOT NULL,
     
