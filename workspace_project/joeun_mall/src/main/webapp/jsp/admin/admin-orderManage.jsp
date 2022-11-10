@@ -20,18 +20,20 @@
     <link rel="stylesheet" type="text/css" href="<c:url value ='/css/admin-section-manage.css' />">
 </head>
 <body>
-<%-- session=${SESS_LOGIN_ID}<br> --%>
 <div id="wrap">
     <!--관리자 페이지 header 생략-->
     <nav>
         <!--a 태그 href는 추후 페이지 완성 후 수정-->
-        <a href="admin-orderManage.html"><img id="logo" src="<c:url value ='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
-        <hr id="logohr"/>
+        <a href = "<%=request.getContextPath()%>/orderManage.do?admin=team3">
+			<img id="logo" src="<c:url value ='/images/logo/logo_transparent.png'/>" alt="JoEunMall">
+		</a>        
+		<hr id="logohr"/>
         <ul>
             <!--html 페이지에 해당하는 li태그에 class="thispage" 지정-->
             <!--class가 "li-lower"에 해당하는 경우, 상위 li에도 class="thispage" 지정-->
             <!--ex) <li class="li-lower thispage"> -->
-            <li class="thispage"><a href="admin-orderManage.do">주문관리</a></li>
+<!--             <li class="thispage"><a href="admin-orderManage.html">주문관리</a></li> -->
+            <li class="thispage"><a href="<c:url value='/admin/admin-orderManage.do' />">주문관리</a></li>
             <li><a href="admin-orderStats.do">주문통계</a></li>
             <li><a href="admin-productManage.do">상품관리</a></li>
             <ul class="ul-lower">
@@ -41,20 +43,20 @@
             <li><a href="admin-customerManage.do">고객관리</a></li>
             <li><a href="admin-inquiryManage.do">1:1문의</a></li>
         </ul>
-        <input type="button" value="로그아웃" id="logout-btn" onclick="location.href='/joeunmall/logout.do'">
+        <input type="button" value="로그아웃" id="logout-btn">
     </nav>
     <!--admin-nav.css 끝-->
     
     <!--section, article css 제작해야 함-->
     <section id="section">
             <div id="top-menu-manage">
-                <select class="drop-box">
-                    <option value="">정렬 선택</option>
-                    <option value="order-sort">최근주문순 정렬</option>
-                    <option value="state-sort">진행상태순 정렬</option>
-                </select>
-                <input type="search" id="search" placeholder="주문번호, 주문자명, 주문일자 또는 상품명" />
-                <a href="123"><img id="icon_search" src="<c:url value ='/images/icon/icon_search.png" alt="돋보기' />"></a>
+                    <select class="drop-box">
+                        <option value="">정렬 선택</option>
+                        <option value="order-sort">최근가입순 정렬</option>
+                        <option value="state-sort">고객명 정렬</option>
+                    </select>
+                    <input type="search" id="search" placeholder="주문번호, 주문자명, 주문일자 또는 상품명" />
+                <a href="123"><img id="icon_search" src="<c:url value ='/images/icon/icon_search.png' />" alt="돋보기"></a>
             </div>
         <!-- 테이블 -->
         <article>
@@ -73,166 +75,28 @@
                     </thead>
                     <!-- 레이아웃 페이지보다 웹페이지가 커서 행 2개 추가 (7개 > 9개) -->
                     <tbody>
-                        <tr>
-                            <td><a href="admin-orderDetails.html">Cell Data</a></td>
-                            <td>Cell Data</td>
-                            <td><a href="admin-orderDetails.html">Cell Data</a></td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>
-                                <select name="order-state" class="drop-table">
-                                    <option value="os-1">판매자 확인중</option>
-                                    <option value="os-2">상품준비</option>
-                                    <option value="os-3">배송처리</option>
-                                    <option value="os-4">배송완료</option>
-                                    <option value="os-5">주문취소</option>
-                                    <option value="os-6">환불완료</option>
-                                    <option value="os-7">교환 처리중</option>
-                                    <option value="os-8">교환완료</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a href="admin-orderDetails.html">220907_003</a></td>
-                            <td>Cell Data</td>
-                            <td><a href="admin-orderDetails.html">Cell Data</a></td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>
-                                <select name="order-state" class="drop-table">
-                                    <option value="os-1">판매자 확인중</option>
-                                    <option value="os-2">상품준비</option>
-                                    <option value="os-3">배송처리</option>
-                                    <option value="os-4">배송완료</option>
-                                    <option value="os-5">주문취소</option>
-                                    <option value="os-6">환불완료</option>
-                                    <option value="os-7">교환 처리중</option>
-                                    <option value="os-8">교환완료</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a href="admin-orderDetails.html">Cell Data</a></td>
-                            <td>Cell Data</td>
-                            <td><a href="admin-orderDetails.html">Cell Data</a></td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>
-                                <select name="order-state" class="drop-table">
-                                    <option value="os-1">판매자 확인중</option>
-                                    <option value="os-2">상품준비</option>
-                                    <option value="os-3">배송처리</option>
-                                    <option value="os-4">배송완료</option>
-                                    <option value="os-5">주문취소</option>
-                                    <option value="os-6">환불완료</option>
-                                    <option value="os-7">교환 처리중</option>
-                                    <option value="os-8">교환완료</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a href="admin-orderDetails.html">Cell Data</a></td>
-                            <td>Cell Data</td>
-                            <td><a href="admin-orderDetails.html">Cell Data</a></td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>
-                                <select name="order-state" class="drop-table">
-                                    <option value="os-1">판매자 확인중</option>
-                                    <option value="os-2">상품준비</option>
-                                    <option value="os-3">배송처리</option>
-                                    <option value="os-4">배송완료</option>
-                                    <option value="os-5">주문취소</option>
-                                    <option value="os-6">환불완료</option>
-                                    <option value="os-7">교환 처리중</option>
-                                    <option value="os-8">교환완료</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a href="admin-orderDetails.html">Cell Data</a></td>
-                            <td>Cell Data</td>
-                            <td><a href="admin-orderDetails.html">Cell Data</a></td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>
-                                <select name="order-state" class="drop-table">
-                                    <option value="os-1">판매자 확인중</option>
-                                    <option value="os-2">상품준비</option>
-                                    <option value="os-3">배송처리</option>
-                                    <option value="os-4">배송완료</option>
-                                    <option value="os-5">주문취소</option>
-                                    <option value="os-6">환불완료</option>
-                                    <option value="os-7">교환 처리중</option>
-                                    <option value="os-8">교환완료</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a href="admin-orderDetails.html">Cell Data</a></td>
-                            <td>Cell Data</td>
-                            <td><a href="admin-orderDetails.html">Cell Data</a></td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>
-                                <select name="order-state" class="drop-table">
-                                    <option value="os-1">판매자 확인중</option>
-                                    <option value="os-2">상품준비</option>
-                                    <option value="os-3">배송처리</option>
-                                    <option value="os-4">배송완료</option>
-                                    <option value="os-5">주문취소</option>
-                                    <option value="os-6">환불완료</option>
-                                    <option value="os-7">교환 처리중</option>
-                                    <option value="os-8">교환완료</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a href="admin-orderDetails.html">Cell Data</a></td>
-                            <td>Cell Data</td>
-                            <td><a href="admin-orderDetails.html">Cell Data</a></td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>
-                                <select name="order-state" class="drop-table">
-                                    <option value="os-1">판매자 확인중</option>
-                                    <option value="os-2">상품준비</option>
-                                    <option value="os-3">배송처리</option>
-                                    <option value="os-4">배송완료</option>
-                                    <option value="os-5">주문취소</option>
-                                    <option value="os-6">환불완료</option>
-                                    <option value="os-7">교환 처리중</option>
-                                    <option value="os-8">교환완료</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a href="admin-orderDetails.html">Cell Data</a></td>
-                            <td>Cell Data</td>
-                            <td><a href="admin-orderDetails.html">Cell Data</a></td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>Cell Data</td>
-                            <td>
-                                <select name="order-state" class="drop-table">
-                                    <option value="os-1">판매자 확인중</option>
-                                    <option value="os-2">상품준비</option>
-                                    <option value="os-3">배송처리</option>
-                                    <option value="os-4">배송완료</option>
-                                    <option value="os-5">주문취소</option>
-                                    <option value="os-6">환불완료</option>
-                                    <option value="os-7">교환 처리중</option>
-                                    <option value="os-8">교환완료</option>
-                                </select>
-                            </td>
-                        </tr>
+                    	<c:forEach var="orderManageVO" items="${orderManageList}" varStatus="st">
+	                    	<tr>                            
+		                        <td>${orderManageVO.orderIndex}</td>
+		                        <td>${orderManageVO.orderName}</td>
+		                        <td>${orderManageVO.productName}</td>
+		                        <td>${orderManageVO.productCount}</td>
+		                        <td><fmt:formatNumber value="${orderManageVO.orderPrice}" pattern="###,###" /></td>
+		                        <td><fmt:formatDate value= "${orderManageVO.orderDate}" pattern="yyyy년MM월dd일"/></td>
+		                        <td>	                                
+		                         	<select name="order-state" class="drop-table">
+	                                    <option value="os-1">판매자 확인중</option>
+	                                    <option value="os-2">상품준비</option>
+	                                    <option value="os-3">배송처리</option>
+	                                    <option value="os-4">배송완료</option>
+	                                    <option value="os-5">주문취소</option>
+	                                    <option value="os-6">환불완료</option>
+	                                    <option value="os-7">교환 처리중</option>
+	                                    <option value="os-8">교환완료</option>
+                                	</select>                            
+                           		</td>
+			               </tr>
+                   		</c:forEach>
                     </tbody>
                 </table>
             </div>
