@@ -43,7 +43,7 @@
             <li><a href="admin-customerManage.do">고객관리</a></li>
             <li><a href="admin-inquiryManage.do">1:1문의</a></li>
         </ul>
-        <input type="button" value="로그아웃" id="logout-btn">
+        <input type="button" value="로그아웃" id="logout-btn" onclick="location.href='/joeunmall/logout.do'">
     </nav>
     <!--admin-nav.css 끝-->
     

@@ -13,9 +13,9 @@
     <title>JoEun-admin 주문통계표</title>
 
     <!-- javascript -->
-    <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="js/admin-orderStats.js"></script>
-    <script src="js/admin-orderTable.js"></script>
+    <script src="<c:url value ='/js/jquery-3.6.1.min.js' />"></script>
+    <script src="<c:url value ='/js/admin-orderStats.js' />"></script>
+    <script src="<c:url value ='/js/admin-orderTable.js' />"></script>
 
     <!--css-->
     <!--admin-nav.css는 고정-->
@@ -38,17 +38,17 @@
                 <!--html 페이지에 해당하는 li태그에 class="thispage" 지정-->
                 <!--class가 "li-lower"에 해당하는 경우, 상위 li에도 class="thispage" 지정-->
                 <!--ex) <li class="li-lower thispage"> -->
-                <li><a href="admin-orderManage.html">주문관리</a></li>
-                <li class="thispage"><a href="admin-orderStats.html">주문통계</a></li>
-                <li><a href="admin-productManage.html">상품관리</a></li>
+                <li><a href="admin-orderManage.do">주문관리</a></li>
+                <li class="thispage"><a href="admin-orderStats.do">주문통계</a></li>
+                <li><a href="admin-productManage.do">상품관리</a></li>
                 <ul class="ul-lower">
-                    <li class="li-lower"><a href="admin-productManage.html">상품조회</a></li>
-                    <li class="li-lower"><a href="admin-productRegistration.html">상품등록</a></li>
+                    <li class="li-lower"><a href="admin-productManage.do">상품조회</a></li>
+                    <li class="li-lower"><a href="admin-productRegistration.do">상품등록</a></li>
                 </ul>
-                <li><a href="admin-customerManage.html">고객관리</a></li>
-                <li><a href="admin-inquiryManage.html">1:1문의</a></li>
+                <li><a href="admin-customerManage.do">고객관리</a></li>
+                <li><a href="admin-inquiryManage.do">1:1문의</a></li>
             </ul>
-            <input type="button" value="로그아웃" id="logout-btn">
+            <input type="button" value="로그아웃" id="logout-btn" onclick="location.href='/joeunmall/logout.do'">
         </nav>
         <!--admin-nav.css 끝-->
 
@@ -57,7 +57,7 @@
             <!-- 기간 선택 드랍박스 -->
             <div id="top-menu-manageStats">
 	            <div>  <!-- 기간 선택 select -->
-	                <select name="selectPeriod" class="select3">
+	                <select name="selectPeriod" id="select3">
 	                    <option selected>전체 기간</option>
 	                    <option value="2209">2022년 9월</option>
 	                    <option value="2208">2022년 8월</option>
@@ -67,7 +67,7 @@
 	            </div>
 	            <div>
 	                <!-- 그래프 보기 버튼 -->
-	                <input type="button" value="그래프 보기" id="graph-btn" style="cursor:pointer" onclick="location.href='admin-orderStatsGraph.html'">
+	                <input type="button" value="그래프 보기" id="graph-btn" style="cursor:pointer" onclick="location.href='admin-orderStatsGraph.do'">
 	            </div>
         	</div>
             <section id="section">
@@ -90,9 +90,9 @@
                                         <option value="os-6">자켓</option>
                                     </select>
                                 </th>
-                                <th style="cursor: pointer;" onclick="sortTable(0)">판매수량&nbsp<img src="images/icon/icon_sort.png" width=20 height=15></th>
-                                <th style="cursor: pointer;" onclick="sortTable(1)">개별 가격&nbsp<img src="images/icon/icon_sort.png" width=20 height=15></th>
-                                <th style="cursor: pointer;" onclick="sortTable(2)">총 판매 금액<img src="images/icon/icon_sort.png" width=20 height=15></th>
+                                <th style="cursor: pointer;" onclick="sortTable(0)">판매수량&nbsp<img src="<c:url value ='/images/icon/icon_sort.png' />" width=20 height=15></th>
+                                <th style="cursor: pointer;" onclick="sortTable(1)">개별 가격&nbsp<img src="<c:url value ='/images/icon/icon_sort.png' />" width=20 height=15></th>
+                                <th style="cursor: pointer;" onclick="sortTable(2)">총 판매 금액<img src="<c:url value ='/images/icon/icon_sort.png' />" width=20 height=15></th>
                             </tr>
                         </thead>
                         <!-- 레이아웃 페이지보다 웹페이지가 커서 행 2개 추가 (7개 > 9개) -->

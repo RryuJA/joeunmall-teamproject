@@ -23,4 +23,5 @@ public class CartVO {
 	private int productPrice;
 	/** 상품이름 */
 	private String productName;
+	
 }

@@ -23,14 +23,64 @@ public class InquiryVO {
 	private String inquiryContent;
 	/** 문의답변 */
 	private String inquiryAnswer;
-	
-	//INQUIRY_TBL(문의 테이블)에 없는 필드  : 다른 테이블(USER_TBL,PRODUCT_TBL)과의 조인을 통해서 조회
 	/** 고객명 */
 	private String userName;
-	/** 상품명 */
-	private String productName; 
-	/** 상품번호 */
-	private String productIndex; 
 	
+public InquiryVO() {
+	}
 
+	public InquiryVO(String inquiryIndex, Date inquiryDate, String userName, String inquiryCategory,
+			String inquiryTitle) {
+		this.inquiryIndex = inquiryIndex;
+		this.inquiryDate = inquiryDate;
+		this.userName = userName;
+		this.inquiryCategory = inquiryCategory;
+		this.inquiryTitle = inquiryTitle;
+	}
+
+	public String getInquiryIndex() {
+		return inquiryIndex;
+	}
+
+	public void setInquiryIndex(String inquiryIndex) {
+		this.inquiryIndex = inquiryIndex;
+	}
+
+	public Date getInquiryDate() {
+		return inquiryDate;
+	}
+
+	public void setInquiryDate(Date inquiryDate) {
+		this.inquiryDate = inquiryDate;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getInquiryCategory() {
+		return inquiryCategory;
+	}
+
+	public void setInquiryCategory(String inquiryCategory) {
+		this.inquiryCategory = inquiryCategory;
+	}
+
+	public String getInquiryTitle() {
+		return inquiryTitle;
+	}
+
+	public void setInquiryTitle(String inquiryTitle) {
+		this.inquiryTitle = inquiryTitle;
+	}
+
+	@Override
+	public String toString() {
+		return "InquiryVO [inquiryIndex=" + inquiryIndex + ", inquiryDate=" + inquiryDate + ", userName="
+				+ userName + ", inquiryCategory=" + inquiryCategory + ", inquiryTitle=" + inquiryTitle + "]";
+	}
 }

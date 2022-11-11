@@ -31,7 +31,7 @@
                 <!--class가 "li-lower"에 해당하는 경우, 상위 li에도 class="thispage" 지정-->
                 <!--ex) <li class="li-lower thispage"> -->
                 <li class="thispage"><a href="admin-orderDetails.do">주문관리</a></li>
-                <li><a href="#">주문통계</a></li>
+                <li><a href="admin-orderStats.do">주문통계</a></li>
                 <li><a href="admin-productManage.do">상품관리</a></li>
                 <ul class="ul-lower">
                     <li class="li-lower"><a href="admin-productManage.do">상품조회</a></li>

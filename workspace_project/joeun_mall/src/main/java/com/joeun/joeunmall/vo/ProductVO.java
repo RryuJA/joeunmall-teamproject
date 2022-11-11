@@ -29,7 +29,8 @@ public class ProductVO {
 	
 	/** 등록일자 */
 	private Date productDate;
-
+	
+	
 	public ProductVO() {
 	
 	}

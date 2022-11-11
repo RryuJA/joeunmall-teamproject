@@ -1,11 +1,7 @@
 package com.joeun.joeunmall.vo;
 
-import lombok.Data;
-
 import java.sql.Date;
-import java.util.List;
 
-@Data
 public class OrderVO {
 
 		/** 주문번호 */
@@ -19,7 +15,7 @@ public class OrderVO {
 		/** 주문일자 */
 		private Date orderDate;
 		/** 총액 */
-		private String orderPrice;
+		private int orderPrice;
 		/** 수령인 */
 		private String orderName;
 		/** 우편번호 */
@@ -32,27 +28,98 @@ public class OrderVO {
 		private String orderMobile;
 		/** 배송메시지 */
 		private String orderMessage;
-		
-		//ORDER_TBL(주문 테이블)에 없는 필드  : 다른 테이블(INQUIRY_TBL)과의 조인을 통해서 조회
-		/** 문의처리상태 */
-		private String inquiryState;
-		/** 문의제목 */
-		private String inquiryTitle;
-		/** 문의내용 */
-		private String inquiryContent;
-		
-		//ORDER_TBL(주문 테이블)에 없는 필드  : 다른 테이블과의 조인을 통해서 조회
-		
-		/** 주문상품 리스트 */
-		private List<CartVO> cartList;
-		/** 상품번호 */
-		//private List<String> productIndex;
 		/** 상품명 */
-		//private List<String> productName;
-		/** 상품개수 */
-		//private List<Integer> productCount;
-		/** 상품가격 */
-		//private List<Integer> productPrice;
-}
+		private String productName;
+		/** 총 주문수량 */
+		private int productCount;
+
+//		/** 진행상태 */
+//		private String orderStateIndex;
+
+		
+		public OrderVO(String orderIndex, String orderName, String productName, int productCount, int orderPrice,
+				Date orderDate) {
+			this.orderIndex = orderIndex;
+			this.orderName = orderName;
+			this.productName = productName;
+			this.productCount = productCount;
+			this.orderPrice = orderPrice;
+			this.orderDate = orderDate;
+		}
+
+	 
+
+		public String getOrderIndex() {
+			return orderIndex;
+		}
+
+	 
+
+		public void setOrderIndex(String orderIndex) {
+			this.orderIndex = orderIndex;
+		}
+
+	 
+		public String getOrderName() {
+			return orderName;
+		}
+
+	 
+
+		public void setOrderName(String orderName) {
+			this.orderName = orderName;
+		}
+
+
+		public String getProductName() {
+			return productName;
+		}
+
+	 
+		public void setProductName(String productName) {
+			this.productName = productName;
+		}
+
+	 
+		public int getProductCount() {
+			return productCount;
+		}
+
+	 
+
+		public void setProductCount(int productCount) {
+			this.productCount = productCount;
+		}
+
+	 
+		public int getOrderPrice() {
+			return orderPrice;
+		}
+
+	 
+		public void setOrderPrice(int orderPrice) {
+			this.orderPrice = orderPrice;
+		}
+
+	 
+		public Date getOrderDate() {
+			return orderDate;
+		}
+
+	 
+		public void setOrderDate(Date orderDate) {
+			this.orderDate = orderDate;
+		}
+
+	 
+
+		@Override
+		public String toString() {
+			return "OrderManageVO [orderIndex=" + orderIndex + ", orderName=" + orderName + ", productName=" + productName
+					+ ", productCount=" + productCount + ", orderPrice=" + orderPrice + ", orderDate=" + orderDate + "]";
+		}
+
+	}
+
 
 

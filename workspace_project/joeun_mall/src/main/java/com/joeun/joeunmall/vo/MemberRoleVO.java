@@ -1,15 +1,19 @@
 package com.joeun.joeunmall.vo;
 
+ 
+
 import org.springframework.security.core.GrantedAuthority;
+ 
 
 /**
  * 회원 롤 정보 값 객체(VO)
  * @author java
  *
  */
+
 public class MemberRoleVO implements GrantedAuthority { 
 	// 추가 : implements GrantedAuthority
-	
+
 	/**
 	 * 
 	 */
@@ -17,10 +21,10 @@ public class MemberRoleVO implements GrantedAuthority {
 
 	/** 아이디 (sequence) */
 	private int memberRoleId;
-	
+
 	/** 회원 아이디 */
 	private String id;
-	
+
 	/** 회원 아이디(Spring Security용) */
 	private String username;
 
@@ -42,7 +46,7 @@ public class MemberRoleVO implements GrantedAuthority {
 	public void setId(String id) {
 		this.id = id;
 	}
-	
+
 	public String getUsername() {
 		return username;
 	}
@@ -58,16 +62,16 @@ public class MemberRoleVO implements GrantedAuthority {
 	public void setRole(String role) {
 		this.role = role;
 	}
-
 	@Override
 	public String toString() {
 		return "MemberRoleVO [memberRoleId=" + memberRoleId + ", id=" + id + ", username=" + username + ", role=" + role
 				+ "]";
 	}
-
 	@Override
 	public String getAuthority() {
 		return this.role;
 	}
+
 	
+
 }

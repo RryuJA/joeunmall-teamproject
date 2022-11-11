@@ -15,7 +15,7 @@
     <!--css-->
     <!--admin-nav.css는 고정-->
     <!--페이지별로 추가해야하는 css 파일은 admin-nav.css 아래에 추가-->
-    <link rel="stylesheet" type="text/css" href="<c:url value ='/css/admin-nav.css' />">
+    <link rel="stylesheet" type="text/css" href="<c:url value ='/joeunmall/css/admin-nav.css' />">
     <link rel="stylesheet" type="text/css" href="<c:url value ='/css/admin-section-details.css' />">
 </head>
 <body>
@@ -30,7 +30,7 @@
                 <!--class가 "li-lower"에 해당하는 경우, 상위 li에도 class="thispage" 지정-->
                 <!--ex) <li class="li-lower thispage"> -->
                 <li><a href="admin-orderManage.do">주문관리</a></li>
-                <li><a href="#">주문통계</a></li>
+                <li><a href="admin-orderStats.do">주문통계</a></li>
                 <li><a href="admin-productManage.do">상품관리</a></li>
                 <ul class="ul-lower">
                     <li class="li-lower"><a href="admin-productManage.do">상품조회</a></li>

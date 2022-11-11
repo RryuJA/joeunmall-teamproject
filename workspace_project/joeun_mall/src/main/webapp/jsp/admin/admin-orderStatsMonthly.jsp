@@ -42,17 +42,17 @@
                     <!--html 페이지에 해당하는 li태그에 class="thispage" 지정-->
                     <!--class가 "li-lower"에 해당하는 경우, 상위 li에도 class="thispage" 지정-->
                     <!--ex) <li class="li-lower thispage"> -->
-                    <li><a href="admin-orderManage.jsp">주문관리</a></li>
-                    <li class="thispage"><a href="admin-orderStats.jsp">주문통계</a></li>
-                    <li><a href="admin-productManage.jsp">상품관리</a></li>
+                    <li><a href="admin-orderManage.do">주문관리</a></li>
+                    <li class="thispage"><a href="admin-orderStats.do">주문통계</a></li>
+                    <li><a href="admin-productManage.do">상품관리</a></li>
                     <ul class="ul-lower">
-                        <li class="li-lower"><a href="admin-productManage.jsp">상품조회</a></li>
-                        <li class="li-lower"><a href="admin-productRegistration.jsp">상품등록</a></li>
+                        <li class="li-lower"><a href="admin-productManage.do">상품조회</a></li>
+                        <li class="li-lower"><a href="admin-productRegistration.do">상품등록</a></li>
                     </ul>
-                    <li><a href="admin-customerManage.jsp">고객관리</a></li>
-                    <li><a href="admin-inquiryManage.">1:1문의</a></li>
+                    <li><a href="admin-customerManage.do">고객관리</a></li>
+                    <li><a href="admin-inquiryManage.do">1:1문의</a></li>
                 </ul>
-                <input type="button" value="로그아웃" id="logout-btn">
+                <input type="button" value="로그아웃" id="logout-btn" onclick="location.href='/joeunmall/logout.do'">
             </nav>
             <!--admin-nav.css 끝-->
 
