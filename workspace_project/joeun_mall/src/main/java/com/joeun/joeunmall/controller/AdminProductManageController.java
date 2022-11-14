@@ -22,15 +22,6 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping
 public class AdminProductManageController {
 
-	@GetMapping("/jumpMenu")
-	public String demo(Model model) {
-		log.info("demo");
-		model.addAttribute("admin", "productManage");
-		return "/admin/jumpMenu";
-//		return "redirect:/admin/admin-productManage.do";
-//		return "demo";
-	}
-
 	@GetMapping("/admin/admin-productManage.do")
 	public String adminProductManage(Model model) {
 		log.info("admin-productManage");

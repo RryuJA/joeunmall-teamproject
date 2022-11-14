@@ -39,21 +39,21 @@
             <!--관리자 페이지 header 생략-->
             <nav>
                 <!--a 태그 href는 추후 페이지 완성 후 수정-->
-                <a href="admin-orderManage.do"><img id="logo" src="<c:url value ='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
+                <a href = "<c:url value='/admin/admin-orderManage.do' />"><img id="logo" src="<c:url value ='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
                 <hr id="logohr" />
                 <ul>
                     <!--html 페이지에 해당하는 li태그에 class="thispage" 지정-->
                     <!--class가 "li-lower"에 해당하는 경우, 상위 li에도 class="thispage" 지정-->
                     <!--ex) <li class="li-lower thispage"> -->
-                    <li><a href="admin-orderManage.do">주문관리</a></li>
-                    <li class="thispage"><a href="admin-orderStats.do">주문통계</a></li>
-                    <li><a href="admin-productManage.do">상품관리</a></li>
+                    <li><a href="<c:url value='/admin/admin-orderManage.do' />">주문관리</a></li>
+                    <li class="thispage"><a href="<c:url value='/admin/admin-orderStats.do' />">주문통계</a></li>
+                    <li><a href="<c:url value='/admin/admin-productManage.do' />">상품관리</a></li>
                     <ul class="ul-lower">
-                        <li class="li-lower"><a href="admin-productManage.do">상품조회</a></li>
-                        <li class="li-lower"><a href="admin-productRegistration.do">상품등록</a></li>
+                        <li class="li-lower"><a href="<c:url value='/admin/admin-productManage.do' />">상품조회</a></li>
+                        <li class="li-lower"><a href="<c:url value='/admin/admin-productRegistration.do' />">상품등록</a></li>
                     </ul>
-                    <li><a href="admin-customerManage.do">고객관리</a></li>
-                    <li><a href="admin-inquiryManage.do">1:1문의</a></li>
+                    <li><a href="<c:url value='/admin/admin-customerManage.do' />">고객관리</a></li>
+                    <li><a href="<c:url value='/admin/admin-inquiryManage.do' />">1:1문의</a></li>
                 </ul>
                 <input type="button" value="로그아웃" id="logout-btn" onclick="location.href='/joeunmall/logout.do'">
             </nav>
@@ -73,12 +73,12 @@
                     <input type="radio" id="selectQuantity" name="selectGraph" value="Quantity"><label for="selectQuantity">판매 수량</label>
                                         
                     <!-- ---------------- 그래프 ---------------------->
-                    <script src="js/charts/getGraph(price_quantity)_onLoad.js" charset="utf-8"></script>
-                    <script src="js/charts/getGraph(price_quantity).js" charset="utf8"></script> <!-- 이 js파일 헤드로 올리면 그래프 작동 안함 -->
-                    <script src="js/charts/getGraph(select3).js" charset="utf8"></script>     
-                    <script src="js/charts/getGraph(select4).js" charset="utf8"></script>     
-                    <script src="js/charts/chartAJAX.js" charset="utf8"></script>
-                    <script src="js/charts/chartCreator.js" charset="utf8"></script>
+                    <script src="<c:url value='/js/charts/getGraph(price_quantity)_onLoad.js' />" charset="utf-8"></script>
+                    <script src="<c:url value='/js/charts/getGraph(price_quantity).js' />" charset="utf8"></script> <!-- 이 js파일 헤드로 올리면 그래프 작동 안함 -->
+                    <script src="<c:url value='/js/charts/getGraph(select3).js' />" charset="utf8"></script>     
+                    <script src="<c:url value='/js/charts/getGraph(select4).js' />" charset="utf8"></script>     
+                    <script src="<c:url value='/js/charts/chartAJAX.js' />" charset="utf8"></script>
+                    <script src="<c:url value='/js/charts/chartCreator.js' />" charset="utf8"></script>
                     
                     <figure class="highcharts-figure">
                         <div id="container"></div>

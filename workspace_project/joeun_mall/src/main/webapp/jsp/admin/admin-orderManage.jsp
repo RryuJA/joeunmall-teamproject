@@ -24,7 +24,7 @@
     <!--관리자 페이지 header 생략-->
     <nav>
         <!--a 태그 href는 추후 페이지 완성 후 수정-->
-        <a href = "<%=request.getContextPath()%>/orderManage.do?admin=team3">
+        <a href = "<c:url value='/admin/admin-orderManage.do' />">
 			<img id="logo" src="<c:url value ='/images/logo/logo_transparent.png'/>" alt="JoEunMall">
 		</a>        
 		<hr id="logohr"/>
@@ -34,14 +34,14 @@
             <!--ex) <li class="li-lower thispage"> -->
 <!--             <li class="thispage"><a href="admin-orderManage.html">주문관리</a></li> -->
             <li class="thispage"><a href="<c:url value='/admin/admin-orderManage.do' />">주문관리</a></li>
-            <li><a href="admin-orderStats.do">주문통계</a></li>
-            <li><a href="admin-productManage.do">상품관리</a></li>
+            <li><a href="<c:url value='/admin/admin-orderStats.do' />">주문통계</a></li>
+            <li><a href="<c:url value='/admin/admin-productManage.do' />">상품관리</a></li>
             <ul class="ul-lower">
-                <li class="li-lower"><a href="admin-productManage.do">상품조회</a></li>
-                <li class="li-lower"><a href="admin-productRegistration.do">상품등록</a></li>
+                <li class="li-lower"><a href="<c:url value='/admin/admin-productManage.do' />">상품조회</a></li>
+                <li class="li-lower"><a href="<c:url value='/admin/admin-productRegistration.do' />">상품등록</a></li>
             </ul>
-            <li><a href="admin-customerManage.do">고객관리</a></li>
-            <li><a href="admin-inquiryManage.do">1:1문의</a></li>
+            <li><a href="<c:url value='/admin/admin-customerManage.do' />">고객관리</a></li>
+            <li><a href="<c:url value='/admin/admin-inquiryManage.do' />">1:1문의</a></li>
         </ul>
         <input type="button" value="로그아웃" id="logout-btn" onclick="location.href='/joeunmall/logout.do'">
     </nav>
