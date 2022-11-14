@@ -7,6 +7,10 @@
 * DB: Oracle 11g
 * WAS : tomcat 9.0 (Port : 8282)
 
+<관리자페이지 ID, PW>
+* ID: admin
+* PW: joeun1234
+
 ** C 드라이브에 파일 다운로드
 
 <초기 설정> 
