@@ -38,15 +38,15 @@
                 <!--html 페이지에 해당하는 li태그에 class="thispage" 지정-->
                 <!--class가 "li-lower"에 해당하는 경우, 상위 li에도 class="thispage" 지정-->
                 <!--ex) <li class="li-lower thispage"> -->
-                <li><a href="<c:url value='/admin-orderManage.do' />">주문관리</a></li>
-                <li class="thispage"><a href="<c:url value='/admin-orderStats.do' />">주문통계</a></li>
-                <li><a href="<c:url value='/admin-productManage.do' />">상품관리</a></li>
+                <li><a href="<c:url value='/admin/admin-orderManage.do' />">주문관리</a></li>
+                <li class="thispage"><a href="<c:url value='/admin/admin-orderStats.do' />">주문통계</a></li>
+                <li><a href="<c:url value='/admin/admin-productManage.do' />">상품관리</a></li>
                 <ul class="ul-lower">
-                    <li class="li-lower"><a href="<c:url value='/admin-productManage.do' />">상품조회</a></li>
-                    <li class="li-lower"><a href="<c:url value='/admin-productRegistration.do' />">상품등록</a></li>
+                    <li class="li-lower"><a href="<c:url value='/admin/admin-productManage.do' />">상품조회</a></li>
+                    <li class="li-lower"><a href="<c:url value='/admin/admin-productRegistration.do' />">상품등록</a></li>
                 </ul>
-                <li><a href="<c:url value='/admin-customerManage.do' />">고객관리</a></li>
-                <li><a href="<c:url value='/admin-inquiryManage.do' />">1:1문의</a></li>
+                <li><a href="<c:url value='/admin/admin-customerManage.do' />">고객관리</a></li>
+                <li><a href="<c:url value='/admin/admin-inquiryManage.do' />">1:1문의</a></li>
             </ul>
             <input type="button" value="로그아웃" id="logout-btn" onclick="location.href='/joeunmall/logout.do'">
         </nav>
