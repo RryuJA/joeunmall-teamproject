@@ -1,10 +1,7 @@
 package com.joeun.joeunmall.controller;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,17 +31,17 @@ public class MonthlyGraphDataRestController {
 	}
 */
 	//sellPeriod와 clothType이 둘다 전체기간/전체종류가 아닐경우 선별하는 함수
-		private List<GraphDataVO> searchList(List<GraphDataVO> listAll, String clothType, String sellPeriod){
-			
-			List<GraphDataVO> resultList = new ArrayList<>();  
-			for(int i=0; i<listAll.size(); i++) {
-				GraphDataVO graphdataVO = listAll.get(i);
-				if(graphdataVO.getCt().equals(clothType) && graphdataVO.getPeriod().substring(0, 2).equals(sellPeriod.substring(2))) {
-					resultList.add(graphdataVO);
-				}
+	private List<GraphDataVO> searchList(List<GraphDataVO> listAll, String clothType, String sellPeriod){
+		
+		List<GraphDataVO> resultList = new ArrayList<>();  
+		for(int i=0; i<listAll.size(); i++) {
+			GraphDataVO graphdataVO = listAll.get(i);
+			if(graphdataVO.getCt().equals(clothType) && graphdataVO.getPeriod().substring(0, 2).equals(sellPeriod.substring(2))) {
+				resultList.add(graphdataVO);
 			}
-			return resultList;
 		}
+		return resultList;
+	}
 	
 	
 	//clothType이 전체종류일 경우 선별하는 함수(판매기간만 선별하는 함수)

@@ -1,9 +1,7 @@
 package com.joeun.joeunmall.controller;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -46,17 +44,17 @@ public class GraphDataRestController {
 	}
 	
 	//sellPeriod가 전체기간일 경우 선별하는 함수
-		private List<GraphDataVO> searchList_periodAll(List<GraphDataVO> listAll, String clothType){
-			
-			List<GraphDataVO> resultListPeriodAll = new ArrayList<>();  
-			for(int i=0; i<listAll.size(); i++) {
-				GraphDataVO graphdataVO = listAll.get(i);
-				if(graphdataVO.getCt().equals(clothType)) {
-					resultListPeriodAll.add(graphdataVO);
-				}
+	private List<GraphDataVO> searchList_periodAll(List<GraphDataVO> listAll, String clothType){
+		
+		List<GraphDataVO> resultListPeriodAll = new ArrayList<>();  
+		for(int i=0; i<listAll.size(); i++) {
+			GraphDataVO graphdataVO = listAll.get(i);
+			if(graphdataVO.getCt().equals(clothType)) {
+				resultListPeriodAll.add(graphdataVO);
 			}
-			return resultListPeriodAll;
 		}
+		return resultListPeriodAll;
+	}
 	
 	/**
 	 * ex) http://localhost:8282/joeunmall/graphJson/priceQuantity?selectGraph=price
