@@ -39,8 +39,8 @@
                 <li class="li-lower thispage"><a href="<c:url value='/admin/admin-productManage.do' />">상품조회</a></li>
                 <li class="li-lower"><a href="<c:url value='/admin/admin-productRegistration.do' />">상품등록</a></li>
             </ul>
-            <li><a href="<c:url value='/admin-customerManage.do' />">고객관리</a></li>
-            <li><a href="<c:url value='/admin-inquiryManage.do' />">1:1문의</a></li>
+            <li><a href="<c:url value='/admin/admin-customerManage.do' />">고객관리</a></li>
+            <li><a href="<c:url value='/admin/admin-inquiryManage.do' />">1:1문의</a></li>
         </ul>
         <input type="button" value="로그아웃" id="logout-btn" onclick="location.href='/joeunmall/logout.do'">
     </nav>
