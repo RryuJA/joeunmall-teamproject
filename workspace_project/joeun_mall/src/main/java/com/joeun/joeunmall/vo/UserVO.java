@@ -32,22 +32,21 @@ public class UserVO {
 	private String userAddressDetail;
 	/** 나이 */
 	private int userAge;
-	/** 연락처 */
-	private String userMoblie;
+
 	
 public UserVO() {
 
 	}
 
 	public UserVO(String userIndex, String userName, Date userDate, int userAge, String userGender,
-			String userMoblie) {
+			String userMobile) {
 
 		this.userIndex = userIndex;
 		this.userName = userName;
 		this.userDate = userDate;
 		this.userAge = userAge;
 		this.userGender = userGender;
-		this.userMoblie = userMoblie;
+		this.userMobile = userMobile;
 
 	}
 
@@ -91,12 +90,12 @@ public UserVO() {
 		this.userGender = userGender;
 	}
 
-	public String getUserMoblie() {
-		return userMoblie;
+	public String getuserMobile() {
+		return userMobile;
 	}
 
-	public void setUserMoblie(String userMoblie) {
-		this.userMoblie = userMoblie;
+	public void setuserMobile(String userMobile) {
+		this.userMobile = userMobile;
 	}
 
  
@@ -104,7 +103,7 @@ public UserVO() {
 	@Override
 	public String toString() {
 		return "UserVO [userIndex=" + userIndex + ", userName=" + userName + ", userDate=" + userDate
-				+ ", userAge=" + userAge + ", userGender=" + userGender + ", userMoblie=" + userMoblie + "]";
+				+ ", userAge=" + userAge + ", userGender=" + userGender + ", userMobile=" + userMobile + "]";
 
 	}
 }
