@@ -66,7 +66,7 @@
                         <th>고객번호</th>
                         <th>고객명</th>
                         <th class="th2_width">가입일</th> <!-- 너비 조절 -->
-                        <th>나이</th>
+                        <th>생년월일</th>
                         <th>성별</th>
                         <th class= "th-width">연락처</th>
                         <th class="th6-width">관련 내역 확인</th>
@@ -74,15 +74,15 @@
                 </thead>
                 <!-- 레이아웃 페이지보다 웹페이지가 커서 행 2개 추가 (7개 > 9개) -->
                 <tbody>
-					<c:forEach var="customerManageVO" items="${customerManageList}" varStatus="st" >
+					<c:forEach var="UserVO" items="${customerManageList}" varStatus="st" >
                     <tr>
                         <!-- <td><a onclick="window.open('./admin-customerInfo.html', 'window_name', 'width=710, height=510, location=no, status=no, scrollbars=yes');" style="cursor:pointer">주문번호</a></td> -->
-                        <td>${customerManageVO.userIndex}</td>
-                        <td>${customerManageVO.userName}</td>
-                        <td><fmt:formatDate value="${customerManageVO.userDate}" pattern="yyyy-MM-dd" /></td>
-                        <td>${customerManageVO.userAge}</td>
-                        <td>${customerManageVO.userGender}</td>
-                        <td>${customerManageVO.userMobile}</td>
+                        <td>${UserVO.userIndex}</td>
+                        <td>${UserVO.userName}</td>
+                        <td><fmt:formatDate value="${UserVO.userDate}" pattern="yyyy-MM-dd" /></td>
+                        <td><fmt:formatDate value="${UserVO.userBirth}" pattern="yyyy-MM-dd" /></td>
+                        <td>${UserVO.userGender}</td>
+                        <td>${UserVO.userMobile}</td>
                         <td>
                             <a href="#"></a><input type="button" value="주문내역">
                             <a href="#"></a><input type="button" value="문의내역">

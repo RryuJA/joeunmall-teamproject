@@ -31,14 +31,13 @@ public class CustomerManageDAOImpl implements CustomerManageDAO {
 	public List<UserVO> getAllUserByPaging(int currentPage, int recordsPerPage) {
 		HashMap<String, Object> map = new HashMap<>();
 		map.put("currentPage", currentPage);
-		map.put("recordsPerPage", recordsPerPage);
-		
+		map.put("recordsPerPage", recordsPerPage);		
 		return sqlSession.selectList(MAPPER_NS+"getAllUserByPaging", map);
 	}
 
 	@Override
-	public int getAllRecordNum() {
-		return sqlSession.selectOne(MAPPER_NS+"getAllRecordNum");
+	public int getAllUserRecordNum() {
+		return sqlSession.selectOne(MAPPER_NS+"getAllUserRecordNum");
 	}
 
 }

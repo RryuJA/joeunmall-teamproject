@@ -7,7 +7,7 @@ FROM (SELECT ROWNUM,
              FLOOR((ROWNUM - 1) / 8 + 1) page  
       FROM (
              SELECT * FROM user_tbl  
-             ORDER BY user_index ASC
+             ORDER BY user_index DESC
            ) m  
       )  
 WHERE page = 1;

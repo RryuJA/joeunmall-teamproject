@@ -12,39 +12,32 @@ public class ProductVO {
 	/** 상품번호 */
 	private String productIndex;
 
-	/** 주문번호 */
-	private String orderIndex;
+	/** 카테고리번호 */
+	private String productCategoryIndex;
 	
-	/** 주문자명 */
-	private String userName;
-
+	/** 상품썸네일 */
+	private String productThumbnail;
+	
 	/** 상품명 */
 	private String productName;
 	
-	/** 상품옵션 */
-	private String productOption; 
+	/** 판매상태번호 */
+	private String productStateIndex;
 	
+	/** 상품이미지 */
+	private String productImage;
+
 	/** 상품가격 */
 	private int productPrice;
-	
+
 	/** 등록일자 */
 	private Date productDate;
 	
+	/** 상품 상세정보 */
+	private String productInfo;
 	
-	public ProductVO() {
-	
-	}
-		
-	public ProductVO(String productIndex, String orderIndex, String userName, String productName, String productOption,
-			int productPrice, Date productDate) {
-		this.productIndex = productIndex;
-		this.orderIndex = orderIndex;
-		this.userName = userName;
-		this.productName = productName;
-		this.productOption = productOption;
-		this.productPrice = productPrice;
-		this.productDate = productDate;
-	}
+	/** 상품옵션 */
+	private String productOptionValue; 
 
 	public String getProductIndex() {
 		return productIndex;
@@ -54,20 +47,20 @@ public class ProductVO {
 		this.productIndex = productIndex;
 	}
 
-	public String getOrderIndex() {
-		return orderIndex;
+	public String getProductCategoryIndex() {
+		return productCategoryIndex;
 	}
 
-	public void setOrderIndex(String orderIndex) {
-		this.orderIndex = orderIndex;
+	public void setProductCategoryIndex(String productCategoryIndex) {
+		this.productCategoryIndex = productCategoryIndex;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getProductThumbnail() {
+		return productThumbnail;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setProductThumbnail(String productThumbnail) {
+		this.productThumbnail = productThumbnail;
 	}
 
 	public String getProductName() {
@@ -78,12 +71,20 @@ public class ProductVO {
 		this.productName = productName;
 	}
 
-	public String getProductOption() {
-		return productOption;
+	public String getProductStateIndex() {
+		return productStateIndex;
 	}
 
-	public void setProductOption(String productOption) {
-		this.productOption = productOption;
+	public void setProductStateIndex(String productStateIndex) {
+		this.productStateIndex = productStateIndex;
+	}
+
+	public String getProductImage() {
+		return productImage;
+	}
+
+	public void setProductImage(String productImage) {
+		this.productImage = productImage;
 	}
 
 	public int getProductPrice() {
@@ -102,11 +103,28 @@ public class ProductVO {
 		this.productDate = productDate;
 	}
 
+	public String getProductInfo() {
+		return productInfo;
+	}
+
+	public void setProductInfo(String productInfo) {
+		this.productInfo = productInfo;
+	}
+
+	public String getProductOptionValue() {
+		return productOptionValue;
+	}
+
+	public void setProductOptionValue(String productOptionValue) {
+		this.productOptionValue = productOptionValue;
+	}
+
 	@Override
 	public String toString() {
-		return "ProductVO [productIndex=" + productIndex + ", orderIndex=" + orderIndex + ", userName=" + userName
-				+ ", productName=" + productName + ", productOption=" + productOption + ", productPrice=" + productPrice
-				+ ", productDate=" + productDate + "]";
+		return "ProductVO [productIndex=" + productIndex + ", productCategoryIndex=" + productCategoryIndex
+				+ ", productThumbnail=" + productThumbnail + ", productName=" + productName + ", productStateIndex="
+				+ productStateIndex + ", productImage=" + productImage + ", productPrice=" + productPrice
+				+ ", productDate=" + productDate + ", productInfo=" + productInfo + ", productOptionValue="
+				+ productOptionValue + "]";
 	}
-	
 }

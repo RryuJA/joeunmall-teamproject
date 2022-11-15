@@ -20,7 +20,6 @@ import lombok.extern.slf4j.Slf4j;
  * @author team3
  * 
  * */
-
 @Slf4j
 @Controller
 @RequestMapping
@@ -43,19 +42,15 @@ public class AdminCustomerManageController {
 		
 		PageDTO pageDTO = new PageDTO();
 		PageMaker pageMaker = new PageMaker();
-		
-				
+						
 		pageDTO.setRecordsPerPage(8);
-		int maxNum = customerManageService.getAllRecordNum(); 
+		int maxNum = customerManageService.getAllUserRecordNum(); 
 		int maxPage = (int)(maxNum / pageDTO.getRecordsPerPage() + 0.95) + 1;
 		pageDTO.setMaxPage(maxPage);
 		pageDTO.setCurrentPage(currentPage  < pageDTO.getMaxPage() ? currentPage : pageDTO.getMaxPage());
 		
 		pageMaker.setPageDTO(pageDTO);
 	
-		
-		
-		//List<CustomerManageVO> customermanageList = customerManageService.getAllUserByPaging(currentPage, pageDTO.getRecordsPerPage());
 		List<UserVO> customermanageList = customerManageService.getAllUserByPaging(pageDTO.getCurrentPage(), pageDTO.getRecordsPerPage());
 		
 		model.addAttribute("customerManageList", customermanageList);
@@ -63,5 +58,4 @@ public class AdminCustomerManageController {
 		
 		return "/admin/admin-customerManage";
 	}
-	
 }

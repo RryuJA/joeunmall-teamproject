@@ -1,14 +1,17 @@
 package com.joeun.joeunmall.controller;
 
-import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.joeun.joeunmall.service.ProductManageService;
+import com.joeun.joeunmall.vo.PageDTO;
+import com.joeun.joeunmall.vo.PageMaker;
 import com.joeun.joeunmall.vo.ProductVO;
 
 import lombok.extern.slf4j.Slf4j;
@@ -22,49 +25,36 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping
 public class AdminProductManageController {
 
+	@Autowired
+	ProductManageService productManageService; 
+	
+	@GetMapping("/productManage.do")
+	public String demo(Model model) {
+		log.info("demo");
+		model.addAttribute("admin", "productManage");
+		return "redirect:/admin/admin-productManage.do";
+	}
+		
 	@GetMapping("/admin/admin-productManage.do")
-	public String adminProductManage(Model model) {
+	public String adminProductManage(@RequestParam(value="currentPage", defaultValue="1") int currentPage,  
+			Model model) {
 		log.info("admin-productManage");
 		
-		List<ProductVO> productList = new ArrayList<>();
-		ProductVO productVO;
+		PageDTO pageDTO = new PageDTO();
+		PageMaker pageMaker = new PageMaker();	
 		
+		pageDTO.setRecordsPerPage(8);
+		int maxNum = productManageService.getAllProductRecordNum(); 
+		int maxPage = (int)(maxNum / pageDTO.getRecordsPerPage() + 0.95) + 1;
+		pageDTO.setMaxPage(maxPage);
+		pageDTO.setCurrentPage(currentPage  < pageDTO.getMaxPage() ? currentPage : pageDTO.getMaxPage());
 		
-		productVO = new ProductVO("22_01_001", "202210_001", "일승은", "파란티셔츠1", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-
-		productVO = new ProductVO("22_01_002", "202210_002", "이승은", "파란티셔츠2", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-
-		productVO = new ProductVO("22_01_003", "202210_003", "삼승은", "파란티셔츠3", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-		
-		productVO = new ProductVO("22_01_004", "202210_004", "사승은", "파란티셔츠4", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-		
-		productVO = new ProductVO("22_01_005", "202210_005", "오승은", "파란티셔츠5", 
-				"파랑_100", 500000000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-		
-		productVO = new ProductVO("22_01_006", "202210_006", "육승은", "파란티셔츠6", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-		
-		productVO = new ProductVO("22_01_007", "202210_007", "칠승은", "파란티셔츠7", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-		
-		productVO = new ProductVO("22_01_008", "202210_008", "팔승은", "파란티셔츠8", 
-				"파랑_100", 50000, Date.valueOf("2022-10-21"));
-		productList.add(productVO);
-		
-		
+		pageMaker.setPageDTO(pageDTO);
+					
+		List<ProductVO> productmanageList = productManageService.getAllProductByPaging(pageDTO.getCurrentPage(), pageDTO.getRecordsPerPage());
 				
-		model.addAttribute("productList", productList);
+		model.addAttribute("productManageList", productmanageList);
+		model.addAttribute("pageMaker", pageMaker);
 		
 		return "/admin/admin-productManage";
 	}

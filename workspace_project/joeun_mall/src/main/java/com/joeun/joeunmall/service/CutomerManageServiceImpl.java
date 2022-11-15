@@ -14,10 +14,10 @@ import com.joeun.joeunmall.vo.UserVO;
 
 import lombok.extern.slf4j.Slf4j;
 
-/**
- * @author TJ
- *
- */
+	/**
+	 * @author TJ
+	 *
+	 */
 @Service
 @Slf4j
 public class CutomerManageServiceImpl implements CustomerManageService {
@@ -34,8 +34,8 @@ public class CutomerManageServiceImpl implements CustomerManageService {
 	
 	@Transactional(readOnly=true, rollbackFor=Exception.class)
 	@Override
-	public int getAllRecordNum() {
-		return customerManageDAO.getAllRecordNum();
+	public int getAllUserRecordNum() {
+		return customerManageDAO.getAllUserRecordNum();
 	}
 
 }

@@ -18,7 +18,7 @@
 	</select>
 	
 	<!-- 게시판 전체 레코드 수 계산 쿼리 -->
-	<select id="getAllRecordNum" resultType="int">
+	<select id="getAllUserRecordNum" resultType="int">
 		SELECT count(*) FROM user_tbl
 	</select>
 	

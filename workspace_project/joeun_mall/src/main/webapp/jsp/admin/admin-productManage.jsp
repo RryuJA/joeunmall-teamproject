@@ -79,29 +79,29 @@
                     <thead>
                         <tr>
                             <th class="th4-width"></th>
+						    <th>등록일자</th>
                             <th>상품번호</th>
-                            <th>주문번호 </th>
-                            <th class="th5-width">주문자명</th>
+                            <th>카테고리 </th>
+                            <th class="th5-width">상품썸네일</th>
                             <th class="th2-width">상품명</th> <!-- 너비 조절 -->
                             <th>옵션</th>
                             <th>상품가격</th>
-                            <th>등록일자</th>
                         </tr>
                     </thead>
                     <!-- 레이아웃 페이지보다 웹페이지가 커서 행 2개 추가 (7개 > 9개) -->
                     <tbody>
-                    <c:forEach var="productVO" items="${productList}" varStatus="st">
+					<c:forEach var="ProductVO" items="${productManageList}" varStatus="st" >
                         <tr>
                             <td class="th4-width">
                             	<input type="checkbox" id="chk_${st.index}" />
                        		</td>
-                            <td>${productVO.productIndex}</td>
-                            <td>${productVO.orderIndex}</td>
-                            <td class="th5-width">${productVO.userName}</td>
-                            <td>${productVO.productName}</td>
-                            <td class="th5-width">${productVO.productOption}</td>
-                            <td class="th5-width"><fmt:formatNumber value="${productVO.productPrice}" pattern="###,###" /></td>
-                            <td><fmt:formatDate value="${productVO.productDate}" pattern="yyyy년 MM월 dd일"/> </td> 
+                            <td><fmt:formatDate value="${ProductVO.productDate}" pattern="yyyy-MM-dd"/> </td> 
+                            <td>${ProductVO.productIndex}</td>
+                            <td>${ProductVO.productCategoryIndex}</td>
+                            <td><img src="C:\joeunmall-teamproject\product_images\05_jacket\22_05_050_thumbnail.jpg" /></td>
+                            <td>${ProductVO.productName}</td>
+                            <td class="th5-width">${ProductVO.productOptionValue}</td>
+                            <td class="th5-width"><fmt:formatNumber value="${ProductVO.productPrice}" pattern="###,###" /></td>
                       	</tr>
                      </c:forEach>
                     </tbody>
@@ -110,20 +110,40 @@
         </article>
 
 <!-- paging -->
-        <article>
-            <div class="page-wrap">
-                <div class="page-nation">
-                    <a class="arrow pprev" href="#"></a>
-                    <a class="arrow prev" href="#"></a>
-                    <a href="#" class="active">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a class="arrow next" href="#"></a>
-                    <a class="arrow nnext" href="#"></a>
-                </div>
-            </div>
+			<article>
+			<div>
+				<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
+<%-- 인자확인용	${pageMaker.pageDTO}, ${pageMaker}, ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}<br>
+				${pageNum}, ${pageNum +1}, ${pageNum +2}, ${pageNum +3}, ${pageNum +4} --%>
+			</div>
+	            <div class="page-wrap">
+	                <div class="page-nation">
+	                    <a class="arrow pprev" href="<%=request.getContextPath()%>/admin/admin-productManage.do?currentPage=1"></a>
+	                    <a class="arrow prev" href="<%=request.getContextPath()%>/admin/admin-productManage.do?currentPage=
+	                    ${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}"></a>
+	          			
+	                    
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-productManage.do?currentPage=${pageNum}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-productManage.do?currentPage=${pageNum+1}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+1 ? "class='active'" : ""}>${pageMaker.startPage +1}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-productManage.do?currentPage=${pageNum+2}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+2 ? "class='active'" : ""}>${pageMaker.startPage +2}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-productManage.do?currentPage=${pageNum+3}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+3 ? "class='active'" : ""}>${pageMaker.startPage +3}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-productManage.do?currentPage=${pageNum+4}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+4 ? "class='active'" : ""}>${pageMaker.startPage +4}</a>
+	                    
+	                    <a class="arrow next" href="<%=request.getContextPath()%>/admin/admin-productManage.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}"></a>
+	                    <a class="arrow nnext" href="<%=request.getContextPath()%>/admin/admin-productManage.do?currentPage=${pageMaker.pageDTO.maxPage}"></a>
+	                </div>
+	            </div>
+
         </article>
     </section>
 </div>
