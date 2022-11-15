@@ -100,7 +100,7 @@
                             <td>${ProductVO.productCategoryIndex}</td>
                             <td><img src="C:\joeunmall-teamproject\product_images\05_jacket\22_05_050_thumbnail.jpg" /></td>
                             <td>${ProductVO.productName}</td>
-                            <td class="th5-width">${ProductVO.productOptionValue}</td>
+                            <td class="th2-width">${ProductVO.productOptionValue}</td>
                             <td class="th5-width"><fmt:formatNumber value="${ProductVO.productPrice}" pattern="###,###" /></td>
                       	</tr>
                      </c:forEach>

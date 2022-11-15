@@ -4,7 +4,7 @@
 /*  관리페이지 상단메뉴  */
 #top-menu-manage {
 /* background-color: aquamarine; */
-    padding: 40px 80px 30px;
+    padding: 10px 80px 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -52,7 +52,7 @@ input#search{
 #modify-button {
     position: absolute;
     right: 3%;
-    top: 17%;
+    top: 8%;
 }
 
 /* ------------- table --------------- */
@@ -70,7 +70,7 @@ input#search{
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 50px;
+    margin-top: 32px;
 }
 
 /* 테이블 디폴드 옵션 */
@@ -85,7 +85,7 @@ th, td {
     border: 1px solid #e0e0e0;
     padding: 1px;
     width: 120px;
-    height: 60px;
+    height: 70px;
     text-align: center;
 margin: 0;
 }
