@@ -78,30 +78,30 @@
                 <table>
                     <thead>
                         <tr>
-                            <th class="th4-width"></th>
+                            <th class= "th4-width"></th>
 						    <th>등록일자</th>
                             <th>상품번호</th>
                             <th>카테고리 </th>
-                            <th class="th5-width">상품썸네일</th>
-                            <th class="th2-width">상품명</th> <!-- 너비 조절 -->
-                            <th>옵션</th>
+                            <th>상품썸네일</th>
+                            <th class = "th-width">상품명</th> <!-- 너비 조절 -->
+                            <th class = "th2-width">옵션</th>
                             <th>상품가격</th>
                         </tr>
                     </thead>
                     <!-- 레이아웃 페이지보다 웹페이지가 커서 행 2개 추가 (7개 > 9개) -->
                     <tbody>
-					<c:forEach var="ProductVO" items="${productManageList}" varStatus="st" >
+					<c:forEach var="productVO" items="${productManageList}" varStatus="st" >
                         <tr>
                             <td class="th4-width">
                             	<input type="checkbox" id="chk_${st.index}" />
                        		</td>
-                            <td><fmt:formatDate value="${ProductVO.productDate}" pattern="yyyy-MM-dd"/> </td> 
-                            <td>${ProductVO.productIndex}</td>
-                            <td>${ProductVO.productCategoryIndex}</td>
-                            <td><img src="C:\joeunmall-teamproject\product_images\05_jacket\22_05_050_thumbnail.jpg" /></td>
-                            <td>${ProductVO.productName}</td>
-                            <td class="th2-width">${ProductVO.productOptionValue}</td>
-                            <td class="th5-width"><fmt:formatNumber value="${ProductVO.productPrice}" pattern="###,###" /></td>
+                            <td><fmt:formatDate value="${productVO.productDate}" pattern="yyyy-MM-dd"/> </td> 
+                            <td>${productVO.productIndex}</td>
+                            <td>${productVO.productCategoryIndex}</td>
+							<td><img src="<c:url value='/thumbnail/${productVO.productImage}' />" /></td>
+                            <td>${productVO.productName}</td>
+                            <td>${productVO.productOptionValue}</td>
+                            <td><fmt:formatNumber value="${productVO.productPrice}" pattern="###,###" /></td>
                       	</tr>
                      </c:forEach>
                     </tbody>

@@ -24,6 +24,9 @@
 	<!-- images -->
 	<resources mapping="/images/**" location="/images/" />
 	
+	<!-- image upload 절대경로 (추후 리눅스 경로로 변경필요함)-->
+	<resources mapping="/thumbnail/**" location="file:///C:/joeunmall-teamproject/product_images/" />
+	
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/jsp/" />

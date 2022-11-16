@@ -10,7 +10,7 @@
 		             m.*,  
 		             FLOOR((ROWNUM - 1) / #{recordsPerPage} + 1) page  
 		      FROM (
-		            SELECT * FROM (SELECT * from PRODUCT_TBL JOIN (SELECT PRODUCT_INDEX, LISTAGG(PRODUCT_OPTION_VALUE, ',') WITHIN GROUP (ORDER BY PRODUCT_OPTION_VALUE) AS PRODUCT_OPTION_VALUE
+		            SELECT * FROM (SELECT * from PRODUCT_TBL JOIN (SELECT PRODUCT_INDEX, LISTAGG(PRODUCT_OPTION_VALUE, ', ') WITHIN GROUP (ORDER BY PRODUCT_OPTION_VALUE) AS PRODUCT_OPTION_VALUE
 				 	FROM PRODUCT_OPTION_TBL
 				 	GROUP BY PRODUCT_INDEX) B ON PRODUCT_TBL.PRODUCT_INDEX = B.PRODUCT_INDEX)  
 		            ORDER BY product_date DESC
@@ -18,6 +18,8 @@
 		      )  
 		WHERE page = #{currentPage}
 	</select>
+	
+
 	
 	<!-- 게시판 전체 레코드 수 계산 쿼리 -->
 	<select id="getAllProductRecordNum" resultType="int">
