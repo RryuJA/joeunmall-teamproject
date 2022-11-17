@@ -82,7 +82,7 @@
 						    <th>등록일자</th>
                             <th>상품번호</th>
                             <th>카테고리 </th>
-                            <th>상품썸네일</th>
+                            <!-- <th>상품썸네일</th> -->
                             <th class = "th-width">상품명</th> <!-- 너비 조절 -->
                             <th class = "th2-width">옵션</th>
                             <th>상품가격</th>
@@ -98,7 +98,7 @@
                             <td><fmt:formatDate value="${productVO.productDate}" pattern="yyyy-MM-dd"/> </td> 
                             <td>${productVO.productIndex}</td>
                             <td>${productVO.productCategoryIndex}</td>
-							<td><img src="<c:url value='/thumbnail/${productVO.productImage}' />" /></td>
+							<%-- <td><img src="<c:url value='/thumbnail/${productVO.productImage}' />" /></td> --%>
                             <td>${productVO.productName}</td>
                             <td>${productVO.productOptionValue}</td>
                             <td><fmt:formatNumber value="${productVO.productPrice}" pattern="###,###" /></td>

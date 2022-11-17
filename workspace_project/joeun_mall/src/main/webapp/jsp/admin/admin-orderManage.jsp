@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--title 페이지에 맞게 수정-->
-    <title>JoEun-admin 주문관리</title>
+    <title>JoEun_admin 주문관리</title>
 
     <!--javascript-->
-
+	
     <!--css-->
     <!--admin-nav.css는 고정-->
     <!--페이지별로 추가해야하는 css 파일은 admin-nav.css 아래에 추가-->
@@ -76,24 +76,58 @@
                     <!-- 레이아웃 페이지보다 웹페이지가 커서 행 2개 추가 (7개 > 9개) -->
                     <tbody>
                     	<c:forEach var="orderManageVO" items="${orderManageList}" varStatus="st">
+                    		
 	                    	<tr>                            
 		                        <td>${orderManageVO.orderIndex}</td>
 		                        <td>${orderManageVO.orderName}</td>
 		                        <td>${orderManageVO.productName}</td>
-		                        <td>${orderManageVO.productCount}</td>
+		                        <td>${orderManageVO.productCountSum}</td>
 		                        <td><fmt:formatNumber value="${orderManageVO.orderPrice}" pattern="###,###" /></td>
 		                        <td><fmt:formatDate value= "${orderManageVO.orderDate}" pattern="yyyy년MM월dd일"/></td>
-		                        <td>	                                
-		                         	<select name="order-state" class="drop-table">
-	                                    <option value="os-1">판매자 확인중</option>
-	                                    <option value="os-2">상품준비</option>
-	                                    <option value="os-3">배송처리</option>
-	                                    <option value="os-4">배송완료</option>
-	                                    <option value="os-5">주문취소</option>
-	                                    <option value="os-6">환불완료</option>
-	                                    <option value="os-7">교환 처리중</option>
-	                                    <option value="os-8">교환완료</option>
-                                	</select>                            
+		                        <td>	
+		                 		                                                       
+		                         	<select name="order-state" id="orderState${st.index}" class="drop-table">
+	                                    <option value="STA1">판매자 확인중</option>
+	                                    <option value="STA2">상품준비</option>
+	                                    <option value="STA3">배송처리</option>
+	                                    <option value="STA4">배송완료</option>
+	                                    <option value="STA5">주문취소</option>
+	                                    <option value="STA6">반품 처리중</option>
+	                                    <option value="STA7">환불완료</option>
+	                                    <option value="STA8">교환 처리중</option>
+	                                    <option value="STA9">교환완료</option>
+                                	</select>     
+                                	
+                                	<script>
+                                	function setOrderStateIndex(idx, stateIndex){
+                                		
+                                		console.log("-------------------------------------");
+                                		
+                                		var selectBox = document.getElementById(idx);
+                                		
+                                		console.log("stateIndex : " + stateIndex);
+                                		var selectedLabelIndex;
+                                		
+                                		for (var i=0; i<selectBox.length; i++) {
+                                			
+                                			if (selectBox[i].value == stateIndex) {
+                                				
+                                				console.log("인자와 일치하는 옵션 index : " + i);
+                                				console.log("인자와 일치하는 옵션 라벨 : " + selectBox[i].label);
+                                				console.log("인자와 일치하는 옵션 값 : " + selectBox[i].value);
+                                				
+                                				selectedLabelIndex = i;
+                                				break;
+                                			}
+                                			
+                                		} // for
+                                		
+                                		console.log("선택된 상자의 옵션 index : " + selectedLabelIndex);
+                                		selectBox.selectedIndex = selectedLabelIndex;
+                                    }
+		                    		
+                                	setOrderStateIndex("orderState${st.index}", "${orderManageVO.orderStateIndex}");
+				                    </script>                        
                            		</td>
 			               </tr>
                    		</c:forEach>
@@ -103,23 +137,41 @@
         </article>
 
 <!-- paging -->
-        <article>
-            <div class="page-wrap">
-                <div class="page-nation">
-                    <a class="arrow pprev" href="#"></a>
-                    <a class="arrow prev" href="#"></a>
-                    <a href="#" class="active">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a class="arrow next" href="#"></a>
-                    <a class="arrow nnext" href="#"></a>
-                </div>
-            </div>
+			<article>
+			<div>
+				<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
+<%-- 인자확인용	${pageMaker.pageDTO}, ${pageMaker}, ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}<br>
+				${pageNum}, ${pageNum +1}, ${pageNum +2}, ${pageNum +3}, ${pageNum +4} --%>
+			</div>
+	            <div class="page-wrap">
+	                <div class="page-nation">
+	                    <a class="arrow pprev" href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=1"></a>
+	                    <a class="arrow prev" href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=
+	                    ${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}"></a>
+	          			
+	                    
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageNum}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageNum+1}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+1 ? "class='active'" : ""}>${pageMaker.startPage +1}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageNum+2}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+2 ? "class='active'" : ""}>${pageMaker.startPage +2}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageNum+3}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+3 ? "class='active'" : ""}>${pageMaker.startPage +3}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageNum+4}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+4 ? "class='active'" : ""}>${pageMaker.startPage +4}</a>
+	                    
+	                    <a class="arrow next" href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}"></a>
+	                    <a class="arrow nnext" href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageMaker.pageDTO.maxPage}"></a>
+	                </div>
+	            </div>
+
         </article>
-        
-    </section>
 </div>
 <!--관리자 페이지 footer 생략-->
 </body>
