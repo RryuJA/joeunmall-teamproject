@@ -1,5 +1,9 @@
 package com.joeun.joeunmall.controller;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.joeun.joeunmall.vo.GraphDataVO;
+import com.joeun.joeunmall.vo.SoldAmountVO;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -31,17 +36,17 @@ public class MonthlyGraphDataRestController {
 	}
 */
 	//sellPeriod와 clothType이 둘다 전체기간/전체종류가 아닐경우 선별하는 함수
-	private List<GraphDataVO> searchList(List<GraphDataVO> listAll, String clothType, String sellPeriod){
-		
-		List<GraphDataVO> resultList = new ArrayList<>();  
-		for(int i=0; i<listAll.size(); i++) {
-			GraphDataVO graphdataVO = listAll.get(i);
-			if(graphdataVO.getCt().equals(clothType) && graphdataVO.getPeriod().substring(0, 2).equals(sellPeriod.substring(2))) {
-				resultList.add(graphdataVO);
+		private List<GraphDataVO> searchList(List<GraphDataVO> listAll, String clothType, String sellPeriod){
+			
+			List<GraphDataVO> resultList = new ArrayList<>();  
+			for(int i=0; i<listAll.size(); i++) {
+				GraphDataVO graphdataVO = listAll.get(i);
+				if(graphdataVO.getCt().equals(clothType) && graphdataVO.getPeriod().substring(0, 2).equals(sellPeriod.substring(2))) {
+					resultList.add(graphdataVO);
+				}
 			}
+			return resultList;
 		}
-		return resultList;
-	}
 	
 	
 	//clothType이 전체종류일 경우 선별하는 함수(판매기간만 선별하는 함수)
@@ -173,47 +178,93 @@ public class MonthlyGraphDataRestController {
 		log.info("clothType: " + clothType);
 		log.info("판매년도: " + sellPeriod.substring(2)); //allPeriod일 경우 앞에 두글자 짤려서 log에 나오긴 함
 		
+		//변수 선언
 		List<GraphDataVO> listAll = new ArrayList<>();
-		GraphDataVO graphDataVO;
+		GraphDataVO graphDataVO = null;
+		SoldAmountVO soldAmountVO = null;
 		
-		listAll.add(new GraphDataVO("t-001", 23213, "220908", "01"));
-		listAll.add(new GraphDataVO("p-001", 13213, "220620", "02"));
-		listAll.add(new GraphDataVO("o-001", 23113, "220821", "03"));
-		listAll.add(new GraphDataVO("n-001", 31213, "220913", "04"));
-		listAll.add(new GraphDataVO("j-001", 13213, "220715", "05"));
-		listAll.add(new GraphDataVO("j-002", 13113, "220630", "05"));
-		listAll.add(new GraphDataVO("j-003", 23213, "220708", "05"));
-		listAll.add(new GraphDataVO("n-001", 33213, "220601", "04"));
-		listAll.add(new GraphDataVO("n-002", 11213, "220816", "04"));
-		listAll.add(new GraphDataVO("o-002", 12213, "220907", "03"));
-		listAll.add(new GraphDataVO("o-003", 12113, "220927", "03"));
-		listAll.add(new GraphDataVO("p-002", 13203, "220824", "02"));
-		listAll.add(new GraphDataVO("p-001", 10213, "220721", "02"));
-		listAll.add(new GraphDataVO("p-003", 13013, "220606", "02"));
-		listAll.add(new GraphDataVO("p-004", 43213, "220903", "02"));
-		listAll.add(new GraphDataVO("p-003", 10213, "220929", "02"));
-		listAll.add(new GraphDataVO("t-002", 23213, "220817", "01"));
-		listAll.add(new GraphDataVO("j-004", 23213, "220819", "05"));
-		listAll.add(new GraphDataVO("j-003", 13213, "220711", "05"));
-		listAll.add(new GraphDataVO("t-001", 232131, "210908", "01"));
-		listAll.add(new GraphDataVO("p-001", 13213, "210620", "02"));
-		listAll.add(new GraphDataVO("o-001", 23113, "210821", "03"));
-		listAll.add(new GraphDataVO("n-001", 31213, "210913", "04"));
-		listAll.add(new GraphDataVO("j-001", 13213, "210715", "05"));
-		listAll.add(new GraphDataVO("j-002", 13113, "210630", "05"));
-		listAll.add(new GraphDataVO("j-003", 23213, "210708", "05"));
-		listAll.add(new GraphDataVO("n-001", 33213, "210601", "04"));
-		listAll.add(new GraphDataVO("n-002", 11213, "210816", "04"));
-		listAll.add(new GraphDataVO("o-002", 12113, "210907", "03"));
-		listAll.add(new GraphDataVO("o-003", 12113, "210927", "03"));
-		listAll.add(new GraphDataVO("p-002", 13203, "210824", "02"));
-		listAll.add(new GraphDataVO("p-001", 10213, "210721", "02"));
-		listAll.add(new GraphDataVO("p-003", 13013, "210606", "02"));
-		listAll.add(new GraphDataVO("p-004", 43213, "210903", "02"));
-		listAll.add(new GraphDataVO("p-003", 10213, "210929", "02"));
-		listAll.add(new GraphDataVO("t-002", 23213, "210817", "01"));
-		listAll.add(new GraphDataVO("j-004", 23213, "210819", "05"));
-		listAll.add(new GraphDataVO("j-003", 13213, "210711", "05"));
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		String uid = "project";
+		String pwd = "1111";
+		String url = "jdbc:oracle:thin:@localhost:1521:XE";
+		String sql = "select * from ORDER_PRODUCT_TBL left join PRODUCT_TBL on ORDER_PRODUCT_TBL.PRODUCT_INDEX=PRODUCT_TBL.PRODUCT_INDEX";
+		
+		try {
+			//데이터베이스 접속 위한 드라이버 sw 로드
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			//데이터베이스에 연결하는 작업
+			conn = DriverManager.getConnection(url, uid, pwd);
+			log.info("connecting database");
+			//쿼리 생성할 객체 생성
+			stmt = conn.createStatement();
+			log.info("stmt: " + stmt);
+			//쿼리 생성
+			rs = stmt.executeQuery(sql);
+			log.info("rs: " + rs);
+			
+			//쿼리 수행 결과의 데이터 읽어옴
+			while(rs.next()) {
+				//상품 이름 function key 뭐시기 써서 불려와야됨
+				listAll.add(new GraphDataVO("", Integer.parseInt(rs.getString("PRODUCT_PRICE")), Integer.parseInt(rs.getString("PRODUCT_COUNT")), rs.getString("ORDER_PRODUCT_INDEX").substring(0, 6), rs.getString("PRODUCT_INDEX").substring(3, 5)));
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(rs != null) {
+					rs.close();
+				}
+				if(stmt != null) {
+					stmt.close();
+				}
+				if(conn != null) {
+					conn.close();
+				}
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+//		listAll.add(new GraphDataVO("t-001", 23213, "220908", "01"));
+//		listAll.add(new GraphDataVO("p-001", 13213, "220620", "02"));
+//		listAll.add(new GraphDataVO("o-001", 23113, "220821", "03"));
+//		listAll.add(new GraphDataVO("n-001", 31213, "220913", "04"));
+//		listAll.add(new GraphDataVO("j-001", 13213, "220715", "05"));
+//		listAll.add(new GraphDataVO("j-002", 13113, "220630", "05"));
+//		listAll.add(new GraphDataVO("j-003", 23213, "220708", "05"));
+//		listAll.add(new GraphDataVO("n-001", 33213, "220601", "04"));
+//		listAll.add(new GraphDataVO("n-002", 11213, "220816", "04"));
+//		listAll.add(new GraphDataVO("o-002", 12213, "220907", "03"));
+//		listAll.add(new GraphDataVO("o-003", 12113, "220927", "03"));
+//		listAll.add(new GraphDataVO("p-002", 13203, "220824", "02"));
+//		listAll.add(new GraphDataVO("p-001", 10213, "220721", "02"));
+//		listAll.add(new GraphDataVO("p-003", 13013, "220606", "02"));
+//		listAll.add(new GraphDataVO("p-004", 43213, "220903", "02"));
+//		listAll.add(new GraphDataVO("p-003", 10213, "220929", "02"));
+//		listAll.add(new GraphDataVO("t-002", 23213, "220817", "01"));
+//		listAll.add(new GraphDataVO("j-004", 23213, "220819", "05"));
+//		listAll.add(new GraphDataVO("j-003", 13213, "220711", "05"));
+//		listAll.add(new GraphDataVO("t-001", 232131, "210908", "01"));
+//		listAll.add(new GraphDataVO("p-001", 13213, "210620", "02"));
+//		listAll.add(new GraphDataVO("o-001", 23113, "210821", "03"));
+//		listAll.add(new GraphDataVO("n-001", 31213, "210913", "04"));
+//		listAll.add(new GraphDataVO("j-001", 13213, "210715", "05"));
+//		listAll.add(new GraphDataVO("j-002", 13113, "210630", "05"));
+//		listAll.add(new GraphDataVO("j-003", 23213, "210708", "05"));
+//		listAll.add(new GraphDataVO("n-001", 33213, "210601", "04"));
+//		listAll.add(new GraphDataVO("n-002", 11213, "210816", "04"));
+//		listAll.add(new GraphDataVO("o-002", 12113, "210907", "03"));
+//		listAll.add(new GraphDataVO("o-003", 12113, "210927", "03"));
+//		listAll.add(new GraphDataVO("p-002", 13203, "210824", "02"));
+//		listAll.add(new GraphDataVO("p-001", 10213, "210721", "02"));
+//		listAll.add(new GraphDataVO("p-003", 13013, "210606", "02"));
+//		listAll.add(new GraphDataVO("p-004", 43213, "210903", "02"));
+//		listAll.add(new GraphDataVO("p-003", 10213, "210929", "02"));
+//		listAll.add(new GraphDataVO("t-002", 23213, "210817", "01"));
+//		listAll.add(new GraphDataVO("j-004", 23213, "210819", "05"));
+//		listAll.add(new GraphDataVO("j-003", 13213, "210711", "05"));
 		
 		//Json 생성인데 배열구조임
 		if(clothType.equals("ct-all") && !sellPeriod.equals("allPeriod")) {
