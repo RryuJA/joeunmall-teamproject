@@ -24,8 +24,8 @@
             <hr>
             <form action="<c:url value ='/admin/admin-loginProc.do'/>" method="post">
             <div  id="login-box">
-	            <p><span style="letter-spacing:6px">ID:</span><input type="text" name="id"/></p>
-	            <p>PW: <input type="password" name="pw"/></p>
+	            <p><span style="letter-spacing:6px">ID:</span><input type="text" name="id" value="admin" /></p>
+	            <p>PW: <input type="password" name="pw" value="joeun1234" /></p>
 	            <p><button type="submit" id="first-login">로그인</button></p>
         	</div>
         	</form>

@@ -1,15 +1,17 @@
 package com.joeun.joeunmall.controller;
 
-
-import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.joeun.joeunmall.service.CustomerManageService;
+import com.joeun.joeunmall.vo.PageDTO;
+import com.joeun.joeunmall.vo.PageMaker;
 import com.joeun.joeunmall.vo.UserVO;
 
 import lombok.extern.slf4j.Slf4j;
@@ -18,11 +20,13 @@ import lombok.extern.slf4j.Slf4j;
  * @author team3
  * 
  * */
-
 @Slf4j
 @Controller
 @RequestMapping
 public class AdminCustomerManageController {
+	
+	@Autowired
+	CustomerManageService customerManageService;
 
 	@GetMapping("/customerManage.do")
 	public String demo(Model model) {
@@ -32,47 +36,26 @@ public class AdminCustomerManageController {
 	}
 	
 	@GetMapping("/admin/admin-customerManage.do")
-	public String adminCustomerManage(Model model) {
+	public String adminCustomerManage(@RequestParam(value="currentPage", defaultValue="1") int currentPage,  
+			Model model) {
 		log.info("admin-customerManage");
 		
-		List<UserVO> userList = new ArrayList<>();
-		UserVO userVO;
+		PageDTO pageDTO = new PageDTO();
+		PageMaker pageMaker = new PageMaker();
+						
+		pageDTO.setRecordsPerPage(8);
+		int maxNum = customerManageService.getAllUserRecordNum(); 
+		int maxPage = (int)(maxNum / pageDTO.getRecordsPerPage() + 0.95) + 1;
+		pageDTO.setMaxPage(maxPage);
+		pageDTO.setCurrentPage(currentPage  < pageDTO.getMaxPage() ? currentPage : pageDTO.getMaxPage());
 		
-		userVO = new UserVO("2022001", "일승은", Date.valueOf("2022-11-02"), 10, 
-				"남", "010-1234-5678");
-		userList.add(userVO);
+		pageMaker.setPageDTO(pageDTO);
+	
+		List<UserVO> customermanageList = customerManageService.getAllUserByPaging(pageDTO.getCurrentPage(), pageDTO.getRecordsPerPage());
 		
-		userVO = new UserVO("2022001", "이승은", Date.valueOf("2022-11-02"), 20, 
-				"남", "010-1234-5678");
-		userList.add(userVO);
-		
-		userVO = new UserVO("2022001", "삼승은", Date.valueOf("2022-11-02"), 30, 
-				"여", "010-1234-5678");
-		userList.add(userVO);
-		
-		userVO = new UserVO("2022001", "사승은", Date.valueOf("2022-11-02"), 40, 
-				"남", "010-1234-5678");
-		userList.add(userVO);
-		
-		userVO = new UserVO("2022001", "오승은", Date.valueOf("2022-11-02"), 50, 
-				"여", "010-1234-5678");
-		userList.add(userVO);
-		
-		userVO = new UserVO("2022001", "육승은", Date.valueOf("2022-11-02"), 60, 
-				"남", "010-1234-5678");
-		userList.add(userVO);
-		
-		userVO = new UserVO("2022001", "칠승은", Date.valueOf("2022-11-02"), 70, 
-				"여", "010-1234-5678");
-		userList.add(userVO);
-		
-		userVO = new UserVO("2022001", "팔승은", Date.valueOf("2022-11-02"), 80, 
-				"남", "010-1234-5678");
-		userList.add(userVO);
-		
-		model.addAttribute("userList", userList);
+		model.addAttribute("customerManageList", customermanageList);
+		model.addAttribute("pageMaker", pageMaker);
 		
 		return "/admin/admin-customerManage";
 	}
-	
 }

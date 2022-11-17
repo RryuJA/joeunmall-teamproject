@@ -205,7 +205,7 @@ CREATE TABLE inquiry_tbl (
 CREATE TABLE review_tbl (
     review_index    		NCHAR(16) NOT NULL PRIMARY KEY,
     product_index 			NCHAR(9) NOT NULL,
-    order_index  			 NCHAR(16) NOT NULL PRIMARY KEY,
+    order_index  			 NCHAR(16) NOT NULL,
     review_date   			DATE DEFAULT SYSDATE NOT NULL,
     review_content 			VARCHAR2(100 CHAR) NOT NULL,
     
