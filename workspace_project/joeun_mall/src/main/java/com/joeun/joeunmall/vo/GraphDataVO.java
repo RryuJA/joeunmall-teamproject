@@ -13,6 +13,9 @@ public class GraphDataVO {
 	/** 판매 금액 */
 	private int price;
 	
+	/** 판매 수량*/
+	private int amount;
+	
 	/** 판매 기간 */
 	private String period;
 	

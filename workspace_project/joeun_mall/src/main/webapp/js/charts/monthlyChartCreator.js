@@ -45,8 +45,11 @@ function monthlyChartCreator(chartData, price_quantity, unit){
         },
         plotOptions: {
             column: {
-                pointPadding: 0.2,
-                borderWidth: 0
+//                pointPadding: 0.2,
+//                borderWidth: 0
+            	dataLabels: {
+                    enabled: true
+                }
             }
         },
         series: [{
