@@ -61,7 +61,7 @@
 
             <section>
                 <!-- 상태 변수 대쉬보드 (나중에 visibility: hidden; 이용해서 투명으로 만들것)-->
-                <div id="PJM_boxStats" style=" height: 40px; text-align: center; padding-top: 20px; background-color: yellow;">
+                <div hidden id="PJM_boxStats" style=" height: 40px; text-align: center; padding-top: 20px; background-color: yellow;">
                     <label for="select_stat">판매 금액:</label><input type="text" id="selectPrice_stat" size="10" value="미선택" readonly>&nbsp;
                     <label for="select_stat">판매 수량:</label><input type="text" id="selectQuantity_stat" size="10" value="미선택" readonly>&nbsp;
                     <label for="select_stat">기간 선택:</label><input type="text" id="select3_stat" size="10" value="미선택" readonly>&nbsp;
@@ -118,11 +118,11 @@
                     <select name="clothType" id="select4" class="clothType-graph">
                         <!-- <option hidden>항목별 통계</option> -->
                         <option selected value="ct-all">전체 의류</option>
-                        <option value="ct-1">티셔츠</option>
-                        <option value="ct-2">팬츠/스커트</option>
-                        <option value="ct-3">원피스</option>
-                        <option value="ct-4">니트/가디건</option>
-                        <option value="ct-5">자켓</option>
+                        <option value="01">티셔츠</option>
+                        <option value="02">팬츠/스커트</option>
+                        <option value="03">원피스</option>
+                        <option value="04">니트/가디건</option>
+                        <option value="05">자켓</option>
                     </select>
                 </div>
 
