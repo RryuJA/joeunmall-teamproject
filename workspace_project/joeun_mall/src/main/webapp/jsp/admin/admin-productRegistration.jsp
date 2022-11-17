@@ -61,46 +61,51 @@
         </nav>
         
         <!--admin-nav.css 끝-->
+        <form id="regist_form" method="post" action="<c:url value='/admin/admin-productRegistration.do' />" enctype="multipart/form-data">
         <section id="regist-section">
             <table id="productRegistration">
                 <tr>
                     <th class="table-col1">상품명</th>
-                    <td class="table-col2"><input type="text" name="pro-name" placeholder="상품명을 입력하세요." size="28"></td>
+                    <td class="table-col2">
+                    	<input type="text" required name="productName" id="productName" placeholder="상품명을 입력하세요." size="28">
+                   	</td>
                     <th class="table-col1">상품번호</th>
-                    <td class="table-col3"><input type="text" name="pro-index" placeholder="카테고리 선택 시 자동으로 입력됩니다." size="35" readonly></td>
+                    <td class="table-col3">
+                    	<input type="text" required name="productIndex" id="productIndex" 
+                    		pattern="\d{2}_\d{2}_\d{3}"	title="먼저 카테고리를 선택해주세요." placeholder="카테고리를 선택해주세요." size="35" >
+                   	</td>
                 </tr>
                 <tr>
                     <th>카테고리</th>
                     <td>
-                        <select id="category">
-                            <option value="cat-01">티셔츠</option>
-                            <option value="cat-02">팬츠/스커트</option>
-                            <option value="cat-03">원피스</option>
-                            <option value="cat-04">니트/가디건</option>
-                            <option value="cat-05">자켓</option>
+                        <select name="productCategoryIndex" id="category">
+                            <option value="01">티셔츠</option>
+                            <option value="02">팬츠/스커트</option>
+                            <option value="03">원피스</option>
+                            <option value="04">니트/가디건</option>
+                            <option value="05">자켓</option>
                         </select>
                     </td>
                     <th>판매상태</th>
                     <td>
-                        <form>
-                            <label><input type="radio" name="pro-state" value="ing">판매중</label>
-                            <label><input type="radio" name="pro-state" value="end">판매종료</label>
-                        </form>
+                        <label><input type="radio" name="productStateInfo" value="1" checked>판매중</label>
+                        <label><input type="radio" name="productStateInfo" value="0">판매종료</label>
                     </td>
                 </tr>
                 <tr>
                     <th>상품가격</th>
-                    <td colspan="3"><input type="number" name="pro-price" placeholder="상품가격을 입력하세요."></td>
+                    <td colspan="3"><input type="number" required min="0" name="productPrice" id="productPrice" placeholder="상품가격을 입력하세요."></td>
                 </tr>
                 <tr>
                     <th>대표 이미지</th>
                     <td colspan="3">
-                        <div id="left_push">
+                        <div name="uploadFile1" id="left_push">
                             <script src="<c:url value= '/js/admin-representative.js' />"></script>
                             <img id="main_image" src="<c:url value='/images/icon/icon_preloader.png' />" width="100" height="100">
                         </div> 
                         <div id="imageupload_pnl">
-                            <input type="file" onchange="readURL(this);";" name="T4" placeholder="이미지 파일을 첨부하세요." size="20">
+                        <!-- T4 >> uploadFile1 -->
+                            <input type="file" onchange="readURL(this);";" required name="uploadFile1" id="uploadFile1" placeholder="이미지 파일을 첨부하세요." size="20">
                         </div>
                     </td>   
                 </tr>
@@ -114,10 +119,10 @@
                                 </a>
                             </div> 
                             <!-- 상품이미지 파일들 -->
-                            <!-- name=T5 >> T5_1 -->
+                            <!-- name=T5 >> T5_1 >> uploadFiles -->
                             <div id="image_upload_boxes">
                                 <div id="image_upload_box1">
-                                    <input type="file"  name="T5_1" id="upload_file1"  placeholder="이미지 파일을 첨부하세요." size="20">
+                                    <input type="file"  name="uploadFiles1" id="upload_file1"  placeholder="이미지 파일을 첨부하세요." size="20">
                                     <img id="upload_image_btn1" src="<c:url value ='/images/icon/icon_minus.png' />">  
                                 </div>
                             </div>
@@ -125,8 +130,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <th>상세정보<br>이미지</th>
-                    <td colspan="3" id="table-row"><textarea name="pro-info" placeholder="상품 상세정보를 입력하세요."></textarea></td>
+                    <th>이미지<br>상세정보</th>
+                    <td colspan="3" id="table-row"><textarea required name="productInfo" placeholder="상품 상세정보를 입력하세요."></textarea></td>
                 </tr>
                 <tr>
                     <th>옵션</th>
@@ -142,8 +147,9 @@
                             <div id="color_upload_boxes" >
                                 <!-- <div id="color_upload_box0"  class="move_square"> -->
                                 <div id="color_upload_box1">
+                                <!-- T8_1 >> productOption -->
                                     <div>
-                                        <input type="text" name="T8_1" id="color_text" placeholder="옵션을 입력하세요." size="20">
+                                        <input type="text" required name="productOption1" id="color_text1" placeholder="옵션을 입력하세요." size="20">
                                     </div>
                                     <div>
                                         <img id="color_image_btn1" src="<c:url value ='/images/icon/icon_minus.png' />">
@@ -154,8 +160,12 @@
                     </td>
                 </tr>
             </table>
-            <input type="submit" value="상품등록">
+            
         </section>
+        <div id="regist-btn">
+        	<input type="submit" id="product_submit_btn" value="상품등록">
+    	</div>
+    	</form>
     </div>
     <!--관리자 페이지 footer 생략-->
 </body>

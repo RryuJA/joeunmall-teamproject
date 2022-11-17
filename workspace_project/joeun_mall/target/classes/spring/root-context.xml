@@ -84,11 +84,11 @@
 	<!-- File repository : 파일 저장소
 		  업로드 이미지는 image 파일 폴더에 저장되고 썸네일은 thumbnail 폴더에 저장됨. -->
 	<!-- 참고로 썸네일 저장소도 별도로  폴더(D:/lsh/works/egov39_1/upload/thumbnail)를 작성해야 합니다. -->
-	<!-- <bean id="uploadDirResource" 
+	<bean id="uploadDirResource" 
 		  class="org.springframework.core.io.FileSystemResource">
 	    <constructor-arg>
-	      <value>D:/lsh/works/egov39_1/upload/</value>
+	      <value>C:/joeunmall-teamproject/product_images/</value>
 	    </constructor-arg>
-	</bean> -->
+	</bean>
 
 </beans>

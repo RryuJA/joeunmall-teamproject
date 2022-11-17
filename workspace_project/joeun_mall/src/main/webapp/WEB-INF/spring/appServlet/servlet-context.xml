@@ -21,6 +21,9 @@
 	<!-- js -->
 	<resources mapping="/js/**" location="/js/" />
 	
+	<!-- 상품 이미지 임시경로 -->
+	<resources mapping="/upload_image/**" location="file:///C:/joeunmall-teamproject/product_images/" />
+	
 	<!-- images -->
 	<resources mapping="/images/**" location="/images/" />
 	
@@ -39,6 +42,7 @@
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
+		<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
 	</context:component-scan>
 	
 	<!-- 관리자 인증 interceptor -->

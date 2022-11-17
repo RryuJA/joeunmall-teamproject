@@ -24,7 +24,7 @@ $(function() {
                 //새로생기는 창
                 $('#image_upload_boxes').append(
                     '<div id="image_upload_box'+fileIndex+'">'+
-                    '<input type="file"  name="T5_'+fileIndex+'" id="upload_file' +fileIndex+'"  placeholder="이미지 파일을 첨부하세요." size="20">&nbsp;'+
+                    '<input type="file"  name="uploadFiles'+fileIndex+'" id="upload_file' +fileIndex+'"  placeholder="이미지 파일을 첨부하세요." size="20">&nbsp;'+
                     '<img id="upload_image_btn'+fileIndex+'" src="/joeunmall/images/icon/icon_minus.png">'+
                     '</div>');
 
@@ -90,7 +90,7 @@ $(function() {
                 $('#color_upload_boxes').append(
                     '<div id="color_upload_box' +fileIndex +'">' +
                         '<div style="float:left; height: 50px;  padding:0;">'+
-                            '<input type="text"  name="T8_'+fileIndex+'" id="color_text' +fileIndex+'"  placeholder="옵션을 입력하세요." size="20">'+
+                            '<input type="text"  required name="productOption'+fileIndex+'" id="color_text' +fileIndex+'"  placeholder="옵션을 입력하세요." size="20">'+
                         '</div>'+
                         '<div style="padding-left:5px">' +
                             '<img id="color_image_btn'+fileIndex+'" src="/joeunmall/images/icon/icon_minus.png">'+
@@ -142,9 +142,11 @@ $(function() {
     
 });
 
-//사이즈
+
+
 $(function() { 
-    
+
+	/*  //사이즈  
     var size_cnt=1;//사이즈 파일박스 개수
 
     $("#size_upload_td").on('click','[id^=size_upload_btn]', function(e){
@@ -209,9 +211,10 @@ $(function() {
             }
         //function
     }); 
+   
 
 
-    //상품 업로드 패널           삭제
+    //상품 업로드 패널    삭제
     $("#size_upload_td").on('click','img[id^=size_image_btn]', function(e){
         var id = e.currentTarget.id;
         var num = id.substring('size_image_btn'.length);
@@ -239,7 +242,49 @@ $(function() {
         
         
     });
+    */
 
-  
+  //카테고리 선택시에 상품번호 자동선정
+  //상품번호 = ''상품등록연도 2자리'_'상품 카테고리 번호 2자리'_'상품 등록 순서 3자리'
+   $("#category").change(function(e){
+	  console.log("카테고리 선택");
+	  var cat_num =  $("#category").val();
+	  console.log("선택된 값 =" + cat_num);
+	  
+	  var today = new Date();
+	  var year = today.getUTCFullYear();
+	  console.log("year =" + year.toString().substring(2));
+	  
+	  var product_index = year.toString().substring(2) + "_" + cat_num + "_";
+	  
+	//상품테이블에서 해당 카테고리 중 마지막 상품번호+1 >> 신규 상품 번호
+	  $.ajax({
+		  url:'/joeunmall/admin/admin-productIndex.do',
+		  type:'get',
+		  data:{ yearCate:product_index },
+		  success:function(data){
+			  console.log( data.split("_")[2]);
+			  var maxNum = data.split("_")[2];
+			  maxNum = parseInt(maxNum);
+			 // console.log("maxNum =" + ( maxNum +1));
+			  
+			  maxNum = maxNum + 1; 
+			  console.log("1.maxNum =" +  maxNum);
+			  console.log("2.product_index =" + product_index);
+			  //100미만이면 숫자 앞에 '0' 붙이기 ex)050
+			  var lastNum = maxNum < 100 ? '0'+ Number(maxNum).toString() :  Number(maxNum).toString();
+			  
+			  product_index = product_index + lastNum;
+			  console.log("3.product_index =" + product_index);
+			  
+			  $("#productIndex").val(product_index);
+			  //상품 번호 필드를 읽기 전용으로 변환시킨다
+			  $("#productIndex").attr("readonly","readonly");
+		  }
+	  });
 
+	  
+   });//카테고리 선택시에 상품번호 자동선정
+   
+    
 });
