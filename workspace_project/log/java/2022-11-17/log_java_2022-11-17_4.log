@@ -1,0 +1,664 @@
+2022-11-17 16:29:17.332 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-12] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-17 16:29:18.017 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-12] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+2022-11-17 16:29:18.018 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-12] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 36 more
+2022-11-17 16:29:18.905 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-17 16:29:19.250 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-1] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+2022-11-17 16:29:19.251 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 36 more
+2022-11-17 16:29:19.906 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-3] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-17 16:29:20.281 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-3] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+2022-11-17 16:29:20.281 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-3] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 36 more
+2022-11-17 16:30:04.242 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-18] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-17 16:30:05.203 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-18] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+2022-11-17 16:30:05.206 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-18] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 36 more
+2022-11-17 16:30:06.585 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-21] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-17 16:30:07.367 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-21] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+2022-11-17 16:30:07.368 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-21] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 36 more
+2022-11-17 16:30:08.624 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-23] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-17 16:30:09.126 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-23] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+2022-11-17 16:30:09.127 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-23] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 36 more
+2022-11-17 16:30:09.585 [INFO ] [com.zaxxer.hikari.HikariDataSource] [Catalina-utility-1] [com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350)] -- HikariPool-5 - Shutdown initiated...
+2022-11-17 16:30:09.589 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 1. Connection closed
+2022-11-17 16:30:09.589 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.close() returned 
+2022-11-17 16:30:09.592 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 2. Connection closed
+2022-11-17 16:30:09.592 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 2. Connection.close() returned 
+2022-11-17 16:30:09.593 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 3. Connection closed
+2022-11-17 16:30:09.595 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 3. Connection.close() returned 
+2022-11-17 16:30:09.596 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 4. Connection closed
+2022-11-17 16:30:09.597 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 4. Connection.close() returned 
+2022-11-17 16:30:09.599 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 5. Connection closed
+2022-11-17 16:30:09.599 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 5. Connection.close() returned 
+2022-11-17 16:30:09.600 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 6. Connection closed
+2022-11-17 16:30:09.600 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 6. Connection.close() returned 
+2022-11-17 16:30:09.602 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 7. Connection closed
+2022-11-17 16:30:09.602 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 7. Connection.close() returned 
+2022-11-17 16:30:09.604 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 8. Connection closed
+2022-11-17 16:30:09.605 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 8. Connection.close() returned 
+2022-11-17 16:30:09.607 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 9. Connection closed
+2022-11-17 16:30:09.607 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 9. Connection.close() returned 
+2022-11-17 16:30:09.610 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionClosed(Slf4jSpyLogDelegator.java:568)] -- 10. Connection closed
+2022-11-17 16:30:09.610 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-5 connection closer] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 10. Connection.close() returned 
+2022-11-17 16:30:09.613 [INFO ] [com.zaxxer.hikari.HikariDataSource] [Catalina-utility-1] [com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352)] -- HikariPool-5 - Shutdown completed.
+2022-11-17 16:30:19.227 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] -- Root WebApplicationContext: initialization started
+2022-11-17 16:30:20.220 [INFO ] [com.zaxxer.hikari.HikariDataSource] [Catalina-utility-1] [com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80)] -- HikariPool-6 - Starting...
+2022-11-17 16:30:20.624 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [Catalina-utility-1] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 1. Connection opened
+2022-11-17 16:30:20.625 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [Catalina-utility-1] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.new Connection returned 
+2022-11-17 16:30:20.626 [INFO ] [com.zaxxer.hikari.pool.PoolBase] [Catalina-utility-1] [com.zaxxer.hikari.pool.PoolBase.getAndSetNetworkTimeout(PoolBase.java:541)] -- HikariPool-6 - Driver does not support get/set network timeout for connections. (net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy.getNetworkTimeout()I)
+2022-11-17 16:30:20.626 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [Catalina-utility-1] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.isReadOnly() returned false
+2022-11-17 16:30:20.626 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [Catalina-utility-1] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.getAutoCommit() returned true
+2022-11-17 16:30:20.629 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [Catalina-utility-1] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.isValid(1) returned true
+2022-11-17 16:30:20.629 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [Catalina-utility-1] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 1. Connection.getTransactionIsolation() returned 2
+2022-11-17 16:30:20.634 [INFO ] [com.zaxxer.hikari.HikariDataSource] [Catalina-utility-1] [com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:82)] -- HikariPool-6 - Start completed.
+2022-11-17 16:30:20.776 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 2. Connection opened
+2022-11-17 16:30:20.777 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 2. Connection.new Connection returned 
+2022-11-17 16:30:20.777 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 2. Connection.isReadOnly() returned false
+2022-11-17 16:30:20.778 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 2. Connection.getAutoCommit() returned true
+2022-11-17 16:30:20.800 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 3. Connection opened
+2022-11-17 16:30:20.800 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 3. Connection.new Connection returned 
+2022-11-17 16:30:20.801 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 3. Connection.isReadOnly() returned false
+2022-11-17 16:30:20.801 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 3. Connection.getAutoCommit() returned true
+2022-11-17 16:30:20.835 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 4. Connection opened
+2022-11-17 16:30:20.835 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 4. Connection.new Connection returned 
+2022-11-17 16:30:20.836 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 4. Connection.isReadOnly() returned false
+2022-11-17 16:30:20.836 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 4. Connection.getAutoCommit() returned true
+2022-11-17 16:30:20.871 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 5. Connection opened
+2022-11-17 16:30:20.872 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 5. Connection.new Connection returned 
+2022-11-17 16:30:20.872 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 5. Connection.isReadOnly() returned false
+2022-11-17 16:30:20.872 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 5. Connection.getAutoCommit() returned true
+2022-11-17 16:30:20.915 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 6. Connection opened
+2022-11-17 16:30:20.915 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 6. Connection.new Connection returned 
+2022-11-17 16:30:20.915 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 6. Connection.isReadOnly() returned false
+2022-11-17 16:30:20.916 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 6. Connection.getAutoCommit() returned true
+2022-11-17 16:30:20.946 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 7. Connection opened
+2022-11-17 16:30:20.946 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 7. Connection.new Connection returned 
+2022-11-17 16:30:20.947 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 7. Connection.isReadOnly() returned false
+2022-11-17 16:30:20.947 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 7. Connection.getAutoCommit() returned true
+2022-11-17 16:30:20.971 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 8. Connection opened
+2022-11-17 16:30:20.971 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 8. Connection.new Connection returned 
+2022-11-17 16:30:20.971 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 8. Connection.isReadOnly() returned false
+2022-11-17 16:30:20.971 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 8. Connection.getAutoCommit() returned true
+2022-11-17 16:30:21.001 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 9. Connection opened
+2022-11-17 16:30:21.001 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 9. Connection.new Connection returned 
+2022-11-17 16:30:21.002 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 9. Connection.isReadOnly() returned false
+2022-11-17 16:30:21.002 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 9. Connection.getAutoCommit() returned true
+2022-11-17 16:30:21.036 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.connectionOpened(Slf4jSpyLogDelegator.java:541)] -- 10. Connection opened
+2022-11-17 16:30:21.037 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 10. Connection.new Connection returned 
+2022-11-17 16:30:21.037 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 10. Connection.isReadOnly() returned false
+2022-11-17 16:30:21.037 [INFO ] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator] [HikariPool-6 connection adder] [net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator.methodReturned(Slf4jSpyLogDelegator.java:175)] -- 10. Connection.getAutoCommit() returned true
+2022-11-17 16:30:21.633 [INFO ] [org.springframework.web.context.ContextLoader] [Catalina-utility-1] [org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] -- Root WebApplicationContext initialized in 2394 ms
+2022-11-17 16:30:21.704 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-17 16:30:23.334 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [Catalina-utility-1] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+2022-11-17 16:30:23.335 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [Catalina-utility-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1010) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4958) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5265) [catalina.jar:9.0.68]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3819) [catalina.jar:9.0.68]
+	at org.apache.catalina.loader.WebappLoader.backgroundProcess(WebappLoader.java:311) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContext.backgroundProcess(StandardContext.java:5614) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1365) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1369) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1369) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1347) [catalina.jar:9.0.68]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_332]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) [?:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) [?:1.8.0_332]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) [?:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 37 more
+2022-11-17 16:30:24.197 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-22] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-17 16:30:24.635 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-22] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+2022-11-17 16:30:24.636 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-22] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 36 more
+2022-11-17 16:30:30.085 [INFO ] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-25] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] -- Initializing Servlet 'appServlet'
+2022-11-17 16:30:30.627 [WARN ] [org.springframework.context.support.AbstractApplicationContext] [http-nio-8282-exec-25] [org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:559)] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+2022-11-17 16:30:30.627 [ERROR] [org.springframework.web.servlet.FrameworkServlet] [http-nio-8282-exec-25] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:534)] -- Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170) [spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158) [servlet-api.jar:4.0.FR]
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:788) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:128) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [catalina.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [catalina.jar:9.0.68]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) [catalina.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [catalina.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [catalina.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-coyote.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-coyote.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-util.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-util.jar:9.0.68]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'orderStatsController' method 
+com.joeun.joeunmall.controller.OrderStatsController#demo(Model)
+to {GET /orderStats.do}: There is already 'adminOrderStatsController' bean method
+com.joeun.joeunmall.controller.AdminOrderStatsController#demo(Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:637) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:604) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:318) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:378) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:75) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:288) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[?:1.8.0_332]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:258) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:217) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:205) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:189) ~[spring-webmvc-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.22.RELEASE.jar:5.2.22.RELEASE]
+	... 36 more

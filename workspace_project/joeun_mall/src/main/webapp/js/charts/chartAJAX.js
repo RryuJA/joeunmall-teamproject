@@ -139,6 +139,11 @@ function chartAJAX(graphType, sellPeriod, clothType){
 					}	//sum_1, sum_2, .... , sum_n 배열화
 					
 					console.log(allTSum);
+					//allTSum길이가 5개가 안될경우 차트 안그려짐 -> 5개 미만일 경우 while루프 돌려서 null 값 추
+					while(allTSum.length<5){
+						allTSum.push({name:"", price:0, amount:0, total: 0});
+					}
+					
 					
 					if(graphType == "selectQuantity"){
 						//배열 정렬(수량)

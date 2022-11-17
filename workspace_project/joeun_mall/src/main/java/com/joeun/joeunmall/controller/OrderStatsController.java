@@ -17,17 +17,15 @@ import lombok.extern.slf4j.Slf4j;
 
 public class OrderStatsController {
 
-	@GetMapping("/orderStats.do")
-	public String demo(Model model) {
-		log.info("demo");
-		model.addAttribute("admin", "orderStats");
-		return "redirect:/admin/admin-orderStats.do";
-	}
-	
-	@GetMapping("/admin/admin-orderStats.do")
+//	@GetMapping("/orderStats.do")
+//	public String demo(Model model) {
+//		log.info("demo");
+//		model.addAttribute("admin", "orderStats");
+//		return "redirect:/admin/admin-orderStats.do";
+//	}
+	@GetMapping("/admin-orderStats.do")
 	public String adminOrderStats(Model model) {
 		log.info("admin-orderStats");
-		
 		return "/admin/admin-orderStats";
 	}
 	

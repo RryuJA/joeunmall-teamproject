@@ -75,7 +75,7 @@ function monthlyChartAJAX(graphType, sellYear, clothType){
 					} else if(1100 < parseInt(json[i].period.slice(2)) && parseInt(json[i].period.slice(2)) < 1131){
 						NovList.push(json[i].price);
 					} else if(1200 < parseInt(json[i].period.slice(2)) && parseInt(json[i].period.slice(2)) < 1231){
-						decList.push(json[i].price);
+						DecList.push(json[i].price);
 					}//if문 끝
 				}//for문 끝
 				
