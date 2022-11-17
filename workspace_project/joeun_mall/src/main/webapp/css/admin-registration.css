@@ -141,5 +141,12 @@ img[src*="icon_plus"], img[src*="icon_minus"] {
 /*상품 등록 내용*/
 #regist-section {
 	overflow-y:auto;
-	height: 100vh;
+	height: 660px;
+	padding-bottom: 30px;
+}
+
+/* 상품 등록 버튼*/
+#regist-btn{
+	width:100%; 
+	height: 50px;
 }
