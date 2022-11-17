@@ -115,7 +115,7 @@
                 </div>
 
                 <div><!-- 표 보기 버튼 -->
-                    <input type="button" value="표 보기" id="graph-btn" style="cursor:pointer" onclick="location.href='admin-orderStats.jsp'">
+                    <input type="button" value="표 보기" id="graph-btn" style="cursor:pointer" onclick="location.href='admin-orderStats.do'">
                 </div>
             </section>
 

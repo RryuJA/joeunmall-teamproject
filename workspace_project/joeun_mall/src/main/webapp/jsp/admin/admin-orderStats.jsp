@@ -1,6 +1,9 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"  %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.util.Calendar" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -57,13 +60,31 @@
             <!-- 기간 선택 드랍박스 -->
             <div id="top-menu-manageStats">
 	            <div>  <!-- 기간 선택 select -->
-	                <select name="selectPeriod" id="select3">
-	                    <option selected>전체 기간</option>
-	                    <option value="2209">2022년 9월</option>
-	                    <option value="2208">2022년 8월</option>
-	                    <option value="2207">2022년 7월</option>
-	                    <option value="2206">2022년 6월</option>
-	                </select>
+	                <%
+                	Date now = new Date();
+               		Calendar cal1 = Calendar.getInstance();
+               		Calendar cal2 = Calendar.getInstance();
+               		Calendar cal3 = Calendar.getInstance();
+               		Calendar cal4 = Calendar.getInstance();
+               		Calendar cal5 = Calendar.getInstance();
+               		Calendar cal6 = Calendar.getInstance();
+                	SimpleDateFormat sf = new SimpleDateFormat("yyyy년 MM월");
+                	SimpleDateFormat sf2 = new SimpleDateFormat("yyMM");
+                	cal1.add(Calendar.MONTH, -1);
+                    cal2.add(Calendar.MONTH, -2);
+                    cal3.add(Calendar.MONTH, -3);
+                    cal4.add(Calendar.MONTH, -4);
+                    cal5.add(Calendar.MONTH, -5);
+                    cal6.add(Calendar.MONTH, -6);
+                    %>
+                    <select name="selectPeriod" id="select3">
+                        <option selected value="allPeriod">전체 기간</option>
+                        <option value=<%=sf2.format(cal1.getTime())%>><%=sf.format(cal1.getTime())%></option>
+                        <option value=<%=sf2.format(cal2.getTime())%>><%=sf.format(cal2.getTime())%></option>
+                        <option value=<%=sf2.format(cal3.getTime())%>><%=sf.format(cal3.getTime())%></option>
+                        <option value=<%=sf2.format(cal4.getTime())%>><%=sf.format(cal4.getTime())%></option>
+                        <option value=<%=sf2.format(cal5.getTime())%>><%=sf.format(cal5.getTime())%></option>
+                        <option value=<%=sf2.format(cal6.getTime())%>><%=sf.format(cal6.getTime())%></option>
 	            </div>
 	            <div>
 	                <!-- 그래프 보기 버튼 -->
@@ -81,13 +102,13 @@
                                 <th>날짜</th>
                                 <th class="th2-width">상품명</th> <!-- 너비 조절 -->
                                 <th>
-                                    <select name="order-state" class="drop-table">
-                                        <option value="os-1">전체 의류</option>
-                                        <option value="os-2">티셔츠</option>
-                                        <option value="os-3">팬츠/스커트</option>
-                                        <option value="os-4">원피스</option>
-                                        <option value="os-5">니트/가디건</option>
-                                        <option value="os-6">자켓</option>
+                                    <select class="drop-table" name="order-state" id="select4">
+                                        <option value="ct-all">전체 의류</option>
+                                        <option value="01">티셔츠</option>
+                                        <option value="02">팬츠/스커트</option>
+                                        <option value="03">원피스</option>
+                                        <option value="04">니트/가디건</option>
+                                        <option value="05">자켓</option>
                                     </select>
                                 </th>
                                 <th style="cursor: pointer;" onclick="sortTable(0)">판매수량&nbsp<img src="<c:url value ='/images/icon/icon_sort.png' />" width=20 height=15></th>
@@ -97,99 +118,76 @@
                         </thead>
                         <!-- 레이아웃 페이지보다 웹페이지가 커서 행 2개 추가 (7개 > 9개) -->
                         <tbody>
-                            <tr>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                            </tr>
-                            <tr>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                            </tr>
-                            <tr>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                            </tr>
-                            <tr>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                            </tr>
-                            <tr>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                            </tr>
-                            <tr>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                            </tr>
-                            <tr>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                            </tr>
-                            <tr>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                                <td>Cell Data</td>
-                            </tr>
+                        	<c:forEach var="orderStatsVO" items="${orderStatsList}" varStatus="st">
+	                            <tr>
+	                                <td>${orderStatsVO.orderIndex}</td>
+	                                <td>${orderStatsVO.sellPeriod}</td>
+	                                <td>${orderStatsVO.productName}</td>
+	                                <td>
+	                                	<c:choose>
+	                                		<c:when test="${orderStatsVO.clothType eq'01'}">
+	                                		티셔츠
+	                                		</c:when>
+	                                		<c:when test="${orderStatsVO.clothType eq'02'}">
+	                                		팬츠/스커트
+	                                		</c:when>
+	                                		<c:when test="${orderStatsVO.clothType eq'03'}">
+	                                		원피스
+	                                		</c:when>
+	                                		<c:when test="${orderStatsVO.clothType eq'04'}">
+	                                		니트/가디건
+	                                		</c:when>
+	                                		<c:when test="${orderStatsVO.clothType eq'05'}">
+	                                		자켓
+	                                		</c:when>
+	                                	</c:choose>
+	                                </td>
+	                                <td>${orderStatsVO.amount}벌</td>
+	                                <td>${orderStatsVO.price}원</td>
+	                                <td>${orderStatsVO.total}원</td>
+	                            </tr>
+                            </c:forEach>
                         </tbody>
                     </table>
                 </div>
             </article>
     
-    <!-- paging -->
-            <article>
-                <div class="page-wrap">
-                    <div class="page-nation">
-                        <a class="arrow pprev" href="#"></a>
-                        <a class="arrow prev" href="#"></a>
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a class="arrow next" href="#"></a>
-                        <a class="arrow nnext" href="#"></a>
-                    </div>
-                </div>
-            </article>
+<!-- paging -->
+			<article>
+			<div>
+				<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
+<%-- 인자확인용	${pageMaker.pageDTO}, ${pageMaker}, ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}<br>
+				${pageNum}, ${pageNum +1}, ${pageNum +2}, ${pageNum +3}, ${pageNum +4} --%>
+			</div>
+	            <div class="page-wrap">
+	                <div class="page-nation">
+	                    <a class="arrow pprev" href="<%=request.getContextPath()%>/admin/admin-orderStats.do?currentPage=1"></a>
+	                    <a class="arrow prev" href="<%=request.getContextPath()%>/admin/admin-orderStats.do?currentPage=
+	                    ${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}"></a>
+	          			
+	                    
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-orderStats.do?currentPage=${pageNum}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-orderStats.do?currentPage=${pageNum+1}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+1 ? "class='active'" : ""}>${pageMaker.startPage +1}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-orderStats.do?currentPage=${pageNum+2}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+2 ? "class='active'" : ""}>${pageMaker.startPage +2}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-orderStats.do?currentPage=${pageNum+3}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+3 ? "class='active'" : ""}>${pageMaker.startPage +3}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-orderStats.do?currentPage=${pageNum+4}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+4 ? "class='active'" : ""}>${pageMaker.startPage +4}</a>
+	                    
+	                    <a class="arrow next" href="<%=request.getContextPath()%>/admin/admin-orderStats.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}"></a>
+	                    <a class="arrow nnext" href="<%=request.getContextPath()%>/admin/admin-orderStats.do?currentPage=${pageMaker.pageDTO.maxPage}"></a>
+	                </div>
+	            </div>
+
+        </article>
             
         </section>
     </div>
