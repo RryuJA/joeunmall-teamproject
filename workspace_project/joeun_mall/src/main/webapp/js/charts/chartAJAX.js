@@ -103,9 +103,9 @@ function chartAJAX(graphType, sellPeriod, clothType){
 				if(json.length != 0){
 					const groupByName = json.reduce((acc, curr) => {	//json배열 pn(제품명)에 따라 그룹화 작업
 						  const {pn} = curr;
-						  // acc[name]이 있으면 acc[name]의 값을 할당 없으면, 빈 배열을 할당
-						  acc[pn] = acc[pn] ?? []; 
-						  // acc[name]에 객체를 추가
+						  //acc[pn]이 있으면 acc[pn]의 값을 할당 없으면, 빈 배열을 할당
+						  acc[pn] = acc[pn] ?? [];
+						  //acc[pn]에 객체를 추가
 						  acc[pn].push(curr);
 						  return acc;
 						}, {});
@@ -139,6 +139,9 @@ function chartAJAX(graphType, sellPeriod, clothType){
 					}	//sum_1, sum_2, .... , sum_n 배열화
 					
 					console.log(allTSum);
+					while(allTSum.length<5){
+						allTSum.push({name: "", price: 0, amount: 0, total: 0})
+					}
 					
 					if(graphType == "selectQuantity"){
 						//배열 정렬(수량)
