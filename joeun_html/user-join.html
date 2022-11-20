@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--title 페이지에 맞게 수정-->
-    <title>JoEunMall 로그인</title>
+    <title>JoEunMall 회원가입</title>
 
     <!--javascript-->
 
@@ -34,64 +34,82 @@
             <article id="title">
                 <p>회원가입</p>
             </article>
-            <article id="">
+            <article id="join">
                 <form>
-                    <tr>
-                        <th>아이디</th>
-                        <td><input type="text" placeholder="(영문 대소문자/숫자, 4~16자)"></tr>
-                    </tr>
-                    <tr>
-                        <th>비밀번호</th>
-                        <td><input type="password" placeholder="(영문 대소문자/숫자, 8~16자)"></td>
-                    </tr>
-                    <tr>
-                        <th>비밀번호 확인</th>
-                        <td><input type="password"></td>
-                    </tr>
-                    <tr>
-                        <th>이름</th>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <th>주소</th>
-                        <td><input type="text" placeholder="(기본주소)"></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td><input type="text" placeholder="(상세주소)"></td>
-                    </tr>
-                    <tr>
-                        <th>이메일</th>
-                        <td><input type="email"></td>
-                    </tr>
-                    <tr>
-                        <th>일반전화</th>
-                        <td><input type="tel"></td>
-                    </tr>
-                    <tr>
-                        <th>휴대전화</th>
-                        <td><input type="tel"></td>
-                    </tr>
-                    <tr>
-                        <th>성별</th>
-                        <td>
-                            <input type="radio" name="gender">남성 
-                            <input type="radio" name="gender">여성
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>생년월일</th>
-                        <td>
-                            <input type="number">년
-                            <input type="number">월
-                            <input type="number">일
-                        </td>
-                    </tr>
-                    <input type="submit" value="회원가입">
+                    <table> 
+                        <tr>
+                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <th>아이디</th>
+                            <td><input type="text" placeholder="(영문 대소문자/숫자, 4~16자)"></tr>
+                        </tr>
+                        <tr>
+                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <th>비밀번호</th>
+                            <td><input type="password" placeholder="(영문 대소문자/숫자, 8~16자)"></td>
+                        </tr>
+                        <tr>
+                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <th>비밀번호 확인</th>
+                            <td><input type="password"></td>
+                        </tr>
+                        <tr>
+                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <th>이름</th>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="icon-width"></td>
+                            <th></th>
+                            <td><input type="text" placeholder="(우편번호)"></td>
+                        </tr>
+                        <tr>
+                            <td class="icon-width"></td>
+                            <th>주소</th>
+                            <td><input type="text" placeholder="(기본주소)"></td>
+                        </tr>
+                        <tr>
+                            <td class="icon-width"></td>
+                            <th></th>
+                            <td><input type="text" placeholder="(상세주소)"></td>
+                        </tr>
+                        <tr>
+                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <th>이메일</th>
+                            <td><input type="email"></td>
+                        </tr>
+                        <tr>
+                            <td class="icon-width"></td>
+                            <th>일반전화</th>
+                            <td><input type="tel"></td>
+                        </tr>
+                        <tr>
+                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <th>휴대전화</th>
+                            <td><input type="tel"></td>
+                        </tr>
+                        <tr>
+                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <th>성별</th>
+                            <td>
+                                <div id="radio">
+                                    <label><input type="radio" name="gender">남성</label>
+                                    <label><input type="radio" name="gender">여성</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <th>생년월일</th>
+                            <td>
+                                <input type="text" id="year">년
+                                <input type="text" id="month">월
+                                <input type="text" id="day">일
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="join-button">
+                        <input type="submit" value="회원가입">  
+                    </div>
                 </form>
             </article>
 
