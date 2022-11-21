@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/user-header-main.css">
     <link rel="stylesheet" type="text/css" href="css/user-nav-mypage.css">
     <link rel="stylesheet" type="text/css" href="css/user-footer.css">
+    <link rel="stylesheet" type="text/css" href="css/user-list-mypage.css">
 
 </head>
 
@@ -62,9 +63,67 @@
                 </div>
             </nav>  
 
-            <section>
-                
-                
+            <section id="list">
+                <div id="sub-title">
+                    <h3>주문내역</h3>
+                </div>
+                <article id="list-table">
+                    <table>
+                        <tr>
+                            <th class="width1">주문일자</th>
+                            <th class="width3">상품명</th>
+                            <th class="width1">결제금액</th>
+                            <th class="width1">주문상세</th>
+                        </tr>
+                        <tr>
+                            <td>2022.09.20</td>
+                            <td>오버롤포켓OPS 외 3건</td>
+                            <td>79,000원</td>
+                            <td><button>상세보기</button></td>
+                        </tr>
+                        <tr>
+                            <td>2022.08.16</td>
+                            <td>위드밴딩팬츠 외 2건</td>
+                            <td>110,980원</td>
+                            <td><button>상세보기</button></td>
+                        </tr>
+                        <tr>
+                            <td>2022.07.15</td>
+                            <td>ST가디건 외 5건</td>
+                            <td>214,100원</td>
+                            <td><button>상세보기</button></td>
+                        </tr>
+                        <tr>
+                            <td>2022.05.05</td>
+                            <td>935스키니 외 3건</td>
+                            <td>34,300원</td>
+                            <td><button>상세보기</button></td>
+                        </tr>
+                        <tr>
+                            <td>2022.03.21</td>
+                            <td>1973슬랙스</td>
+                            <td>20,000원</td>
+                            <td><button>상세보기</button></td>
+                        </tr>
+                    </table>
+                </article>
+
+                <!--페이지 이동 버튼-->
+                <article>
+                    <div class="page-wrap">
+                        <div class="page-nation">
+                            <a class="arrow pprev" href="#"></a>
+                            <a class="arrow prev" href="#"></a>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a class="arrow next" href="#"></a>
+                            <a class="arrow nnext" href="#"></a>
+                        </div>
+                    </div>
+                </article>
             </section>
         </div>
 
