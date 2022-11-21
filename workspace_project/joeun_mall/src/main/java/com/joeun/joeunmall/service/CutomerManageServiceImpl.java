@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.joeun.joeunmall.service;
 
 import java.util.List;
@@ -15,7 +12,7 @@ import com.joeun.joeunmall.vo.UserVO;
 import lombok.extern.slf4j.Slf4j;
 
 	/**
-	 * @author TJ
+	 * @author LSE
 	 *
 	 */
 @Service
