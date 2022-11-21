@@ -2,11 +2,18 @@
 
 @charset "utf-8";
 
-#carousel {
+.carousel {
     display: flex;
     width: 100%;
     height: 450px;
     background-color: cadetblue;
+    
+}
+
+.carousel-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
 }
 
 /* -------------------------------------- */

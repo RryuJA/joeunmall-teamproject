@@ -16,6 +16,7 @@ nav {
 
 section {
     display: flex;
+    width: 850px;
 }
 /* ---------------------------- */
 
@@ -48,5 +49,9 @@ ul.mypage-sublist li {
 
 ul.mypage-sublist li:hover {
     text-decoration: underline;
+}
+
+ul.mypage-sublist li#this-page {
+    font-weight: bold;
 }
 /* ---------------------------- */

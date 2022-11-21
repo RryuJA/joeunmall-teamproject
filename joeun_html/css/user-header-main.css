@@ -121,7 +121,8 @@ header input[type="button"] {
     border-width: thin;
     border-radius: 5px;
     margin-left: 20px;
-    width: 80px;
+    text-align: center;
+    width: 85px;
     height: 30px;
     font-size: 13pt;
 }
