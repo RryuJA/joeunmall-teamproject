@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/user-header-main.css">
     <link rel="stylesheet" type="text/css" href="css/user-mypage-nav.css">
     <link rel="stylesheet" type="text/css" href="css/user-footer.css">
-    <link rel="stylesheet" type="text/css" href="css/user-mypage-modify.css">
+    <link rel="stylesheet" type="text/css" href="css/user-mypage-pwcheck.css">
 
 </head>
 
@@ -63,13 +63,22 @@
                 </div>
             </nav>  
 
-            <section id="modify">
+            <section id="pw-check">
                 <div id="sub-title">
-                    <h3>회원정보수정</h3>
+                    <h3>비밀번호 재확인</h3>
+                    <hr width="700px">
                 </div>
-                <article id="modify-table">
+                <article id="pw-check-table">
                     <form>
-                        <!--작업중-->
+                        <table>
+                            <tr>
+                                <th>비밀번호</th>
+                                <td><input type="password">
+                            </tr>
+                            <tr class="height1">
+                                <td colspan="2"><input type="submit" value="확인"></td>
+                            </tr>
+                        </table>
                     </form>
                 </article>
             </section>
