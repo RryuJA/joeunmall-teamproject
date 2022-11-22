@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.joeun.joeunmall.mapper.user">
+
+	<!-- 회원정보 조회 -->
+	<select id="selectUser" parameterType="String" resultType="com.joeun.joeunmall.vo.UserVO"> 
+		SELECT * FROM user_tbl
+		WHERE user_id = #{userId}
+	</select>
+	
+	<!-- 최근 고객 번호 조회 -->
+	<select id="selectMaxUserIndex" resultType="String">
+		SELECT SUBSTR(decode((SELECT MAX(user_index) FROM user_tbl), NULL, '0',
+					 (SELECT MAX(user_index) FROM user_tbl)),5) FROM dual
+	</select>
+	
+	<!-- 회원 정보 저장 -->
+	<insert id="insertUser" parameterType="com.joeun.joeunmall.vo.UserVO">
+		INSERT INTO user_tbl 
+	    VALUES
+	    (#{userIndex},#{userId},#{userName},#{userPw},sysdate,#{userMail},#{userBirth},
+	    #{userGender},#{userLandline},#{userMobile},#{userPost},#{userAddress},#{userAddressDetail})
+	</insert>
+	
+	<!-- 회원 정보 수정 -->
+	<update id="updateUser" parameterType="com.joeun.joeunmall.vo.UserVO">
+		 UPDATE user_tbl SET
+		 user_pw=#{userPw},
+		 user_mail=#{userMail},
+		 user_landline=#{userLandline},
+		 user_mobile=#{userMobile},
+		 user_post=#{userPost},
+		 user_address=#{userAddress},
+		 user_address_detail=#{userAddressDetail}
+		 WHERE user_id =#{userId}
+	</update>
+	
+</mapper>

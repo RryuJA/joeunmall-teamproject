@@ -40,8 +40,8 @@
                 <li><a href="#">자켓</a></li>
             </ul>
             <input type="button" value="로그인">
-            <a href="#"><img src="<c:url value='/images/icon/icon_user.png' />"></a>
-            <a href="#"><img src="<c:url value='/images/icon/icon_shopping_bag.png' />"></a>
+            <a href="user-mypageOrder.do"><img src="<c:url value='/images/icon/icon_user.png' />"></a>
+            <a href="user-shoppingBasket.do"><img src="<c:url value='/images/icon/icon_shopping_bag.png' />"></a>
             <a href="#"><img src="<c:url value='/images/icon/icon_search.png' />"></a>
         </header>
         

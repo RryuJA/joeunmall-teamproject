@@ -12,6 +12,21 @@
     <title>JoEunMall 로그인</title>
 
     <!--javascript-->
+    <script src="<c:url value='/jquery/jquery.min.js'/>"></script>
+	<script>
+	$(function(){
+		
+		//로그아웃 버튼 눌렀을때
+		$("#logout_btn").click(function(){
+			location.href = "<%=request.getContextPath()%>/user/user-logout.do"
+		});
+		
+		//로그인 버튼 눌렀을때
+		$("#login_btn").click(function(){
+			location.href = "<%=request.getContextPath()%>/user/user-login.do"
+		})
+	});
+	</script>
 
     <!--css-->
     <!--header와 footer는 고정-->
@@ -24,11 +39,20 @@
 <body>
     <div id="wrap">
         <header>
-            <a href="user-productlistAll.do"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
+            <a href="<c:url value='/user/user-productlistAll.do' />"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
             <div id="header-icon">
-                <input type="button" value="로그인">
-                <a href="#"><img src="<c:url value='/images/icon/icon_user.png' />"></a>
-                <a href="user-shoppingBasket.do"><img src="<c:url value='/images/icon/icon_shopping_bag.png' />"></a>
+                
+                <!-- 로그인 상태 -->
+	            <c:if test="${not empty SESS_LOGIN_ID}">
+	           		<input type="button" id="logout_btn" value="로그아웃">
+	            </c:if>
+	            <!-- 로그아웃 상태 -->
+	            <c:if test="${empty SESS_LOGIN_ID}">
+	            	<input type="button" id="login_btn" value="로그인">
+	            </c:if>
+                
+                <a href="<c:url value='/user/user-mypageOrder.do' />"><img src="<c:url value='/images/icon/icon_user.png' />"></a>
+                <a href="<c:url value='/user/user-shoppingBasket.do' />"><img src="<c:url value='/images/icon/icon_shopping_bag.png' />"></a>
                 <a href="#"><img src="<c:url value='/images/icon/icon_search.png' />"></a>
             </div>
         </header>
@@ -39,14 +63,15 @@
             </article>
             <article id="login">
                 <form action="<c:url value ='/user/user-loginProc.do'/>" method="post">
-                    <input type="text" name="userId" placeholder="아이디">
-                    <input type="password" name="userPw" placeholder="비밀번호">
+                    <input type="text" name="userId" required pattern="\w{8,16}" title="아이디는 8자~16자 이내로 영문/숫자로 입력하세요" placeholder="아이디">
+                    <input type="text" name="userPw" required pattern="\w{8,16}" 
+                    	title="패쓰워드는 영문 대소문자, 숫자를 포함하여 8~16자 이내로 입력하세요" placeholder="비밀번호">
                     <input type="submit" value="로그인">
                 </form>
             </article>
             <article id="etc-button">
                 <ul>
-                    <li><a href="#">회원가입</a></li>
+                    <li><a href="<c:url value='/user/user-join.do' />">회원가입</a></li>
                     <div class="vertical-line"></div>
                     <li><a href="#">아이디 찾기</a></li>
                     <div class="vertical-line"></div>
