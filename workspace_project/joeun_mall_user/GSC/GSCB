@@ -1,0 +1,13 @@
+#{userIndex},
+#{userId},
+#{userName},
+#{userPw},
+#{userDate},
+#{userMail},
+#{userBirth},
+#{userGender},
+#{userLandline},
+#{userMobile},
+#{userPost},
+#{userAddress},
+#{userAddressDetail}

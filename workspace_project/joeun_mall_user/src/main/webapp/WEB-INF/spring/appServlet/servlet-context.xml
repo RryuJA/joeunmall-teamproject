@@ -21,6 +21,9 @@
 	<!-- js -->
 	<resources mapping="/js/**" location="/js/" />
 	
+	<!-- jquery -->
+	<resources mapping="/jquery/**" location="classpath:/META-INF/resources/webjars/jquery/3.6.0/" />
+	
 	<!-- 상품 이미지 임시경로 -->
 	<resources mapping="/upload_image/**" location="file:///C:/joeunmall-teamproject/product_images/" />
 	
@@ -45,14 +48,24 @@
 		<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
 	</context:component-scan>
 	
-	<!-- 관리자 인증 interceptor -->
+	<!-- 인증 interceptor -->
 	<interceptors>
+	
+		<!-- 관리자 인증 -->
 		<interceptor>
 			<mapping path="/admin/**"/>
 			<exclude-mapping path="/admin/admin-login.do"/>
 			<exclude-mapping path="/admin/admin-loginProc.do"/>
 			<exclude-mapping path="/logout.do"/>
 			<beans:bean class="com.joeun.joeunmall.interceptor.AdminInterceptor"/>
+		</interceptor>
+		
+		<!-- 사용자 인증 -->
+		<interceptor>
+			<mapping path="/user/user-mypageOrder.do"/>
+			<mapping path="/user/user-update.do"/>
+			<mapping path="/user/user-view.do"/>
+			<beans:bean class="com.joeun.joeunmall.interceptor.UserInterceptor"/>
 		</interceptor>
 	</interceptors>
 	
