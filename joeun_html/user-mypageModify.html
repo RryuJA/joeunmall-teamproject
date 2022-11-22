@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--title 페이지에 맞게 수정-->
+    <title>JoEunMall 회원정보수정</title>
+
+    <!--javascript-->
+
+    <!--css-->
+    <!--header와 footer는 고정-->
+    <link rel="stylesheet" type="text/css" href="css/user-header-main.css">
+    <link rel="stylesheet" type="text/css" href="css/user-nav-mypage.css">
+    <link rel="stylesheet" type="text/css" href="css/user-footer.css">
+    <link rel="stylesheet" type="text/css" href="css/user-modify-mypage.css">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <a href="user-productlistAll.html"><img id="logo" src="images/logo/logo_transparent.png" alt="JoEunMall"></a>
+            <ul id="header">
+                <li><a href="#">전상품</a></li>
+                <li><a href="#">티셔츠</a></li>
+                <li><a href="#">팬츠/스커트</a></li>
+                <li><a href="#">원피스</a></li>
+                <li><a href="#">니트/가디건</a></li>
+                <li><a href="#">자켓</a></li>
+            </ul>
+            <input type="button" value="로그아웃">
+            <a href="user-mypageOrder.html"><img src="images/icon/icon_user.png"></a>
+            <a href="user-shoppingBasket.html"><img src="images/icon/icon_shopping_bag.png"></a>
+            <a href="#"><img src="images/icon/icon_search.png"></a>
+        </header>
+        
+        <div id="content-wrap">
+            <nav>
+                <h3 id="mypage-title">마이페이지</h3>
+
+                <div class="mypage-list">
+                    <p class="sub-title">나의 쇼핑정보</p>
+                    <ul class="mypage-sublist">
+                        <li><a href="user-mypageOrder.html">주문내역</a></li>
+                        <li><a href="user-mypageHistory.html">최근본상품</a></li>
+                    </ul>
+                </div>
+                <div class="mypage-list">
+                    <p class="sub-title">나의 쇼핑문의</p>
+                    <ul class="mypage-sublist">
+                        <li><a href="user-mypageInquiry.html">내 문의글</a></li>
+                    </ul>
+                </div>
+                <div class="mypage-list">
+                    <p class="sub-title">회원정보</p>
+                    <ul class="mypage-sublist">
+                        <li id="this-page"><a href="#">회원정보수정</a></li>
+                        <li><a href="#">회원탈퇴</a></li>
+                    </ul>
+                </div>
+            </nav>  
+
+            <section id="modify">
+                <div id="sub-title">
+                    <h3>회원정보수정</h3>
+                </div>
+                <article id="modify-table">
+                    <form>
+                        <table> 
+                            <tr>
+                                <td class="icon-width"><a class="checked-icon" /></td>
+                                <th class="width2">아이디</th>
+                                <td><input type="text" readonly class="background-gray"></tr>
+                            </tr>
+                            <tr>
+                                <td class="icon-width"><a class="checked-icon" /></td>
+                                <th>비밀번호</th>
+                                <td><input type="password" placeholder="(영문 대소문자/숫자, 8~16자)"></td>
+                            </tr>
+                            <tr>
+                                <td class="icon-width"><a class="checked-icon" /></td>
+                                <th>비밀번호 확인</th>
+                                <td><input type="password"></td>
+                            </tr>
+                            <tr>
+                                <td class="icon-width"><a class="checked-icon" /></td>
+                                <th>이름</th>
+                                <td><input type="text" readonly class="background-gray"></td>
+                            </tr>
+                            <tr>
+                                <td class="icon-width"></td>
+                                <th></th>
+                                <td><input type="text" placeholder="(우편번호)"></td>
+                            </tr>
+                            <tr>
+                                <td class="icon-width"></td>
+                                <th>주소</th>
+                                <td><input type="text" placeholder="(기본주소)"></td>
+                            </tr>
+                            <tr>
+                                <td class="icon-width"></td>
+                                <th></th>
+                                <td><input type="text" placeholder="(상세주소)"></td>
+                            </tr>
+                            <tr>
+                                <td class="icon-width"><a class="checked-icon" /></td>
+                                <th>이메일</th>
+                                <td><input type="email"></td>
+                            </tr>
+                            <tr>
+                                <td class="icon-width"></td>
+                                <th>일반전화</th>
+                                <td><input type="tel"></td>
+                            </tr>
+                            <tr>
+                                <td class="icon-width"><a class="checked-icon" /></td>
+                                <th>휴대전화</th>
+                                <td><input type="tel"></td>
+                            </tr>
+                            <tr>
+                                <td class="icon-width"><a class="checked-icon" /></td>
+                                <th>성별</th>
+                                <td>
+                                    <div id="radio" class="background-gray">
+                                        <label><input type="radio" name="gender" onclick="return false;">남성</label>
+                                        <label><input type="radio" name="gender" onclick="return false;">여성</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="icon-width"><a class="checked-icon" /></td>
+                                <th>생년월일</th>
+                                <td>
+                                    <input type="text" readonly id="year" class="background-gray">년
+                                    <input type="text" readonly id="month" class="background-gray">월
+                                    <input type="text" readonly id="day" class="background-gray">일
+                                </td>
+                            </tr>
+                        </table>
+                        <div id="submit-button">
+                            <input type="reset" value="내용 초기화">
+                            <input type="submit" value="수정완료">  
+                        </div>
+                    </form>
+                </article>
+            </section>
+        </div>
+
+        <footer>
+            <ul>
+                <li>이용약관</li>
+                <li>개인정보취급방침</li>
+                <a href="#"><li>1:1문의</li></a>
+            </ul>
+            <div id="horizontal-line"></div>
+            <div id="footer-info">
+                <p>법인명(상호) : 조은몰</p>
+                <p>사업자 등록번호 안내 : 000-00-00000</p>
+                <p>주소 : 서울특별시 강남구 강남대로78길 8 (한국빌딩 8층) 804호</p>
+                <p>팀원 : 류정아, 이승은, 조규성, 박재민</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
