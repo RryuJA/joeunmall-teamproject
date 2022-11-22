@@ -4,8 +4,7 @@
 <!-- <mapper namespace="com.joeun.joeunmall.mapper.Product"> -->
 
 	<!-- product_tbl 전체 데이터 가져오기 -->
-	<select id="getAllProductByPaging" parameterType="hashmap" resultType="com.joeun.joeunmall.vo.ProductVO">
-			
+	<select id="getAllProductByPaging" parameterType="hashmap" resultType="com.joeun.joeunmall.vo.ProductVO">	
 		SELECT *  
 			FROM (SELECT ROWNUM,  
 		             m.*,  

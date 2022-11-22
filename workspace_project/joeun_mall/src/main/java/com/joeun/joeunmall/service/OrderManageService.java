@@ -1,8 +1,7 @@
 package com.joeun.joeunmall.service;
 
 import java.util.List;
-
-import com.joeun.joeunmall.vo.OrderVO;
+import java.util.Map;
 
 public interface OrderManageService {
 
@@ -13,7 +12,7 @@ public interface OrderManageService {
 		 * @param recordsPerPage 한 페이지당 레코드 수
 		 * @return 페이지 당 vo
 		 */
-		public List<OrderVO> getAllOrderByPaging(int currentPage, int recordsPerPage);
+		public List<Map<String, Object>> getAllOrderByPaging(int currentPage, int recordsPerPage);
 		
 		/**
 		 * 게시판 전체 레코드 수

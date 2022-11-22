@@ -26,61 +26,22 @@ public class InquiryVO {
 	/** 고객명 */
 	private String userName;
 	
-public InquiryVO() {
+	public InquiryVO() {
+		
 	}
+	
+	public InquiryVO(String inquiryIndex, String userIndex, Date inquiryDate, String inquiryCategory,
+			String inquiryState, String inquiryTitle, String inquiryContent, String inquiryAnswer, String userName) {
 
-	public InquiryVO(String inquiryIndex, Date inquiryDate, String userName, String inquiryCategory,
-			String inquiryTitle) {
 		this.inquiryIndex = inquiryIndex;
+		this.userIndex = userIndex;
 		this.inquiryDate = inquiryDate;
-		this.userName = userName;
 		this.inquiryCategory = inquiryCategory;
+		this.inquiryState = inquiryState;
 		this.inquiryTitle = inquiryTitle;
-	}
-
-	public String getInquiryIndex() {
-		return inquiryIndex;
-	}
-
-	public void setInquiryIndex(String inquiryIndex) {
-		this.inquiryIndex = inquiryIndex;
-	}
-
-	public Date getInquiryDate() {
-		return inquiryDate;
-	}
-
-	public void setInquiryDate(Date inquiryDate) {
-		this.inquiryDate = inquiryDate;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
+		this.inquiryContent = inquiryContent;
+		this.inquiryAnswer = inquiryAnswer;
 		this.userName = userName;
 	}
 
-	public String getInquiryCategory() {
-		return inquiryCategory;
-	}
-
-	public void setInquiryCategory(String inquiryCategory) {
-		this.inquiryCategory = inquiryCategory;
-	}
-
-	public String getInquiryTitle() {
-		return inquiryTitle;
-	}
-
-	public void setInquiryTitle(String inquiryTitle) {
-		this.inquiryTitle = inquiryTitle;
-	}
-
-	@Override
-	public String toString() {
-		return "InquiryVO [inquiryIndex=" + inquiryIndex + ", inquiryDate=" + inquiryDate + ", userName="
-				+ userName + ", inquiryCategory=" + inquiryCategory + ", inquiryTitle=" + inquiryTitle + "]";
-	}
 }

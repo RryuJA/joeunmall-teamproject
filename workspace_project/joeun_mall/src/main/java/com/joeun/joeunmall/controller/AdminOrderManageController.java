@@ -1,6 +1,8 @@
 package com.joeun.joeunmall.controller;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +18,10 @@ import com.joeun.joeunmall.vo.PageMaker;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @author team3 LSE
+ * 
+ * */
 @Controller
 @Slf4j
 @RequestMapping
@@ -24,12 +30,11 @@ public class AdminOrderManageController {
 	@Autowired
 	OrderManageService orderManageService; 
 
-	@GetMapping("/order.do")
+	@GetMapping("/orderManage.do")
 	public String demo(Model model) {
 		log.info("demo");
-		model.addAttribute("admin", "order");
+		model.addAttribute("admin", "orderManage");
 		return "redirect:/admin/admin-orderManage.do";
-//		return "demo";
 	}
 
 	@GetMapping("/admin/admin-orderManage.do")
@@ -41,7 +46,7 @@ public class AdminOrderManageController {
 		PageDTO pageDTO = new PageDTO();
 		PageMaker pageMaker = new PageMaker();	
 		
-		pageDTO.setRecordsPerPage(9);
+		pageDTO.setRecordsPerPage(8);
 		int maxNum = orderManageService.getAllOrderRecordNum(); 
 		int maxPage = (int)(maxNum / pageDTO.getRecordsPerPage() + 0.95) + 1;
 		pageDTO.setMaxPage(maxPage);
@@ -49,11 +54,28 @@ public class AdminOrderManageController {
 		
 		pageMaker.setPageDTO(pageDTO);
 					
-		List<OrderVO> ordermanageList = orderManageService.getAllOrderByPaging(pageDTO.getCurrentPage(), pageDTO.getRecordsPerPage());
-				
-		model.addAttribute("orderManageList", ordermanageList);
+		List<Map<String, Object>> ordermanageList = orderManageService.getAllOrderByPaging(pageDTO.getCurrentPage(), pageDTO.getRecordsPerPage());
+		List<OrderVO> orderList = toOrderList(ordermanageList);		
+		
+		model.addAttribute("orderManageList", orderList);
 		model.addAttribute("pageMaker", pageMaker);
 		
 		return "/admin/admin-orderManage";
+	}
+	
+	private List<OrderVO> toOrderList(List<Map<String, Object>> list) {
+		
+		log.info("변환");
+
+		List<OrderVO> resultList = new ArrayList<>();
+		OrderVO orderVO;
+		
+		for (Map<String, Object> map : list) {
+			
+			orderVO = new OrderVO(map);
+			resultList.add(orderVO);
+		}
+		
+		return resultList;
 	}
 }

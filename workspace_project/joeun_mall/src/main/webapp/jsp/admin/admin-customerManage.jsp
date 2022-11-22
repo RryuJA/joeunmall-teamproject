@@ -75,62 +75,58 @@
                 <!-- 레이아웃 페이지보다 웹페이지가 커서 행 2개 추가 (7개 > 9개) -->
                 <tbody>
 					<c:forEach var="UserVO" items="${customerManageList}" varStatus="st" >
-                    <tr>
-                        <!-- <td><a onclick="window.open('./admin-customerInfo.html', 'window_name', 'width=710, height=510, location=no, status=no, scrollbars=yes');" style="cursor:pointer">주문번호</a></td> -->
-                        <td>${UserVO.userIndex}</td>
-                        <td>${UserVO.userName}</td>
-                        <td><fmt:formatDate value="${UserVO.userDate}" pattern="yyyy-MM-dd" /></td>
-                        <td><fmt:formatDate value="${UserVO.userBirth}" pattern="yyyy-MM-dd" /></td>
-                        <td>${UserVO.userGender}</td>
-                        <td>${UserVO.userMobile}</td>
-                        <td>
-                            <a href="#"></a><input type="button" value="주문내역">
-                            <a href="#"></a><input type="button" value="문의내역">
-                        </td>
-                    </tr>
+	                    <tr>
+	                        <!-- <td><a onclick="window.open('./admin-customerInfo.html', 'window_name', 'width=710, height=510, location=no, status=no, scrollbars=yes');" style="cursor:pointer">주문번호</a></td> -->
+	                        <td>${UserVO.userIndex}</td>
+	                        <td>${UserVO.userName}</td>
+	                        <td><fmt:formatDate value="${UserVO.userDate}" pattern="yyyy-MM-dd" /></td>
+	                        <td><fmt:formatDate value="${UserVO.userBirth}" pattern="yyyy-MM-dd" /></td>
+	                        <td>${UserVO.userGender}</td>
+	                        <td>${UserVO.userMobile}</td>
+	                        <td>
+	                            <a href="#"></a><input type="button" value="주문내역">
+	                            <a href="#"></a><input type="button" value="문의내역">
+	                        </td>
+	                    </tr>
                     </c:forEach>
                 </tbody>
             </table>
-        </div>
+        </div>        
+        <!-- //paging -->
 			<article>
-			<div>
+				<div>
 				<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
 <%-- 인자확인용	${pageMaker.pageDTO}, ${pageMaker}, ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}<br>
 				${pageNum}, ${pageNum +1}, ${pageNum +2}, ${pageNum +3}, ${pageNum +4} --%>
-			</div>
-	            <div class="page-wrap">
-	                <div class="page-nation">
-	                    <a class="arrow pprev" href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=1"></a>
-	                    <a class="arrow prev" href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=
-	                    ${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}"></a>
-	          			
-	                    
-	                    
-	                    <a href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=${pageNum}"
-	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
-	                    
-	                    <a href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=${pageNum+1}"
-	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+1 ? "class='active'" : ""}>${pageMaker.startPage +1}</a>
-	                    
-	                    <a href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=${pageNum+2}"
-	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+2 ? "class='active'" : ""}>${pageMaker.startPage +2}</a>
-	                    
-	                    <a href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=${pageNum+3}"
-	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+3 ? "class='active'" : ""}>${pageMaker.startPage +3}</a>
-	                    
-	                    <a href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=${pageNum+4}"
-	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+4 ? "class='active'" : ""}>${pageMaker.startPage +4}</a>
-	                    
-	                    <a class="arrow next" href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}"></a>
-	                    <a class="arrow nnext" href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=${pageMaker.pageDTO.maxPage}"></a>
-	                </div>
-	            </div>
-
-        </article>
-        <!-- //paging -->
-        
-    </section>
-</div>
+				</div>
+		            <div class="page-wrap">
+		                <div class="page-nation">
+		                    <a class="arrow pprev" href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=1"></a>
+		                    <a class="arrow prev" href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=
+		                    ${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}"></a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=${pageNum}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=${pageNum+1}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+1 ? "class='active'" : ""}>${pageMaker.startPage +1}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=${pageNum+2}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+2 ? "class='active'" : ""}>${pageMaker.startPage +2}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=${pageNum+3}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+3 ? "class='active'" : ""}>${pageMaker.startPage +3}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=${pageNum+4}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+4 ? "class='active'" : ""}>${pageMaker.startPage +4}</a>
+		                    
+		                    <a class="arrow next" href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}"></a>
+		                    <a class="arrow nnext" href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=${pageMaker.pageDTO.maxPage}"></a>
+		                </div>
+		            </div>
+	        </article>
+	    </section>
+	</div>
 <!--관리자 페이지 footer 생략-->
 </body>
 </html>
