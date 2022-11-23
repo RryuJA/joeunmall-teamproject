@@ -28,10 +28,16 @@ public class UserLoginController {
 	
 	@Autowired UserService userService;
 	
-	@GetMapping("/")
-	public String demo(Model model) {
+	@GetMapping("/demo.do")
+	public String demo() {
 		log.info("demo");
-		return  "redirect:/user/user-login.do";
+		return "demo";
+	}
+	
+	@GetMapping("/")
+	public String home(Model model) {
+		log.info("home");
+		return  "redirect:/user/user-productlistAll.do";
 	}
 	
 	
@@ -184,18 +190,30 @@ public class UserLoginController {
 		return "/user/user-view";
 	}
 	
-	@GetMapping("/user/user-update.do")
-	public String userUpdate(HttpSession session) {
-		log.info("userUpdate");
+	@GetMapping("/user/user-mypageHistory.do")
+	public String userMypageHistory() {
+		log.info("userMypageHistory");
+		return "/user/user-mypageHistory";
+	}
+	
+	@GetMapping("/user/user-mypageInquiry.do")
+	public String userMypageInquiry() {
+		log.info("userMypageInquiry");
+		return "/user/user-mypageInquiry";
+	}
+	
+	@GetMapping("/user/user-mypageModify.do")
+	public String userMypageModify(HttpSession session) {
+		log.info("userMypageModify");
 		String userId = session.getAttribute("SESS_LOGIN_ID").toString();
 		UserVO userVO = userService.selectUser(userId);
 		session.setAttribute("defaultUser", userVO); //기존 정보
-		return "/user/user-update";
+		return "/user/user-mypageModify";
 	}
 	
-	@PostMapping("/user/user-updateProc.do")
-	public String userUpdateProc(@ModelAttribute UserVO userVO, Model model,HttpSession session) {
-		log.info("userUpdateProc");
+	@PostMapping("/user/user-mypageModifyProc.do")
+	public String userMypageModifyProc(@ModelAttribute UserVO userVO, Model model,HttpSession session) {
+		log.info("userMypageModifyProc");
 		String msg = ""; //메시지
 		String movePath = ""; //이동경로
 		
@@ -208,16 +226,22 @@ public class UserLoginController {
 		//회원정보 수정
 		if (userService.updateUser(userVO) == true) {
 			msg = "회원정보 수정에 성공하셨습니다."; 
-			movePath = "/user/user-update.do";
+			movePath = "/user/user-mypageModify.do";
 			session.removeAttribute("defaultUser");//기존 정보 세션 삭제
 		} else {
 			msg = "회원정보 수정에 실패하였습니다."; 
-			movePath = "/user/user-update.do";
+			movePath = "/user/user-mypageModify.do";
 		}
 		
 		model.addAttribute("errMsg", msg);
 		model.addAttribute("movePath", movePath);
 		
 		return "/error/error";
+	}
+	
+	@GetMapping("/user/user-mypageModifyBeforeCheck.do")
+	public String userMypageModifyBeforeCheck() {
+		log.info("userMypageModifyBeforeCheck");
+		return "/user/user-mypageModifyBeforeCheck";
 	}
 }

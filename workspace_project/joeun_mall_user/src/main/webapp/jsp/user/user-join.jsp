@@ -115,6 +115,88 @@
 	        }).open();
 	    }
 </script>
+<script>
+function checkField(fldId, regex){
+	
+	$(function(){
+		
+		//입력 필드 클릭시 아이콘 표시
+		//폼 점검 조건에 안맞을 경우 X표시 아이콘 표시
+		$("input[id^=user], #year, #month, #day").blur(function(){
+			console.log("입력필드 작성완료");
+			console.log("fldId =" +$("#" + fldId + "").val());
+			
+			regex = new RegExp(regex);
+			
+			if(regex.test($("#" + fldId + "").val())){
+				
+				console.log("폼점검 성공");
+				
+				if((fldId == 'year') || (fldId == 'month') || (fldId == 'day') ){
+					console.log("생일");
+					var date = $("#year").val()+"-"+$("#month").val()+"-"+$("#day").val();
+					$("#userBirthStr").val(date);
+					
+					console.log("생일 =" + date);
+					//생년월일(hidden) 폼 점검
+					var regexDate = new RegExp('((19|2[0-9])[0-9]{2})-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])');
+					if(regexDate.test(date) == true){
+						console.log("생일 폼점검 성공1");
+						$("div#userBirthIcon").css("visibility","visible");
+					} else {
+						console.log("생일 폼점검 실패1");
+						$("div#userBirthIcon").css("visibility","hidden");
+					}
+					
+				} else {
+					$("div#" + fldId + "Icon").css("visibility","visible");
+				}
+			} else {
+				console.log("폼점검 실패");
+				if((fldId == 'year') || (fldId == 'month') || (fldId == 'day') ){
+					console.log("생일");
+					var date = $("#year").val()+"-"+$("#month").val()+"-"+$("#day").val();
+					$("#userBirthStr").val(date);
+					console.log("생일 =" + date); 
+					//생년월일(hidden) 폼 점검
+					var regexDate = new RegExp('((19|2[0-9])[0-9]{2})-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])');
+					if(regexDate.test(date) == true){
+						console.log("생일 폼점검 성공2");
+						$("div#userBirthIcon").css("visibility","visible");
+					} else {
+						console.log("생일 폼점검 실패2");
+						$("div#userBirthIcon").css("visibility","hidden");
+					}
+					
+				} else {
+					console.log("기타");
+					$("div#" + fldId + "Icon").css("visibility","hidden");
+				}
+			}
+		})
+	});
+}
+$(function(){
+	
+	//입력 필드 클릭시 아이콘 표시
+	//폼 점검 조건에 안맞을 경우 X표시 아이콘 표시
+	
+	checkField("userId", /^[a-zA-Z_0-9]{8,16}$/ );
+	checkField("userPw", /^[a-zA-Z_0-9]{8,16}$/ );
+	checkField("userPw2", /^[a-zA-Z_0-9]{8,16}$/ );
+	checkField("userName", /^[가-힣]{2,10}$/ );
+	checkField("userMail", /^[a-zA-Z0-9_+.-]+@([a-zA-Z0-9-]+\.)+[a-zA-Z0-9]{2,4}$/ );
+	checkField("userMobile", /^010-\d{4}-\d{4}$/ );
+	checkField("year",  '(19|2[0-9])[0-9]{2}' );
+	checkField("month", '[0[1-9]|1[012]]' );
+	checkField("day", '0[1-9]|[12][0-9]|3[01]' );
+	
+	
+	 
+	                           
+
+});
+</script>
     <!--css-->
     <!--header와 footer는 고정-->
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-header-login.css' />">
@@ -143,22 +225,22 @@
                 <form id="join_form" method="post" action="<c:url value='/user/user-joinProc.do'/>">
                     <table> 
                         <tr>
-                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <td class="icon-width"><div id="userIdIcon"><a class="checked-icon" /></div></td>
                             <th>아이디</th>
                             <td><input type="text" id="userId" name="userId" required pattern="\w{8,16}" placeholder="(영문 대소문자/숫자, 8~16자)"></td>
                         </tr>
                         <tr>
-                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <td class="icon-width"><div id="userPwIcon"><a class="checked-icon" /></div></td>
                             <th>비밀번호</th>
                             <td><input type="text" id="userPw" name="userPw" required pattern="\w{8,16}" placeholder="(영문 대소문자/숫자, 8~16자)"></td>
                         </tr>
                         <tr>
-                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <td class="icon-width"><div id="userPw2Icon"><a class="checked-icon" /></div></td>
                             <th>비밀번호 확인</th>
                             <td><input type="text" id="userPw2" name="userPw2" required pattern="\w{8,16}" placeholder="(영문 대소문자/숫자, 8~16자)"></td>
                         </tr>
                         <tr>
-                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <td class="icon-width"><div id="userNameIcon"><a class="checked-icon" /></div></td>
                             <th>이름</th>
                             <td><input type="text" id="userName" name="userName" required pattern="[가-힣]{2,10}"></td>
                         </tr>
@@ -181,22 +263,22 @@
                             <td><input type="text" id="userAddressDetail" name="userAddressDetail" required placeholder="(상세주소)"></td>
                         </tr>
                         <tr>
-                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <td class="icon-width"><div id="userMailIcon"><a class="checked-icon" /></div></td>
                             <th>이메일</th>
                             <td><input type="email" id="userMail" name="userMail" pattern="[a-zA-Z0-9_+.-]+@([a-zA-Z0-9-]+\.)+[a-zA-Z0-9]{2,4}" required ></td>
                         </tr>
                         <tr>
                             <td class="icon-width"></td>
                             <th>일반전화</th>
-                            <td><input type="tel" id="userLandline" name="userLandline" pattern="0\d{1,2}-\d{3,4}-\d{4}" ></td>
+                            <td><input type="tel" id="userLandline" name="userLandline" pattern="0\d{1,2}-\d{3,4}-\d{4}" placeholder="ex) 02-123-5678"></td>
                         </tr>
                         <tr>
-                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <td class="icon-width"><div id="userMobileIcon"><a class="checked-icon" /></div></td>
                             <th>휴대전화</th>
-                            <td><input type="tel" id="userMobile" name="userMobile" required pattern="010-\d{4}-\d{4}"></td>
+                            <td><input type="tel" id="userMobile" name="userMobile" required pattern="010-\d{4}-\d{4}" placeholder="ex) 010-1234-5678"></td>
                         </tr>
                         <tr>
-                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <td class="icon-width"><div id="userGenderIcon"><a class="checked-icon" /></div></td>
                             <th>성별</th>
                             <td>
                                 <div id="radio">
@@ -206,10 +288,10 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="icon-width"><a class="checked-icon" /></td>
+                            <td class="icon-width"><div id="userBirthIcon"><a class="checked-icon" /></div></td>
                             <th>생년월일</th>
                             <td>
-                                <input type="text" required id="year" name="year" pattern="(19|2[0-9])[0-9]{2}" maxlength="4">년
+                                <input type="text" required id="year" name="year" pattern="(19|2[0-9])[0-9]{2})" maxlength="4">년
                                 <input type="text" required id="month" name="month" pattern="[0[1-9]|1[012]]" maxlength="2">월
                                 <input type="text" required id="day" name="day" pattern="0[1-9]|[12][0-9]|3[01]" maxlength="2">일
                             	<input type="hidden" id="userBirthStr" name="userBirthStr">

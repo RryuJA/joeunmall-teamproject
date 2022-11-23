@@ -16,6 +16,21 @@
     <script src="js/user-productDetail-topBtn.js"></script> <!-- topButton -->
     <script src="js/user-imageChange.js"></script>
     <script src="js/user-productDetail-optionSelect.js"></script>
+    <script src="<c:url value='/jquery/jquery.min.js'/>"></script>
+	<script>
+	$(function(){
+		
+		//로그아웃 버튼 눌렀을때
+		$("#logout_btn").click(function(){
+			location.href = "<%=request.getContextPath()%>/user/user-logout.do";
+		});
+		
+		//로그인 버튼 눌렀을때
+		$("#login_btn").click(function(){
+			location.href = "<%=request.getContextPath()%>/user/user-login.do";
+		})
+	});
+	</script>
 
     <!--css-->
     <!--header와 footer는 고정-->
@@ -39,7 +54,16 @@
                 <li><a href="#">니트/가디건</a></li>
                 <li><a href="#">자켓</a></li>
             </ul>
-            <input type="button" value="로그인">
+            
+            <!-- 로그인 상태 -->
+            <c:if test="${not empty SESS_LOGIN_ID}">
+           		<input type="button" id="logout_btn" value="로그아웃">
+            </c:if>
+            <!-- 로그아웃 상태 -->
+            <c:if test="${empty SESS_LOGIN_ID}">
+            	<input type="button" id="login_btn" value="로그인">
+            </c:if>
+            
             <a href="user-mypageOrder.do"><img src="<c:url value='/images/icon/icon_user.png' />"></a>
             <a href="user-shoppingBasket.do"><img src="<c:url value='/images/icon/icon_shopping_bag.png' />"></a>
             <a href="#"><img src="<c:url value='/images/icon/icon_search.png' />"></a>

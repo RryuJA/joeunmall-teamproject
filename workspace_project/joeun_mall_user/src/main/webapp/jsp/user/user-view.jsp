@@ -32,6 +32,8 @@
 		
     <!--css-->
     <!--header와 footer는 고정-->
+    <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-header-main.css' />">
+    <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-mypage-nav.css' />">
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-header-login.css' />">
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-footer.css' />">
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-join.css' />">
@@ -41,8 +43,15 @@
 <body>
     <div id="wrap">
         <header>
-            <a href="user-productlistAll.html"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
-            <div id="header-icon">
+            <a href="user-productlistAll.do"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
+            <ul id="header">
+                <li><a href="#">전상품</a></li>
+                <li><a href="#">티셔츠</a></li>
+                <li><a href="#">팬츠/스커트</a></li>
+                <li><a href="#">원피스</a></li>
+                <li><a href="#">니트/가디건</a></li>
+                <li><a href="#">자켓</a></li>
+            </ul>
                 
                 <!-- 로그인 상태 -->
 	            <c:if test="${not empty SESS_LOGIN_ID}">
@@ -58,6 +67,33 @@
                 <a href="#"><img src="<c:url value='/images/icon/icon_search.png' />"></a>
             </div>
         </header>
+        
+        <div id="content-wrap">
+            <nav>
+                <h3 id="mypage-title">마이페이지</h3>
+
+                <div class="mypage-list">
+                    <p class="sub-title">나의 쇼핑정보</p>
+                    <ul class="mypage-sublist">
+                        <li><a href="<c:url value='/user/user-mypageOrder.do' />">주문내역</a></li>
+                        <li id="this-page"><a href="<c:url value='/user/user-mypageHistory.do' />">최근본상품</a></li>
+                    </ul>
+                </div>
+                <div class="mypage-list">
+                    <p class="sub-title">나의 쇼핑문의</p>
+                    <ul class="mypage-sublist">
+                        <li><a href="<c:url value='/user/user-mypageInquiry.do' />">내 문의글</a></li>
+                    </ul>
+                </div>
+                <div class="mypage-list">
+                    <p class="sub-title">회원정보</p>
+                    <ul class="mypage-sublist">
+                        <li><a href="<c:url value='/user/user-view.do'/>">회원정보 보기</a></li>
+                        <li><a href="<c:url value='/user/user-mypageModify.do' />">회원정보수정</a></li>
+                        <li><a href="#">회원탈퇴</a></li>
+                    </ul>
+                </div>
+            </nav>  
         
         <section>
             <article id="title">
