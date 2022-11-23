@@ -2,12 +2,11 @@ package com.joeun.joeunmall.dao;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import com.joeun.joeunmall.vo.OrderVO;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -25,7 +24,7 @@ public class OrderManageDAOImpl implements OrderManageDAO {
 	private static final String MAPPER_NS = "com.joeun.joeunmall.mapper.order_tbl.";
 	
 	@Override
-	public List<OrderVO> getAllOrderByPaging(int currentPage, int recordsPerPage) {
+	public List<Map<String, Object>> getAllOrderByPaging(int currentPage, int recordsPerPage) {
 		HashMap<String, Object> map = new HashMap<>();
 		map.put("currentPage", currentPage);
 		map.put("recordsPerPage", recordsPerPage);

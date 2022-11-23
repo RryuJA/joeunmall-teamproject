@@ -1,13 +1,13 @@
 package com.joeun.joeunmall.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.joeun.joeunmall.dao.OrderManageDAO;
-import com.joeun.joeunmall.vo.OrderVO;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,7 +27,7 @@ public class OrderManageServiceImpl implements OrderManageService {
 	
 	@Transactional(readOnly=true, rollbackFor=Exception.class)
 	@Override
-	public List<OrderVO> getAllOrderByPaging(int currentPage, int recordsPerPage) {
+	public List<Map<String, Object>> getAllOrderByPaging(int currentPage, int recordsPerPage) {
 		
 		return orderManageDAO.getAllOrderByPaging(currentPage, recordsPerPage);
 	}

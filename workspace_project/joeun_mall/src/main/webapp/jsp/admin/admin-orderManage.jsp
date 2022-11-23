@@ -83,7 +83,7 @@
 		                        <td>${orderManageVO.productName}</td>
 		                        <td>${orderManageVO.productCountSum}</td>
 		                        <td><fmt:formatNumber value="${orderManageVO.orderPrice}" pattern="###,###" /></td>
-		                        <td><fmt:formatDate value= "${orderManageVO.orderDate}" pattern="yyyy년MM월dd일"/></td>
+		                        <td><fmt:formatDate value= "${orderManageVO.orderDate}" pattern="yyyy-MM-dd"/></td>
 		                        <td>	
 		                 		                                                       
 		                         	<select name="order-state" id="orderState${st.index}" class="drop-table">

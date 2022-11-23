@@ -3,17 +3,16 @@
 <mapper namespace="com.joeun.joeunmall.mapper.product_tbl">
 <!-- <mapper namespace="com.joeun.joeunmall.mapper.Product"> -->
 
-	<!-- LSE product_tbl 전체 데이터 가져오기 -->
-	<select id="getAllProductByPaging" parameterType="hashmap" resultType="com.joeun.joeunmall.vo.ProductVO">
-			
+	<!-- product_tbl 전체 데이터 가져오기 -->
+	<select id="getAllProductByPaging" parameterType="hashmap" resultType="com.joeun.joeunmall.vo.ProductVO">	
 		SELECT *  
 			FROM (SELECT ROWNUM,  
 		             m.*,  
 		             FLOOR((ROWNUM - 1) / #{recordsPerPage} + 1) page  
 		      FROM (
-		            SELECT * FROM (SELECT * from PRODUCT_TBL JOIN (SELECT PRODUCT_INDEX, LISTAGG(PRODUCT_OPTION_VALUE, ', ') WITHIN GROUP (ORDER BY PRODUCT_OPTION_VALUE) AS PRODUCT_OPTION_VALUE
-				 	FROM PRODUCT_OPTION_TBL
-				 	GROUP BY PRODUCT_INDEX) B ON PRODUCT_TBL.PRODUCT_INDEX = B.PRODUCT_INDEX)  
+		            SELECT * FROM (SELECT * from PRODUCT_TBL JOIN (SELECT product_index, LISTAGG(product_option_value, ', ') WITHIN GROUP (ORDER BY product_option_value) AS product_option_value
+				 	FROM product_option_tbl
+				 	GROUP BY product_index) B ON product_tbl.product_index = B.product_index)  
 		            ORDER BY product_date DESC
 		           ) m  
 		      )  

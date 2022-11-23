@@ -17,7 +17,7 @@ import com.joeun.joeunmall.vo.UserVO;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author team3
+ * @author team3 LSE
  * 
  * */
 @Slf4j
