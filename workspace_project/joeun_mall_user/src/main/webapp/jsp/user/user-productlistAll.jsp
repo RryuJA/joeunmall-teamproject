@@ -12,6 +12,8 @@
     <title>JoEunMall</title>
 
     <!--javascript-->
+    <script src="<c:url value='/js/bootstrap-5.0.2-js/bootstrap.bundle.js' />"></script>
+    
     <script src="<c:url value='/jquery/jquery.min.js'/>"></script>
 	<script>
 	$(function(){
@@ -33,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-header-main.css' />">
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-footer.css' />">
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-product-list.css' />">
+    <link rel="stylesheet" type="text/css" href="<c:url value='/css/bootstrap-5.0.2-css/bootstrap.css' />">
 
 </head>
 
@@ -66,7 +69,28 @@
         <section>
             <!--슬라이드 이미지(캐러셀)-->
             <article>
-                <img id="carousel" src="" alt="carousel-image">
+                <!-- <img id="carousel" src="" alt="carousel-image"> -->
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="<c:url value='/images/carousel/image-carousel-1.jpeg' />" class="carousel-image" alt="carousel-image1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="<c:url value='/images/carousel/image-carousel-2.jpeg' />" class="carousel-image" alt="carousel-image2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="<c:url value='/images/carousel/image-carousel-3.jpeg' />" class="carousel-image" alt="carousel-image3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </article>
 
             <article>

@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"  %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -9,25 +9,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--title 페이지에 맞게 수정-->
-    <title>JoEunMall 주문내역</title>
+    <title>JoEunMall 최근 본 상품</title>
 
     <!--javascript-->
-    <script src="<c:url value='/jquery/jquery.min.js'/>"></script>
+    
+	<script src="<c:url value='/jquery/jquery.min.js'/>"></script>
 	<script>
 	$(function(){
 		
 		//로그아웃 버튼 눌렀을때
 		$("#logout_btn").click(function(){
-			location.href = "<%=request.getContextPath()%>/user/user-logout.do"
+			location.href = "<%=request.getContextPath()%>/user/user-logout.do";
 		});
 		
 		//로그인 버튼 눌렀을때
 		$("#login_btn").click(function(){
-			location.href = "<%=request.getContextPath()%>/user/user-login.do"
+			location.href = "<%=request.getContextPath()%>/user/user-login.do";
 		})
 	});
 	</script>
-
     <!--css-->
     <!--header와 footer는 고정-->
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-header-main.css' />">
@@ -71,8 +71,8 @@
                 <div class="mypage-list">
                     <p class="sub-title">나의 쇼핑정보</p>
                     <ul class="mypage-sublist">
-                        <li id="this-page"><a href="<c:url value='/user/user-mypageOrder.do' />">주문내역</a></li>
-                        <li><a href="<c:url value='/user/user-mypageHistory.do' />">최근본상품</a></li>
+                        <li><a href="<c:url value='/user/user-mypageOrder.do' />">주문내역</a></li>
+                        <li id="this-page"><a href="<c:url value='/user/user-mypageHistory.do' />">최근본상품</a></li>
                     </ul>
                 </div>
                 <div class="mypage-list">
@@ -84,72 +84,56 @@
                 <div class="mypage-list">
                     <p class="sub-title">회원정보</p>
                     <ul class="mypage-sublist">
-                        <li><a href="<c:url value='/user/user-mypageModify.do'/>">회원정보 수정</a></li>
+                        <li><a href="<c:url value='/user/user-mypageModify.do' />">회원정보수정</a></li>
                         <li><a href="#">회원탈퇴</a></li>
                     </ul>
                 </div>
             </nav>  
 
+            <!-- 최근 본 상품은 5개까지만 저장 -->
             <section id="list">
                 <div id="sub-title">
-                    <h3>주문내역</h3>
+                    <h3>최근 본 상품</h3>
                 </div>
                 <article id="list-table">
                     <table>
                         <tr>
-                            <th class="width2">주문일자</th>
-                            <th class="width3">상품명</th>
-                            <th class="width2">결제금액</th>
-                            <th class="width2">주문상세</th>
+                            <th colspan="2" class="width4">상품</th>
+                            <th class="width2">가격</th>
+                            <th class="width2">선택</th>
                         </tr>
                         <tr>
-                            <td>2022.09.20</td>
-                            <td>오버롤포켓OPS 외 3건</td>
+                            <!-- 상품이미지 경로 추가해야함 -->
+                            <td class="width1 height1"><img src=""></td>
+                            <td class="text-left">오버롤포켓OPS</td>
                             <td>79,000원</td>
-                            <td><button>상세보기</button></td>
+                            <td><button>삭제</button></td>
                         </tr>
                         <tr>
-                            <td>2022.08.16</td>
-                            <td>위드밴딩팬츠 외 2건</td>
-                            <td>110,980원</td>
-                            <td><button>상세보기</button></td>
+                            <td class="height1"><img src=""></td>
+                            <td class="text-left">위드밴딩팬츠</td>
+                            <td>50,000원</td>
+                            <td><button>삭제</button></td>
                         </tr>
                         <tr>
-                            <td>2022.07.15</td>
-                            <td>ST가디건 외 5건</td>
-                            <td>214,100원</td>
-                            <td><button>상세보기</button></td>
-                        </tr>
-                        <tr>
-                            <td>2022.05.05</td>
-                            <td>935스키니 외 3건</td>
-                            <td>34,300원</td>
-                            <td><button>상세보기</button></td>
-                        </tr>
-                        <tr>
-                            <td>2022.03.21</td>
-                            <td>1973슬랙스</td>
+                            <td class="height1"><img src=""></td>
+                            <td class="text-left">ST가디건</td>
                             <td>20,000원</td>
-                            <td><button>상세보기</button></td>
+                            <td><button>삭제</button></td>
+                        </tr>
+                        <tr>
+                            <td class="height1"><img src=""></td>
+                            <td class="text-left">935스키니</td>
+                            <td>34,300원</td>
+                            <td><button>삭제</button></td>
+                        </tr>
+                        <tr>
+                            <td class="height1"><img src=""></td>
+                            <td class="text-left">1973슬랙스</td>
+                            <td>20,000원</td>
+                            <td><button>삭제</button></td>
                         </tr>
                     </table>
-                </article>
-
-                <!--페이지 이동 버튼-->
-                <article>
-                    <div class="page-wrap">
-                        <div class="page-nation">
-                            <a class="arrow pprev" href="#"></a>
-                            <a class="arrow prev" href="#"></a>
-                            <a href="#" class="active">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
-                            <a class="arrow next" href="#"></a>
-                            <a class="arrow nnext" href="#"></a>
-                        </div>
-                    </div>
                 </article>
             </section>
         </div>
@@ -170,4 +154,4 @@
         </footer>
     </div>
 </body>
-</html>''
+</html>

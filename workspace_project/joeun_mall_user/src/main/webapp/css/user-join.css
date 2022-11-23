@@ -48,11 +48,15 @@ article#join .icon-width {
     height: 20px;
 }
 
+div[id$=Icon]{
+	visibility:hidden;
+}
+
 a.checked-icon {
 	float:left;
 	width:20px;
 	height:20px;
-    background:#FBFBFB url('../images/icon/icon_checked.png') center center;
+    background:#FBFBFB url('/joeunmall/images/icon/icon_checked.png') center center;
     background-repeat : no-repeat;
     background-size:20px;
 }
