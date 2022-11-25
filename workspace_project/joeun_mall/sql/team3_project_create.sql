@@ -94,7 +94,7 @@ CREATE TABLE product_option_tbl (
 
 -- 장바구니
 CREATE TABLE cart_tbl (
-    cart_index    				NCHAR(11) NOT NULL PRIMARY KEY,
+    cart_index    				NCHAR(12) NOT NULL PRIMARY KEY,
     user_index 					NCHAR(7) NOT NULL,
     product_index 				NCHAR(9) NOT NULL,
     product_option_index		NCHAR(13) NOT NULL,
