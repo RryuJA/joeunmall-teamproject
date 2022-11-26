@@ -12,9 +12,9 @@
     <title>JoEunMall</title>
 
     <!--javascript-->
-    <script src="<c:url value='/js/bootstrap-5.0.2-js/bootstrap.bundle.js' />"></script>
-    
-    <script src="<c:url value='/jquery/jquery.min.js'/>"></script>
+    <script src="bootstrap-5.0.2/js/bootstrap.bundle.js"></script>
+
+	<script src="<c:url value='/jquery/jquery.min.js'/>"></script>
 	<script>
 	$(function(){
 		
@@ -29,20 +29,20 @@
 		})
 	});
 	</script>
-
     <!--css-->
     <!--header와 footer는 고정-->
-    <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-header-main.css' />">
-    <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-footer.css' />">
-    <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-product-list.css' />">
-    <link rel="stylesheet" type="text/css" href="<c:url value='/css/bootstrap-5.0.2-css/bootstrap.css' />">
+    <link rel="stylesheet" type="text/css" href="css/user-header-main.css">
+    <link rel="stylesheet" type="text/css" href="css/user-footer.css">
+    <link rel="stylesheet" type="text/css" href="css/user-product-list.css">
+    
+    <link rel="stylesheet" type="text/css" href="bootstrap-5.0.2/css/bootstrap.css">
 
 </head>
 
 <body>
     <div id="wrap">
         <header>
-            <a href="user-productlistAll.do"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
+            <a href="user-productlistCarousel.do"><img id="logo" src="images/logo/logo_transparent.png" alt="JoEunMall"></a>
             <ul id="header">
                 <li><a href="#">전상품</a></li>
                 <li><a href="#">티셔츠</a></li>
@@ -51,48 +51,13 @@
                 <li><a href="#">니트/가디건</a></li>
                 <li><a href="#">자켓</a></li>
             </ul>
-            
-            <!-- 로그인 상태 -->
-            <c:if test="${not empty SESS_LOGIN_ID}">
-           		<input type="button" id="logout_btn" value="로그아웃">
-            </c:if>
-            <!-- 로그아웃 상태 -->
-            <c:if test="${empty SESS_LOGIN_ID}">
-            	<input type="button" id="login_btn" value="로그인">
-            </c:if>
-            
-            <a href="<c:url value='/user/user-mypageOrder.do' />"><img src="<c:url value='/images/icon/icon_user.png' />"></a>
-            <a href="<c:url value='/user/user-shoppingBasket.do' />"><img src="<c:url value='/images/icon/icon_shopping_bag.png' />"></a>
-            <a href="#"><img src="<c:url value='/images/icon/icon_search.png' />"></a>
+            <input type="button" value="로그인">
+            <a href="user-mypageOrder.html"><img src="images/icon/icon_user.png"></a>
+            <a href="user-shoppingBasket.html"><img src="images/icon/icon_shopping_bag.png"></a>
+            <a href="#"><img src="images/icon/icon_search.png"></a>
         </header>
         
         <section>
-            <!--슬라이드 이미지(캐러셀)-->
-            <article>
-                <!-- <img id="carousel" src="" alt="carousel-image"> -->
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="<c:url value='/images/carousel/image-carousel-1.jpeg' />" class="carousel-image" alt="carousel-image1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="<c:url value='/images/carousel/image-carousel-2.jpeg' />" class="carousel-image" alt="carousel-image2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="<c:url value='/images/carousel/image-carousel-3.jpeg' />" class="carousel-image" alt="carousel-image3">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </article>
-
             <article>
                 <!--상품 정렬 버튼-->
                 <ul class="sort">
@@ -132,6 +97,60 @@
                         </div>
                     </li>
                 </ul>
+                <ul class="list">
+                    <li>
+                        <div class="thumbnail-box">
+                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                            <div class="thumbnail-title">레이스 블라우스 티셔츠<br>35,000</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumbnail-box">
+                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                            <div class="thumbnail-title">소매 턱 티셔츠<br>15,000</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumbnail-box">
+                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                            <div class="thumbnail-title">RN 후드<br>20,000</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumbnail-box">
+                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                            <div class="thumbnail-title">시스루 캐주얼 점퍼<br>50,000</div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="list">
+                    <li>
+                        <div class="thumbnail-box">
+                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                            <div class="thumbnail-title">레이스 블라우스 티셔츠<br>35,000</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumbnail-box">
+                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                            <div class="thumbnail-title">소매 턱 티셔츠<br>15,000</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumbnail-box">
+                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                            <div class="thumbnail-title">RN 후드<br>20,000</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumbnail-box">
+                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
+                            <div class="thumbnail-title">시스루 캐주얼 점퍼<br>50,000</div>
+                        </div>
+                    </li>
+                </ul>
+
                 <ul class="list">
                     <li>
                         <div class="thumbnail-box">

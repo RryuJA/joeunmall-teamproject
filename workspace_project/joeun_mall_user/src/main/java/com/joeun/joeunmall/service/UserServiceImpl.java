@@ -36,6 +36,7 @@ public class UserServiceImpl implements UserService {
 		return Integer.parseInt(str);
 	}
 
+	@Transactional
 	@Override
 	public boolean insertUser(UserVO userVO) {
 		log.info("insertUser");
@@ -61,6 +62,7 @@ public class UserServiceImpl implements UserService {
 		return result;
 	}
 
+	@Transactional
 	@Override
 	public boolean updateUser(UserVO userVO) {
 		log.info("updateUser");
@@ -87,4 +89,31 @@ public class UserServiceImpl implements UserService {
 		return result;
 	}
 
+	@Transactional
+	@Override
+	public boolean deleteUser(String userId) {
+		log.info("deleteUser");
+		boolean result = false;
+		
+		result = transactionTemplate.execute(new TransactionCallback<Boolean>() {
+
+			@Override
+			public Boolean doInTransaction(TransactionStatus status) {
+				boolean result = false;
+				try {
+					userDAO.deleteUser(userId);
+					result = true;
+				} catch (Exception e) {
+					log.error("회원 정보 삭제 실패");
+					result = false;
+					status.setRollbackOnly();
+				}
+				return result;
+			}
+			
+		});
+		
+		return result;
+	}
+	
 }

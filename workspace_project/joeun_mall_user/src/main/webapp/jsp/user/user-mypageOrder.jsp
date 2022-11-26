@@ -24,7 +24,15 @@
 		//로그인 버튼 눌렀을때
 		$("#login_btn").click(function(){
 			location.href = "<%=request.getContextPath()%>/user/user-login.do"
-		})
+		});
+		
+		//회원탈퇴 버튼 눌렀을때
+		$("#deleteMember_btn").click(function(){
+			if(confirm("정말 탈되하시겠습니까?")){
+				location.href="<%=request.getContextPath()%>/user/user-delete.do?userId=${sessionScope.SESS_LOGIN_ID}"	
+			}
+		});
+		
 	});
 	</script>
 
@@ -40,7 +48,7 @@
 <body>
     <div id="wrap">
         <header>
-            <a href="user-productlistAll.do"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
+            <a href="user-productlistCarousel.do"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
             <ul id="header">
                 <li><a href="#">전상품</a></li>
                 <li><a href="#">티셔츠</a></li>
@@ -85,7 +93,7 @@
                     <p class="sub-title">회원정보</p>
                     <ul class="mypage-sublist">
                         <li><a href="<c:url value='/user/user-mypageModify.do'/>">회원정보 수정</a></li>
-                        <li><a href="#">회원탈퇴</a></li>
+                        <li><a href="#" id="deleteMember_btn">회원탈퇴</a></li>
                     </ul>
                 </div>
             </nav>  

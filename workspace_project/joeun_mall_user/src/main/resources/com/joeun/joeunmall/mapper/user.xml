@@ -35,4 +35,18 @@
 		 WHERE user_id =#{userId}
 	</update>
 	
+	<!-- 회원 정보 삭제 -->
+	<delete id="deleteUser" parameterType="String">
+	{call
+        declare
+        begin
+            DELETE INQUIRY_TBL WHERE USER_INDEX = (SELECT USER_INDEX FROM USER_TBL WHERE USER_ID = #{userId}); 
+			DELETE CART_TBL WHERE USER_INDEX = (SELECT USER_INDEX FROM USER_TBL WHERE USER_ID = #{userId}); 
+			DELETE Order_Product_Tbl WHERE USER_INDEX = (SELECT USER_INDEX FROM USER_TBL WHERE USER_ID = #{userId}); 
+			DELETE USER_TBL WHERE USER_ID = #{userId};
+        end
+    }
+	
+	</delete>
+	
 </mapper>

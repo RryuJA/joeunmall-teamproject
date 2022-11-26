@@ -39,7 +39,7 @@
 <body>
     <div id="wrap">
         <header>
-            <a href="<c:url value='/user/user-productlistAll.do' />"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
+            <a href="user-productlistCarousel.do"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
             <div id="header-icon">
                 
                 <!-- 로그인 상태 -->
