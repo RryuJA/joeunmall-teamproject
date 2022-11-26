@@ -41,4 +41,9 @@ public class UserDAOImpl implements UserDAO {
 		sqlSession.insert(NS_NAME + "updateUser", userVO); 
 	}
 
+	@Override
+	public void deleteUser(String userId) {
+		log.info("deleteUser");
+		sqlSession.insert(NS_NAME + "deleteUser", userId); 
+	}
 }

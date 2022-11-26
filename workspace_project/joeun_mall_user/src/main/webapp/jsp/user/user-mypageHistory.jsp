@@ -40,7 +40,7 @@
 <body>
     <div id="wrap">
         <header>
-            <a href="user-productlistAll.do"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
+            <a href="user-productlistCarousel.do"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
             <ul id="header">
                 <li><a href="#">전상품</a></li>
                 <li><a href="#">티셔츠</a></li>

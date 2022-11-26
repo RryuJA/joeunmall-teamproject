@@ -35,4 +35,12 @@ public interface UserService {
 	 * @return 수정여부
 	 */
 	public boolean updateUser(UserVO userVO);
+	
+	/**
+	 * 회원 정보 삭제
+	 * 
+	 * @param userId 고객 아이디
+	 * @return 삭제여부
+	 */
+	public boolean deleteUser(String userId);
 }

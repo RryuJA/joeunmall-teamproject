@@ -32,4 +32,11 @@ public interface UserDAO {
 	 * @param userVO 회원 정보 객체
 	 */
 	public void updateUser(UserVO userVO);
+	
+	/**
+	 * 회원 정보 삭제
+	 * 
+	 * @param userId 고객 아이디
+	 */
+	public void deleteUser(String userId);
 }

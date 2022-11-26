@@ -65,6 +65,7 @@
 			<mapping path="/user/user-mypageOrder.do"/>
 			<mapping path="/user/user-update.do"/>
 			<mapping path="/user/user-view.do"/>
+			<mapping path="/user/user-delete.do"/>
 			<beans:bean class="com.joeun.joeunmall.interceptor.UserInterceptor"/>
 		</interceptor>
 	</interceptors>

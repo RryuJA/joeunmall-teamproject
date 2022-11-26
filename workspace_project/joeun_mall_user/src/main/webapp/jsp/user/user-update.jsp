@@ -101,7 +101,7 @@
 <body>
     <div id="wrap">
         <header>
-            <a href="user-productlistAll.html"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
+            <a href="user-productlistCarousel.do"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
             <div id="header-icon">
                 <input type="button" value="로그인">
                 <a href="user-mypageOrder.do"><img src="<c:url value='/images/icon/icon_user.png' />"></a>

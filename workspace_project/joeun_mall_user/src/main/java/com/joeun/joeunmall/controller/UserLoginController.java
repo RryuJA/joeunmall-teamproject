@@ -37,7 +37,7 @@ public class UserLoginController {
 	@GetMapping("/")
 	public String home(Model model) {
 		log.info("home");
-		return  "redirect:/user/user-productlistAll.do";
+		return  "redirect:/user/user-productlistCarousel.do";
 	}
 	
 	
@@ -87,7 +87,7 @@ public class UserLoginController {
 				}
 				
 				msg = "로그인에 성공하였습니다.";
-				movePath = "/user/user-productlistAll.do"; //상품 리스트 페이지 
+				movePath = "/user/user-productlistCarousel.do"; //상품 리스트 페이지 
 				
 			} else {//pw가 불일치시
 				msg = "패쓰워드가 일치하지 않습니다.";
@@ -115,10 +115,10 @@ public class UserLoginController {
 		return "/user/user-productDetail";
 	}
 	
-	@GetMapping("/user/user-productlistAll.do")
-	public String userProductlistAll() {
-		log.info("userProductlistAll");
-		return "/user/user-productlistAll";
+	@GetMapping("/user/user-productlistCarousel.do")
+	public String userProductlistCarousel() {
+		log.info("userProductlistCarousel");
+		return "/user/user-productlistCarousel";
 	}
 	
 	@GetMapping("/user/user-shoppingBasket.do")
@@ -243,5 +243,30 @@ public class UserLoginController {
 	public String userMypageModifyBeforeCheck() {
 		log.info("userMypageModifyBeforeCheck");
 		return "/user/user-mypageModifyBeforeCheck";
+	}
+	
+	@GetMapping("/user/user-delete.do")
+	public String userDelete(@RequestParam(value = "userId", required = true) String userId, HttpSession session,
+			Model model) {
+		log.info("userDelete");
+		log.info("userId=" + userId);
+		String msg = ""; //메시지
+		String movePath = ""; //이동경로
+		
+		//회원 정보 삭제 
+
+		if (userService.deleteUser(userId) == true) {
+			msg = "회원정보 삭제에 성공하셨습니다."; 
+			movePath = "/user/user-login.do";
+			session.invalidate();//사용자 세션 종료 (로그아웃)
+		} else {
+			msg = "회원정보 삭제에 실패하였습니다."; 
+			movePath = "/user/user-mypageOrder.do";
+		}
+		
+		model.addAttribute("errMsg", msg);
+		model.addAttribute("movePath", movePath);
+		
+		return "/error/error";
 	}
 }

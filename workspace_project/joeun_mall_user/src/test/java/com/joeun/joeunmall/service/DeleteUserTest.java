@@ -1,8 +1,10 @@
-package com.joeun.joeunmall.security;
+package com.joeun.joeunmall.service;
+
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -16,14 +18,15 @@ import lombok.extern.slf4j.Slf4j;
    })
 @WebAppConfiguration
 @Slf4j
-public class PwMakingTest {
+public class DeleteUserTest {
 	
-	@Test
-	public void test(){
-		log.info("암호생성");
-		String pw = "joeun5678";
-		BCryptPasswordEncoder bce = new BCryptPasswordEncoder();
-		log.info("암호화 pw=" + bce.encode(pw));//$2a$10$PdP6.CsUr2OA2Ntvj1GHreOzjlYimO6l/5criE/JNLfshxc5Mb0FC
+	@Autowired UserService userService;
+	
+	@Test 
+	public void test() {
+		log.info("회원정보 삭제");
+		assertTrue(userService.deleteUser("AabcdeF1234"));
+		
 	}
-	
+
 }
