@@ -247,9 +247,9 @@ $(function(){
                         <tr>
                             <td class="icon-width"></td>
                             <th></th>
-                            <td><input type="text"  id="userPost" name="userPost" placeholder="(우편번호)" required readonly>
-                            <button type="button"  id="post_search" onclick="getPostcodeAddress()" style="width: 200px; height: 40px; background: #FBFBFB">주소검색</button>
-                            
+                            <td>
+                            	<input type="text" id="userPost" name="userPost" placeholder="(우편번호)" required readonly>
+                            	<button type="button" id="post_search" onclick="getPostcodeAddress()">주소검색</button>
                             </td>
                         </tr>
                         <tr>
