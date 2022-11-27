@@ -31,6 +31,16 @@ div#sub-title h3 {
     border-radius: 5px;
 }
 
+div.input-size-box{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-evenly;
+    width: 345px;
+    height: 40px;
+}
+
 article#modify-table {
     display: flex;
     justify-content: center;
@@ -77,19 +87,31 @@ article#modify-table input#day {
     margin-right: 5px;
 }
 
-div.input-size-box{
+div#radio{
     display: flex;
     align-items: center;
     flex-direction: row;
-    margin: auto;
     justify-content: space-evenly;
-    width: 330px;
     height: 40px;
 }
 
 article#modify-table input[type="radio"] {
     width: 30px;
     height: 15px;
+}
+
+article#modify-table #userPost {
+    width: 180px;
+}
+
+article#modify-table #post_search {
+    width: 140px;
+    height: 45px;
+    border: solid 1px black;
+    border-radius: 5px;
+    font-size: 11pt;
+    font-weight: bold;
+    margin-left: 5px;
 }
 
 /*-----------------------------------------------------*/

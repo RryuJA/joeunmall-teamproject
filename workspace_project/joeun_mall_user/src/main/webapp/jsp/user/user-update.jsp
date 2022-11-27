@@ -94,7 +94,7 @@
     <!--header와 footer는 고정-->
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-header-login.css' />">
     <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-footer.css' />">
-    <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-join.css' />">
+    <link rel="stylesheet" type="text/css" href="<c:url value='/css/user-mypage-modify.css' />">
 
 </head>
 
@@ -140,9 +140,9 @@
                         <tr>
                             <td class="icon-width"></td>
                             <th></th>
-                            <td><input type="text"  id="userPost" name="userPost" placeholder="(우편번호)" required readonly value="${defaultUser.userPost}">
-                            <button type="button"  id="post_search" onclick="getPostcodeAddress()" style="width: 200px; height: 40px; background: #FBFBFB">주소검색</button>
-                            
+                            <td>
+                            	<input type="text" id="userPost" name="userPost" placeholder="(우편번호)" required readonly value="${defaultUser.userPost}">
+                            	<button type="button" id="post_search" onclick="getPostcodeAddress()">주소검색</button>
                             </td>
                         </tr>
                         <tr>

@@ -202,7 +202,7 @@
                                 <th></th>
                                 <td>
                                 	<input type="text" required readonly id="userPost" name="userPost" placeholder="(우편번호)" value="${defaultUser.userPost}">
-                                	<button type="button"  id="post_search" onclick="getPostcodeAddress()" style="width: 200px; height: 40px; background: #FBFBFB">주소검색</button>
+                                	<button type="button"  id="post_search" onclick="getPostcodeAddress()">주소검색</button>
                             	</td>
                             </tr>
                             <tr>
