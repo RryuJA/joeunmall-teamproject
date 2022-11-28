@@ -43,7 +43,7 @@ public class AdminProductManageController {
 		PageDTO pageDTO = new PageDTO();
 		PageMaker pageMaker = new PageMaker();	
 		
-		pageDTO.setRecordsPerPage(6);
+		pageDTO.setRecordsPerPage(8);
 		int maxNum = productManageService.getAllProductRecordNum(); 
 		int maxPage = (int)(maxNum / pageDTO.getRecordsPerPage() + 0.95) + 1;
 		pageDTO.setMaxPage(maxPage);

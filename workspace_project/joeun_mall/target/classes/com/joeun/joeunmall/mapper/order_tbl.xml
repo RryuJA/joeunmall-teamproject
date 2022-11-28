@@ -2,22 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.joeun.joeunmall.mapper.order_tbl">
 
-	<!-- Order_tbl 전체 데이터 가져오기 -->
-<!-- 	
-	<select id="getAllOrderByPaging" parameterType="hashmap" resultType="com.joeun.joeunmall.vo.OrderVO">
-	SELECT *
-		FROM (SELECT ROWNUM, m.*, FLOOR(ROWNUM -1) / 8 + 1 PAGE 
-			FROM ( SELECT * FROM (SELECT * from ORDER_TBL JOIN (SELECT A.order_index, SUM(B.product_count) product_count_sum
-		    	FROM order_tbl A, order_product_tbl B
-		    	WHERE A.order_index = SUBSTR(B.order_product_index, 1, 16)
-		    	GROUP BY A.order_index ORDER BY A.order_index ASC) C ON order_tbl.ORDER_INDEX = C.order_index)
-		    	ORDER BY ORDER_DATE DESC
-			) m
-		)
-	WHERE page = #{currentPage}
-	</select> -->
-	
-	<!-- ROWNUM "ROW_ORDER_NUM" 제외 -->
+	<!-- 주문관리 paging 쿼리 -->
 	<select id="getAllOrderByPaging" parameterType="hashmap" resultType="map">
 		SELECT *
 		FROM (
@@ -36,16 +21,80 @@
 		                        ORDER BY A.order_index ASC
 		                    ) C 
 							ON order_tbl.order_index = C.order_index
-		                    )				
+	                    )				
 						ORDER BY order_date DESC
 				) m
-		)
-		WHERE page = #{currentPage}
+		) WHERE page = #{currentPage}
 	</select>
 		
-	<!-- 게시판 전체 레코드 수 계산 쿼리 -->
+	<!-- 주문관리 전체 레코드 수 -->
 	<select id="getAllOrderRecordNum" resultType="int">
 		SELECT count(*) FROM order_tbl
 	</select>
 	
+	<!-- 주문상태번호 수정 product_state_tbl (주문관리 selectBox 제어) -->
+	<update id="updateOrderState" parameterType="map">
+		UPDATE ORDER_TBL SET
+			ORDER_STATE_INDEX = #{orderStateIndex}
+		WHERE order_index = #{orderIndex}
+	</update>
+	
+	<!-- 주문번호 존재확인 (주문관리 selectBox 제어) -->
+	<select id="getOrderStateCheck" parameterType="String" resultType="int">
+		SELECT COUNT(*) FROM ORDER_TBL WHERE ORDER_INDEX = #{orderIndex}	
+	</select>
+	
+	<!-- 주문번호에 포함되는 모든 제품명을 뽑는 쿼리 (주문관리 제품명 출력용(ex 파란색 티셔츠 외 3개)) -->
+	<select id="getOrderProductsName" parameterType="String" resultType="String">
+		SELECT product_name FROM PRODUCT_TBL
+		WHERE product_index IN (
+								SELECT product_index FROM ORDER_PRODUCT_TBL 
+								WHERE order_product_index like '${orderIndex}%'
+							  )
+	</select>
+	
+	<!-- 주문관리 검색기능 -->
+	<select id="getOrderSearchByPage" parameterType="hashmap" resultType="map">
+	SELECT *
+	FROM (
+	      SELECT m.*, FLOOR((ROWNUM -1) / #{recordsPerPage} + 1) page  
+	      FROM ( 
+	            SELECT * FROM 
+	            (
+	               SELECT * FROM order_tbl
+	               JOIN 
+	               (
+	                  SELECT A.order_index, 
+	                              SUM(B.product_count) product_count_sum
+	                  FROM order_tbl A, order_product_tbl B
+	                  WHERE A.order_index = SUBSTR(B.order_product_index, 1, 16)
+	                  GROUP BY A.order_index 
+                      ORDER BY A.order_index ASC
+                   ) C 
+	               ON order_tbl.order_index = C.order_index
+                ) D            
+                WHERE order_name like '%${searchWord}%'
+	            ORDER BY order_date DESC
+	      ) m
+	) WHERE page = #{currentPage}
+	</select>
+	
+	<!-- 주문관리 검색 후 paging 전체 레코드 수 -->
+	<select id="getAllOrderRecordNumSearch" parameterType="hashmap" resultType="int">
+	SELECT count(*) 
+	FROM (
+		SELECT * from ORDER_TBL 
+			JOIN 
+		(
+			SELECT A.order_index,
+						SUM(B.product_count) product_count_sum
+			    FROM order_tbl A, order_product_tbl B
+			    WHERE A.order_index = SUBSTR(B.order_product_index, 1, 16)
+			    GROUP BY A.order_index 
+			    ORDER BY A.order_index ASC
+			    ) C 
+		    ON order_tbl.ORDER_INDEX = C.order_index
+		    )
+			WHERE order_name LIKE '%${searchWord}%'
+	</select>
 </mapper>

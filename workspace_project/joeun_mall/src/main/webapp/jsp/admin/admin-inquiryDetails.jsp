@@ -82,12 +82,6 @@
                         <input type="hidden" id="inquiryTitle" name="inquiryTitle " value="${inquiryVO.inquiryTitle}"/></td>
                     </tr>
                     <tr>
-                        <!--첨부파일 양식: jpg, png, zip, pdf-->
-                        <th>첨부파일</th>
-                        <!--download: 다운로드 될 파일명 지정-->
-                        <td colspan="3"><a href="#" download="test" id="a-filedownload">첨부파일 다운로드</a></td>
-                    </tr>
-                    <tr>
                         <th>문의내용</th>
                         <td colspan="3" class="table-row2"><div id="text-square2">고객이 문의한 내용</div>
                         <input type="hidden" id="inquiryContent" name="inquiryContent" value="${inquiryVO.inquiryContent}"/></td>

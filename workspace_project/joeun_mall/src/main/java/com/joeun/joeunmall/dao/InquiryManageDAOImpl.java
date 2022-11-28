@@ -36,5 +36,20 @@ public class InquiryManageDAOImpl implements InquiryManageDAO{
 	public int getAllInquiryRecordNum() {
 		return sqlSession.selectOne(MAPPER_NS+"getAllInquiryRecordNum");
 	}
-	
+
+	//고객명 '만' 검색
+	@Override
+	public List<InquiryVO> getInquirySearchByPage(int currentPage, int recordsPerPage, String searchWord) {
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("currentPage", currentPage);
+		map.put("recordsPerPage", recordsPerPage);
+		map.put("searchWord", searchWord);
+		return sqlSession.selectList(MAPPER_NS+"getInquirySearchByPage", map);
+	}
+
+	//고객명 검색 후 검색된 레코드 수 전체 계산. 
+	@Override
+	public int getAllInquiryRecordNumSearch(String searchWord) {
+		return sqlSession.selectOne(MAPPER_NS+"getAllInquiryRecordNumSearch", searchWord);
+	}
 }

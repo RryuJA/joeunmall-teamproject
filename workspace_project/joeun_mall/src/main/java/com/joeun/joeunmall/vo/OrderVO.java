@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.util.Date; // 수정 : map => VO 변환시 문제 해결 : javateacher 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -55,6 +56,10 @@ public class OrderVO {
 	/** 총 주문수량 */
 	private int productCountSum;
 	
+	/** 주문번호에 포함되는 모든 상품명 */
+	private List<String> productNames;
+
+
 	// 추가 : javateacher
 	public OrderVO() {}
 	
@@ -275,6 +280,14 @@ public class OrderVO {
 	public void setProductCountSum(int productCountSum) {
 		this.productCountSum = productCountSum;
 	}
+	
+	public List<String> getProductNames() {
+		return productNames;
+	}
+
+	public void setProductNames(List<String> productNames) {
+		this.productNames = productNames;
+	}
 
 	@Override
 	public String toString() {
@@ -282,6 +295,7 @@ public class OrderVO {
 				+ ", paymentIndex=" + paymentIndex + ", orderDate=" + orderDate + ", orderPrice=" + orderPrice
 				+ ", orderName=" + orderName + ", orderPost=" + orderPost + ", orderAddress=" + orderAddress
 				+ ", orderAddressDetail=" + orderAddressDetail + ", orderMobile=" + orderMobile + ", orderMessage="
-				+ orderMessage + ", productName=" + productName + ", productCountSum=" + productCountSum + "]";
+				+ orderMessage + ", productName=" + productName + ", productCountSum=" + productCountSum
+				+ ", productNames=" + productNames.toString() + "]";
 	}
 }

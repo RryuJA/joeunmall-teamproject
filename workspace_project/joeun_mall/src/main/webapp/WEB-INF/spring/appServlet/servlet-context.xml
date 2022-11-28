@@ -21,6 +21,9 @@
 	<!-- js -->
 	<resources mapping="/js/**" location="/js/" />
 	
+	<!-- jquery -->
+	<resources mapping="/jquery/**" location="classpath:/META-INF/resources/webjars/jquery/3.6.0/" />
+	
 	<!-- 상품 이미지 임시경로 -->
 	<resources mapping="/upload_image/**" location="file:///C:/joeunmall-teamproject/product_images/" />
 	

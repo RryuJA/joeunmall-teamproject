@@ -46,11 +46,12 @@
     </nav>
     <!--admin-nav.css 끝-->
     
-    <!--section, article css 제작해야 함-->
     <section id="section">
         <div id="top-menu-manage">
-                <input type="search" id="search" placeholder="고객번호, 고객명 또는 문의번호" />
-                 <a href="123"><img id="icon_search" src="<c:url value ='/images/icon/icon_search.png' />" alt="돋보기"></a>
+        	<form method="get" action="<c:url value = '/admin/admin-inquiryManageSearch.do' />" >
+                <input type="search" id="search" name="searchWord" placeholder="고객명" />
+                <a href="123"><img id="icon_search" src="<c:url value ='/images/icon/icon_search.png' />" alt="돋보기"></a>
+           	</form>
         </div>
         <!-- 테이블 -->
         <article>
@@ -80,12 +81,15 @@
                     </tbody>
                 </table>
             </div>
+            
         	<!-- //paging -->
 				<article>
+				<!-- 기본 페이징 -->
+				<c:if test="${empty searchWord}">
 					<div>
 					<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
-	<%-- 인자확인용	${pageMaker.pageDTO}, ${pageMaker}, ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}<br>
-					${pageNum}, ${pageNum +1}, ${pageNum +2}, ${pageNum +3}, ${pageNum +4} --%>
+				<%-- 인자확인용	${pageMaker.pageDTO}, ${pageMaker}, ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}<br>
+								${pageNum}, ${pageNum +1}, ${pageNum +2}, ${pageNum +3}, ${pageNum +4} --%>
 					</div>
 			            <div class="page-wrap">
 			                <div class="page-nation">
@@ -112,7 +116,40 @@
 			                    <a class="arrow nnext" href="<%=request.getContextPath()%>/admin/admin-inquiryManage.do?currentPage=${pageMaker.pageDTO.maxPage}"></a>
 			                </div>
 			            </div>
-		        </article>      
+		            </c:if>
+	        <!-- 검색페이징 -->
+			<c:if test="${not empty searchWord}">
+				<div>
+			<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
+			</div>
+            	<div class="page-wrap">
+                	<div class="page-nation">
+	                    <a class="arrow pprev" href="<%=request.getContextPath()%>/admin/admin-inquiryManageSearch.do?currentPage=1&searchWord=${searchWord}"></a>
+	                    <a class="arrow prev" href="<%=request.getContextPath()%>/admin/admin-inquiryManageSearch.do?currentPage=
+	                    ${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}&searchWord=${searchWord}"></a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-inquiryManageSearch.do?currentPage=${pageNum}&searchWord=${searchWord}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-inquiryManageSearch.do?currentPage=${pageNum+1}&searchWord=${searchWord}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+1 ? "class='active'" : ""}>${pageMaker.startPage +1}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-inquiryManageSearch.do?currentPage=${pageNum+2}&searchWord=${searchWord}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+2 ? "class='active'" : ""}>${pageMaker.startPage +2}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-inquiryManageSearch.do?currentPage=${pageNum+3}&searchWord=${searchWord}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+3 ? "class='active'" : ""}>${pageMaker.startPage +3}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/admin/admin-inquiryManageSearch.do?currentPage=${pageNum+4}&searchWord=${searchWord}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+4 ? "class='active'" : ""}>${pageMaker.startPage +4}</a>
+	                    
+	                    <a class="arrow next" href="<%=request.getContextPath()%>/admin/admin-inquiryManageSearch.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}&searchWord=${searchWord}"></a>
+	                    <a class="arrow nnext" href="<%=request.getContextPath()%>/admin/admin-inquiryManageSearch.do?currentPage=${pageMaker.pageDTO.maxPage}&searchWord=${searchWord}"></a>
+               		 </div>
+           		 </div>
+			</c:if>
+			<!-- //검색페이징 --> 
+	    </article>      
     </section>
 </div>
 <!--관리자 페이지 footer 생략-->
