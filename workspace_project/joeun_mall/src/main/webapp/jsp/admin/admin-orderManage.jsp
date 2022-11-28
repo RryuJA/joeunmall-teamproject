@@ -12,6 +12,46 @@
     <title>JoEun_admin 주문관리</title>
 
     <!--javascript-->
+	<script src="<c:url value='/jquery/jquery.min.js' />" ></script>
+	<script>
+	$(function(){
+		//id="orderState${st.index}"
+		//주문관리-진행상태-selectBOX제어(인자 전송_ajax)
+		$("select[id^=orderState]").change(function(e){
+			var targetId = e.currentTarget.id;
+			
+			//선택상자의 id를 확인하는 코드
+			console.log("targetID: " + targetId);
+			//선택된 값을 확인
+			console.log("값 : " + $("#"+targetId).val());
+			
+			//주문번호를 추출해서 확인
+			var num = targetId.substring(10);
+			var orderIndex = "orderIndex" + num; //주문번호 
+			 console.log("주문번호: " + $("#"+orderIndex).text());
+			 
+			//전송
+			 $.ajax({
+				url: "${pageContext.request.contextPath}/admin/admin-orderStateUpdate.do",
+				type: 'GET',
+				data: {
+					orderIndex : $("#"+orderIndex).text() , 
+					orderStateIndex : $("#"+targetId).val()
+				}, 
+				success(result){
+					console.log("result: " + result);
+					alert(result);
+				}
+				 
+			 })
+
+			 
+		});
+		
+ 	
+	
+	});
+	</script>
 	
     <!--css-->
     <!--admin-nav.css는 고정-->
@@ -47,17 +87,13 @@
     </nav>
     <!--admin-nav.css 끝-->
     
-    <!--section, article css 제작해야 함-->
     <section id="section">
-            <div id="top-menu-manage">
-                    <select class="drop-box">
-                        <option value="">정렬 선택</option>
-                        <option value="order-sort">최근가입순 정렬</option>
-                        <option value="state-sort">고객명 정렬</option>
-                    </select>
-                    <input type="search" id="search" placeholder="주문번호, 주문자명, 주문일자 또는 상품명" />
+        <div id="top-menu-manage">
+            <form method="get" action="<c:url value = '/admin/admin-orderManageSearch.do' />" >
+                <input type="search" id="search" name="searchWord" placeholder="고객명" />
                 <a href="123"><img id="icon_search" src="<c:url value ='/images/icon/icon_search.png' />" alt="돋보기"></a>
-            </div>
+           	</form>
+        </div>
         <!-- 테이블 -->
         <article>
             <div id="bottom-menu-manage">
@@ -78,14 +114,13 @@
                     	<c:forEach var="orderManageVO" items="${orderManageList}" varStatus="st">
                     		
 	                    	<tr>                            
-		                        <td>${orderManageVO.orderIndex}</td>
+		                        <td><div id="orderIndex${st.index}">${orderManageVO.orderIndex}</div></td>
 		                        <td>${orderManageVO.orderName}</td>
-		                        <td>${orderManageVO.productName}</td>
+								<td>${orderManageVO.productNames.get(0)} 외 ${orderManageVO.productNames.size()-1}개</td>
 		                        <td>${orderManageVO.productCountSum}</td>
 		                        <td><fmt:formatNumber value="${orderManageVO.orderPrice}" pattern="###,###" /></td>
 		                        <td><fmt:formatDate value= "${orderManageVO.orderDate}" pattern="yyyy-MM-dd"/></td>
 		                        <td>	
-		                 		                                                       
 		                         	<select name="order-state" id="orderState${st.index}" class="drop-table">
 	                                    <option value="STA1">판매자 확인중</option>
 	                                    <option value="STA2">상품준비</option>
@@ -136,41 +171,73 @@
             </div>
         </article>
 
-<!-- paging -->
+		<!-- paging -->
 			<article>
-			<div>
-				<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
-<%-- 인자확인용	${pageMaker.pageDTO}, ${pageMaker}, ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}<br>
-				${pageNum}, ${pageNum +1}, ${pageNum +2}, ${pageNum +3}, ${pageNum +4} --%>
-			</div>
-	            <div class="page-wrap">
-	                <div class="page-nation">
-	                    <a class="arrow pprev" href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=1"></a>
-	                    <a class="arrow prev" href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=
-	                    ${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}"></a>
-	          			
+			<!-- 기본 페이징 -->
+			<c:if test="${empty searchWord}">
+				<div>
+					<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
+	<%-- 인자확인용	${pageMaker.pageDTO}, ${pageMaker}, ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}<br>
+					${pageNum}, ${pageNum +1}, ${pageNum +2}, ${pageNum +3}, ${pageNum +4} --%>
+				</div>
+		            <div class="page-wrap">
+		                <div class="page-nation">
+		                    <a class="arrow pprev" href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=1"></a>
+		                    <a class="arrow prev" href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=
+		                    ${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}"></a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageNum}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageNum+1}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+1 ? "class='active'" : ""}>${pageMaker.startPage +1}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageNum+2}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+2 ? "class='active'" : ""}>${pageMaker.startPage +2}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageNum+3}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+3 ? "class='active'" : ""}>${pageMaker.startPage +3}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageNum+4}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+4 ? "class='active'" : ""}>${pageMaker.startPage +4}</a>
+		                    
+		                    <a class="arrow next" href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}"></a>
+		                    <a class="arrow nnext" href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageMaker.pageDTO.maxPage}"></a>
+		                </div>
+		            </div>
+	            </c:if>
+	        <!-- 검색페이징 -->
+			<c:if test="${not empty searchWord}">
+				<div>
+					<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
+				</div>
+            	<div class="page-wrap">
+                	<div class="page-nation">
+	                    <a class="arrow pprev" href="<%=request.getContextPath()%>/admin/admin-orderManageSearch.do?currentPage=1&searchWord=${searchWord}"></a>
+	                    <a class="arrow prev" href="<%=request.getContextPath()%>/admin/admin-orderManageSearch.do?currentPage=
+	                    ${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}&searchWord=${searchWord}"></a>
 	                    
-	                    
-	                    <a href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageNum}"
+	                    <a href="<%=request.getContextPath()%>/admin/admin-orderManageSearch.do?currentPage=${pageNum}&searchWord=${searchWord}"
 	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
 	                    
-	                    <a href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageNum+1}"
+	                    <a href="<%=request.getContextPath()%>/admin/admin-orderManageSearch.do?currentPage=${pageNum+1}&searchWord=${searchWord}"
 	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+1 ? "class='active'" : ""}>${pageMaker.startPage +1}</a>
 	                    
-	                    <a href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageNum+2}"
+	                    <a href="<%=request.getContextPath()%>/admin/admin-orderManageSearch.do?currentPage=${pageNum+2}&searchWord=${searchWord}"
 	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+2 ? "class='active'" : ""}>${pageMaker.startPage +2}</a>
 	                    
-	                    <a href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageNum+3}"
+	                    <a href="<%=request.getContextPath()%>/admin/admin-orderManageSearch.do?currentPage=${pageNum+3}&searchWord=${searchWord}"
 	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+3 ? "class='active'" : ""}>${pageMaker.startPage +3}</a>
 	                    
-	                    <a href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageNum+4}"
+	                    <a href="<%=request.getContextPath()%>/admin/admin-orderManageSearch.do?currentPage=${pageNum+4}&searchWord=${searchWord}"
 	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+4 ? "class='active'" : ""}>${pageMaker.startPage +4}</a>
 	                    
-	                    <a class="arrow next" href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}"></a>
-	                    <a class="arrow nnext" href="<%=request.getContextPath()%>/admin/admin-orderManage.do?currentPage=${pageMaker.pageDTO.maxPage}"></a>
-	                </div>
-	            </div>
-
+	                    <a class="arrow next" href="<%=request.getContextPath()%>/admin/admin-orderManageSearch.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}&searchWord=${searchWord}"></a>
+	                    <a class="arrow nnext" href="<%=request.getContextPath()%>/admin/admin-orderManageSearch.do?currentPage=${pageMaker.pageDTO.maxPage}&searchWord=${searchWord}"></a>
+               		 </div>
+           		 </div>
+			</c:if>
+			<!-- //검색페이징 --> 	          
         </article>
 </div>
 <!--관리자 페이지 footer 생략-->

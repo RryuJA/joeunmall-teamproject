@@ -19,6 +19,8 @@ import com.joeun.joeunmall.vo.PageMaker;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * 주문관리 페이지 컨트롤러
+ * 
  * @author team3 LSE
  * 
  * */
@@ -73,9 +75,47 @@ public class AdminOrderManageController {
 		for (Map<String, Object> map : list) {
 			
 			orderVO = new OrderVO(map);
+
+			//주문번호에 포함되는 모든 제품명을 뽑는 쿼리
+			List<String> productList = orderManageService.getOrderProductsName(orderVO.getOrderIndex());
+			if (productList.size() > 0) {
+				orderVO.setProductNames(productList);
+			}
 			resultList.add(orderVO);
 		}
 		
 		return resultList;
 	}
+	
+	@GetMapping("/admin/admin-orderManageSearch.do")
+	public String adminOrderManageSearch(@RequestParam(value="currentPage", defaultValue="1") int currentPage,  
+			@RequestParam(value="searchWord") String searchWord,Model model) {
+		log.info("admin-OrderManageSearch");
+		
+
+		PageDTO pageDTO = new PageDTO();
+		PageMaker pageMaker = new PageMaker();	
+		
+		pageDTO.setRecordsPerPage(8);
+		int maxNum = orderManageService.getAllOrderRecordNumSearch(searchWord); 
+		int maxPage = (int)(maxNum / pageDTO.getRecordsPerPage() + 0.95) + 1;
+		log.info("maxNum=" + maxNum);
+		log.info("maxPage=" + maxPage);
+		pageDTO.setMaxPage(maxPage);
+		pageDTO.setCurrentPage(currentPage  < pageDTO.getMaxPage() ? currentPage : pageDTO.getMaxPage());
+		
+		pageMaker.setPageDTO(pageDTO);
+		log.info("---------------------------------------------------------------------------------------------------");
+		log.info("pageDTO.getCurrentPage(): " + pageDTO.getCurrentPage());
+		log.info("pageDTO.getRecordsPerPage(): " + pageDTO.getRecordsPerPage());
+		
+		List<Map<String, Object>> ordermanageList = orderManageService.getOrderSearchByPage(pageDTO.getCurrentPage(), pageDTO.getRecordsPerPage(), searchWord);
+		List<OrderVO> orderList = toOrderList(ordermanageList);		
+		
+		model.addAttribute("orderManageList", orderList);
+		model.addAttribute("pageMaker", pageMaker);
+		model.addAttribute("searchWord", searchWord);
+		
+		return "/admin/admin-orderManage";
+	}	
 }

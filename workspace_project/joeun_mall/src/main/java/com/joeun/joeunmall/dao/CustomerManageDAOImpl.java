@@ -40,4 +40,19 @@ public class CustomerManageDAOImpl implements CustomerManageDAO {
 		return sqlSession.selectOne(MAPPER_NS+"getAllUserRecordNum");
 	}
 
+	//고객명 '만' 검색
+	@Override
+	public List<UserVO> getSearchByPage(int currentPage, int recordsPerPage, String searchWord) {
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("currentPage", currentPage);
+		map.put("recordsPerPage", recordsPerPage);
+		map.put("searchWord", searchWord);
+		return sqlSession.selectList(MAPPER_NS+"getSearchByPage", map);
+	}
+	
+	//고객명 검색 후 검색된 레코드 수 전체 계산. 
+	@Override
+	public int getAllUserRecordNumSearch(String searchWord) {
+		return sqlSession.selectOne(MAPPER_NS+"getAllUserRecordNumSearch", searchWord);
+	}
 }

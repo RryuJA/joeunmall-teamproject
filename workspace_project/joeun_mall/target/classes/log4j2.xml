@@ -46,7 +46,7 @@
 		<Property name="LOG_PATH" value="C:\joeunmall-teamproject\workspace_project\log\java" />
 		
 		<Property name="layoutPattern">
-			%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5p] [%C] [%t] [%l{36}] -- %m%n
+			%m [%-5p] [%C] [%t] [%l{36}] -- %d{yyyy-MM-dd HH:mm:ss.SSS}%n
 		</Property>
 	</Properties>
 	

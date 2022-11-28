@@ -59,11 +59,6 @@
                     <option value="cat-04">니트/가디건</option>
                     <option value="cat-05">자켓</option>
                 </select>
-                <select class="drop-box">
-                    <option hidden>정렬 선택</option>
-                    <option value="order-sort">최근주문순 정렬</option>
-                    <option value="state-sort">상품명 정렬</option>
-                </select>
                 <input type="search" id="search" placeholder="상품번호 또는 상품명" />
                 <a href="123"><img id="icon_search" src="<c:url value ='/images/icon/icon_search.png' />" alt="돋보기"></a>
             </div>
@@ -82,7 +77,7 @@
 						    <th>등록일자</th>
                             <th>상품번호</th>
                             <th>카테고리 </th>
-                            <th>상품썸네일</th>
+                            <!-- <th>상품썸네일</th> -->
                             <th class = "th-width">상품명</th> <!-- 너비 조절 -->
                             <th class = "th2-width">옵션</th>
                             <th>상품가격</th>
@@ -98,8 +93,7 @@
                             <td><fmt:formatDate value="${productVO.productDate}" pattern="yyyy-MM-dd"/> </td> 
                             <td>${productVO.productIndex}</td>
                             <td>${productVO.productCategoryIndex}</td>
-							<td><img src="<c:url value='/thumbnail/${productVO.productImage}' />" /></td>
-                            <td>${productVO.productName}</td>
+<%-- 							<td><img src="<c:url value='/thumbnail/${productVO.productImage}' />" /></td>--%>                            <td>${productVO.productName}</td>
                             <td>${productVO.productOptionValue}</td>
                             <td><fmt:formatNumber value="${productVO.productPrice}" pattern="###,###" /></td>
                       	</tr>

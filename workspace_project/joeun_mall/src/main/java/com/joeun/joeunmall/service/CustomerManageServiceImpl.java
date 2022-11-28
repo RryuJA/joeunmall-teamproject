@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 	 */
 @Service
 @Slf4j
-public class CutomerManageServiceImpl implements CustomerManageService {
+public class CustomerManageServiceImpl implements CustomerManageService {
 	
 	@Autowired
 	CustomerManageDAO customerManageDAO;
@@ -35,4 +35,17 @@ public class CutomerManageServiceImpl implements CustomerManageService {
 		return customerManageDAO.getAllUserRecordNum();
 	}
 
+	//고객명 '만' 검색
+	@Transactional(readOnly=true, rollbackFor=Exception.class)
+	@Override
+	public List<UserVO> getSearchByPage(int currentPage, int recordsPerPage, String searchWord) {
+		return customerManageDAO.getSearchByPage(currentPage, recordsPerPage, searchWord);
+	}
+	
+	//검색된 레코드 수 전체 계산. 
+	@Transactional(readOnly=true, rollbackFor=Exception.class)
+	@Override
+	public int getAllUserRecordNumSearch(String searchWord) {
+		return customerManageDAO.getAllUserRecordNumSearch(searchWord);
+	}
 }

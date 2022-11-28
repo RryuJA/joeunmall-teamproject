@@ -24,7 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @RequestMapping
 public class AdminCustomerManageController {
-	
+
 	@Autowired
 	CustomerManageService customerManageService;
 
@@ -55,6 +55,33 @@ public class AdminCustomerManageController {
 		
 		model.addAttribute("customerManageList", customermanageList);
 		model.addAttribute("pageMaker", pageMaker);
+		
+		return "/admin/admin-customerManage";
+	}
+	
+	@GetMapping("/admin/admin-customerManageSearch.do")
+	public String adminCustomerManageSearch(@RequestParam(value="currentPage", defaultValue="1") int currentPage, 
+			@RequestParam(value="searchWord") String searchWord,Model model) {
+		log.info("admin-customerManageSearch");
+		
+		PageDTO pageDTO = new PageDTO();
+		PageMaker pageMaker = new PageMaker();
+						
+		pageDTO.setRecordsPerPage(8);
+		int maxNum = customerManageService.getAllUserRecordNumSearch(searchWord); 
+		int maxPage = (int)(maxNum / pageDTO.getRecordsPerPage() + 0.95) + 1;
+		log.info("maxNum=" + maxNum);
+		log.info("maxPage=" + maxPage);
+		pageDTO.setMaxPage(maxPage);
+		pageDTO.setCurrentPage(currentPage  < pageDTO.getMaxPage() ? currentPage : pageDTO.getMaxPage());
+		
+		pageMaker.setPageDTO(pageDTO);
+	
+		List<UserVO> customerManageList = customerManageService.getSearchByPage(pageDTO.getCurrentPage(), pageDTO.getRecordsPerPage(), searchWord);
+		
+		model.addAttribute("customerManageList", customerManageList);
+		model.addAttribute("pageMaker", pageMaker);
+		model.addAttribute("searchWord", searchWord);
 		
 		return "/admin/admin-customerManage";
 	}

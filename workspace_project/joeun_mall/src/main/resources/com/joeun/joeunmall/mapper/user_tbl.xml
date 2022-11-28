@@ -11,7 +11,7 @@
 		             FLOOR((ROWNUM - 1) / #{recordsPerPage} + 1) page  
 		      FROM (
 		             SELECT * FROM user_tbl  
-		             ORDER BY user_index DESC
+		             ORDER BY user_date DESC
 		           ) m  
 		      )  
 		WHERE page = #{currentPage}
@@ -21,5 +21,25 @@
 	<select id="getAllUserRecordNum" resultType="int">
 		SELECT count(*) FROM user_tbl
 	</select>
+
+	<!-- 게시판 검색  -->
+	<select id="getSearchByPage" parameterType="hashmap" resultType="com.joeun.joeunmall.vo.UserVO">
+		SELECT *  
+				FROM (SELECT ROWNUM,  
+			             m.*,  
+			             FLOOR((ROWNUM - 1) / #{recordsPerPage} + 1) page  
+			      FROM (
+			             SELECT * FROM user_tbl
+           	             WHERE user_name LIKE '%${searchWord}%'   
+			             ORDER BY user_date DESC
+			           ) m  
+			      )  
+			WHERE page = #{currentPage}
+	</select>
 	
+	<!-- 게시판 검색 후 레코드 수 계산 쿼리 -->
+	<select id="getAllUserRecordNumSearch" parameterType="String" resultType="int">
+		SELECT count(*) FROM user_tbl WHERE user_name LIKE '%${searchWord}%'
+	</select>
+
 </mapper>

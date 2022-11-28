@@ -35,5 +35,40 @@ public class OrderManageDAOImpl implements OrderManageDAO {
 	public int getAllOrderRecordNum() {
 		return sqlSession.selectOne(MAPPER_NS+"getAllOrderRecordNum");
 	}
-	
+
+	@Override
+	public void updateOrderState(String orderIndex, String orderStateIndex) {
+		Map<String, Object> map = new HashMap<>();
+		map.put("orderIndex", orderIndex);
+		map.put("orderStateIndex", orderStateIndex);
+		sqlSession.update(MAPPER_NS+"updateOrderState", map);
+	}
+
+	@Override
+	public int getOrderStateCheck(String orderIndex) {
+		return sqlSession.selectOne(MAPPER_NS+"getOrderStateCheck", orderIndex);
+	}
+
+	@Override
+	public List<String> getOrderProductsName(String orderIndex) {
+		return sqlSession.selectList(MAPPER_NS+"getOrderProductsName", orderIndex);
+	}
+
+	@Override
+	public List<Map<String, Object>> getOrderSearchByPage(int currentPage, int recordsPerPage, String searchWord) {
+		log.info("currentPage: " + currentPage);
+		log.info("recordsPerPage: " + recordsPerPage);
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("currentPage", currentPage);
+		map.put("recordsPerPage", recordsPerPage);
+		map.put("searchWord", searchWord);
+		return sqlSession.selectList(MAPPER_NS+"getOrderSearchByPage", map);
+	}
+
+	@Override
+	public int getAllOrderRecordNumSearch(String searchWord) {
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("searchWord", searchWord);
+		return sqlSession.selectOne(MAPPER_NS+"getAllOrderRecordNumSearch", map);
+	}
 }	

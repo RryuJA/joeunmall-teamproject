@@ -49,13 +49,10 @@
     <!--section, article css 제작해야 함-->
     <section id="section">
             <div id="top-menu-manage">
-                    <select class="drop-box">
-                        <option value="">정렬 선택</option>
-                        <option value="order-sort">최근가입순 정렬</option>
-                        <option value="state-sort">고객명 정렬</option>
-                    </select>
-                    <input type="search" id="search" placeholder="고객번호 또는 고객명" />
-                <a href="123"><img id="icon_search" src="<c:url value ='/images/icon/icon_search.png' />" alt="돋보기"></a>
+            	<form method="get" action="<c:url value ='/admin/admin-customerManageSearch.do' />">
+                    <input type="text" id="search" name="searchWord" placeholder="고객명" />
+                	<a href="123"><img id="icon_search" src="<c:url value ='/images/icon/icon_search.png' />" alt="돋보기"></a>
+                </form>
             </div>
         <!-- 테이블 -->
         <article>
@@ -69,7 +66,7 @@
                         <th>생년월일</th>
                         <th>성별</th>
                         <th class= "th-width">연락처</th>
-                        <th class="th6-width">관련 내역 확인</th>
+                        <th class="th6-width">이메일</th>
                     </tr>
                 </thead>
                 <!-- 레이아웃 페이지보다 웹페이지가 커서 행 2개 추가 (7개 > 9개) -->
@@ -83,10 +80,7 @@
 	                        <td><fmt:formatDate value="${UserVO.userBirth}" pattern="yyyy-MM-dd" /></td>
 	                        <td>${UserVO.userGender}</td>
 	                        <td>${UserVO.userMobile}</td>
-	                        <td>
-	                            <a href="#"></a><input type="button" value="주문내역">
-	                            <a href="#"></a><input type="button" value="문의내역">
-	                        </td>
+	                        <td>${UserVO.userMail}</td>
 	                    </tr>
                     </c:forEach>
                 </tbody>
@@ -94,6 +88,8 @@
         </div>        
         <!-- //paging -->
 			<article>
+			<!-- 기본 페이징 -->
+			<c:if test="${empty searchWord}">
 				<div>
 				<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
 <%-- 인자확인용	${pageMaker.pageDTO}, ${pageMaker}, ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}<br>
@@ -124,6 +120,41 @@
 		                    <a class="arrow nnext" href="<%=request.getContextPath()%>/admin/admin-customerManage.do?currentPage=${pageMaker.pageDTO.maxPage}"></a>
 		                </div>
 		            </div>
+		            </c:if>
+		        <!-- //기본 페이징 -->
+		        
+		        <!-- 검색페이징 -->
+				<c:if test="${not empty searchWord}">
+					<div>
+				<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
+				</div>
+		            <div class="page-wrap">
+		                <div class="page-nation">
+		                    <a class="arrow pprev" href="<%=request.getContextPath()%>/admin/admin-customerManageSearch.do?currentPage=1&searchWord=${searchWord}"></a>
+		                    <a class="arrow prev" href="<%=request.getContextPath()%>/admin/admin-customerManageSearch.do?currentPage=
+		                    ${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}&searchWord=${searchWord}"></a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-customerManageSearch.do?currentPage=${pageNum}&searchWord=${searchWord}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-customerManageSearch.do?currentPage=${pageNum+1}&searchWord=${searchWord}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+1 ? "class='active'" : ""}>${pageMaker.startPage +1}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-customerManageSearch.do?currentPage=${pageNum+2}&searchWord=${searchWord}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+2 ? "class='active'" : ""}>${pageMaker.startPage +2}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-customerManageSearch.do?currentPage=${pageNum+3}&searchWord=${searchWord}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+3 ? "class='active'" : ""}>${pageMaker.startPage +3}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-customerManageSearch.do?currentPage=${pageNum+4}&searchWord=${searchWord}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+4 ? "class='active'" : ""}>${pageMaker.startPage +4}</a>
+		                    
+		                    <a class="arrow next" href="<%=request.getContextPath()%>/admin/admin-customerManageSearch.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}&searchWord=${searchWord}"></a>
+		                    <a class="arrow nnext" href="<%=request.getContextPath()%>/admin/admin-customerManageSearch.do?currentPage=${pageMaker.pageDTO.maxPage}&searchWord=${searchWord}"></a>
+		                </div>
+		            </div>
+				</c:if>
+			<!-- //검색페이징 -->
 	        </article>
 	    </section>
 	</div>

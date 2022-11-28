@@ -43,7 +43,7 @@ public class AdminInquiryManageController {
 		PageDTO pageDTO = new PageDTO();
 		PageMaker pageMaker = new PageMaker();
 		
-		pageDTO.setRecordsPerPage(7);
+		pageDTO.setRecordsPerPage(8);
 		int maxNum = inquiryManageService.getAllInquiryRecordNum();
 		int maxPage = (int)(maxNum / pageDTO.getRecordsPerPage() + 0.95) + 1;
 		pageDTO.setMaxPage(maxPage);
@@ -55,6 +55,33 @@ public class AdminInquiryManageController {
 		
 		model.addAttribute("inquiryManageList", inquirymanageList);
 		model.addAttribute("pageMaker", pageMaker);
+		
+		return "/admin/admin-inquiryManage";
+	}
+	
+	@GetMapping("/admin/admin-inquiryManageSearch.do")
+	public String adminInquiryManageSearch(@RequestParam(value="currentPage", defaultValue="1") int currentPage, 
+			@RequestParam(value="searchWord") String searchWord,Model model) {
+		log.info("admin-inquiryManageSearch");
+		
+		PageDTO pageDTO = new PageDTO();
+		PageMaker pageMaker = new PageMaker();
+						
+		pageDTO.setRecordsPerPage(8);
+		int maxNum = inquiryManageService.getAllInquiryRecordNumSearch(searchWord); 
+		int maxPage = (int)(maxNum / pageDTO.getRecordsPerPage() + 0.95) + 1;
+		log.info("maxNum=" + maxNum);
+		log.info("maxPage=" + maxPage);
+		pageDTO.setMaxPage(maxPage);
+		pageDTO.setCurrentPage(currentPage  < pageDTO.getMaxPage() ? currentPage : pageDTO.getMaxPage());
+		
+		pageMaker.setPageDTO(pageDTO);
+	
+		List<InquiryVO> inquiryManageList = inquiryManageService.getInquirySearchByPage(pageDTO.getCurrentPage(), pageDTO.getRecordsPerPage(), searchWord);
+		
+		model.addAttribute("inquiryManageList", inquiryManageList);
+		model.addAttribute("pageMaker", pageMaker);
+		model.addAttribute("searchWord", searchWord);
 		
 		return "/admin/admin-inquiryManage";
 	}
