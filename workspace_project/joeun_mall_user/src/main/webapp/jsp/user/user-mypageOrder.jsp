@@ -92,7 +92,7 @@
                 <div class="mypage-list">
                     <p class="sub-title">회원정보</p>
                     <ul class="mypage-sublist">
-                        <li><a href="<c:url value='/user/user-mypageModify.do'/>">회원정보 수정</a></li>
+                        <li><a href="<c:url value='/user/user-mypageModify.do'/>">회원정보수정</a></li>
                         <li><a href="#" id="deleteMember_btn">회원탈퇴</a></li>
                     </ul>
                 </div>

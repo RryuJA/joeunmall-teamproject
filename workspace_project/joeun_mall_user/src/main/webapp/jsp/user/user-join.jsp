@@ -225,22 +225,22 @@ $(function(){
                 <form id="join_form" method="post" action="<c:url value='/user/user-joinProc.do'/>">
                     <table> 
                         <tr>
-                            <td class="icon-width"><div id="userIdIcon"><a class="checked-icon" /></div></td>
+                            <td class="icon-width"><a class="checked-icon" /></td>
                             <th>아이디</th>
                             <td><input type="text" id="userId" name="userId" required pattern="\w{8,16}" placeholder="(영문 대소문자/숫자, 8~16자)"></td>
                         </tr>
                         <tr>
-                            <td class="icon-width"><div id="userPwIcon"><a class="checked-icon" /></div></td>
+                            <td class="icon-width"><a class="checked-icon" /></td>
                             <th>비밀번호</th>
                             <td><input type="text" id="userPw" name="userPw" required pattern="\w{8,16}" placeholder="(영문 대소문자/숫자, 8~16자)"></td>
                         </tr>
                         <tr>
-                            <td class="icon-width"><div id="userPw2Icon"><a class="checked-icon" /></div></td>
+                            <td class="icon-width"><a class="checked-icon" /></td>
                             <th>비밀번호 확인</th>
                             <td><input type="text" id="userPw2" name="userPw2" required pattern="\w{8,16}" placeholder="(영문 대소문자/숫자, 8~16자)"></td>
                         </tr>
                         <tr>
-                            <td class="icon-width"><div id="userNameIcon"><a class="checked-icon" /></div></td>
+                            <td class="icon-width"><a class="checked-icon" /></td>
                             <th>이름</th>
                             <td><input type="text" id="userName" name="userName" required pattern="[가-힣]{2,10}"></td>
                         </tr>
@@ -248,22 +248,22 @@ $(function(){
                             <td class="icon-width"></td>
                             <th></th>
                             <td>
-                            	<input type="text" id="userPost" name="userPost" placeholder="(우편번호)" required readonly>
+                            	<input type="text" id="userPost" name="userPost" placeholder="(우편번호)"  readonly>
                             	<button type="button" id="post_search" onclick="getPostcodeAddress()">주소검색</button>
                             </td>
                         </tr>
                         <tr>
                             <td class="icon-width"></td>
                             <th>주소</th>
-                            <td><input type="text" id="userAddress" name="userAddress" required readonly placeholder="(기본주소)"></td>
+                            <td><input type="text" id="userAddress" name="userAddress"  readonly placeholder="(기본주소)"></td>
                         </tr>
                         <tr>
                             <td class="icon-width"></td>
                             <th></th>
-                            <td><input type="text" id="userAddressDetail" name="userAddressDetail" required placeholder="(상세주소)"></td>
+                            <td><input type="text" id="userAddressDetail" name="userAddressDetail"  placeholder="(상세주소)"></td>
                         </tr>
                         <tr>
-                            <td class="icon-width"><div id="userMailIcon"><a class="checked-icon" /></div></td>
+                            <td class="icon-width"><a class="checked-icon" /></td>
                             <th>이메일</th>
                             <td><input type="email" id="userMail" name="userMail" pattern="[a-zA-Z0-9_+.-]+@([a-zA-Z0-9-]+\.)+[a-zA-Z0-9]{2,4}" required ></td>
                         </tr>
@@ -273,12 +273,12 @@ $(function(){
                             <td><input type="tel" id="userLandline" name="userLandline" pattern="0\d{1,2}-\d{3,4}-\d{4}" placeholder="ex) 02-123-5678"></td>
                         </tr>
                         <tr>
-                            <td class="icon-width"><div id="userMobileIcon"><a class="checked-icon" /></div></td>
+                            <td class="icon-width"><a class="checked-icon" /></td>
                             <th>휴대전화</th>
                             <td><input type="tel" id="userMobile" name="userMobile" required pattern="010-\d{4}-\d{4}" placeholder="ex) 010-1234-5678"></td>
                         </tr>
                         <tr>
-                            <td class="icon-width"><div id="userGenderIcon"><a class="checked-icon" /></div></td>
+                            <td class="icon-width"><a class="checked-icon" /></td>
                             <th>성별</th>
                             <td>
                                 <div id="radio">
@@ -288,7 +288,7 @@ $(function(){
                             </td>
                         </tr>
                         <tr>
-                            <td class="icon-width"><div id="userBirthIcon"><a class="checked-icon" /></div></td>
+                            <td class="icon-width"><a class="checked-icon" /></td>
                             <th>생년월일</th>
                             <td>
                                 <input type="text" required id="year" name="year" pattern="(19|2[0-9])[0-9]{2})" maxlength="4">년
