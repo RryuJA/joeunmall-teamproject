@@ -7,6 +7,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.joeun.joeunmall.vo.ProductImageVO;
+import com.joeun.joeunmall.vo.ProductOptionVO;
 import com.joeun.joeunmall.vo.ProductVO;
 
 import lombok.extern.slf4j.Slf4j;
@@ -35,6 +37,21 @@ public class ProductManageDAOImpl implements ProductManageDAO{
 	@Override
 	public int getAllProductRecordNum() {
 		return sqlSession.selectOne(MAPPER_NS+"getAllProductRecordNum");
+	}
+
+	@Override
+	public ProductVO selectProductInfo(String productIndex) {
+		return sqlSession.selectOne(MAPPER_NS+"selectProductData", productIndex);
+	}
+
+	@Override
+	public List<ProductImageVO> selectProductImage(String productIndex) {
+		return sqlSession.selectList(MAPPER_NS+"selectProductImage", productIndex);
+	}
+
+	@Override
+	public List<ProductOptionVO> selectProductOption(String productIndex) {
+		return sqlSession.selectList(MAPPER_NS+"selectProductOption", productIndex);
 	}
 
 }

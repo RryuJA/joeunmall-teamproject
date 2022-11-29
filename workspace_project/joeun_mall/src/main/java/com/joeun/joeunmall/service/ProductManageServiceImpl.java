@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.joeun.joeunmall.dao.ProductManageDAO;
+import com.joeun.joeunmall.vo.ProductImageVO;
+import com.joeun.joeunmall.vo.ProductOptionVO;
 import com.joeun.joeunmall.vo.ProductVO;
 
 import lombok.extern.slf4j.Slf4j;
@@ -35,5 +37,21 @@ public class ProductManageServiceImpl implements ProductManageService {
 	public int getAllProductRecordNum() {
 		return productManageDAO.getAllProductRecordNum();
 		}
+
+	@Transactional(readOnly=true, rollbackFor=Exception.class)
+	@Override
+	public ProductVO selectProductInfo(String productIndex) {
+		return productManageDAO.selectProductInfo(productIndex);
+	}
+
+	@Override
+	public List<ProductImageVO> selectProductImage(String productIndex) {
+		return productManageDAO.selectProductImage(productIndex);
+	}
+
+	@Override
+	public List<ProductOptionVO> selectProductOption(String productIndex) {
+		return productManageDAO.selectProductOption(productIndex);
+	}
 			
 }
