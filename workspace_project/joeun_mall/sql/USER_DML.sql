@@ -22,8 +22,11 @@ SELECT *
 	             FLOOR((ROWNUM - 1) / 8 + 1) page  
 	      FROM (
 	             SELECT * FROM user_tbl 
-	             WHERE user_name LIKE '%남궁%'
-	             ORDER BY user_index DESC
+	             WHERE user_name LIKE '%숙자%'
+	             ORDER BY product_index DESC
 	           ) m  
 	      )  
 	WHERE page = 1;
+	
+-- 상품관리 검색 후 레코드 총 갯수
+SELECT count(*) FROM user_tbl WHERE user_name LIKE '%숙자%'

@@ -32,6 +32,32 @@
 		ORDER BY PRODUCT_INDEX DESC
 	</select>
 	
+	<!-- 상품관리 검색기능 -->
+	<select id="getProductSearchByPage" parameterType="hashmap" resultType="com.joeun.joeunmall.vo.ProductVO">
+		SELECT * 
+		FROM (SELECT m.*, FLOOR((ROWNUM -1) / #{recordsPerPage} + 1) PAGE 
+				FROM (
+						SELECT * FROM (
+							SELECT * from PRODUCT_TBL JOIN (
+								SELECT PRODUCT_INDEX, LISTAGG(PRODUCT_OPTION_VALUE , ',') 
+								WITHIN GROUP (ORDER BY PRODUCT_OPTION_VALUE) AS PRODUCT_OPTION_VALUE
+			 			FROM PRODUCT_OPTION_TBL
+			 			GROUP BY PRODUCT_INDEX) B ON PRODUCT_TBL.PRODUCT_INDEX = B.PRODUCT_INDEX
+			 			)
+			 			WHERE product_name LIKE '%${searchWord}%'
+			 			ORDER BY product_date DESC
+					 ) m
+				)
+		WHERE page = #{currentPage}
+	</select>
+	
+		<!-- 상품관리 검색 후 총 레코드 갯수 -->
+	<select id="getAllProductRecordNumSearch" parameterType="String" resultType="int">
+		SELECT COUNT(*)   
+				FROM (SELECT * FROM product_tbl )
+			             WHERE product_name LIKE '%${searchWord}%'
+	</select>
+		
 	<!-- GSC 상품 등록  -->
 	<insert id="insertProduct" parameterType="com.joeun.joeunmall.vo.ProductDTO">
 		INSERT INTO PRODUCT_TBL VALUES(#{productIndex},#{productCategoryIndex},#{productStateInfo},#{productName},#{productPrice},#{updateFile1Filename},sysdate,#{productInfo})

@@ -26,6 +26,25 @@ public interface ProductManageDAO {
 	public int getAllProductRecordNum();
 	
 	/**
+	 * 상품관리 검색기능 페이징
+	 * 
+	 * @param currentPage
+	 * @param recordsPerPage
+	 * @param searchWord
+	 * @return
+	 */
+	public List<ProductVO> getProductSearchByPage(int currentPage, int recordsPerPage, String searchWord);
+	
+	/**
+	 * 검색 결과의 전체 레코드 수
+	 * 
+	 * @param searchWord 검색어
+	 * @return 검색 결과의 전체 레코드 수
+	 */
+	public int getAllProductRecordNumSearch(String searchWord);
+	
+	/**
+	 * CGS
 	 * 상품번호로 상품정보 조회
 	 * 
 	 * @param productIndex 상품번호
@@ -34,6 +53,7 @@ public interface ProductManageDAO {
 	public ProductVO selectProductInfo(String productIndex);
 	
 	/**
+	 * CGS
 	 * 상품번호로 상품이미지 조회
 	 * 
 	 * @param productIndex 상품번호
@@ -42,6 +62,7 @@ public interface ProductManageDAO {
 	public List<ProductImageVO> selectProductImage(String productIndex);
 	
 	/**
+	 * CGS
 	 * 상품번호로 상품옵션 조회
 	 * 
 	 * @param productIndex 상품번호

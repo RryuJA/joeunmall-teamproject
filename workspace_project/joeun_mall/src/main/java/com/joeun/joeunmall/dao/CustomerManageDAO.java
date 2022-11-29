@@ -24,6 +24,7 @@ public interface CustomerManageDAO {
 	public int getAllUserRecordNum();
 
 	/**
+	 * 고객관리 검색기능 페이징
 	 * 
 	 * @param currentPage
 	 * @param recordsPerPage
