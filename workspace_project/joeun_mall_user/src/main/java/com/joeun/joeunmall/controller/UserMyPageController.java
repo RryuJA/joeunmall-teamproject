@@ -11,7 +11,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.joeun.joeunmall.service.UserMypageInquiryService;
 import com.joeun.joeunmall.service.UserService;
+import com.joeun.joeunmall.vo.InquiryVO;
 import com.joeun.joeunmall.vo.OrderVO;
 import com.joeun.joeunmall.vo.PageDTO;
 import com.joeun.joeunmall.vo.PageMaker;
@@ -22,25 +24,15 @@ import lombok.extern.slf4j.Slf4j;
 
 @Controller
 @Slf4j
-public class UserOrderController {
+public class UserMyPageController {
 	
 	@Autowired UserService userService;
 	
-	//수정 전 컨트롤러
-/*	@GetMapping("/user/user-mypageOrdertemp.do")
-	public String mypageORder(HttpSession session) {
-		log.info("userMypageOrder");
-		String userId = session.getAttribute("SESS_LOGIN_ID").toString();
-		UserVO userVO = userService.selectUser(userId);
-		session.setAttribute("userData", userVO); //유저 데이터
-		return "/user/user-mypageOrder";
-	}*/
-	
-	// 유저-마이페이지-주문관리 페이지 컨트롤 
-	// (구버전)@ModelAttribute UserVO userVO,
+	@Autowired
+	UserMypageInquiryService userMypageInquiryService;
 	
 	@GetMapping("/user/user-mypageOrder.do") 
-	public String adminProductManage(@RequestParam(value="currentPage", defaultValue="1") int currentPage,  
+	public String userProductManage(@RequestParam(value="currentPage", defaultValue="1") int currentPage,  
 			 Model model, HttpSession session) {
 		log.info("마이페이지 로그:");
 		String userId = session.getAttribute("SESS_LOGIN_ID").toString();
@@ -85,42 +77,30 @@ public class UserOrderController {
 		
 		return resultList;
 	}
-	/*
-	@GetMapping("/user/user-mypageModify.do")
-	public String userMypageModify(HttpSession session) {
-		log.info("userMypageModify");
+	
+	@GetMapping("/user/user-mypageInquiry.do")
+	public String userMypageInquiry(@RequestParam(value="currentPage", defaultValue="1") int currentPage,  
+			Model model, HttpSession session) {
+		log.info("user-MypageInquiry");
 		String userId = session.getAttribute("SESS_LOGIN_ID").toString();
 		UserVO userVO = userService.selectUser(userId);
-		session.setAttribute("defaultUser", userVO); //기존 정보
-		return "/user/user-mypageModify";
-	}
+		
+		PageDTO pageDTO = new PageDTO();
+		PageMaker pageMaker = new PageMaker();
+						
+		pageDTO.setRecordsPerPage(5);
+		int maxNum = userMypageInquiryService.selectMyPageInquiryIndexNum(userVO.getUserIndex()); 
+		int maxPage = (int)(maxNum / pageDTO.getRecordsPerPage() + 0.95) + 1;
+		pageDTO.setMaxPage(maxPage);
+		pageDTO.setCurrentPage(currentPage  < pageDTO.getMaxPage() ? currentPage : pageDTO.getMaxPage());
+		
+		pageMaker.setPageDTO(pageDTO);
 	
-	@PostMapping("/user/user-mypageModifyProc.do")
-	public String userMypageModifyProc(@ModelAttribute UserVO userVO, Model model,HttpSession session) {
-		log.info("userMypageModifyProc");
-		String msg = ""; //메시지
-		String movePath = ""; //이동경로
+		List<InquiryVO> userMypageInquiryList = userMypageInquiryService.selectMyPageInquiryIndex(pageDTO.getCurrentPage(), pageDTO.getRecordsPerPage(), userVO.getUserIndex());
 		
-		//패스워드 암호화
-		BCryptPasswordEncoder bce = new BCryptPasswordEncoder();
-		userVO.setUserPw(bce.encode(userVO.getUserPw()));
+		model.addAttribute("userMypageInquiryList", userMypageInquiryList);
+		model.addAttribute("pageMaker", pageMaker);
 		
-		log.info("userVO(update) ="+ userVO);
-		
-		//회원정보 수정
-		if (userService.updateUser(userVO) == true) {
-			msg = "회원정보 수정에 성공하셨습니다."; 
-			movePath = "/user/user-mypageModify.do";
-			session.removeAttribute("defaultUser");//기존 정보 세션 삭제
-		} else {
-			msg = "회원정보 수정에 실패하였습니다."; 
-			movePath = "/user/user-mypageModify.do";
-		}
-		
-		model.addAttribute("errMsg", msg);
-		model.addAttribute("movePath", movePath);
-		
-		return "/error/error";
+		return "/user/user-mypageInquiry";
 	}
-	*/
 }

@@ -62,9 +62,7 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	public int selectMypageUserIndexNum(String userIndex) {
-		HashMap<String, Object> map = new HashMap<>();
-		map.put("userIndex", userIndex);
-		return sqlSession.selectOne(NS_NAME+"selectMypageUserIndexNum", map);	
+		return sqlSession.selectOne(NS_NAME+"selectMypageUserIndexNum", userIndex);	
 	}
 
 	@Override
