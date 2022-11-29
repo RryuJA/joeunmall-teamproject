@@ -1,5 +1,8 @@
 package com.joeun.joeunmall.dao;
 
+import java.util.List;
+
+import com.joeun.joeunmall.vo.OrderVO;
 import com.joeun.joeunmall.vo.UserVO;
 
 public interface UserDAO {
@@ -39,4 +42,29 @@ public interface UserDAO {
 	 * @param userId 고객 아이디
 	 */
 	public void deleteUser(String userId);
+	
+	/**
+	 * 마이페이지-주문관리 페이징
+	 * 
+	 * @param currentPage 현재 페이지
+	 * @param recordsPerPage 페이지당 레코드수
+	 * @param userIndex 로그인한 유저번호
+	 * @return
+	 */
+	public List<OrderVO> selectMypageUserIndex(int currentPage, int recordsPerPage, String userIndex);
+	
+	/**
+	 * 마이페이지-주문관리 페이징 전체 레코드 수
+	 * 
+	 * @return 게시판 전체 레코드 수
+	 */
+	public int selectMypageUserIndexNum(String orderIndex);
+	
+	/**
+	 * 마이페이지 주문내역에 포함되는 모든 상품명 조회 ('파란색티셔츠 외 N개' 형식으로 출력용)
+	 * 
+	 * @param orderIndex
+	 * @return 주문번호에 포함되는 모든 상품명
+	 */
+	public List<String> getOrderProductsName(String orderIndex);
 }

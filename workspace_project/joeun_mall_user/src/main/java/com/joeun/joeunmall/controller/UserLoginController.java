@@ -106,14 +106,7 @@ public class UserLoginController {
 		model.addAttribute("movePath", movePath);
 		return "/error/error";
 	}
-	
-	
-	
-	@GetMapping("/user/user-mypageOrder.do")
-	public String mypageORder() {
-		log.info("mypageORder");
-		return "/user/user-mypageOrder";
-	}
+
 	@GetMapping("/user/user-productDetail.do")
 	public String userProductDetail() {
 		log.info("userProductDetail");
