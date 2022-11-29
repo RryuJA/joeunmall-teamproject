@@ -27,20 +27,13 @@ import lombok.extern.slf4j.Slf4j;
 public class UserLoginController {
 	
 	@Autowired UserService userService;
-		
-	@GetMapping("/demo.do")
-	public String demo() {
-		log.info("demo");
-		return "demo";
-	}
 	
 	@GetMapping("/")
 	public String home(Model model) {
 		log.info("home");
 		return  "redirect:/user/user-productlistCarousel.do";
 	}
-	
-	
+		
 	@GetMapping("/user/user-login.do")
 	public String userLogin() {
 		log.info("userLogin");
@@ -100,15 +93,7 @@ public class UserLoginController {
 		model.addAttribute("movePath", movePath);
 		return "/error/error";
 	}
-	
-	
-	
-	@GetMapping("/user/user-mypageOrder.do")
-	public String mypageORder() {
-		log.info("mypageORder");
-		return "/user/user-mypageOrder";
-	}
-	
+		
 	// ------------------------------------------------------------------	
 	
 	@GetMapping("/user/user-shoppingBasket.do")

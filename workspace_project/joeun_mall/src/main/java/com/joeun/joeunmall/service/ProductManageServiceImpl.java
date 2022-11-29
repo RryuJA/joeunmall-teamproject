@@ -44,11 +44,13 @@ public class ProductManageServiceImpl implements ProductManageService {
 		return productManageDAO.selectProductInfo(productIndex);
 	}
 
+	@Transactional(readOnly=true, rollbackFor=Exception.class)
 	@Override
 	public List<ProductImageVO> selectProductImage(String productIndex) {
 		return productManageDAO.selectProductImage(productIndex);
 	}
 
+	@Transactional(readOnly=true, rollbackFor=Exception.class)
 	@Override
 	public List<ProductOptionVO> selectProductOption(String productIndex) {
 		return productManageDAO.selectProductOption(productIndex);

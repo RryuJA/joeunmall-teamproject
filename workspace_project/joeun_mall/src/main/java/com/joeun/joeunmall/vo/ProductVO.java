@@ -15,9 +15,6 @@ public class ProductVO {
 	/** 카테고리번호 */
 	private String productCategoryIndex;
 	
-	/** 상품썸네일 */
-	private String productThumbnail;
-	
 	/** 상품명 */
 	private String productName;
 	
@@ -60,18 +57,6 @@ public class ProductVO {
 
 	public void setProductCategoryIndex(String productCategoryIndex) {
 		this.productCategoryIndex = productCategoryIndex;
-	}
-
-
-
-	public String getProductThumbnail() {
-		return productThumbnail;
-	}
-
-
-
-	public void setProductThumbnail(String productThumbnail) {
-		this.productThumbnail = productThumbnail;
 	}
 
 
@@ -163,7 +148,7 @@ public class ProductVO {
 	@Override
 	public String toString() {
 		return "ProductVO [productIndex=" + productIndex + ", productCategoryIndex=" + productCategoryIndex
-				+ ", productThumbnail=" + productThumbnail + ", productName=" + productName + ", productStateIndex="
+				+ ", productName=" + productName + ", productStateIndex="
 				+ productStateIndex + ", productImage=" + productImage + ", productPrice=" + productPrice
 				+ ", productDate=" + productDate + ", productInfo=" + productInfo + ", productOptionValue="
 				+ productOptionValue + "]";

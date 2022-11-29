@@ -9,14 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--title 페이지에 맞게 수정-->
-    <title>JoEunMall</title>
+    <title>JoEunMall ${productVO.productName}</title>
 
     <!--javascript-->
-    <script src="<c:url value='js/jquery-3.6.1.min.js' />"></script>
-    <script src="<c:url value='js/user-productDetail-topBtn.js' />"></script> <!-- topButton -->
-    <script src="<c:url value='js/user-imageChange.js' />"></script>
-    <script src="<c:url value='js/user-productDetail-optionSelect.js' />"></script>
-    <script src="<c:url value='js/jquery/jquery.min.js'/>"></script>
+    <script src="<c:url value='/js/jquery-3.6.1.min.js' />"></script>
+    <script src="<c:url value='/js/user-productDetail-topBtn.js' />"></script> <!-- topButton -->
+    <script src="<c:url value='/js/user-imageChange.js' />"></script>
+    <script src="<c:url value='/js/user-productDetail-optionSelect.js' />"></script>
 	<script>
 	$(function(){
 		
@@ -44,15 +43,15 @@
 
 <body>
     <div id="wrap">
-        <header><!-- 위에 배너 -->
+        <header>
             <a href="user-productlistCarousel.do"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
             <ul id="header">
-                <li><a href="#">전상품</a></li>
-                <li><a href="#">티셔츠</a></li>
-                <li><a href="#">팬츠/스커트</a></li>
-                <li><a href="#">원피스</a></li>
-                <li><a href="#">니트/가디건</a></li>
-                <li><a href="#">자켓</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarousel.do?currentPage=1'/>">전상품</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=01'/>">티셔츠</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=02'/>">팬츠/스커트</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=03'/>">원피스</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=04'/>">니트/가디건</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=05'/>">자켓</a></li>
             </ul>
             
             <!-- 로그인 상태 -->
@@ -74,18 +73,18 @@
             <section>
                 <div class="product-img">
                     <div class="main-img">
-                        <img id="img1" class="target1" src="<c:url value='/images/logo/logo_mark.png' />" data-zoom="2">
-                        <img id="img2" class="target2" src="<c:url value='/images/icon/icon_minus.png' />" data-zoom="2">
-                        <img id="img3" class="target3" src="<c:url value='/images/icon/icon_page_next.png' />" data-zoom="2">
-                        <img id="img4" class="target4" src="<c:url value='/images/icon/icon_page_nextnext.png' />" data-zoom="2">
-                        <img id="img5" class="target5" src="<c:url value='/images/icon/icon_page_prev.png' />" data-zoom="2">
+                        <img id="img1" class="target1" src="<c:url value='/thumbnail/${productImageList[0].productDetailImage}'/>" data-zoom="2">
+                        <img id="img2" class="target2" src="<c:url value='/thumbnail/${productImageList[1].productDetailImage}' />" data-zoom="2">
+                        <img id="img3" class="target3" src="<c:url value='/thumbnail/${productImageList[2].productDetailImage}' />" data-zoom="2">
+                        <img id="img4" class="target4" src="<c:url value='/thumbnail/${productImageList[3].productDetailImage}' />" data-zoom="2">
+                        <img id="img5" class="target5" src="<c:url value='/thumbnail/${productImageList[4].productDetailImage}' />" data-zoom="2">
                     </div>
                     <div id="sub-img">
-                        <p><img id="sub-img1" src="<c:url value='/images/logo/logo_mark.png' />"></p>
-                        <p><img id="sub-img2" src="<c:url value='/images/icon/icon_minus.png' />"></p>
-                        <p><img id="sub-img3" src="<c:url value='/images/icon/icon_page_next.png' />"></p>
-                        <p><img id="sub-img4" src="<c:url value='/images/icon/icon_page_nextnext.png' />"></p>
-                        <p><img id="sub-img5" src="<c:url value='/images/icon/icon_page_prev.png' />"></p>
+                        <p><img id="sub-img1" src="<c:url value='/thumbnail/${productImageList[0].productDetailImage}' />"></p>
+                        <p><img id="sub-img2" src="<c:url value='/thumbnail/${productImageList[1].productDetailImage}' />"></p>
+                        <p><img id="sub-img3" src="<c:url value='/thumbnail/${productImageList[2].productDetailImage}' />"></p>
+                        <p><img id="sub-img4" src="<c:url value='/thumbnail/${productImageList[3].productDetailImage}' />"></p>
+                        <p><img id="sub-img5" src="<c:url value='/thumbnail/${productImageList[4].productDetailImage}' />"></p>
                     </div>
                 </div>
             </section>
@@ -94,40 +93,61 @@
             <section class="product-select">
                 <!-- 상품명 -->
                 <div class="productName">
-                    상품명(data) <!-- 상품명 데이터 들어가야 됨 -->
+                   	 ${productVO.productName}
                 </div>
                 <hr width="100%" color="grey">
 
                 <!-- 판매 가격 -->
-                <div class="productPrice">
-                    판매가<span class="productPriceData">100,100</span><span class="won1">원</span>    <!-- 판매가격 데이터 들어가야 됨 -->
+                <div class="productPrice">판매가
+               		<span class="productPriceData">
+                   		<fmt:formatNumber value="${productVO.productPrice}" pattern="#,###"/>
+                   	</span>
+                   	<span class="won1">원</span>    <!-- 판매가격 데이터 들어가야 됨 -->
                 </div>
 
                 <!-- 배송비 -->
-                <div class="deliveryFee">
-                    배송비<span class="deliveryFeeDetail">3,000원 (50,000원 이상 구매 시 무료)</span><!-- 5만원 이상일시 배송비 계산 안되는거 까지 포함시켜야 됨-->
+                <div class="deliveryFee">배송비
+                	<span class="deliveryFeeDetail">
+                		3,000원 (50,000원 이상 구매 시 무료)
+               		</span><!-- 5만원 이상일시 배송비 계산 안되는거 까지 포함시켜야 됨-->
                 </div>
                 <hr width="100%" color="grey">
 
                 <!-- 옵션 -->
-                <div class="option">
-                    옵션
-                    <select class="optionSelect" id="optionSelect"> <!-- 옵션 선택시 이벤트 javascript -->
-                        <option value="1">1</option>
-                        <option value="2">2</option>
+                <div class="option">옵션
+                    <select class="optionSelect" id="optionSelect" onchange="changeSelect()">
+                    	<option hidden>옵션을 선택하세요</option>
+                    	<c:forEach var="productOptions" items="${productOptionList}" varStatus="st">
+                        	<option value="${productOptions.productOptionIndex}">${productOptions.productOptionValue}</option>
+                        </c:forEach>
                     </select> 
-                    <div class="layer">   <!-- 옵션 선택한 목록 상자 -->
-                        asdf
+                    
+                    <script>
+                    	function changeSelect() {
+	                    	var productOption = document.getElementById('optionSelect');
+	                    	
+	                    	alert("value: "+ productOption.options[productOption.selectedIndex].value 
+	                    			+ " text: " + productOption.options[productOption.selectedIndex].text);
+                    	}
+                    </script>
+                    
+                    <!-- 옵션 선택한 목록 상자 -->
+                    <!-- 
+                    <div class="layer">   
                         <hr style="height: 100px">
                     </div>
+                    -->
                 </div>
+
 
                 <!-- 총 상품 가격 -->
-                <div class="totalPrice">
-                    총 상품 가격
-                    <span class="finalPrice"> 100,000 </span><span class="won2">원</span> <!-- 합산 결과 이거도 javascript? -->
+                <!-- 
+                <div class="totalPrice">총 상품 가격
+                    <span class="finalPrice">100,000</span>
+                    <span class="won2">원</span> 
                 </div>
-
+ 				-->
+ 				
                 <!-- 장바구니 담기 버튼, 구매하기 버튼 -->
                 <div>
                 <hr width="100%" color="grey">
@@ -142,20 +162,7 @@
                     PRODUCT INFO
                 </div>
                 <div>                    
-                    <p>
-                        <br>
-                        SIZE :  90, 95, 100<br>
-                        COLOR :  검정(black), 하양(white)<br>
-                        소재 :  나일론(nylon)100%<br>
-                        제조국 :  한국/협력업체<br>
-                        제조연월 :  당월제조<br>
-                        품질보증기준 :  교환/반품 공지사항참조<br><br>
-                    </p>    
-                        안감: 없음<br>
-                        두께감: 보통<br>
-                        계절감: 봄, 가을<br>
-                        비침: 없음<br>
-                        신축성: 없음<br>
+                    ${productVO.productInfo}
                 </div>
             </section>
 
@@ -172,7 +179,7 @@
             </section>
 
             <!-- Top Button -->
-            <a href="#"><img id="topButton" src="<c:url value='/images/icon/topbutton.png' />"></a>
+            <%-- <a href="#"><img id="topButton" src="<c:url value='/images/icon/topbutton.png' />"></a> --%>
 
         </article>
 

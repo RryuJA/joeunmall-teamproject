@@ -112,10 +112,18 @@
                     <li>
                         <div class="thumbnail-box">
                             <div class="thumbnail-image">
-                            	<img src="<c:url value='/thumbnail/${product.productImage}'/>" alt="product-image">
+                            	<a href="<%=request.getContextPath()%>/user/user-productDetail.do?productIndex=${product.productIndex}">
+                            		<img src="<c:url value='/thumbnail/${product.productImage}'/>" alt="product-image">
+                            	</a>
                            	</div>
-                            <div class="thumbnail-title">${product.productName}
-                            	<br><fmt:formatNumber value="${product.productPrice}" pattern="#,###"/></div>
+                      		<div class="thumbnail-title">
+                      			<a href="<%=request.getContextPath()%>/user/user-productDetail.do?productIndex=${product.productIndex}">
+                      				${product.productName}
+                   				</a>
+                   				<a href="<%=request.getContextPath()%>/user/user-productDetail.do?productIndex=${product.productIndex}">
+                           			<br><fmt:formatNumber value="${product.productPrice}" pattern="#,###"/>
+                           		</a>
+                           	</div>
                         </div>
                     </li>
                 </c:forEach>
@@ -126,10 +134,18 @@
                     <li>
                         <div class="thumbnail-box">
                             <div class="thumbnail-image">
-                            	<img src="<c:url value='/thumbnail/${product.productImage}'/>" alt="product-image">
+                            	<a href="<%=request.getContextPath()%>/user/user-productDetail.do?productIndex=${product.productIndex}">
+                            		<img src="<c:url value='/thumbnail/${product.productImage}'/>" alt="product-image">
+                            	</a>
                            	</div>
-                            <div class="thumbnail-title">${product.productName}
-                            	<br><fmt:formatNumber value="${product.productPrice}" pattern="#,###"/></div>
+                      		<div class="thumbnail-title">
+                      			<a href="<%=request.getContextPath()%>/user/user-productDetail.do?productIndex=${product.productIndex}">
+                      				${product.productName}
+                   				</a>
+                   				<a href="<%=request.getContextPath()%>/user/user-productDetail.do?productIndex=${product.productIndex}">
+                           			<br><fmt:formatNumber value="${product.productPrice}" pattern="#,###"/>
+                           		</a>
+                           	</div>
                         </div>
                     </li>
                 </c:forEach>
