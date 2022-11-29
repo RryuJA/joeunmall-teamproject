@@ -165,17 +165,18 @@ public class UserLoginController {
 		return "/user/user-view";
 	}
 	
+// 11.29 이승은 수정
 	@GetMapping("/user/user-mypageHistory.do")
 	public String userMypageHistory() {
 		log.info("userMypageHistory");
 		return "/user/user-mypageHistory";
 	}
 	
-	@GetMapping("/user/user-mypageInquiry.do")
+/*	@GetMapping("/user/user-mypageInquiry.do")
 	public String userMypageInquiry() {
 		log.info("userMypageInquiry");
 		return "/user/user-mypageInquiry";
-	}
+	}*/
 	
 	@GetMapping("/user/user-mypageModify.do")
 	public String userMypageModify(HttpSession session) {

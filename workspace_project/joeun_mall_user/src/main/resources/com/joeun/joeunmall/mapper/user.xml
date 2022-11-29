@@ -24,7 +24,7 @@
 	</select>
 	
 	<!-- 마이페이지 주문내역 조회 (user_index로 주문 조회) -->
-	<select id="selectMypageUserIndexNum" parameterType="hashmap" resultType="int">
+	<select id="selectMypageUserIndexNum" parameterType="String" resultType="int">
 		SELECT count(*) FROM order_tbl
 		WHERE user_index LIKE  #{userIndex}
 	</select>
