@@ -62,13 +62,14 @@ article ul.list li {
     margin: 10px;
 }
 
-.thumbnail-image {
+/** 크기 170*200  >>  210,250으로 변경  , 마진 0px으로 변경*/
+.thumbnail-image, .thumbnail-image img {
     background-color:cornflowerblue;
     /*border: solid 1px black;*/
-    width: 170px;
-    height: 200px;
+    width: 210px;
+    height: 250px;
     margin-bottom: 0px;
-    margin: 5px;
+    margin: 0px;
 }
 
 .thumbnail-title {
