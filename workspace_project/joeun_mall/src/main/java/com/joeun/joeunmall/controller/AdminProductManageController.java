@@ -48,7 +48,8 @@ public class AdminProductManageController {
 		model.addAttribute("admin", "productManage");
 		return "redirect:/admin/admin-productManage.do";
 	}
-		
+	
+	// 상품관리 페이징
 	@GetMapping("/admin/admin-productManage.do")
 	public String adminProductManage(@RequestParam(value="currentPage", defaultValue="1") int currentPage,  
 			Model model) {
@@ -73,6 +74,33 @@ public class AdminProductManageController {
 		return "/admin/admin-productManage";
 	}
 	
+	// 상품관리 검색기능
+	@GetMapping("/admin/admin-productManageSearch.do")
+	public String adminProductManageSearch(@RequestParam(value="currentPage", defaultValue="1") int currentPage, 
+			@RequestParam(value="searchWord") String searchWord, Model model) {
+		log.info("admin-productManageSearch");
+		
+		PageDTO pageDTO = new PageDTO();
+		PageMaker pageMaker = new PageMaker();
+						
+		pageDTO.setRecordsPerPage(8);
+		int maxNum = productManageService.getAllProductRecordNumSearch(searchWord); 
+		int maxPage = (int)(maxNum / pageDTO.getRecordsPerPage() + 0.95) + 1;
+		log.info("maxNum=" + maxNum);
+		log.info("maxPage=" + maxPage);
+		pageDTO.setMaxPage(maxPage);
+		pageDTO.setCurrentPage(currentPage  < pageDTO.getMaxPage() ? currentPage : pageDTO.getMaxPage());
+		
+		pageMaker.setPageDTO(pageDTO);
+	
+		List<ProductVO> productManageList = productManageService.getProductSearchByPage(pageDTO.getCurrentPage(), pageDTO.getRecordsPerPage(), searchWord);
+		
+		model.addAttribute("productManageList", productManageList);
+		model.addAttribute("pageMaker", pageMaker);
+		model.addAttribute("searchWord", searchWord);
+		
+		return "/admin/admin-productManage";
+	}
 	//-------------------------상품등록페이지-------------------------
 	@GetMapping("/admin/admin-productRegistration.do")
 	public String adminProductRegistration() {

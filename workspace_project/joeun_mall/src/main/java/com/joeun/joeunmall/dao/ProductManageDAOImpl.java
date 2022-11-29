@@ -38,6 +38,20 @@ public class ProductManageDAOImpl implements ProductManageDAO{
 	public int getAllProductRecordNum() {
 		return sqlSession.selectOne(MAPPER_NS+"getAllProductRecordNum");
 	}
+	
+	@Override
+	public List<ProductVO> getProductSearchByPage(int currentPage, int recordsPerPage, String searchWord) {
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("currentPage", currentPage);
+		map.put("recordsPerPage", recordsPerPage);
+		map.put("searchWord", searchWord);
+		return sqlSession.selectList(MAPPER_NS+"getProductSearchByPage", map);
+	}
+	
+	@Override
+	public int getAllProductRecordNumSearch(String searchWord) {
+		return sqlSession.selectOne(MAPPER_NS+"getAllProductRecordNumSearch", searchWord);
+	}
 
 	@Override
 	public ProductVO selectProductInfo(String productIndex) {
@@ -53,5 +67,7 @@ public class ProductManageDAOImpl implements ProductManageDAO{
 	public List<ProductOptionVO> selectProductOption(String productIndex) {
 		return sqlSession.selectList(MAPPER_NS+"selectProductOption", productIndex);
 	}
+
+
 
 }

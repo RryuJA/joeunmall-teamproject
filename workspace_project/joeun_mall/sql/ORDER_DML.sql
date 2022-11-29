@@ -2,7 +2,7 @@
 
 SELECT *
 FROM (
-		SELECT m.*, FLOOR(ROWNUM -1) / 8 + 1 PAGE 
+		SELECT m.*, FLOOR((ROWNUM -1) / 8 + 1) PAGE 
 		FROM ( 
 				SELECT * FROM 
 				(

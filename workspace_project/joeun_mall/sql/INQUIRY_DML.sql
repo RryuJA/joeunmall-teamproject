@@ -1,7 +1,7 @@
 -- 1:1문의 Paging 쿼리(INQUIRY_TBL에 USER_TBL을 JOIN해서 USER_NAME을 추가하는 쿼리)
 	SELECT *
 FROM (
-		SELECT m.*, FLOOR(ROWNUM -1) / 8 + 1 PAGE 
+		SELECT m.*, FLOOR((ROWNUM -1) / 8 + 1) PAGE 
 		FROM ( 
 				SELECT * FROM 
 				(

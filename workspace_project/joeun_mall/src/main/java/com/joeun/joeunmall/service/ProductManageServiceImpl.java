@@ -53,5 +53,15 @@ public class ProductManageServiceImpl implements ProductManageService {
 	public List<ProductOptionVO> selectProductOption(String productIndex) {
 		return productManageDAO.selectProductOption(productIndex);
 	}
+
+	@Override
+	public List<ProductVO> getProductSearchByPage(int currentPage, int recordsPerPage, String searchWord) {
+		return productManageDAO.getProductSearchByPage(currentPage, recordsPerPage, searchWord);
+	}
+
+	@Override
+	public int getAllProductRecordNumSearch(String searchWord) {
+		return productManageDAO.getAllProductRecordNumSearch(searchWord);
+	}
 			
 }

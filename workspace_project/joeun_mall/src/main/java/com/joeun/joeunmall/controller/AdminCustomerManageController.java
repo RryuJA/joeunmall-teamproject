@@ -61,7 +61,7 @@ public class AdminCustomerManageController {
 	
 	@GetMapping("/admin/admin-customerManageSearch.do")
 	public String adminCustomerManageSearch(@RequestParam(value="currentPage", defaultValue="1") int currentPage, 
-			@RequestParam(value="searchWord") String searchWord,Model model) {
+			@RequestParam(value="searchWord") String searchWord, Model model) {
 		log.info("admin-customerManageSearch");
 		
 		PageDTO pageDTO = new PageDTO();
