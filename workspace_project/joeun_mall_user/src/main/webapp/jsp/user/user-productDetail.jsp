@@ -12,11 +12,11 @@
     <title>JoEunMall</title>
 
     <!--javascript-->
-    <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="js/user-productDetail-topBtn.js"></script> <!-- topButton -->
-    <script src="js/user-imageChange.js"></script>
-    <script src="js/user-productDetail-optionSelect.js"></script>
-    <script src="<c:url value='/jquery/jquery.min.js'/>"></script>
+    <script src="<c:url value='js/jquery-3.6.1.min.js' />"></script>
+    <script src="<c:url value='js/user-productDetail-topBtn.js' />"></script> <!-- topButton -->
+    <script src="<c:url value='js/user-imageChange.js' />"></script>
+    <script src="<c:url value='js/user-productDetail-optionSelect.js' />"></script>
+    <script src="<c:url value='js/jquery/jquery.min.js'/>"></script>
 	<script>
 	$(function(){
 		

@@ -54,6 +54,7 @@ public class ProductVO {
 	public void setProductCategoryIndex(String productCategoryIndex) {
 		this.productCategoryIndex = productCategoryIndex;
 	}
+	
 
 	public String getProductThumbnail() {
 		return productThumbnail;
@@ -122,9 +123,10 @@ public class ProductVO {
 	@Override
 	public String toString() {
 		return "ProductVO [productIndex=" + productIndex + ", productCategoryIndex=" + productCategoryIndex
-				+ ", productThumbnail=" + productThumbnail + ", productName=" + productName + ", productStateIndex="
-				+ productStateIndex + ", productImage=" + productImage + ", productPrice=" + productPrice
-				+ ", productDate=" + productDate + ", productInfo=" + productInfo + ", productOptionValue="
-				+ productOptionValue + "]";
+				+ ", productThumbnail=" + productThumbnail
+				+ ", productName=" + productName + ", productStateIndex=" + productStateIndex + ", productImage="
+				+ productImage + ", productPrice=" + productPrice + ", productDate=" + productDate + ", productInfo="
+				+ productInfo + ", productOptionValue=" + productOptionValue + "]";
 	}
+	
 }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.joeun.joeunmall.mapper.product">
+
+	<!-- 상품 정보 조회 (메인 갤러리-8개씩 2*4)  -->
+	<select id="selectProductsByPaging" parameterType="map" resultType="com.joeun.joeunmall.vo.ProductVO">
+		SELECT *  
+		FROM (SELECT  m.*,  
+		             FLOOR((ROWNUM - 1) / #{recordsPerPage} + 1) page  
+		      FROM (
+		             SELECT * FROM product_tbl 
+		             ORDER BY product_index DESC
+		           ) m  
+		      )  
+		WHERE page = #{currentPage}
+	</select>
+	
+	<!-- 총 상품 개수  -->
+	<select id="selectProductCount" resultType="int">
+		SELECT count(*) FROM product_tbl
+	</select>
+	
+	<!-- 카테고리별 상품 정보 조회 (메인 갤러리-8개씩 2*4)  -->
+	<select id="selectProductsByPagingAndCategory" parameterType="map" resultType="com.joeun.joeunmall.vo.ProductVO">
+		SELECT *  
+		FROM (SELECT  m.*,  
+		             FLOOR((ROWNUM - 1) / #{recordsPerPage} + 1) page  
+		      FROM (
+		             SELECT * FROM product_tbl 
+		             WHERE product_category_index = #{productCategoryIndex}
+		             ORDER BY product_index DESC
+		           ) m  
+		      )  
+		WHERE page = #{currentPage}
+	</select>
+	
+	<!-- 카테고리별 상품 수  -->
+	<select id="selectProductsCountByCategory" parameterType="String" resultType="int">
+		SELECT count(*) FROM product_tbl 
+		WHERE product_category_index = #{productCategoryIndex} 
+		ORDER BY product_index DESC
+	</select>
+	
+</mapper>

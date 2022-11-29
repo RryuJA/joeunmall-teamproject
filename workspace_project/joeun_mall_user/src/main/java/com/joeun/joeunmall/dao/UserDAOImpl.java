@@ -46,4 +46,6 @@ public class UserDAOImpl implements UserDAO {
 		log.info("deleteUser");
 		sqlSession.insert(NS_NAME + "deleteUser", userId); 
 	}
+	
+	
 }

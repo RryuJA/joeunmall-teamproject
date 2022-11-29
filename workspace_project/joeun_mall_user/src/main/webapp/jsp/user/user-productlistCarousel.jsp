@@ -44,12 +44,12 @@
         <header>
             <a href="user-productlistCarousel.do"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
             <ul id="header">
-                <li><a href="#">전상품</a></li>
-                <li><a href="#">티셔츠</a></li>
-                <li><a href="#">팬츠/스커트</a></li>
-                <li><a href="#">원피스</a></li>
-                <li><a href="#">니트/가디건</a></li>
-                <li><a href="#">자켓</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarousel.do?currentPage=1'/>">전상품</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=01'/>">티셔츠</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=02'/>">팬츠/스커트</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=03'/>">원피스</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=04'/>">니트/가디건</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=05'/>">자켓</a></li>
             </ul>
             
             <!-- 로그인 상태 -->
@@ -93,6 +93,7 @@
                 </div>
             </article>
 
+			<a name="product-list"></a>
             <article>
                 <!--상품 정렬 버튼-->
                 <ul class="sort">
@@ -107,75 +108,107 @@
 
                 <!--상품 목록-->
                 <ul class="list">
+                <c:forEach items="${products}" var="product" varStatus="st" begin="0" end="3">
                     <li>
                         <div class="thumbnail-box">
-                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
-                            <div class="thumbnail-title">레이스 블라우스 티셔츠<br>35,000</div>
+                            <div class="thumbnail-image">
+                            	<img src="<c:url value='/thumbnail/${product.productImage}'/>" alt="product-image">
+                           	</div>
+                            <div class="thumbnail-title">${product.productName}
+                            	<br><fmt:formatNumber value="${product.productPrice}" pattern="#,###"/></div>
                         </div>
                     </li>
-                    <li>
-                        <div class="thumbnail-box">
-                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
-                            <div class="thumbnail-title">소매 턱 티셔츠<br>15,000</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="thumbnail-box">
-                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
-                            <div class="thumbnail-title">RN 후드<br>20,000</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="thumbnail-box">
-                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
-                            <div class="thumbnail-title">시스루 캐주얼 점퍼<br>50,000</div>
-                        </div>
-                    </li>
+                </c:forEach>
                 </ul>
+                
                 <ul class="list">
+                <c:forEach items="${products}" var="product" varStatus="st" begin="4" end="7">
                     <li>
                         <div class="thumbnail-box">
-                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
-                            <div class="thumbnail-title">레이스 블라우스 티셔츠<br>35,000</div>
+                            <div class="thumbnail-image">
+                            	<img src="<c:url value='/thumbnail/${product.productImage}'/>" alt="product-image">
+                           	</div>
+                            <div class="thumbnail-title">${product.productName}
+                            	<br><fmt:formatNumber value="${product.productPrice}" pattern="#,###"/></div>
                         </div>
                     </li>
-                    <li>
-                        <div class="thumbnail-box">
-                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
-                            <div class="thumbnail-title">소매 턱 티셔츠<br>15,000</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="thumbnail-box">
-                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
-                            <div class="thumbnail-title">RN 후드<br>20,000</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="thumbnail-box">
-                            <div class="thumbnail-image"><img src="" alt="product-image"></div>
-                            <div class="thumbnail-title">시스루 캐주얼 점퍼<br>50,000</div>
-                        </div>
-                    </li>
+                </c:forEach>
                 </ul>
             </article>
 
-            <!--페이지 이동 버튼-->
-            <article>
-                <div class="page-wrap">
-                    <div class="page-nation">
-                        <a class="arrow pprev" href="#"></a>
-                        <a class="arrow prev" href="#"></a>
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a class="arrow next" href="#"></a>
-                        <a class="arrow nnext" href="#"></a>
-                    </div>
-                </div>
-            </article>
+<!-- paging -->
+			<article>
+				<div>
+					<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
+	<%--  인자확인용	${pageMaker.pageDTO}, ${pageMaker}, ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}<br>
+					${pageNum}, ${pageNum +1}, ${pageNum +2}, ${pageNum +3}, ${pageNum +4}  --%>
+				</div>
+				
+	            <div class="page-wrap">
+	            
+	            	<!-- 전상품 -->
+	            	<c:if test="${empty productCategoryIndex}">
+	                <div class="page-nation">
+	                    <a class="arrow pprev" href="<%=request.getContextPath()%>/user/user-productlistCarousel.do?currentPage=1"></a>
+	                    <a class="arrow prev" href="<%=request.getContextPath()%>/user/user-productlistCarousel.do?currentPage=
+	                    	${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}#product-list"></a>
+	          			
+	                    
+	                    
+	                    <a href="<%=request.getContextPath()%>/user/user-productlistCarousel.do?currentPage=${pageNum}#product-list"
+	                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/user/user-productlistCarousel.do?currentPage=${pageNum+1}#product-list"
+	                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage+1 ? "class='active'" : ""}>${pageMaker.startPage +1}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/user/user-productlistCarousel.do?currentPage=${pageNum+2}#product-list"
+	                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage+2 ? "class='active'" : ""}>${pageMaker.startPage +2}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/user/user-productlistCarousel.do?currentPage=${pageNum+3}#product-list"
+	                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage+3 ? "class='active'" : ""}>${pageMaker.startPage +3}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/user/user-productlistCarousel.do?currentPage=${pageNum+4}#product-list"
+	                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage+4 ? "class='active'" : ""}>${pageMaker.startPage +4}</a>
+	                    
+	                    <a class="arrow next" href="<%=request.getContextPath()%>/user/user-productlistCarousel.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}#product-list"></a>
+	                    <a class="arrow nnext" href="<%=request.getContextPath()%>/user/user-productlistCarousel.do?currentPage=${pageMaker.pageDTO.maxPage}#product-list"></a>
+	                </div>
+	                </c:if>
+	                <!--// 전상품 -->
+	                
+	                <!-- 카테고리별 상품 -->
+	            	<c:if test="${not empty productCategoryIndex}">
+	                <div class="page-nation">
+	                    <a class="arrow pprev" href="<%=request.getContextPath()%>/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=${productCategoryIndex}"></a>
+	                    <a class="arrow prev" href="<%=request.getContextPath()%>/user/user-productlistCarouselCategory.do?currentPage=
+	                    	${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}&productCategoryIndex=${productCategoryIndex}#product-list"></a>
+	          			
+	                    
+	                    
+	                    <a href="<%=request.getContextPath()%>/user/user-productlistCarouselCategory.do?currentPage=${pageNum}&productCategoryIndex=${productCategoryIndex}#product-list"
+	                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/user/user-productlistCarouselCategory.do?currentPage=${pageNum+1}&productCategoryIndex=${productCategoryIndex}#product-list"
+	                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage+1 ? "class='active'" : ""}>${pageMaker.startPage +1}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/user/user-productlistCarouselCategory.do?currentPage=${pageNum+2}&productCategoryIndex=${productCategoryIndex}#product-list"
+	                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage+2 ? "class='active'" : ""}>${pageMaker.startPage +2}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/user/user-productlistCarouselCategory.do?currentPage=${pageNum+3}&productCategoryIndex=${productCategoryIndex}#product-list"
+	                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage+3 ? "class='active'" : ""}>${pageMaker.startPage +3}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/user/user-productlistCarouselCategory.do?currentPage=${pageNum+4}&productCategoryIndex=${productCategoryIndex}#product-list"
+	                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage+4 ? "class='active'" : ""}>${pageMaker.startPage +4}</a>
+	                    
+	                    <a class="arrow next" href="<%=request.getContextPath()%>/user/user-productlistCarouselCategory.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}&productCategoryIndex=${productCategoryIndex}#product-list"></a>
+	                    <a class="arrow nnext" href="<%=request.getContextPath()%>/user/user-productlistCarouselCategory.do?currentPage=${pageMaker.pageDTO.maxPage}&productCategoryIndex=${productCategoryIndex}#product-list"></a>
+	                </div>
+	                </c:if>
+	                <!--// 카테고리별 상품 -->
+	            </div>
+				
+	        </article>
+        	
         </section>
 
         <footer>
