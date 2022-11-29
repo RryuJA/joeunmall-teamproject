@@ -16,10 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.joeun.joeunmall.service.ProductService;
 import com.joeun.joeunmall.service.UserService;
-import com.joeun.joeunmall.vo.PageDTO;
-import com.joeun.joeunmall.vo.PageMaker;
 import com.joeun.joeunmall.vo.UserVO;
 
 import lombok.extern.slf4j.Slf4j;
@@ -30,10 +27,7 @@ import lombok.extern.slf4j.Slf4j;
 public class UserLoginController {
 	
 	@Autowired UserService userService;
-	
-	@Autowired ProductService productService;
-
-	
+		
 	@GetMapping("/demo.do")
 	public String demo() {
 		log.info("demo");
@@ -114,67 +108,7 @@ public class UserLoginController {
 		log.info("mypageORder");
 		return "/user/user-mypageOrder";
 	}
-	@GetMapping("/user/user-productDetail.do")
-	public String userProductDetail() {
-		log.info("userProductDetail");
-		return "/user/user-productDetail";
-	}
 	
-	// ------------------------------------------------------------------	
-
-	@GetMapping("/user/user-productlistCarousel.do")
-	public String userProductlistCarousel(@RequestParam(value="currentPage", defaultValue="1") int currentPage, 
-			Model model) {
-		log.info("userProductlistCarousel");
-		
-		//상품 갤러리 정보 확보 
-		//페이지당 8개 상품 출력
-		PageDTO pageDTO = new PageDTO();
-		PageMaker pageMaker = new PageMaker();	
-		//총 상품 수 
-		pageDTO.setRecordsPerPage(8);
-		int maxNum = productService.selectProductCount();
-		int maxPage = (int)(maxNum / pageDTO.getRecordsPerPage() + 0.95) + 1;
-		pageDTO.setMaxPage(maxPage);
-		pageDTO.setCurrentPage(currentPage  < pageDTO.getMaxPage() ? currentPage : pageDTO.getMaxPage());
-		
-		pageMaker.setPageDTO(pageDTO);
-
-		
-		
-		model.addAttribute("products", productService.selectProductsByPaging(currentPage, 8));
-		model.addAttribute("pageMaker", pageMaker);
-		
-		return "/user/user-productlistCarousel";
-	}
-	
-	
-	@GetMapping("/user/user-productlistCarouselCategory.do")
-	public String userProductlistCarouselCategory(@RequestParam(value="currentPage", defaultValue="1") int currentPage, 
-			@RequestParam("productCategoryIndex") String productCategoryIndex,Model model) {
-		log.info("userProductlistCarousel");
-		
-		//상품 갤러리 정보 확보 
-		//페이지당 8개 상품 출력
-		PageDTO pageDTO = new PageDTO();
-		PageMaker pageMaker = new PageMaker();	
-		//총 상품 수 
-		pageDTO.setRecordsPerPage(8);
-		int maxNum = productService.selectProductsCountByCategory(productCategoryIndex);
-		int maxPage = (int)(maxNum / pageDTO.getRecordsPerPage() + 0.95) + 1;
-		pageDTO.setMaxPage(maxPage);
-		pageDTO.setCurrentPage(currentPage  < pageDTO.getMaxPage() ? currentPage : pageDTO.getMaxPage());
-		
-		pageMaker.setPageDTO(pageDTO);
-
-		
-		model.addAttribute("products", productService.selectProductsByPagingAndCategory(currentPage, 8, productCategoryIndex));
-		model.addAttribute("pageMaker", pageMaker);
-		model.addAttribute("productCategoryIndex", productCategoryIndex);
-		
-		return "/user/user-productlistCarousel";
-	}
-
 	// ------------------------------------------------------------------	
 	
 	@GetMapping("/user/user-shoppingBasket.do")
