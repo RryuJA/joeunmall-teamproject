@@ -50,12 +50,12 @@
         <header>
             <a href="user-productlistCarousel.do"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
             <ul id="header">
-                <li><a href="#">전상품</a></li>
-                <li><a href="#">티셔츠</a></li>
-                <li><a href="#">팬츠/스커트</a></li>
-                <li><a href="#">원피스</a></li>
-                <li><a href="#">니트/가디건</a></li>
-                <li><a href="#">자켓</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarousel.do?currentPage=1'/>">전상품</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=01'/>">티셔츠</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=02'/>">팬츠/스커트</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=03'/>">원피스</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=04'/>">니트/가디건</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=05'/>">자켓</a></li>
             </ul>
             
             <!-- 로그인 상태 -->
@@ -110,55 +110,55 @@
                             <th class="width2">결제금액</th>
                             <th class="width2">주문상세</th>
                         </tr>
+					<tbody>
+					<c:forEach var="OrderVO" items="${userMypageOrderList}" varStatus="st" >
                         <tr>
-                            <td>2022.09.20</td>
-                            <td>오버롤포켓OPS 외 3건</td>
-                            <td>79,000원</td>
+                            <td><fmt:formatDate value="${OrderVO.orderDate}" pattern="yyyy-MM-dd"/></td>
+                            <td>${OrderVO.productNames.get(0)} 외 ${OrderVO.productNames.size()-1}개</td>
+                            <td><fmt:formatNumber value="${OrderVO.orderPrice}" pattern="###,###" /></td>
                             <td><button>상세보기</button></td>
                         </tr>
-                        <tr>
-                            <td>2022.08.16</td>
-                            <td>위드밴딩팬츠 외 2건</td>
-                            <td>110,980원</td>
-                            <td><button>상세보기</button></td>
-                        </tr>
-                        <tr>
-                            <td>2022.07.15</td>
-                            <td>ST가디건 외 5건</td>
-                            <td>214,100원</td>
-                            <td><button>상세보기</button></td>
-                        </tr>
-                        <tr>
-                            <td>2022.05.05</td>
-                            <td>935스키니 외 3건</td>
-                            <td>34,300원</td>
-                            <td><button>상세보기</button></td>
-                        </tr>
-                        <tr>
-                            <td>2022.03.21</td>
-                            <td>1973슬랙스</td>
-                            <td>20,000원</td>
-                            <td><button>상세보기</button></td>
-                        </tr>
+                    </c:forEach>
+                    </tbody>    
                     </table>
                 </article>
 
-                <!--페이지 이동 버튼-->
-                <article>
-                    <div class="page-wrap">
-                        <div class="page-nation">
-                            <a class="arrow pprev" href="#"></a>
-                            <a class="arrow prev" href="#"></a>
-                            <a href="#" class="active">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
-                            <a class="arrow next" href="#"></a>
-                            <a class="arrow nnext" href="#"></a>
-                        </div>
-                    </div>
-                </article>
+<!-- paging -->
+			<article>
+			<div>
+				<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
+<%-- 인자확인용	${pageMaker.pageDTO}, ${pageMaker}, ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}<br>
+				${pageNum}, ${pageNum +1}, ${pageNum +2}, ${pageNum +3}, ${pageNum +4} --%>
+			</div>
+	            <div class="page-wrap">
+	                <div class="page-nation">
+	                    <a class="arrow pprev" href="<%=request.getContextPath()%>/user/user-mypageOrder.do?currentPage=1"></a>
+	                    <a class="arrow prev" href="<%=request.getContextPath()%>/user/user-mypageOrder.do?currentPage=
+	                    ${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}"></a>
+	          			
+	                    
+	                    
+	                    <a href="<%=request.getContextPath()%>/user/user-mypageOrder.do?currentPage=${pageNum}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/user/user-mypageOrder.do?currentPage=${pageNum+1}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+1 ? "class='active'" : ""}>${pageMaker.startPage +1}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/user/user-mypageOrder.do?currentPage=${pageNum+2}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+2 ? "class='active'" : ""}>${pageMaker.startPage +2}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/user/user-mypageOrder.do?currentPage=${pageNum+3}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+3 ? "class='active'" : ""}>${pageMaker.startPage +3}</a>
+	                    
+	                    <a href="<%=request.getContextPath()%>/user/user-mypageOrder.do?currentPage=${pageNum+4}"
+	                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+4 ? "class='active'" : ""}>${pageMaker.startPage +4}</a>
+	                    
+	                    <a class="arrow next" href="<%=request.getContextPath()%>/user/user-mypageOrder.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}"></a>
+	                    <a class="arrow nnext" href="<%=request.getContextPath()%>/user/user-mypageOrder.do?currentPage=${pageMaker.pageDTO.maxPage}"></a>
+	                </div>
+	            </div>
+
+        </article>
             </section>
         </div>
 

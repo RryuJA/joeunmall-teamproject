@@ -1,9 +1,13 @@
 package com.joeun.joeunmall.dao;
 
+import java.util.HashMap;
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.joeun.joeunmall.vo.OrderVO;
 import com.joeun.joeunmall.vo.UserVO;
 
 import lombok.extern.slf4j.Slf4j;
@@ -46,6 +50,25 @@ public class UserDAOImpl implements UserDAO {
 		log.info("deleteUser");
 		sqlSession.insert(NS_NAME + "deleteUser", userId); 
 	}
-	
-	
+
+	@Override
+	public List<OrderVO> selectMypageUserIndex(int currentPage, int recordsPerPage, String userIndex) {
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("currentPage", currentPage);
+		map.put("recordsPerPage", recordsPerPage);
+		map.put("userIndex", userIndex);
+		return sqlSession.selectList(NS_NAME+"selectMypageUserIndex", map);
+	}
+
+	@Override
+	public int selectMypageUserIndexNum(String userIndex) {
+		HashMap<String, Object> map = new HashMap<>();
+		map.put("userIndex", userIndex);
+		return sqlSession.selectOne(NS_NAME+"selectMypageUserIndexNum", map);	
+	}
+
+	@Override
+	public List<String> getOrderProductsName(String orderIndex) {
+		return sqlSession.selectList(NS_NAME+"getOrderProductsName", orderIndex);
+	}
 }
