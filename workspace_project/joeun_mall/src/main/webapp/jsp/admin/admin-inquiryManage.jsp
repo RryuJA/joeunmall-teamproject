@@ -74,7 +74,14 @@
 	                            <td>${inquiryVO.userName}</td>
 	                            <td>${inquiryVO.inquiryCategory}</td>
 	                            <td><a href="<%=request.getContextPath()%>/admin/admin-inquiryDetails.do?inquiryIndex=${inquiryVO.inquiryIndex}">${inquiryVO.inquiryTitle}</a></td>
-	                            <td><div class="box-red">문의접수</div></td>
+		                        <td>
+		                        	<c:if test="${inquiryVO.inquiryState == '문의접수'}">
+		                        	<div class="box-red">${inquiryVO.inquiryState}</div>
+		                        	</c:if>
+		                        	<c:if test="${inquiryVO.inquiryState != '문의접수'}">
+		                        	<div class="box-blue">${inquiryVO.inquiryState}</div>
+		                        	</c:if>
+		                        </td>
 	                        </tr>
                         </c:forEach>
                     </tbody>

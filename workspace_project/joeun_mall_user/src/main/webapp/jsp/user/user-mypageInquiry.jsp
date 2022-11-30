@@ -108,8 +108,15 @@
                             <td>${InquiryVO.inquiryIndex}</td>
                             <td>${InquiryVO.inquiryDate}</td>
                             <td>${InquiryVO.inquiryCategory}</td>                            
-                            <td>${InquiryVO.inquiryTitle}</td>                            
-                            <td><div class="box-red">문의접수</div></td>
+                            <td>${InquiryVO.inquiryTitle}</td>     
+ 	                        <td>
+	                        	<c:if test="${InquiryVO.inquiryState == '문의접수'}">
+	                        		<button class="bg-red">${InquiryVO.inquiryState}</button>
+	                        	</c:if>
+	                        	<c:if test="${InquiryVO.inquiryState != '문의접수'}">
+	                        		<button class="bg-blue">${InquiryVO.inquiryState}</button>
+	                        	</c:if>
+	                        </td>
 						</tr>
                     </c:forEach>
                     </table>
@@ -117,7 +124,6 @@
 
 			<!-- 기본 페이징 -->
 			<article>
-
 				<div>
 				<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
 <%-- 인자확인용	${pageMaker.pageDTO}, ${pageMaker}, ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}<br>
