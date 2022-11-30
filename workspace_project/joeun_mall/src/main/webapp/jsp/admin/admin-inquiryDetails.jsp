@@ -15,7 +15,7 @@
     <!--css-->
     <!--admin-nav.css는 고정-->
     <!--페이지별로 추가해야하는 css 파일은 admin-nav.css 아래에 추가-->
-    <link rel="stylesheet" type="text/css" href="<c:url value ='/joeunmall/css/admin-nav.css' />">
+    <link rel="stylesheet" type="text/css" href="<c:url value ='/css/admin-nav.css' />">
     <link rel="stylesheet" type="text/css" href="<c:url value ='/css/admin-section-details.css' />">
 </head>
 <body>
@@ -37,7 +37,7 @@
                     <li class="li-lower"><a href="<c:url value ='/admin/admin-productRegistration.do' />">상품등록</a></li>
                 </ul>
                 <li><a href="<c:url value ='/admin/admin-customerManage.do' />">고객관리</a></li>
-                <li class="thispage"><a href="<c:url value ='/admin/admin-inquiryDetails.do' />">1:1문의</a></li>
+                <li class="thispage"><a href="<c:url value ='/admin/admin-inquiryManage.do' />">1:1문의</a></li>
             </ul> 
             <input type="button" value="로그아웃" id="logout-btn" onclick="location.href='/joeunmall/logout.do'">
         </nav>
@@ -55,7 +55,6 @@
                     <tr>
                         <th class="table-col1">고객명</th>
                         <td class="table-col3"><div class="text-square"><a onclick="window.open('./admin-customerInfo.html', 'window_name', 'width=710, height=510, location=no, status=no, scrollbars=yes');" style="cursor:pointer">${inquiryVO.userName}</a></div>
-                        <input type="hidden" id="userIndex" name="userIndex" value="${'고객번호'}"/></td>
                         <th class="table-col1">문의번호</th>
                         <td class="table-col2">${inquiryVO.inquiryIndex}
                         <input type="hidden" id="inquiryIndex" name="inquiryIndex" value="${inquiryVO.inquiryIndex}"/></td>
@@ -64,27 +63,20 @@
                         <th>처리현황</th>
                         <!--"box-red" 또는 "box-blue"-->
                         <td><div class="box-red">${inquiryVO.inquiryState}</div>
-                        <input type="hidden" id="inquiryState" name="inquiryState" value="${inquiryVO.inquiryState}"/></td><!-- 문의접수 or 문의완료 -->
                         <th>문의일자</th>
                         <td>${inquiryVO.inquiryDate}
-                        <input type="hidden" id="inquiryDate" name="inquiryDate" value="${inquiryVO.inquiryDate}"/></td></td>
                     </tr>
                     <tr>
-                        <th>상품/주문</th>
-                        <td><a href="#" class="popup">${inquiryVO.productName} ${inquiryVO.productIndex}</a></td>
                         <th>문의항목</th>
-                        <td>${inquiryVO.inquiryCategory}
-                        <input type="hidden" id="inquiryCategory" name="inquiryCategory" value="${inquiryVO.inquiryCategory}"/></td>
+                        <td colspan="3">${inquiryVO.inquiryCategory}
                     </tr>
                     <tr>
                         <th>문의제목</th>
                         <td colspan="3"><div class="text-square">${inquiryVO.inquiryTitle}</div>
-                        <input type="hidden" id="inquiryTitle" name="inquiryTitle " value="${inquiryVO.inquiryTitle}"/></td>
                     </tr>
                     <tr>
                         <th>문의내용</th>
-                        <td colspan="3" class="table-row2"><div id="text-square2">고객이 문의한 내용</div>
-                        <input type="hidden" id="inquiryContent" name="inquiryContent" value="${inquiryVO.inquiryContent}"/></td>
+                        <td colspan="3" class="table-row2"><div id="text-square2">${inquiryVO.inquiryContent}</div>
                     </tr>
                     <tr>
                         <th>문의답변</th>

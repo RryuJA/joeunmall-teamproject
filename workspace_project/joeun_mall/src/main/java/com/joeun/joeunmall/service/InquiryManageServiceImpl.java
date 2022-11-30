@@ -48,4 +48,10 @@ public class InquiryManageServiceImpl implements InquiryManageService {
 	public int getAllInquiryRecordNumSearch(String searchWord) {
 		return InquiryManageDAO.getAllInquiryRecordNumSearch(searchWord);
 	}
+	
+	@Transactional(readOnly=true, rollbackFor=Exception.class)
+	@Override
+	public InquiryVO selectInquiryData(String inquiryIndex) {
+		return InquiryManageDAO.selectInquiryData(inquiryIndex);
+	}
 }

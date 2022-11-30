@@ -55,4 +55,13 @@
 		    )
 		     WHERE user_name LIKE '%${searchWord}%'
 	</select> 
+	
+	<!-- LSE 문의번호로 문의상세정보조회 --> 
+	<select id="selectInquiryData" parameterType="String" resultType="com.joeun.joeunmall.vo.InquiryVO">	
+		SELECT *
+			FROM inquiry_tbl
+			JOIN user_tbl
+			ON inquiry_tbl.user_index = user_tbl.user_index
+			WHERE inquiry_index = #{inquiryIndex}
+	</select>
 </mapper>

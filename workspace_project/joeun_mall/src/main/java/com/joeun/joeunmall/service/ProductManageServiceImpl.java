@@ -65,5 +65,18 @@ public class ProductManageServiceImpl implements ProductManageService {
 	public int getAllProductRecordNumSearch(String searchWord) {
 		return productManageDAO.getAllProductRecordNumSearch(searchWord);
 	}
+
+	@Override
+	public List<ProductVO> selectProductsByPagingAndCategory(int currentPage, int recordsPerPage,
+			String productCategoryIndex) {
+		log.info("selectProductsByPagingAndCategory");
+		return productManageDAO.selectProductsByPagingAndCategory(currentPage, recordsPerPage, productCategoryIndex);
+	}
+
+	@Override
+	public int selectProductsCountByCategory(String productCategoryIndex) {
+		log.info("selectProductsCountByCategory");
+		return productManageDAO.selectProductsCountByCategory(productCategoryIndex);
+	}
 			
 }

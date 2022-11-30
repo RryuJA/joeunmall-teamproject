@@ -39,3 +39,23 @@ WHERE page = 1;
 SELECT COUNT(*)   
 		FROM (SELECT * FROM product_tbl )
 	             WHERE product_name LIKE '%팬츠%'
+	             
+-- RJA 상품번호로 상품정보 조회
+SELECT * FROM product_tbl WHERE product_index = '22_05_050';
+
+--카테고리별 상품 정보 조회 - 상품관리 카테고리 
+SELECT *  
+FROM (SELECT  m.*,  
+             FLOOR((ROWNUM - 1) / 8 + 1) page  
+      FROM (
+             SELECT * FROM product_tbl 
+             WHERE product_category_index = '01'
+             ORDER BY product_index DESC
+           ) m  
+      )  
+WHERE page = 1;
+
+--카테고리별 상품 수 조회 - 상품관리 카테고리 
+SELECT count(*) FROM product_tbl 
+WHERE product_category_index = '01'
+ORDER BY product_index DESC;

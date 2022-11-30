@@ -52,4 +52,9 @@ public class InquiryManageDAOImpl implements InquiryManageDAO{
 	public int getAllInquiryRecordNumSearch(String searchWord) {
 		return sqlSession.selectOne(MAPPER_NS+"getAllInquiryRecordNumSearch", searchWord);
 	}
+
+	@Override
+	public InquiryVO selectInquiryData(String inquiryIndex) {
+		return sqlSession.selectOne(MAPPER_NS+"selectInquiryData", inquiryIndex);
+	}
 }

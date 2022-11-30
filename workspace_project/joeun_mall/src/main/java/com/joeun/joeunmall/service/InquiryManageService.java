@@ -42,4 +42,13 @@ public interface InquiryManageService {
 	 * @return 검색 결과의 전체 레코드 수
 	 */
 	public int getAllInquiryRecordNumSearch(String searchWord);	
+	
+	/**
+	 * LSE
+	 * 문의번호로 문의상세정보조회
+	 * 
+	 * @param inquiryIndex 문의번호
+	 * @return 문의상세정보VO
+	 */
+	public InquiryVO selectInquiryData(String inquiryIndex);
 }

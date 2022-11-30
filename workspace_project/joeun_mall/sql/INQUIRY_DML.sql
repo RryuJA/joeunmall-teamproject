@@ -1,4 +1,4 @@
--- 1:1문의 Paging 쿼리(INQUIRY_TBL에 USER_TBL을 JOIN해서 USER_NAME을 추가하는 쿼리)
+-- 1:1문의 Paging 쿼리(INQUIRY_TBL에 USER_TBL을 JOIN해서 USER_NAME을 추가하는 쿼리), 1:1문의 상세 Paging 쿼리
 	SELECT *
 FROM (
 		SELECT m.*, FLOOR((ROWNUM -1) / 8 + 1) PAGE 
@@ -50,3 +50,10 @@ WHERE product_index IN (
 						SELECT product_index FROM ORDER_PRODUCT_TBL 
 						WHERE order_product_index like '221007_2022039_1%'
 					  );
+
+-- LSE 문의번호로 문의상세정보조회 
+SELECT *
+	FROM inquiry_tbl
+	JOIN user_tbl
+	ON inquiry_tbl.user_index = user_tbl.user_index
+	WHERE inquiry_index = '221005001';
