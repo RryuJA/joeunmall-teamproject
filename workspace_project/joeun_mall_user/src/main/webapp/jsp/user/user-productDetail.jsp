@@ -183,7 +183,7 @@
                     		const totalPriceElement = document.getElementById("total-price");
                     		const countElement = document.getElementById("count");
                     		
-                    		let totalPrice = parseInt(productPrice) * countElement.innerText;
+                    		let totalPrice = productPrice * countElement.innerText;
                     		let totalPriceString = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                     		
                     		totalPriceElement.innerText = totalPriceString;                     		
@@ -216,9 +216,69 @@
                     </div>
                 </div>
 
+				<script>
+	            	//콤마찍혀있는숫자 -> 콤마 제거
+	            	function stringNumberToInt(stringNumber) {
+	            	    return parseInt(stringNumber.replace(",", ""));
+	            	}
+	            	
+					function postShoppingBasket() {
+						const totalPriceElement = document.getElementById("total-price");
+						
+						if(!totalPriceElement.innerText) {
+							//옵션을 선택하지 않은 경우
+							alert("옵션을 선택해주세요.")
+							
+						} else {
+							//옵션을 선택한 경우
+							let confirmResult = window.confirm("장바구니에 상품을 담으시겠습니까?")
+							
+							if(confirmResult == true) {
+								let tempForm = document.createElement('form');
+															   
+							    const productOption = document.getElementById('option-select-box');
+							    let tempProductOptionObj;
+							    tempProductOptionObj = document.createElement('input');
+							    tempProductOptionObj.setAttribute('type', 'hidden');
+							    tempProductOptionObj.setAttribute('name', 'productOption');
+							    tempProductOptionObj.setAttribute('value', productOption.options[productOption.selectedIndex].value);
+							    console.log(tempProductOptionObj);
+							    
+							    const productCount = document.getElementById("count").innerText;
+							    let tempProductCountObj;
+							    tempProductCountObj = document.createElement('input');
+							    tempProductCountObj.setAttribute('type', 'hidden');
+							    tempProductCountObj.setAttribute('name', 'productCount');
+							    tempProductCountObj.setAttribute('value', productCount);
+							    console.log(tempProductCountObj);
+							    
+							    let tempTotalPriceObj;
+							    tempTotalPriceObj = document.createElement('input');
+							    tempTotalPriceObj.setAttribute('type', 'hidden');
+							    tempTotalPriceObj.setAttribute('name', 'totalPrice');
+							    tempTotalPriceObj.setAttribute('value', stringNumberToInt(totalPriceElement.innerText));
+							    console.log(tempTotalPriceObj);
+							    
+							    tempForm.appendChild(tempProductOptionObj);
+							    tempForm.appendChild(tempProductCountObj);
+							    tempForm.appendChild(tempTotalPriceObj);
+							    
+							    /* 
+							    tempForm.setAttribute('method', 'post');
+							    tempForm.setAttribute('action', 'view.do');
+							    document.body.appendChild(tempForm);
+							    tempForm.submit(); 
+							    */
+							} else {
+								console.log("no");
+							}
+						}
+
+					}
+				</script>
                 <!-- 장바구니 담기 버튼, 구매하기 버튼 -->
                 <div>
-                    <input type="button" value="장바구니 담기" id="shoppingList-btn" style="cursor:pointer" onclick="location.href=''">
+                    <input type="button" value="장바구니 담기" id="shoppingList-btn" style="cursor:pointer" onclick="postShoppingBasket()">
                     <input type="button" value="구매하기" id="purchase-btn" style="cursor:pointer" onclick="location.href=''">
                 </div>
             </section>
