@@ -194,4 +194,42 @@
     left: 105.5%;
     display: none;     /* 보여지지 없음 - 기본적으로  안보여지게 */
     z-index: 99;     /* 포지션을 먼저 지정후 z-좌표(레이어) : 99 */
- }
+}
+
+
+
+/*-----------------------------------------------------------------------------------*/
+div#hide-div {
+    display: none;
+}
+
+div#selected-option {
+    margin-top: 20px;
+    width: 400px;
+}
+
+table#option-table {
+    background-color: gray;
+    border-radius: 5px;
+    color: white;
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    font-size: 15pt;
+}
+
+div#option-count {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div#option-count input[type="button"]{
+    width: 25px;
+    margin: 0px 5px;
+    font-size: 14pt;
+}
+
+td.width-1 {
+    width: 250px;
+}

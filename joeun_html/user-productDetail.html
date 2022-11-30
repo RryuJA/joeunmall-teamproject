@@ -89,9 +89,21 @@
                         <option value="1">1</option>
                         <option value="2">2</option>
                     </select> 
-                    <div class="layer">   <!-- 옵션 선택한 목록 상자 -->
-                        asdf
-                        <hr style="height: 100px">
+                    <div id="hide-div"> 
+                        <div id="selected-option">
+                            <table id="option-table">
+                                <tr>
+                                    <td class="width-1">black 90</td>
+                                    <td>
+                                        <div id="option-count">
+                                            <input type='button' onclick='count2("plus")' value='+'/>
+                                            <div id='result2' class="result">1</div>
+                                            <input type='button' onclick='count2("minus")' value='-'/>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
 

@@ -80,11 +80,31 @@
                         <img id="img5" class="target5" src="<c:url value='/thumbnail/${productImageList[4].productDetailImage}' />" data-zoom="2">
                     </div>
                     <div id="sub-img">
-                        <p><img id="sub-img1" src="<c:url value='/thumbnail/${productImageList[0].productDetailImage}' />"></p>
-                        <p><img id="sub-img2" src="<c:url value='/thumbnail/${productImageList[1].productDetailImage}' />"></p>
-                        <p><img id="sub-img3" src="<c:url value='/thumbnail/${productImageList[2].productDetailImage}' />"></p>
-                        <p><img id="sub-img4" src="<c:url value='/thumbnail/${productImageList[3].productDetailImage}' />"></p>
-                        <p><img id="sub-img5" src="<c:url value='/thumbnail/${productImageList[4].productDetailImage}' />"></p>
+                    	<p>
+                    		<c:if test="${productImageList[0].productDetailImage != null}">
+                    			<img id="sub-img1" src="<c:url value='/thumbnail/${productImageList[0].productDetailImage}' />">
+                    		</c:if>
+                   		</p>
+                   		<p>
+	                        <c:if test="${productImageList[1].productDetailImage != null}">
+	                        	<img id="sub-img2" src="<c:url value='/thumbnail/${productImageList[1].productDetailImage}' />">
+	                        </c:if>
+                        </p>
+                   		<p>
+	                       	<c:if test="${productImageList[2].productDetailImage != null}">
+	                        	<img id="sub-img3" src="<c:url value='/thumbnail/${productImageList[2].productDetailImage}' />">
+	                        </c:if>
+                        </p>
+                   		<p>
+	                        <c:if test="${productImageList[3].productDetailImage != null}">
+	                        	<img id="sub-img4" src="<c:url value='/thumbnail/${productImageList[3].productDetailImage}' />">
+	                        </c:if>
+                        </p>
+                   		<p>
+	                        <c:if test="${productImageList[4].productDetailImage != null}">
+	                        	<img id="sub-img5" src="<c:url value='/thumbnail/${productImageList[4].productDetailImage}' />">
+	                        </c:if>
+                        </p>
                     </div>
                 </div>
             </section>
@@ -115,42 +135,89 @@
 
                 <!-- 옵션 -->
                 <div class="option">옵션
-                    <select class="optionSelect" id="optionSelect" onchange="changeSelect()">
+                    <select class="optionSelect" id="option-select-box" onchange='changeSelect(); sumTotalPrice(${productVO.productPrice})'>
                     	<option hidden>옵션을 선택하세요</option>
-                    	<c:forEach var="productOptions" items="${productOptionList}" varStatus="st">
-                        	<option value="${productOptions.productOptionIndex}">${productOptions.productOptionValue}</option>
+                    	<c:forEach var="productOption" items="${productOptionList}" varStatus="st">
+                        	<option value="${productOption.productOptionIndex}">
+                        		${productOption.productOptionValue}
+                        	</option>
                         </c:forEach>
                     </select> 
                     
                     <script>
+                    	//select 박스에서 옵션 선택 시
                     	function changeSelect() {
-	                    	var productOption = document.getElementById('optionSelect');
-	                    	
-	                    	alert("value: "+ productOption.options[productOption.selectedIndex].value 
-	                    			+ " text: " + productOption.options[productOption.selectedIndex].text);
+	                    	const productOption = document.getElementById('option-select-box');
+	                    	/* alert("value: "+ productOption.options[productOption.selectedIndex].value 
+	                    			+ " text: " + productOption.options[productOption.selectedIndex].text); */
+	                  
+	                    	document.getElementById('selected-value').innerText = productOption.options[productOption.selectedIndex].text;
+	                    	document.getElementById("count").innerText = 1;
+	                    			
+	                    	jQuery('#hide-div').show();
+                    	}
+                    	
+                    	//+버튼 기능
+                    	function countPlus() {
+                    		const countElement = document.getElementById("count");
+                    		
+                    		let countNum = countElement.innerText;
+                    		countNum = parseInt(countNum) + 1;
+                    		
+                    		countElement.innerText = countNum;
+                    	}
+                    	
+                    	//-버튼 기능
+                    	function countMinus() {
+							const countElement = document.getElementById("count");
+                    		
+                    		let countNum = countElement.innerText;
+                    		if(countNum > 1) {	//이미 숫자가 1일때, 숫자가 더 내려가지 않음
+                    			countNum = parseInt(countNum) - 1;
+                    		}
+                    		
+                    		countElement.innerText = countNum;
+                    	}          
+                    	
+                    	function sumTotalPrice(productPrice) {
+                    		const totalPriceElement = document.getElementById("total-price");
+                    		const countElement = document.getElementById("count");
+                    		
+                    		let totalPrice = parseInt(productPrice) * countElement.innerText;
+                    		let totalPriceString = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                    		
+                    		totalPriceElement.innerText = totalPriceString;                     		
                     	}
                     </script>
                     
-                    <!-- 옵션 선택한 목록 상자 -->
-                    <!-- 
-                    <div class="layer">   
-                        <hr style="height: 100px">
+                    <div id="hide-div"> 
+                    	<!-- 선택된 상품 옵션 -->
+                        <div id="selected-option">
+                            <table id="option-table">
+                                <tr>
+                                    <td id="selected-value" class="width-1"></td>
+                                    <td>
+                                        <div id="option-count">
+                                            <input type='button' onclick='countPlus(); sumTotalPrice(${productVO.productPrice})' value='+'/>
+                                            <div id='count'>1</div>
+                                            <input type='button' onclick='countMinus(); sumTotalPrice(${productVO.productPrice})' value='-'/>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <!-- 선택된 상품 총 가격 -->
+                        <!-- 배송비는 장바구니 총 가격으로 확인함 -->
+                        <div class="totalPrice">총 상품 가격
+                        	<span class="finalPrice" id="total-price"></span>
+                    		<span class="won2">원</span> 
+                        </div>
                     </div>
-                    -->
                 </div>
 
-
-                <!-- 총 상품 가격 -->
-                <!-- 
-                <div class="totalPrice">총 상품 가격
-                    <span class="finalPrice">100,000</span>
-                    <span class="won2">원</span> 
-                </div>
- 				-->
- 				
                 <!-- 장바구니 담기 버튼, 구매하기 버튼 -->
                 <div>
-                <hr width="100%" color="grey">
                     <input type="button" value="장바구니 담기" id="shoppingList-btn" style="cursor:pointer" onclick="location.href=''">
                     <input type="button" value="구매하기" id="purchase-btn" style="cursor:pointer" onclick="location.href=''">
                 </div>
