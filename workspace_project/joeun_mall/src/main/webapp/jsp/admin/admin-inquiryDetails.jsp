@@ -54,7 +54,13 @@
                 <table>
                     <tr>
                         <th class="table-col1">고객명</th>
-                        <td class="table-col3"><div class="text-square"><a onclick="window.open('./admin-customerInfo.html', 'window_name', 'width=710, height=510, location=no, status=no, scrollbars=yes');" style="cursor:pointer">${inquiryVO.userName}</a></div>
+                        <td class="table-col3">
+                        	<div class="text-square">
+                        		<a onclick="window.open('./admin-customerInfo.html', 'window_name', 'width=710, height=510, location=no, status=no, scrollbars=yes');" style="cursor:pointer">
+                        			${inquiryVO.userName}
+                        		</a>
+                        	</div>
+                        </td>
                         <th class="table-col1">문의번호</th>
                         <td class="table-col2">${inquiryVO.inquiryIndex}
                         <input type="hidden" id="inquiryIndex" name="inquiryIndex" value="${inquiryVO.inquiryIndex}"/></td>
@@ -62,21 +68,28 @@
                     <tr>
                         <th>처리현황</th>
                         <!--"box-red" 또는 "box-blue"-->
-                        <td><div class="box-red">${inquiryVO.inquiryState}</div>
+                        <td>
+                        	<c:if test="${inquiryVO.inquiryState == '문의접수'}">
+                        	<div class="box-red">${inquiryVO.inquiryState}</div>
+                        	</c:if>
+                        	<c:if test="${inquiryVO.inquiryState != '문의접수'}">
+                        	<div class="box-blue">${inquiryVO.inquiryState}</div>
+                        	</c:if>
+                        </td> 
                         <th>문의일자</th>
-                        <td>${inquiryVO.inquiryDate}
+                        <td>${inquiryVO.inquiryDate}</td>
                     </tr>
                     <tr>
                         <th>문의항목</th>
-                        <td colspan="3">${inquiryVO.inquiryCategory}
+                        <td colspan="3">${inquiryVO.inquiryCategory}</td>
                     </tr>
                     <tr>
                         <th>문의제목</th>
-                        <td colspan="3"><div class="text-square">${inquiryVO.inquiryTitle}</div>
+                        <td colspan="3"><div class="text-square">${inquiryVO.inquiryTitle}</div></td>
                     </tr>
                     <tr>
                         <th>문의내용</th>
-                        <td colspan="3" class="table-row2"><div id="text-square2">${inquiryVO.inquiryContent}</div>
+                        <td colspan="3" class="table-row2"><div id="text-square2">${inquiryVO.inquiryContent}</div></td>
                     </tr>
                     <tr>
                         <th>문의답변</th>
