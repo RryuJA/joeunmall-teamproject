@@ -50,28 +50,21 @@
     <section id="section">
         <article>
             <div id="top-menu-manage">
-                <select class="drop-box">
-                    <option hidden>카테고리</option>
-                    <option value="cat-00">전상품</option>
-                    <option value="cat-01">티셔츠</option>
-                    <option value="cat-02">팬츠/스커트</option>
-                    <option value="cat-03">원피스</option>
-                    <option value="cat-04">니트/가디건</option>
-                    <option value="cat-05">자켓</option>
-                </select>
             	<form method="get" action="<c:url value ='/admin/admin-productManageSearch.do' />">
                     <input type="text" id="search" name="searchWord" placeholder="상품명" />
                 </form>
             </div>
+            <div id="manage-Category">
+                <ul>
+                    <li><a href="<c:url value='/admin/admin-productCategoryManage.do?currentPage=1&productCategoryIndex=01'/>">티셔츠</a></li>
+                    <li><a href="<c:url value='/admin/admin-productCategoryManage.do?currentPage=1&productCategoryIndex=02'/>">팬츠/스커트</a></li>
+                    <li><a href="<c:url value='/admin/admin-productCategoryManage.do?currentPage=1&productCategoryIndex=03'/>">원피스</a></li>
+                    <li><a href="<c:url value='/admin/admin-productCategoryManage.do?currentPage=1&productCategoryIndex=04'/>">니트/가디건</a></li>
+                    <li><a href="<c:url value='/admin/admin-productCategoryManage.do?currentPage=1&productCategoryIndex=05'/>">자켓</a></li>
+                </ul> 
+            </div>
         </article>
         
-        <!-- 
-        <div id="modify-button">
-            <a href="#"></a><input type="button" value="전체 삭제">
-            <a href="#"></a><input type="button" value="선택항목 삭제">
-        </div>
-         -->
-         
         <!-- 테이블 -->
         <article>
             <div id="bottom-menu-productmanage">
@@ -105,7 +98,7 @@
 
 			<!-- 기본 페이징 -->
 			<article>
-			<c:if test="${empty searchWord}">
+			<c:if test="${empty searchWord && empty productCategoryIndex}">
 			<div>
 				<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
 <%-- 인자확인용	${pageMaker.pageDTO}, ${pageMaker}, ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}<br>
@@ -172,7 +165,37 @@
 		                </div>
 		            </div>
 				</c:if>
-			<!-- //검색페이징 -->				
+					<!-- //검색페이징 -->
+	                <!-- 카테고리별 상품 -->
+	            	<c:if test="${not empty productCategoryIndex}">
+	            	<div class="page-wrap">
+		                <div class="page-nation">
+	               				<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
+		                    <a class="arrow pprev" href="<%=request.getContextPath()%>/admin/admin-productCategoryManage.do?currentPage=1&productCategoryIndex=${productCategoryIndex}"></a>
+		                    <a class="arrow prev" href="<%=request.getContextPath()%>/admin/admin-productCategoryManage.do?currentPage=
+		                    	${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}&productCategoryIndex=${productCategoryIndex}#product-list"></a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-productCategoryManage.do?currentPage=${pageNum}&productCategoryIndex=${productCategoryIndex}#product-list"
+		                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-productCategoryManage.do?currentPage=${pageNum+1}&productCategoryIndex=${productCategoryIndex}#product-list"
+		                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage+1 ? "class='active'" : ""}>${pageMaker.startPage +1}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-productCategoryManage.do?currentPage=${pageNum+2}&productCategoryIndex=${productCategoryIndex}#product-list"
+		                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage+2 ? "class='active'" : ""}>${pageMaker.startPage +2}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-productCategoryManage.do?currentPage=${pageNum+3}&productCategoryIndex=${productCategoryIndex}#product-list"
+		                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage+3 ? "class='active'" : ""}>${pageMaker.startPage +3}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/admin/admin-productCategoryManage.do?currentPage=${pageNum+4}&productCategoryIndex=${productCategoryIndex}#product-list"
+		                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage+4 ? "class='active'" : ""}>${pageMaker.startPage +4}</a>
+		                    
+		                    <a class="arrow next" href="<%=request.getContextPath()%>/admin/admin-productCategoryManage.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}&productCategoryIndex=${productCategoryIndex}#product-list"></a>
+		                    <a class="arrow nnext" href="<%=request.getContextPath()%>/admin/admin-productCategoryManage.do?currentPage=${pageMaker.pageDTO.maxPage}&productCategoryIndex=${productCategoryIndex}#product-list"></a>
+		                </div>
+		                </div>
+	                </c:if>
+	                <!--// 카테고리별 상품 -->							
 			</article>
     </section>
 </div>

@@ -73,7 +73,7 @@
 	                            <td><fmt:formatDate value = "${inquiryVO.inquiryDate}" pattern="yyyy-MM-dd" /></td>     
 	                            <td>${inquiryVO.userName}</td>
 	                            <td>${inquiryVO.inquiryCategory}</td>
-	                            <td>${inquiryVO.inquiryTitle}</td>
+	                            <td><a href="<%=request.getContextPath()%>/admin/admin-inquiryDetails.do?inquiryIndex=${inquiryVO.inquiryIndex}">${inquiryVO.inquiryTitle}</a></td>
 	                            <td><div class="box-red">문의접수</div></td>
 	                        </tr>
                         </c:forEach>

@@ -31,6 +31,7 @@ public class UserMyPageController {
 	@Autowired
 	UserMypageInquiryService userMypageInquiryService;
 	
+	//유저-마이페이지-주문내역
 	@GetMapping("/user/user-mypageOrder.do") 
 	public String userProductManage(@RequestParam(value="currentPage", defaultValue="1") int currentPage,  
 			 Model model, HttpSession session) {
@@ -78,6 +79,7 @@ public class UserMyPageController {
 		return resultList;
 	}
 	
+	//유저-마이페이지-내문의글
 	@GetMapping("/user/user-mypageInquiry.do")
 	public String userMypageInquiry(@RequestParam(value="currentPage", defaultValue="1") int currentPage,  
 			Model model, HttpSession session) {

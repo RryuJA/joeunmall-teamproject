@@ -168,8 +168,6 @@
 	                    <a class="arrow pprev" href="<%=request.getContextPath()%>/user/user-productlistCarousel.do?currentPage=1"></a>
 	                    <a class="arrow prev" href="<%=request.getContextPath()%>/user/user-productlistCarousel.do?currentPage=
 	                    	${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}#product-list"></a>
-	          			
-	                    
 	                    
 	                    <a href="<%=request.getContextPath()%>/user/user-productlistCarousel.do?currentPage=${pageNum}#product-list"
 	                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
@@ -198,8 +196,6 @@
 	                    <a class="arrow pprev" href="<%=request.getContextPath()%>/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=${productCategoryIndex}"></a>
 	                    <a class="arrow prev" href="<%=request.getContextPath()%>/user/user-productlistCarouselCategory.do?currentPage=
 	                    	${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}&productCategoryIndex=${productCategoryIndex}#product-list"></a>
-	          			
-	                    
 	                    
 	                    <a href="<%=request.getContextPath()%>/user/user-productlistCarouselCategory.do?currentPage=${pageNum}&productCategoryIndex=${productCategoryIndex}#product-list"
 	                    	${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>

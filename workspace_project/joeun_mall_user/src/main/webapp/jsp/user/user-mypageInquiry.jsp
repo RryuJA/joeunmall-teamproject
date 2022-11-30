@@ -125,27 +125,27 @@
 				</div>
 		            <div class="page-wrap">
 		                <div class="page-nation">
-		                    <a class="arrow pprev" href="<%=request.getContextPath()%>/admin/admin-mypageInquiry.do?currentPage=1"></a>
-		                    <a class="arrow prev" href="<%=request.getContextPath()%>/admin/admin-mypageInquiry.do?currentPage=
+		                    <a class="arrow pprev" href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=1"></a>
+		                    <a class="arrow prev" href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=
 		                    ${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}"></a>
 		                    
-		                    <a href="<%=request.getContextPath()%>/admin/admin-mypageInquiry.do?currentPage=${pageNum}"
+		                    <a href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=${pageNum}"
 		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
 		                    
-		                    <a href="<%=request.getContextPath()%>/admin/admin-mypageInquiry.do?currentPage=${pageNum+1}"
+		                    <a href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=${pageNum+1}"
 		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+1 ? "class='active'" : ""}>${pageMaker.startPage +1}</a>
 		                    
-		                    <a href="<%=request.getContextPath()%>/admin/admin-mypageInquiry.do?currentPage=${pageNum+2}"
+		                    <a href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=${pageNum+2}"
 		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+2 ? "class='active'" : ""}>${pageMaker.startPage +2}</a>
 		                    
-		                    <a href="<%=request.getContextPath()%>/admin/admin-mypageInquiry.do?currentPage=${pageNum+3}"
+		                    <a href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=${pageNum+3}"
 		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+3 ? "class='active'" : ""}>${pageMaker.startPage +3}</a>
 		                    
-		                    <a href="<%=request.getContextPath()%>/admin/admin-mypageInquiry.do?currentPage=${pageNum+4}"
+		                    <a href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=${pageNum+4}"
 		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+4 ? "class='active'" : ""}>${pageMaker.startPage +4}</a>
 		                    
-		                    <a class="arrow next" href="<%=request.getContextPath()%>/admin/admin-mypageInquiry.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}"></a>
-		                    <a class="arrow nnext" href="<%=request.getContextPath()%>/admin/admin-mypageInquiry.do?currentPage=${pageMaker.pageDTO.maxPage}"></a>
+		                    <a class="arrow next" href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}"></a>
+		                    <a class="arrow nnext" href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=${pageMaker.pageDTO.maxPage}"></a>
 		                </div>
 		            </div>
 		        <!-- //기본 페이징 -->
