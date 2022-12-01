@@ -3,7 +3,7 @@
 <mapper namespace="com.joeun.joeunmall.mapper.product_tbl">
 <!-- <mapper namespace="com.joeun.joeunmall.mapper.Product"> -->
 
-	<!-- product_tbl 전체 데이터 가져오기 -->
+	<!-- LSE 관리자-상품관리 Paging -->
 	<select id="getAllProductByPaging" parameterType="hashmap" resultType="com.joeun.joeunmall.vo.ProductVO">	
 		SELECT *  
 			FROM (SELECT ROWNUM,  
@@ -18,21 +18,13 @@
 		      )  
 		WHERE page = #{currentPage}
 	</select>
-		
-	<!-- LSE 게시판 전체 레코드 수 계산 쿼리 -->
+	
+	<!-- LSE 관리자-상품관리 Paging records 수량 계산 -->
 	<select id="getAllProductRecordNum" resultType="int">
 		SELECT count(*) FROM product_tbl
 	</select>
-	
-	<!-- 원파일 명 Product.xml -->
-	<!-- GSC 상품테이블에서 해당 카테고리 중 마지막 상품번호 -->
-	<select id="selectMaxProductIndex" parameterType="String" resultType="String">
-		SELECT MAX(PRODUCT_INDEX) FROM PRODUCT_TBL
-		WHERE PRODUCT_INDEX LIKE #{yearCate}
-		ORDER BY PRODUCT_INDEX DESC
-	</select>
-	
-	<!-- 상품관리 검색기능 -->
+		
+	<!-- LSE 관리자-상품관리-검색기능 paging -->
 	<select id="getProductSearchByPage" parameterType="hashmap" resultType="com.joeun.joeunmall.vo.ProductVO">
 		SELECT * 
 		FROM (SELECT m.*, FLOOR((ROWNUM -1) / #{recordsPerPage} + 1) PAGE 
@@ -51,14 +43,14 @@
 		WHERE page = #{currentPage}
 	</select>
 	
-		<!-- 상품관리 검색 후 총 레코드 갯수 -->
+	<!-- LSE 관리자-상품관리-검색기능 paging records 수량 계산 -->
 	<select id="getAllProductRecordNumSearch" parameterType="String" resultType="int">
 		SELECT COUNT(*)   
 				FROM (SELECT * FROM product_tbl )
 			             WHERE product_name LIKE '%${searchWord}%'
-	</select>
+	</select>		
 	
-	<!-- 카테고리별 상품 정보 조회 - 상품관리 카테고리 --> 
+	<!-- LSE 관리자-상품관리-카테고리별 상품조회 paging --> 
 	<select id="selectProductsByPagingAndCategory" parameterType="map" resultType="com.joeun.joeunmall.vo.ProductVO">
 		SELECT *  
 			FROM (SELECT ROWNUM,  
@@ -75,12 +67,19 @@
 		WHERE page = #{currentPage}
 	</select>
 	
-	
-	<!-- 카테고리별 상품 수 조회 - 상품관리 카테고리 --> 
+	<!-- LSE 관리자-상품관리-카테고리별 상품조회 paging records 수량 계산 --> 
 	<select id="selectProductsCountByCategory" parameterType="String" resultType="int">
 		SELECT count(*) FROM product_tbl 
 		WHERE product_category_index = #{productCategoryIndex} 
 		ORDER BY product_index DESC
+	</select>
+		
+	<!-- 원파일 명 Product.xml -->
+	<!-- GSC 상품테이블에서 해당 카테고리 중 마지막 상품번호 -->
+	<select id="selectMaxProductIndex" parameterType="String" resultType="String">
+		SELECT MAX(PRODUCT_INDEX) FROM PRODUCT_TBL
+		WHERE PRODUCT_INDEX LIKE #{yearCate}
+		ORDER BY PRODUCT_INDEX DESC
 	</select>
 		
 	<!-- GSC 상품 등록  -->
@@ -99,7 +98,6 @@
 		WHERE PRODUCT_INDEX = #{productIndex}
 	</select>
 	
-	
 	<!-- RJA 상품번호로 상품정보 조회 -->
 	<select id="selectProductData" parameterType="String" resultType="com.joeun.joeunmall.vo.ProductVO">
 		SELECT * FROM product_tbl WHERE product_index = #{productIndex}
@@ -114,6 +112,4 @@
 	<select id="selectProductOption" parameterType="String" resultType="com.joeun.joeunmall.vo.ProductOptionVO">
 		SELECT * FROM product_option_tbl WHERE product_index = #{productIndex}
 	</select>
-	
 </mapper>
-

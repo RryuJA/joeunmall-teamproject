@@ -42,5 +42,4 @@ public class ProductRegistrationDAOImpl implements ProductRegistrationDAO {
 		log.info("selectMaxProductImageIndex");
 		return sqlSession.selectOne(NS_NAME + "selectMaxProductImageIndex", productIndex);
 	}
-
 }

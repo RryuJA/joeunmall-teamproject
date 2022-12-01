@@ -2,9 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.joeun.joeunmall.mapper.inquiry_tbl">
 	
-	<!-- 1:1문의 Paging 쿼리(INQUIRY_TBL에 USER_TBL을 JOIN해서 USER_NAME을 추가하는 쿼리) -->
+	<!-- LSE 관리자-1:1문의 Paging -->
 	<select id="getAllInquiryByPaging" parameterType="hashmap" resultType="com.joeun.joeunmall.vo.InquiryVO">
-	
 		SELECT *
 	FROM (
 				SELECT m.*, FLOOR((ROWNUM - 1) / #{recordsPerPage} + 1) page
@@ -22,12 +21,12 @@
 		WHERE page = #{currentPage}
 	</select>
 	
-	<!-- 1:1문의 전체 레코드 수 -->
+	<!-- LSE 관리자-1:1문의 Paging records 수량 계산 -->
 	<select id="getAllInquiryRecordNum" resultType="int">
 		SELECT count(*) FROM inquiry_tbl
 	</select>
 
-	<!-- 1:1문의 검색기능 -->
+	<!-- LSE 관리자-1:1문의-검색기능 paging -->
 		<select id="getInquirySearchByPage" parameterType="hashmap" resultType="com.joeun.joeunmall.vo.InquiryVO">
 		SELECT *  
 				FROM (SELECT ROWNUM, m.*, FLOOR((ROWNUM - 1) / #{recordsPerPage} + 1) page  
@@ -45,7 +44,7 @@
 		)WHERE page = #{currentPage}	
 		</select>
 		
-	<!-- 1:1문의 검색 후 paging 전체 레코드 수  -->
+	<!-- LSE 관리자-1:1문의-검색기능 paging records 수량 계산  -->
 	<select id="getAllInquiryRecordNumSearch" parameterType="String" resultType="int">
 		SELECT count(*) FROM (
 			SELECT *
@@ -56,7 +55,7 @@
 		     WHERE user_name LIKE '%${searchWord}%'
 	</select> 
 	
-	<!-- LSE 문의번호로 문의상세정보조회 --> 
+	<!-- LSE 관리자-1:1문의-문의제목-문의상세정보(문의번호로 문의상세성보 조회) --> 
 	<select id="selectInquiryData" parameterType="String" resultType="com.joeun.joeunmall.vo.InquiryVO">	
 		SELECT *
 			FROM inquiry_tbl

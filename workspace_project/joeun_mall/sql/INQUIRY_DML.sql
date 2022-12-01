@@ -1,4 +1,4 @@
--- 1:1문의 Paging 쿼리(INQUIRY_TBL에 USER_TBL을 JOIN해서 USER_NAME을 추가하는 쿼리), 1:1문의 상세 Paging 쿼리
+-- LSE 관리자-1:1문의 Paging
 	SELECT *
 FROM (
 		SELECT m.*, FLOOR((ROWNUM -1) / 8 + 1) PAGE 
@@ -14,10 +14,10 @@ FROM (
 		) m
 );
 
--- 1:1문의 전체 레코드 수
+-- LSE 관리자-1:1문의 Paging records 수량 계산
 SELECT count(*) FROM inquiry_tbl;
 
--- 1:1문의 검색기능.
+-- LSE 관리자-1:1문의-검색기능 paging
 SELECT *  
 		FROM (SELECT ROWNUM,  
 	             m.*,  
@@ -35,7 +35,7 @@ SELECT *
 	      )  
 	WHERE page = 1;
 	
--- 1:1문의 검색 후 Paging
+-- LSE 관리자-1:1문의-검색기능 paging records 수량 계산
 SELECT count(*) FROM (
 	SELECT *
 		FROM inquiry_tbl
@@ -44,14 +44,7 @@ SELECT count(*) FROM (
     )
      WHERE user_name LIKE '%남궁%';
      
--- 주문번호에 포함되는 모든 제품명을 뽑는 쿼리.
-SELECT product_name FROM PRODUCT_TBL
-WHERE product_index IN (
-						SELECT product_index FROM ORDER_PRODUCT_TBL 
-						WHERE order_product_index like '221007_2022039_1%'
-					  );
-
--- LSE 문의번호로 문의상세정보조회 
+-- LSE 관리자-1:1문의-문의제목-문의상세정보(문의번호로 문의상세성보 조회)
 SELECT *
 	FROM inquiry_tbl
 	JOIN user_tbl
