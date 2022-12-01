@@ -1,6 +1,4 @@
--- user_tbl paging 쿼리. 
--- user_tbl 전체 데이터 가져오기 (paging)
--- ASC는 오름차순
+-- LSE 관리자-고객관리 paging
 SELECT *  
 FROM (SELECT ROWNUM,  
              m.*,  
@@ -12,10 +10,10 @@ FROM (SELECT ROWNUM,
       )  
 WHERE page = 1;
 
--- user_tbl 전체 레코드 수
+-- LSE 관리자-고객관리 paging records 수량 계산
 SELECT count(*) FROM user_tbl;
 
--- user_tbl 검색기능.
+-- LSE 관리자-고객관리-검색기능 paging
 SELECT *  
 		FROM (SELECT ROWNUM,  
 	             m.*,  
@@ -28,5 +26,5 @@ SELECT *
 	      )  
 	WHERE page = 1;
 	
--- 상품관리 검색 후 레코드 총 갯수
+-- LSE 관리자-고객관리-검색기능 paging records 수량 계산
 SELECT count(*) FROM user_tbl WHERE user_name LIKE '%숙자%'

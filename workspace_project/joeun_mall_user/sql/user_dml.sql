@@ -1,20 +1,3 @@
--- user_tbl paging 쿼리. 
--- user_tbl 전체 데이터 가져오기 (paging)
--- ASC는 오름차순
-SELECT *  
-FROM (SELECT ROWNUM,  
-             m.*,  
-             FLOOR((ROWNUM - 1) / 8 + 1) page  
-      FROM (
-             SELECT * FROM user_tbl  
-             ORDER BY user_index DESC
-           ) m  
-      )  
-WHERE page = 1;
-
--- user_tbl 전체 레코드 수
-SELECT count(*) FROM user_tbl;
-
 -- 개별 회원정보 조회 
 SELECT * FROM user_tbl
 WHERE user_id = '2022001abc123';
@@ -38,4 +21,20 @@ INSERT INTO user_tbl (user_index,user_id,user_name,user_pw,user_date,user_mail,u
  user_address='서울 강남구 역삼동',
  user_address_detail='더조은 '
  WHERE user_id = '2022001abc123';
- 
+
+-- -- 마이페이지-주문내역(MyOrder)
+-- LSE 사용자-마이페이지-주문내역 Paging(user_index로 주문 조회)
+SELECT * FROM order_tbl
+WHERE user_index LIKE '2022001';
+
+-- LSE 사용자-마이페이지-주문내역 Paging records records 수량 계산(user_index로 주문 조회)
+SELECT count(*) FROM order_tbl
+WHERE user_index LIKE  '2022001';
+
+-- LSE 사용자-마이페이지-주문내역-상품명 (모든 상품명 조회 ('파란색티셔츠 외 N개' 형식으로 출력용))
+SELECT product_name FROM PRODUCT_TBL
+	WHERE product_index IN 
+		(
+		SELECT product_index FROM ORDER_PRODUCT_TBL 
+		WHERE order_product_index like '221007_2022039_1%'
+	    );

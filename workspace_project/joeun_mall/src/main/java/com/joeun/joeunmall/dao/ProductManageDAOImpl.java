@@ -85,7 +85,4 @@ public class ProductManageDAOImpl implements ProductManageDAO{
 		log.info("selectProductsCountByCategory");
 		return sqlSession.selectOne(MAPPER_NS + "selectProductsCountByCategory", productCategoryIndex);
 	}
-
-
-
 }

@@ -35,14 +35,12 @@ public class InquiryManageServiceImpl implements InquiryManageService {
 		return InquiryManageDAO.getAllInquiryRecordNum();
 	}
 	
-	//고객명 '만' 검색
 	@Transactional(readOnly=true, rollbackFor=Exception.class)
 	@Override
 	public List<InquiryVO> getInquirySearchByPage(int currentPage, int recordsperPage, String searchWord) {
 		return InquiryManageDAO.getInquirySearchByPage(currentPage, recordsperPage, searchWord);
 	}
 	
-	//검색된 레코드 수 전체 계산. 
 	@Transactional(readOnly=true, rollbackFor=Exception.class)
 	@Override
 	public int getAllInquiryRecordNumSearch(String searchWord) {

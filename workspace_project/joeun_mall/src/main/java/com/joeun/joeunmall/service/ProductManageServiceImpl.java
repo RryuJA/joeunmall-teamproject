@@ -14,10 +14,9 @@ import com.joeun.joeunmall.vo.ProductVO;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author TJ
+ * @author LSE
  *
  */
-
 @Service
 @Slf4j
 public class ProductManageServiceImpl implements ProductManageService {
@@ -78,5 +77,4 @@ public class ProductManageServiceImpl implements ProductManageService {
 		log.info("selectProductsCountByCategory");
 		return productManageDAO.selectProductsCountByCategory(productCategoryIndex);
 	}
-			
 }
