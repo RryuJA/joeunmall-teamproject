@@ -42,12 +42,12 @@
         <header>
             <a href="user-productlistCarousel.do"><img id="logo" src="<c:url value='/images/logo/logo_transparent.png' />" alt="JoEunMall"></a>
             <ul id="header">
-                <li><a href="#">전상품</a></li>
-                <li><a href="#">티셔츠</a></li>
-                <li><a href="#">팬츠/스커트</a></li>
-                <li><a href="#">원피스</a></li>
-                <li><a href="#">니트/가디건</a></li>
-                <li><a href="#">자켓</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarousel.do?currentPage=1'/>">전상품</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=01'/>">티셔츠</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=02'/>">팬츠/스커트</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=03'/>">원피스</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=04'/>">니트/가디건</a></li>
+                <li><a href="<c:url value='/user/user-productlistCarouselCategory.do?currentPage=1&productCategoryIndex=05'/>">자켓</a></li>
             </ul>
             
             <!-- 로그인 상태 -->
@@ -103,59 +103,58 @@
                             <th class="width3">문의제목</th>
                             <th class="width1">처리현황</th>
                         </tr>
+					<c:forEach var="InquiryVO" items="${userMypageInquiryList}" varStatus="st" >
                         <tr>
-                            <td>220910010</td>
-                            <td>2022.09.10</td>
-                            <td>상품</td>
-                            <td>상품 비침 문의</td>
-                            <td><button class="bg-red">문의접수</button></td>
-                        </tr>
-                        <tr>
-                            <td>220908003</td>
-                            <td>2022.09.08</td>
-                            <td>교환/환불</td>
-                            <td>사이즈가 안맞아서 교환하고 싶어요</td>
-                            <td><button class="bg-red">문의접수</button></td>
-                        </tr>
-                        <tr>
-                            <td>220817018</td>
-                            <td>2022.08.17</td>
-                            <td>교환/환불</td>
-                            <td>사이즈가 안맞아서 교환하고 싶어요</td>
-                            <td><button class="bg-blue">답변완료</button></td>
-                        </tr>
-                        <tr>
-                            <td>220515005</td>
-                            <td>2022.05.15</td>
-                            <td>상품</td>
-                            <td>상품 재질 문의</td>
-                            <td><button class="bg-blue">답변완료</button></td>
-                        </tr>
-                        <tr>
-                            <td>220308023</td>
-                            <td>2022.03.08</td>
-                            <td>상품</td>
-                            <td>상품 비침 문의</td>
-                            <td><button class="bg-blue">답변완료</button></td>
-                        </tr>
+                            <td>${InquiryVO.inquiryIndex}</td>
+                            <td>${InquiryVO.inquiryDate}</td>
+                            <td>${InquiryVO.inquiryCategory}</td>                            
+                            <td>${InquiryVO.inquiryTitle}</td>     
+ 	                        <td>
+	                        	<c:if test="${InquiryVO.inquiryState == '문의접수'}">
+	                        		<button class="bg-red">${InquiryVO.inquiryState}</button>
+	                        	</c:if>
+	                        	<c:if test="${InquiryVO.inquiryState != '문의접수'}">
+	                        		<button class="bg-blue">${InquiryVO.inquiryState}</button>
+	                        	</c:if>
+	                        </td>
+						</tr>
+                    </c:forEach>
                     </table>
                 </article>
 
-                <!--페이지 이동 버튼-->
-                <article>
-                    <div class="page-wrap">
-                        <div class="page-nation">
-                            <a class="arrow pprev" href="#"></a>
-                            <a class="arrow prev" href="#"></a>
-                            <a href="#" class="active">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
-                            <a class="arrow next" href="#"></a>
-                            <a class="arrow nnext" href="#"></a>
-                        </div>
-                    </div>
+			<!-- 기본 페이징 -->
+			<article>
+				<div>
+				<c:set var="pageNum" value="${pageMaker.startPage < pageMaker.pageDTO.maxPage ? pageMaker.startPage : pageMaker.pageDTO.maxPage}" />
+<%-- 인자확인용	${pageMaker.pageDTO}, ${pageMaker}, ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}<br>
+				${pageNum}, ${pageNum +1}, ${pageNum +2}, ${pageNum +3}, ${pageNum +4} --%>
+				</div>
+		            <div class="page-wrap">
+		                <div class="page-nation">
+		                    <a class="arrow pprev" href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=1"></a>
+		                    <a class="arrow prev" href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=
+		                    ${pageMaker.pageDTO.currentPage-1 < 1 ? '1' : pageMaker.pageDTO.currentPage-1}"></a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=${pageNum}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage ? "class='active'" : ""}>${pageMaker.startPage}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=${pageNum+1}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+1 ? "class='active'" : ""}>${pageMaker.startPage +1}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=${pageNum+2}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+2 ? "class='active'" : ""}>${pageMaker.startPage +2}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=${pageNum+3}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+3 ? "class='active'" : ""}>${pageMaker.startPage +3}</a>
+		                    
+		                    <a href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=${pageNum+4}"
+		                    ${pageMaker.pageDTO.currentPage == pageMaker.startPage+4 ? "class='active'" : ""}>${pageMaker.startPage +4}</a>
+		                    
+		                    <a class="arrow next" href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=${pageMaker.pageDTO.currentPage+1 < pageMaker.pageDTO.maxPage ? pageMaker.pageDTO.currentPage + 1 : pageMaker.pageDTO.maxPage}"></a>
+		                    <a class="arrow nnext" href="<%=request.getContextPath()%>/user/user-mypageInquiry.do?currentPage=${pageMaker.pageDTO.maxPage}"></a>
+		                </div>
+		            </div>
+		        <!-- //기본 페이징 -->
                 </article>
             </section>
         </div>

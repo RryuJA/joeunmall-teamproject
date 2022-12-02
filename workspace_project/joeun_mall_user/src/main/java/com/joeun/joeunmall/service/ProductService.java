@@ -2,6 +2,8 @@ package com.joeun.joeunmall.service;
 
 import java.util.List;
 
+import com.joeun.joeunmall.vo.ProductImageVO;
+import com.joeun.joeunmall.vo.ProductOptionVO;
 import com.joeun.joeunmall.vo.ProductVO;
 
 public interface ProductService {
@@ -39,4 +41,29 @@ public interface ProductService {
 	 * @return 카테고리별 상품 수
 	 */
 	public int selectProductsCountByCategory(String productCategoryIndex);
+	
+	//상품상세페이지에서 사용
+	/**
+	 * 상품번호로 상품정보 조회
+	 * 
+	 * @param productIndex 상품번호
+	 * @return 상품정보VO
+	 */
+	public ProductVO selectProductInfo(String productIndex);
+	
+	/**
+	 * 상품번호로 상품이미지 조회
+	 * 
+	 * @param productIndex 상품번호
+	 * @return 상품이미지VO
+	 */
+	public List<ProductImageVO> selectProductImage(String productIndex);
+	
+	/**
+	 * 상품번호로 상품옵션 조회
+	 * 
+	 * @param productIndex 상품번호
+	 * @return 상품옵션VO
+	 */
+	public List<ProductOptionVO> selectProductOption(String productIndex);
 }

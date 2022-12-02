@@ -256,6 +256,8 @@ public class AdminProductManageController {
 		return "/admin/admin-productDetails";
 	}
 	
+	
+
 	/*
 	@PostMapping("/admin/admin-productDetails.do")
 	public String adminProductDetails(@ModelAttribute ProductDTO productDTO, String productIndex, Model model) {
