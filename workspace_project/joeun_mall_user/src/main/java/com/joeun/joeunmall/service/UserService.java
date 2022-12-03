@@ -48,7 +48,7 @@ public interface UserService {
 	public boolean deleteUser(String userId);
 	
 	/**
-	 * 마이페이지-주문관리 페이징
+	 * LSE 사용자-마이페이지-주문내역 Paging(user_index로 주문 조회)
 	 * 
 	 * @param currentPage 현재 페이지
 	 * @param recordsPerPage 페이지당 레코드수
@@ -58,14 +58,14 @@ public interface UserService {
 	public List<OrderVO> selectMypageUserIndex(int currentPage, int recordsPerPage, String userIndex);
 	
 	/**
-	 * 마이페이지-주문관리 페이징 전체 레코드 수
+	 * LSE 사용자-마이페이지-주문내역 Paging records records 수량 계산(user_index로 주문 조회)
 	 * 
 	 * @return 게시판 전체 레코드 수
 	 */
-	public int selectMypageUserIndexNum(String userIndex);
+	public int selectMypageUserIndexNum(String orderIndex);
 	
 	/**
-	 * 마이페이지 주문내역에 포함되는 모든 상품명 조회 ('파란색티셔츠 외 N개' 형식으로 출력용)
+	 * LSE 사용자-마이페이지-주문내역-상품명 (모든 상품명 조회 ('파란색티셔츠 외 N개' 형식으로 출력용)
 	 * 
 	 * @param orderIndex
 	 * @return 주문번호에 포함되는 모든 상품명

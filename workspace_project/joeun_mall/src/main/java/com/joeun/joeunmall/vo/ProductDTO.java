@@ -36,11 +36,11 @@ public class ProductDTO {
 	private MultipartFile uploadFiles5;
 	
 	/** 상품 이미지들 삭제 여부 */
-	private String uploadImageDeleteYn1;
-	private String uploadImageDeleteYn2;
-	private String uploadImageDeleteYn3;
-	private String uploadImageDeleteYn4;
-	private String uploadImageDeleteYn5;
+	private String uploadImageDeleteYn1 = "N";
+	private String uploadImageDeleteYn2 = "N";
+	private String uploadImageDeleteYn3 = "N";
+	private String uploadImageDeleteYn4 = "N";
+	private String uploadImageDeleteYn5 = "N";
 	
 	/** 이미지 상세정보*/
 	private String productInfo;

@@ -7,36 +7,6 @@
 		SELECT * FROM user_tbl
 		WHERE user_id = #{userId}
 	</select>
-	
-	<!-- 마이페이지 주문내역 조회 (user_index로 주문 조회) -->
-	<select id="selectMypageUserIndex" parameterType="hashmap" resultType="com.joeun.joeunmall.vo.OrderVO">
-		SELECT *  
-			FROM (SELECT ROWNUM,  
-		            m.*,  
-		            FLOOR((ROWNUM - 1) / #{recordsPerPage} + 1) page  
-		      FROM (		
-					SELECT * FROM 
-					order_tbl
-					WHERE user_index LIKE #{userIndex}
-					) m  
-		      )  
-		WHERE page = #{currentPage}
-	</select>
-	
-	<!-- 마이페이지 주문내역 조회 (user_index로 주문 조회) -->
-	<select id="selectMypageUserIndexNum" parameterType="String" resultType="int">
-		SELECT count(*) FROM order_tbl
-		WHERE user_index LIKE  #{userIndex}
-	</select>
-	
-	<!-- 마이페이지 주문내역에 포함되는 모든 상품명 조회 ('파란색티셔츠 외 N개' 형식으로 출력용) -->
-		<select id="getOrderProductsName" parameterType="String" resultType="String">
-		SELECT product_name FROM PRODUCT_TBL
-		WHERE product_index IN (
-								SELECT product_index FROM ORDER_PRODUCT_TBL 
-								WHERE order_product_index like '${orderIndex}%'
-							   )
-		</select>
 			
 	<!-- 최근 고객 번호 조회 -->
 	<select id="selectMaxUserIndex" resultType="String">
@@ -76,7 +46,35 @@
 			DELETE USER_TBL WHERE USER_ID = #{userId};
         end
     }
-	
 	</delete>
+		
+	<!-- LSE 사용자-마이페이지-주문내역 Paging(user_index로 주문 조회) -->
+	<select id="selectMypageUserIndex" parameterType="hashmap" resultType="com.joeun.joeunmall.vo.OrderVO">
+		SELECT *  
+			FROM (SELECT ROWNUM,  
+		            m.*,  
+		            FLOOR((ROWNUM - 1) / #{recordsPerPage} + 1) page  
+		      FROM (		
+					SELECT * FROM order_tbl
+					WHERE user_index LIKE #{userIndex}
+					) m  
+		      )  
+		WHERE page = #{currentPage}
+	</select>
 	
+	<!-- LSE 사용자-마이페이지-주문내역 Paging records records 수량 계산(user_index로 주문 조회) -->
+	<select id="selectMypageUserIndexNum" parameterType="String" resultType="int">
+		SELECT count(*) FROM order_tbl
+		WHERE user_index LIKE  #{userIndex}
+	</select>
+	
+	<!-- LSE 사용자-마이페이지-주문내역-상품명 (모든 상품명 조회 ('파란색티셔츠 외 N개' 형식으로 출력용)) -->
+	<select id="getOrderProductsName" parameterType="String" resultType="String">
+	SELECT product_name FROM PRODUCT_TBL
+		WHERE product_index IN 
+			(
+			SELECT product_index FROM ORDER_PRODUCT_TBL 
+			WHERE order_product_index like '${orderIndex}%'
+		    )
+	</select>
 </mapper>

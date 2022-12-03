@@ -286,10 +286,10 @@ productImageList.크기:${productImageList.size()}
                                 <c:forEach items="${productOptionList}" var="productOptionVO" varStatus="st">
                                 <div id="color_upload_box${st.count}">
                                 <!-- T8_1 >> productOption -->
-                                    <div>
+                                    <div style="float:left; height: 50px;  padding:0;">
                                         <input type="text" required name="productOption${st.count}" id="color_text${st.count}" placeholder="옵션을 입력하세요." size="20" value="${productOptionVO.productOptionValue}">
                                     </div>
-                                    <div>
+                                    <div style="padding-left:5px">
                                         <img id="color_image_btn${st.count}" src="<c:url value ='/images/icon/icon_minus.png' />">
                                     </div>
                                 </div>
