@@ -36,10 +36,39 @@ public class ProductRegistrationDAOImpl implements ProductRegistrationDAO {
 		log.info("insertProductImages");
 		sqlSession.insert(NS_NAME + "insertProductImages", productImageVO);
 	}
+	
 
 	@Override
 	public String selectMaxProductImageIndex(String productIndex) {
 		log.info("selectMaxProductImageIndex");
 		return sqlSession.selectOne(NS_NAME + "selectMaxProductImageIndex", productIndex);
 	}
+
+	@Override
+	public void updateProduct(ProductDTO productDTO) {
+		log.info("updateProduct");
+		sqlSession.update(NS_NAME + "updateProduct", productDTO);
+		
+	}
+
+	@Override
+	public void updateProductImages(ProductImageVO productImageVO) {
+		log.info("updateProductImages");
+		sqlSession.update(NS_NAME + "updateProductImages", productImageVO);
+		
+	}
+
+	@Override
+	public ProductImageVO selectProductImageByImageIndex(String productImageIndex) {
+		log.info("selectProductImageByImageIndex");
+		return sqlSession.selectOne(NS_NAME + "selectProductImageByImageIndex", productImageIndex);
+	}
+
+	@Override
+	public void deleteProductImages(String productImageIndex) {
+		log.info("deleteProductImages");
+		sqlSession.delete(NS_NAME + "deleteProductImages", productImageIndex);
+	}
+	
+
 }

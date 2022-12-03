@@ -109,4 +109,90 @@ public class ProductRegistrationServiceImpl implements ProductRegistrationServic
 		return catePath;
 	}
 
+	@Transactional
+	@Override
+	public boolean updateProduct(ProductDTO productDTO) {
+		log.info("updateProduct");
+		
+		boolean result = false;
+		TransactionStatus txStatus =
+		        transactionManager.getTransaction(new DefaultTransactionDefinition());
+	    try {
+	    	productDAO.updateProduct(productDTO);;
+	    } catch (Exception e) {
+	    	log.error("상품 수정 오류 발생");
+	    	result = false;
+	    	transactionManager.rollback(txStatus); //수정 취소 
+	    	throw e;
+	    }
+	    transactionManager.commit(txStatus); //수정 승인
+	    result = true;
+	    
+		return result;
+	}
+
+	@Transactional
+	@Override
+	public boolean updateProductImages(ProductImageVO productImageVO) {
+		log.info("updateProductImages");
+		boolean result = false;
+		
+		result = transactionTemplate.execute(new TransactionCallback<Boolean>() {
+			
+			@Override
+			public Boolean doInTransaction(TransactionStatus status) {
+				boolean result = false;
+				
+				try {
+					productDAO.updateProductImages(productImageVO);
+					result = true;
+				} catch (Exception e) {
+					log.error("상품 이미지 수정 오류 발생");
+					result = false;
+					status.setRollbackOnly();
+				}
+				
+				return result;
+			}
+		});
+		log.info("result=" + result);
+		
+		return result;
+	}
+
+	@Transactional(readOnly = true, rollbackFor = Exception.class)
+	@Override
+	public ProductImageVO selectProductImageByImageIndex(String productImageIndex) {
+		log.info("selectProductImageByImageIndex");
+		return productDAO.selectProductImageByImageIndex(productImageIndex);
+	}
+
+	@Override
+	public boolean deleteProductImages(String productImageIndex) {
+		log.info("deleteProductImages");
+		boolean result = false;
+		
+		result = transactionTemplate.execute(new TransactionCallback<Boolean>() {
+			
+			@Override
+			public Boolean doInTransaction(TransactionStatus status) {
+				boolean result = false;
+				
+				try {
+					productDAO.deleteProductImages(productImageIndex);
+					result = true;
+				} catch (Exception e) {
+					log.error("상품 이미지 삭제 오류 발생");
+					result = false;
+					status.setRollbackOnly();
+				}
+				
+				return result;
+			}
+		});
+		log.info("result=" + result);
+		
+		return result;
+	}
+
 }

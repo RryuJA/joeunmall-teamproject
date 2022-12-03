@@ -84,7 +84,8 @@
 		
 	<!-- GSC 상품 등록  -->
 	<insert id="insertProduct" parameterType="com.joeun.joeunmall.vo.ProductDTO">
-		INSERT INTO PRODUCT_TBL VALUES(#{productIndex},#{productCategoryIndex},#{productStateInfo},#{productName},#{productPrice},#{updateFile1Filename},sysdate,#{productInfo})
+		INSERT INTO PRODUCT_TBL VALUES(#{productIndex},#{productCategoryIndex},
+				#{productStateInfo},#{productName},#{productPrice},#{updateFile1Filename},sysdate,#{productInfo})
 	</insert>
 	
 	<!-- GSC 상품 이미지 등록 -->
@@ -92,10 +93,40 @@
 		INSERT INTO PRODUCT_IMAGE_TBL VALUES(#{productImageIndex},#{productIndex},#{productDetailImage})
 	</insert>	
 	
+	<!-- GSC 상품 수정 -->
+	<update id="updateProduct" parameterType="com.joeun.joeunmall.vo.ProductDTO">
+		UPDATE product_tbl SET
+		product_name = #{productName},
+		product_price = #{productPrice},
+		product_image =#{updateFile1Filename},
+		product_date = sysdate,
+		product_info = #{productInfo}
+		WHERE product_index = #{productIndex}
+	</update>
+	
+	<!-- GSC 상품 이미지 수정 -->
+	<update id="updateProductImages" parameterType="com.joeun.joeunmall.vo.ProductImageVO">
+		UPDATE product_image_tbl SET
+		product_index = #{productIndex},
+		product_detail_image = #{productDetailImage}
+		WHERE product_image_index = #{productImageIndex}
+	</update>
+	
 	<!-- GSC 상품 이미지 마지막 번호 조회 -->
 	<select id="selectMaxProductImageIndex" parameterType="String" resultType="String">
 		SELECT MAX(PRODUCT_IMAGE_INDEX) FROM PRODUCT_IMAGE_TBL
 		WHERE PRODUCT_INDEX = #{productIndex}
+	</select>
+	
+	<!-- GSC 상품 이미지 삭제 -->
+	<delete id="deleteProductImages" parameterType="String">
+		DELETE product_image_tbl 
+		WHERE product_image_index = #{productImageIndex}
+	</delete>
+	
+	<!-- GSC 이미지번호로 상품이미지 조회 -->
+	<select id="selectProductImageByImageIndex" parameterType="String" resultType="com.joeun.joeunmall.vo.ProductImageVO">
+		SELECT * FROM product_image_tbl WHERE product_image_index = #{productImageIndex}
 	</select>
 	
 	<!-- RJA 상품번호로 상품정보 조회 -->

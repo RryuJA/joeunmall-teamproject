@@ -35,6 +35,13 @@ public class ProductDTO {
 	private MultipartFile uploadFiles4;
 	private MultipartFile uploadFiles5;
 	
+	/** 상품 이미지들 삭제 여부 */
+	private String uploadImageDeleteYn1 = "N";
+	private String uploadImageDeleteYn2 = "N";
+	private String uploadImageDeleteYn3 = "N";
+	private String uploadImageDeleteYn4 = "N";
+	private String uploadImageDeleteYn5 = "N";
+	
 	/** 이미지 상세정보*/
 	private String productInfo;
 	
@@ -44,4 +51,40 @@ public class ProductDTO {
 	private String productOption3;
 	private String productOption4;
 	private String productOption5;
+	@Override
+	public String toString() {
+		return "ProductDTO [productName=" + productName + ", productIndex=" + productIndex + ", productCategoryIndex="
+				+ productCategoryIndex + ", productStateInfo=" + productStateInfo + ", productPrice=" + productPrice
+				+ ", uploadFile1=" + (uploadFile1==null || uploadFile1.isEmpty() ? "파일없음":uploadFile1.getOriginalFilename()) + ","
+				+ " updateFile1Filename=" + updateFile1Filename + ","
+				+ " uploadFiles1=" + (uploadFiles1==null || uploadFiles1.isEmpty() ? "파일없음":uploadFiles1.getOriginalFilename()) + ","
+				+ " uploadFiles2=" + (uploadFiles2==null || uploadFiles2.isEmpty() ? "파일없음":uploadFiles2.getOriginalFilename()) + ","
+				+ " uploadFiles3=" + (uploadFiles3==null || uploadFiles3.isEmpty() ? "파일없음":uploadFiles3.getOriginalFilename()) + ","
+				+ " uploadFiles4=" + (uploadFiles4==null || uploadFiles4.isEmpty() ? "파일없음":uploadFiles4.getOriginalFilename()) + ","
+				+ " uploadFiles5=" + (uploadFiles5==null || uploadFiles5.isEmpty() ? "파일없음":uploadFiles5.getOriginalFilename()) + "," 
+				+ ", uploadImageDeleteYn1=" + uploadImageDeleteYn1
+				+ ", uploadImageDeleteYn2=" + uploadImageDeleteYn2 + ", uploadImageDeleteYn3=" + uploadImageDeleteYn3
+				+ ", uploadImageDeleteYn4=" + uploadImageDeleteYn4 + ", uploadImageDeleteYn5=" + uploadImageDeleteYn5
+				+ ", productInfo=" + productInfo + ", productOption1=" + productOption1 + ", productOption2="
+				+ productOption2 + ", productOption3=" + productOption3 + ", productOption4=" + productOption4
+				+ ", productOption5=" + productOption5 + "]";
+	}
+	
+	/*@Override
+	public String toString() {
+		
+		return "ProductDTO [productName=" + productName + ", productIndex=" + productIndex + ", productCategoryIndex="
+				+ productCategoryIndex + ", productStateInfo=" + productStateInfo + ", productPrice=" + productPrice
+				+ ", uploadFile1=" + (uploadFile1==null || uploadFile1.isEmpty() ? "파일없음":uploadFile1.getOriginalFilename()) + ","
+				+ " updateFile1Filename=" + updateFile1Filename + ","
+				+ " uploadFiles1=" + (uploadFiles1==null || uploadFiles1.isEmpty() ? "파일없음":uploadFiles1.getOriginalFilename()) + ","
+				+ " uploadFiles2=" + (uploadFiles2==null || uploadFiles2.isEmpty() ? "파일없음":uploadFiles2.getOriginalFilename()) + ","
+				+ " uploadFiles3=" + (uploadFiles3==null || uploadFiles3.isEmpty() ? "파일없음":uploadFiles3.getOriginalFilename()) + ","
+				+ " uploadFiles4=" + (uploadFiles4==null || uploadFiles4.isEmpty() ? "파일없음":uploadFiles4.getOriginalFilename()) + ","
+				+ " uploadFiles5=" + (uploadFiles5==null || uploadFiles5.isEmpty() ? "파일없음":uploadFiles5.getOriginalFilename()) + ","
+						+ " productInfo=" + productInfo + ", productOption1="
+				+ productOption1 + ", productOption2=" + productOption2 + ", productOption3=" + productOption3
+				+ ", productOption4=" + productOption4 + ", productOption5=" + productOption5 + "]";
+	}*/
+	
 }

@@ -72,7 +72,7 @@
                     <th class="table-col1">상품번호</th>
                     <td class="table-col3">
                     	<input type="text" required name="productIndex" id="productIndex" 
-                    		pattern="\d{2}_\d{2}_\d{3}"	title="먼저 카테고리를 선택해주세요." placeholder="카테고리를 선택해주세요." size="35" >
+                    		pattern="\d{2}_\d{2}_\d{3}"	title="먼저 카테고리를 선택해주세요." placeholder="카테고리를 선택해주세요." size="35" readonly >
                    	</td>
                 </tr>
                 <tr>
@@ -88,8 +88,8 @@
                     </td>
                     <th>판매상태</th>
                     <td>
-                        <label><input type="radio" name="productStateInfo" value="1" checked>판매중</label>
-                        <label><input type="radio" name="productStateInfo" value="0">판매종료</label>
+                        <label><input type="radio" name="productStateInfo" value="0" checked>판매중</label>
+                        <label><input type="radio" name="productStateInfo" value="1">판매종료</label>
                     </td>
                 </tr>
                 <tr>

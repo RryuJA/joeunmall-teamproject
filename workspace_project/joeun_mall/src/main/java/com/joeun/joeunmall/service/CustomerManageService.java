@@ -6,7 +6,8 @@ import com.joeun.joeunmall.vo.UserVO;
 
 public interface CustomerManageService {
 	/**
-	 * LSE 관리자-고객관리 paging  <br>
+	 * @author LSE
+	 * user_tbl 전체 데이터 가져오기  <br>
 	 * ex)한 페이지 당 8레코드<br>
 	 * 
 	 * @param currentPage 현재 페이지
@@ -16,15 +17,13 @@ public interface CustomerManageService {
 	public List<UserVO> getAllUserByPaging(int currentPage, int recordsPerPage);
 	
 	/**
-	 * LSE 관리자-고객관리 paging records 수량 계산
+	 * 게시판 전체 레코드 수
 	 * 
 	 * @return 게시판 전체 레코드 수
 	 */
 	public int getAllUserRecordNum();
 	
 	/**
-	 * LSE 관리자-고객관리-검색기능 paging
-	 * 
 	 * @param currentPage
 	 * @param recordsPerPage
 	 * @param searchWord
@@ -33,7 +32,7 @@ public interface CustomerManageService {
 	public List<UserVO> getSearchByPage(int currentPage, int recordsPerPage, String searchWord);
 	
 	/**
-	 * LSE 관리자-고객관리-검색기능 paging records 수량 계산
+	 * 검색 결과의 전체 레코드 수
 	 * 
 	 * @param searchWord 검색어
 	 * @return 검색 결과의 전체 레코드 수
