@@ -15,6 +15,9 @@ public class ProductVO {
 	/** 카테고리번호 */
 	private String productCategoryIndex;
 	
+	/** 상품썸네일 */
+	private String productThumbnail;
+	
 	/** 상품명 */
 	private String productName;
 	
@@ -41,78 +44,126 @@ public class ProductVO {
 		return productIndex;
 	}
 
+
+
 	public void setProductIndex(String productIndex) {
 		this.productIndex = productIndex;
 	}
+
+
 
 	public String getProductCategoryIndex() {
 		return productCategoryIndex;
 	}
 
+
+
 	public void setProductCategoryIndex(String productCategoryIndex) {
 		this.productCategoryIndex = productCategoryIndex;
 	}
+
+
+
+	public String getProductThumbnail() {
+		return productThumbnail;
+	}
+
+
+
+	public void setProductThumbnail(String productThumbnail) {
+		this.productThumbnail = productThumbnail;
+	}
+
+
 
 	public String getProductName() {
 		return productName;
 	}
 
+
+
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
+
+
 
 	public String getProductStateIndex() {
 		return productStateIndex;
 	}
 
+
+
 	public void setProductStateIndex(String productStateIndex) {
 		this.productStateIndex = productStateIndex;
 	}
+
+
 
 	public String getProductImage() {
 		return productImage;
 	}
 
+
+
 	public void setProductImage(String productImage) {
 		this.productImage = productImage;
 	}
+
+
 
 	public int getProductPrice() {
 		return productPrice;
 	}
 
+
+
 	public void setProductPrice(int productPrice) {
 		this.productPrice = productPrice;
 	}
+
+
 
 	public Date getProductDate() {
 		return productDate;
 	}
 
+
+
 	public void setProductDate(Date productDate) {
 		this.productDate = productDate;
 	}
+
+
 
 	public String getProductInfo() {
 		return productInfo;
 	}
 
+
+
 	public void setProductInfo(String productInfo) {
 		this.productInfo = productInfo;
 	}
+
+
 
 	public String getProductOptionValue() {
 		return productOptionValue;
 	}
 
+
+
 	public void setProductOptionValue(String productOptionValue) {
 		this.productOptionValue = productOptionValue;
 	}
 
+
+
 	@Override
 	public String toString() {
 		return "ProductVO [productIndex=" + productIndex + ", productCategoryIndex=" + productCategoryIndex
-				+ ", productName=" + productName + ", productStateIndex="
+				+ ", productThumbnail=" + productThumbnail + ", productName=" + productName + ", productStateIndex="
 				+ productStateIndex + ", productImage=" + productImage + ", productPrice=" + productPrice
 				+ ", productDate=" + productDate + ", productInfo=" + productInfo + ", productOptionValue="
 				+ productOptionValue + "]";

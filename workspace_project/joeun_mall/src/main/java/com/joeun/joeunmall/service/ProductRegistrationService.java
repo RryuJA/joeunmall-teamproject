@@ -29,6 +29,24 @@ public interface ProductRegistrationService {
 	 */
 	public boolean insertProductImages(ProductImageVO productImageVO);
 	
+	/** 
+	 * 상품 수정
+	 * 
+	 * @param productDTO 상품 정보 객체
+	 * @return 등록 성공 여부 
+	 */
+	public boolean updateProduct(ProductDTO productDTO);
+	
+	/**
+	 * 상품 이미지 수정 
+	 * 
+	 * @param productImageVO 상품 정보 이미지 객체 
+	 * @return 등록 성공 여부 
+	 */
+	public boolean updateProductImages(ProductImageVO productImageVO);
+	
+	
+	
 	/**
 	 * 상품 이미지 마지막 번호 조회
 	 * 
@@ -44,4 +62,20 @@ public interface ProductRegistrationService {
 	 * @return 카테고리 저장 경로 ex) 01_tshirt
 	 */
 	public String getCatePath(String cateNum);
+	
+	/**
+	 * 상품 이미지 정보 조회
+	 * 
+	 * @param productImageIndex 상품 이미지 번호
+	 * @return 상품 이미지
+	 */
+	public ProductImageVO selectProductImageByImageIndex(String productImageIndex);
+	
+	/**
+	 * 상품 이미지 삭제
+	 * 
+	 * @param productImageIndex 상품 이미지 번호
+	 * @return 삭제 여부
+	 */
+	public boolean deleteProductImages(String productImageIndex);
 }

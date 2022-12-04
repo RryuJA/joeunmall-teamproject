@@ -14,8 +14,35 @@
     <title>JoEun-admin 상품상세</title>
 
     <!--javascript-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="<c:url value = '/js/admin-productregist.js' />" charset="UTF-8"></script>   
+    <script src="<c:url value='/jquery/jquery.min.js' />"></script>
+    
+    <!-- 상품 상세보기  -->
+ 	<script src="<c:url value = '/js/admin-productdetail.js' />" charset="UTF-8"></script> 
+    
+    <!-- 커스텀 파일 필드  -->
+    <script>
+    	$(function(){
+   				
+   			  $('#image_upload_td').on('change','.upload-hidden', function(e){ // 값이 변경되면
+   				
+   					if(window.FileReader){ // modern browser 
+
+   						var filename = $(this)[0].files[0].name; 
+
+   					} else { // old IE(예전 IE)
+
+   						var filename = $(this).val()
+   											  .split('/')
+   											  .pop()
+   											  .split('\\')
+   											  .pop(); // 파일명만 추출 
+   					} // 추출한 파일명 삽입 
+   					
+   					$(this).siblings('.upload-name').val(filename); 
+					
+   			   });  // 값이 변경되면(끝)
+    		}); 
+    </script>
 
     <!--css-->
 
@@ -27,8 +54,67 @@
     <link rel="stylesheet" type="text/css" href="<c:url value ='/css/admin-registration.css' />">
     <link rel="stylesheet" type="text/css" href="<c:url value ='/css/admin-section-details.css' />">
 
+	<!-- 커스텀 파일 필드 -->
+	<style>
+	.filebox{
+		width: 400px;
+	}
+	
+	.filebox input[type="file"] 
+	{ 
+		position: absolute; 
+		width: 1px; 
+		height: 1px; 
+		padding: 0; 
+		margin: -1px; 
+		overflow: hidden; 
+		clip:rect(0,0,0,0); 
+		border: 0; 
+	} 
+
+	.filebox label 
+	{ 
+		display: inline-block; 
+		padding: .5em .5em; 
+		color: #000; 
+		font-size: inherit; 
+		line-height: normal; 
+		vertical-align: middle; 
+		background-color: #fff; 
+		cursor: pointer; 
+		border: 1px solid #646464; 
+		border-bottom-color: #646464; 
+		border-radius: .25em; 
+	} 
+
+	/* named upload */ 
+	.filebox .upload-name 
+	{ 
+		display: inline-block; 
+		padding: .5em .75em; /* label의 패딩값과 일치 */ 
+		font-size: inherit; 
+		font-family: inherit; 
+		line-height: normal; 
+		vertical-align: middle; 
+		background-color: #fff; 
+		border: 1px solid #646464; 
+		border-bottom-color: #646464; 
+		border-radius: .25em; 
+		width: 250px; 
+
+		/* 네이티브 외형(원래 모양) 감추기 */		
+		appearance: none; 
+	}
+
+  </style>
 </head>
 <body>
+<%-- <div>
+productVO:${productVO}<br><hr>
+productImageList:${productImageList}<br><hr>
+productOptionList:${productOptionList}<br><hr>
+productImageList.크기:${productImageList.size()}
+</div> --%>
     <div id="wrap">
         <!--관리자 페이지 header 생략-->
         <nav>
@@ -53,7 +139,7 @@
         </nav>
         
         <!--admin-nav.css 끝-->
-        <form id="regist_form" method="post" action="<c:url value='/admin/admin-productDetails.do' />" enctype="multipart/form-data">
+        <form id="update_form" method="post" action="<c:url value='/admin/admin-productUpdate.do' />" enctype="multipart/form-data">
         <section id="regist-section">
             <table id="productRegistration">
                 <tr>
@@ -71,17 +157,17 @@
                     <th>카테고리</th>
                     <td>
                         <select name="productCategoryIndex" id="category">
-                            <option value="01">티셔츠</option>
-                            <option value="02">팬츠/스커트</option>
-                            <option value="03">원피스</option>
-                            <option value="04">니트/가디건</option>
-                            <option value="05">자켓</option>
+                            <option value="01" ${productVO.productCategoryIndex == '01' ? "selected" : ""}>티셔츠</option>
+                            <option value="02" ${productVO.productCategoryIndex == '02' ? "selected" : ""}>팬츠/스커트</option>
+                            <option value="03" ${productVO.productCategoryIndex == '03' ? "selected" : ""}>원피스</option>
+                            <option value="04" ${productVO.productCategoryIndex == '04' ? "selected" : ""}>니트/가디건</option>
+                            <option value="05" ${productVO.productCategoryIndex == '05' ? "selected" : ""}>자켓</option>
                         </select>
                     </td>
                     <th>판매상태</th>
                     <td>
-                        <label><input type="radio" name="productStateInfo" value="1" checked>판매중</label>
-                        <label><input type="radio" name="productStateInfo" value="0">판매종료</label>
+                        <label><input type="radio" name="productStateInfo" value="0" ${productVO.productStateIndex == '0' ? "checked" : ""}>판매중</label>
+                        <label><input type="radio" name="productStateInfo" value="1" ${productVO.productStateIndex == '1' ? "checked" : ""}>판매종료</label>
                     </td>
                 </tr>
                 <tr>
@@ -93,30 +179,89 @@
                     <td colspan="3">
                         <div name="uploadFile1" id="left_push">
                             <script src="<c:url value= '/js/admin-representative.js' />"></script>
-                            <img id="main_image" src="<c:url value='/images/icon/icon_preloader.png' />" width="100" height="100">
+                            <!-- 상품 이미지가 존재할때  -->
+                            <c:if test ="${not empty productVO.productImage}">
+                            	<img id="main_image" src="<c:url value='/thumbnail/${productVO.productImage}' />" width="100" height="100" style="margin: 10px 0 5px 5px">
+                            </c:if>
+                            <!-- 상품 이미지가 존재X  -->
+                            <c:if  test ="${empty productVO.productImage}">
+                            <img id="main_image" src="<c:url value='/images/icon/icon_preloader.png' />" width="100" height="100">	
+                            </c:if>
+                            
                         </div> 
                         <div id="imageupload_pnl">
-                        <!-- T4 >> uploadFile1 -->
-                            <input type="file" onchange="readURL(this);";" required name="uploadFile1" id="uploadFile1" placeholder="이미지 파일을 첨부하세요." size="20">
+                        	<!-- T4 >> uploadFile1 -->
+                            <!-- <input type="file" onchange="readURL(this);";" required name="uploadFile1" id="uploadFile1" placeholder="이미지 파일을 첨부하세요." size="20"> -->
+                         	<div class="filebox">
+                                    <div style="float: left"> 
+									<input class="upload-name" value="${productVO.productImage}" disabled> 
+									<label for="uploadFile1">선택</label> 
+									<input type="file" name="uploadFile1" id="uploadFile1" class="upload-hidden"> 
+								 </div>
+						    </div>
                         </div>
                     </td>   
                 </tr>
                 <tr>
-                    <th>상품 이미지</th>
+                    <th id="image_title_box">상품 이미지
+                    	
+                    	<!-- 업로드 파일 삭제 여부 체크 -->
+                    	<c:forEach items="${productImageList}" var="productImage" varStatus="st" >
+		                   <div id="upload_image_delete_menu" style="float: left">
+		                        <div style="float: left">
+						  			<input type="hidden" id="upload_image_delete_yn${st.count}" name="uploadImageDeleteYn${st.count}" value="N" size="1">
+		                        </div>
+		                    </div>
+	                    </c:forEach>
+	                    
+                    </th>
                     <td id="image_upload_td" colspan="3">
                         <div id="image_upload_pnl">
-                            <div id="image_upload_btn_pnl">
-                                <a id="image_upload_btn">
+                            <div id="image_upload_btn_pnl"  style="padding-top: 5px">
+                                <a id="image_upload_btn" >
                                     <img id="goods1" src="<c:url value ='/images/icon/icon_plus.png' />">
                                 </a>
                             </div> 
                             <!-- 상품이미지 파일들 -->
                             <!-- name=T5 >> T5_1 >> uploadFiles -->
                             <div id="image_upload_boxes">
-                                <div id="image_upload_box1">
-                                    <input type="file"  name="uploadFiles1" id="upload_file1"  placeholder="이미지 파일을 첨부하세요." size="20">
-                                    <img id="upload_image_btn1" src="<c:url value ='/images/icon/icon_minus.png' />">  
+                            	
+                            <c:forEach items="${productImageList}" var="productImage" varStatus="st" >
+                            	
+                            	<div id="image_upload_box${st.count}">
+                                     <div class="filebox" style="float: left">
+	                                     <div style="float: left"> 
+											<input class="upload-name" value="${productImage.productDetailImage}" disabled> 
+											<label for="upload_file${st.count}">선택</label> 
+											<input type="file" name="uploadFiles${st.count}" id="upload_file${st.count}" class="upload-hidden"> 
+										 </div>
+										 <div style="padding-top: 5px">
+										  	<img id="upload_image_btn${st.count}" src="<c:url value ='/images/icon/icon_minus.png' />"> 
+										  </div>
+									  </div>
+									  
                                 </div>
+                                
+                                <script> 
+                                	$(function(){
+                                		var imgPnlheight=$("#image_upload_boxes").height();
+                                		console.log("imgPnlheight ="+imgPnlheight);
+                                		$("#image_upload_boxes").height(imgPnlheight+50);
+                                		imgPnlheight=$("#image_upload_boxes").height()
+                                		console.log("imgPnlheight ="+imgPnlheight);
+                                	});
+                                </script>
+                            </c:forEach>
+                            
+                                <script> /* 상품 이미지 패널 높이 조정 */
+                                	$(function(){
+                                		var imgPnlheight=$("#image_upload_boxes").height();
+                                		console.log("imgPnlheight ="+imgPnlheight);
+                                		$("#image_upload_boxes").height(imgPnlheight-50);
+                                		imgPnlheight=$("#image_upload_boxes").height()
+                                		console.log("imgPnlheight ="+imgPnlheight);
+                                	});
+                                </script>
                             </div>
                         </div>
                     </td>
@@ -136,30 +281,54 @@
                                 </a>
                             </div>
                             <!-- 색상이미지 파일들 -->
-                            <div id="color_upload_boxes" >
-                                <!-- <div id="color_upload_box0"  class="move_square"> -->
-                                <div id="color_upload_box1">
+                            <div id="color_upload_boxes">
+                                
+                                <c:forEach items="${productOptionList}" var="productOptionVO" varStatus="st">
+                                <div id="color_upload_box${st.count}">
                                 <!-- T8_1 >> productOption -->
-                                    <div>
-                                        <input type="text" required name="productOption1" id="color_text1" placeholder="옵션을 입력하세요." size="20">
+                                    <div style="float:left; height: 50px;  padding:0;">
+                                        <input type="text" required name="productOption${st.count}" id="color_text${st.count}" placeholder="옵션을 입력하세요." size="20" value="${productOptionVO.productOptionValue}">
                                     </div>
-                                    <div>
-                                        <img id="color_image_btn1" src="<c:url value ='/images/icon/icon_minus.png' />">
+                                    <div style="padding-left:5px">
+                                        <img id="color_image_btn${st.count}" src="<c:url value ='/images/icon/icon_minus.png' />">
                                     </div>
                                 </div>
+                                <script>
+                                	$(function(){
+                                		var colorPnlheight=$("#color_upload_boxes").height();
+                                		console.log("colorPnlheight ="+colorPnlheight);
+                                		$("#color_upload_boxes").height(colorPnlheight+50);
+                                		colorPnlheight=$("#color_upload_boxes").height()
+                                		console.log("colorPnlheight ="+colorPnlheight);
+                                	});
+                                </script>
+                                </c:forEach>
+                                
+                                <script> /* 상품 이미지 패널 높이 조정 */
+                                	$(function(){
+                                		var colorPnlheight=$("#color_upload_boxes").height();
+                                		console.log("colorPnlheight ="+colorPnlheight);
+                                		$("#color_upload_boxes").height(colorPnlheight-50);
+                                		colorPnlheight=$("#color_upload_boxes").height()
+                                		console.log("colorPnlheight ="+colorPnlheight);
+                                	});
+                                </script>
+                                
                             </div>   
                         </div> 
                     </td>
                 </tr>
             </table>
             
-        </section>
-        <div id="regist-btn">
-        	<input type="submit" class="submit2" value="상품삭제">
-        	<input type="submit" id="product_submit_btn" value="상품수정">
+        </section> 
+        <br>
+        <div  style="text-align:right; height: 50px;width: 100%">
+	        	<button type="button" id="product_delete_btn">상품삭제</button>&nbsp;
+	        	<button type="submit" id="product_update_btn">상품수정</button>
     	</div>
     	</form>
     </div>
     <!--관리자 페이지 footer 생략-->
+    
 </body>
 </html>

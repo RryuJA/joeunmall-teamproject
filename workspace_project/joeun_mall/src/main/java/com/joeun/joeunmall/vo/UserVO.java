@@ -31,13 +31,13 @@ public class UserVO {
 	/** 상세주소 */
 	private String userAddressDetail;
 	
-	public UserVO() {
-	
-		}
-	
-	public UserVO(String userIndex, String userId, String userName, String userPw, Date userDate, String userMail,
-			Date userBirth, String userGender, String userLandline, String userMobile, String userPost,
-			String userAddress, String userAddressDetail) {
+public UserVO() {
+
+	}
+
+public UserVO(String userIndex, String userId, String userName, String userPw, Date userDate, String userMail,
+		Date userBirth, String userGender, String userLandline, String userMobile, String userPost,
+		String userAddress, String userAddressDetail) {
 
 	this.userIndex = userIndex;
 	this.userId = userId;
@@ -54,115 +54,117 @@ public class UserVO {
 	this.userAddressDetail = userAddressDetail;
 }
 
-	public String getUserIndex() {
-		return userIndex;
-	}
-	
-	public void setUserIndex(String userIndex) {
-		this.userIndex = userIndex;
-	}
-	
-	public String getUserId() {
-		return userId;
-	}
-	
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-	
-	public String getUserName() {
-		return userName;
-	}
-	
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-	
-	public String getUserPw() {
-		return userPw;
-	}
-	
-	public void setUserPw(String userPw) {
-		this.userPw = userPw;
-	}
-	
-	public Date getUserDate() {
-		return userDate;
-	}
-	
-	public void setUserDate(Date userDate) {
-		this.userDate = userDate;
-	}
-	
-	public String getUserMail() {
-		return userMail;
-	}
-	
-	public void setUserMail(String userMail) {
-		this.userMail = userMail;
-	}
-	
-	public Date getUserBirth() {
-		return userBirth;
-	}
-	
-	public void setUserBirth(Date userBirth) {
-		this.userBirth = userBirth;
-	}
-	
-	public String getUserGender() {
-		return userGender;
-	}
-	
-	public void setUserGender(String userGender) {
-		this.userGender = userGender;
-	}
-	
-	public String getUserLandline() {
-		return userLandline;
-	}
-	
-	public void setUserLandline(String userLandline) {
-		this.userLandline = userLandline;
-	}
-	
-	public String getUserMobile() {
-		return userMobile;
-	}
-	
-	public void setUserMobile(String userMobile) {
-		this.userMobile = userMobile;
-	}
-	
-	public String getUserPost() {
-		return userPost;
-	}
-	
-	public void setUserPost(String userPost) {
-		this.userPost = userPost;
-	}
-	
-	public String getUserAddress() {
-		return userAddress;
-	}
-	
-	public void setUserAddress(String userAddress) {
-		this.userAddress = userAddress;
-	}
-	
-	public String getUserAddressDetail() {
-		return userAddressDetail;
-	}
-	
-	public void setUserAddressDetail(String userAddressDetail) {
-		this.userAddressDetail = userAddressDetail;
-	}
+public String getUserIndex() {
+	return userIndex;
+}
 
-	@Override
-	public String toString() {
-		return "UserVO [userIndex=" + userIndex + ", userId=" + userId + ", userName=" + userName + ", userPw=" + userPw
-				+ ", userDate=" + userDate + ", userMail=" + userMail + ", userBirth=" + userBirth + ", userGender="
-				+ userGender + ", userLandline=" + userLandline + ", userMobile=" + userMobile + ", userPost=" + userPost
-				+ ", userAddress=" + userAddress + ", userAddressDetail=" + userAddressDetail + "]";
-	}
+public void setUserIndex(String userIndex) {
+	this.userIndex = userIndex;
+}
+
+public String getUserId() {
+	return userId;
+}
+
+public void setUserId(String userId) {
+	this.userId = userId;
+}
+
+public String getUserName() {
+	return userName;
+}
+
+public void setUserName(String userName) {
+	this.userName = userName;
+}
+
+public String getUserPw() {
+	return userPw;
+}
+
+public void setUserPw(String userPw) {
+	this.userPw = userPw;
+}
+
+public Date getUserDate() {
+	return userDate;
+}
+
+public void setUserDate(Date userDate) {
+	this.userDate = userDate;
+}
+
+public String getUserMail() {
+	return userMail;
+}
+
+public void setUserMail(String userMail) {
+	this.userMail = userMail;
+}
+
+public Date getUserBirth() {
+	return userBirth;
+}
+
+public void setUserBirth(Date userBirth) {
+	this.userBirth = userBirth;
+}
+
+public String getUserGender() {
+	return userGender;
+}
+
+public void setUserGender(String userGender) {
+	this.userGender = userGender;
+}
+
+public String getUserLandline() {
+	return userLandline;
+}
+
+public void setUserLandline(String userLandline) {
+	this.userLandline = userLandline;
+}
+
+public String getUserMobile() {
+	return userMobile;
+}
+
+public void setUserMobile(String userMobile) {
+	this.userMobile = userMobile;
+}
+
+public String getUserPost() {
+	return userPost;
+}
+
+public void setUserPost(String userPost) {
+	this.userPost = userPost;
+}
+
+public String getUserAddress() {
+	return userAddress;
+}
+
+public void setUserAddress(String userAddress) {
+	this.userAddress = userAddress;
+}
+
+public String getUserAddressDetail() {
+	return userAddressDetail;
+}
+
+public void setUserAddressDetail(String userAddressDetail) {
+	this.userAddressDetail = userAddressDetail;
+}
+
+@Override
+public String toString() {
+	return "UserVO [userIndex=" + userIndex + ", userId=" + userId + ", userName=" + userName + ", userPw=" + userPw
+			+ ", userDate=" + userDate + ", userMail=" + userMail + ", userBirth=" + userBirth + ", userGender="
+			+ userGender + ", userLandline=" + userLandline + ", userMobile=" + userMobile + ", userPost=" + userPost
+			+ ", userAddress=" + userAddress + ", userAddressDetail=" + userAddressDetail + "]";
+}
+
+
 }

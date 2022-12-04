@@ -11,23 +11,6 @@
     align-items: flex-end;
 }
 
- #manage-Category {
-    position: static;
-    float: right;
-    margin-right: 40px;
-}
-
- div#manage-Category ul {
-    padding: 0 15px 0 500px; 
-    font-size: 11pt;
-    font-family: 돋움;
-}
-
- div#manage-Category li {
-    margin-top: 0px;
-    float: left;
-}
-
 #top-menu-manageStats {
         padding: 80px 80px 15px;
         display: flex;

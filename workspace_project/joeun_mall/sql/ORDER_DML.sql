@@ -1,7 +1,8 @@
--- LSE 관리자-주문관리 Paging
+-- 주문관리 paging 쿼리
+
 SELECT *
 FROM (
-		SELECT m.*, FLOOR((ROWNUM -1) / 8 + 1) PAGE 
+		SELECT m.*, FLOOR(ROWNUM -1) / 8 + 1 PAGE 
 		FROM ( 
 				SELECT * FROM 
 				(
@@ -21,10 +22,22 @@ FROM (
 		) m
 );
 
--- LSE 관리자-주문관리 Paging records 수량 계산
+-- 주문관리 전체 레코드 수
 SELECT count(*) FROM order_tbl;
 
--- LSE 관리자-주문관리-검색기능 paging
+-- 주문번호에 포함되는 모든 제품명을 뽑는 쿼리(주문관리 selectBox 제어)
+SELECT product_name FROM PRODUCT_TBL
+WHERE product_index IN (
+						SELECT product_index FROM ORDER_PRODUCT_TBL 
+						WHERE order_product_index like '221007_2022039_1%'
+					  );	
+
+-- 주문상태번호 수정 Order_product_state_tbl(주문관리 selectBox 제어)
+UPDATE ORDER_TBL SET
+	ORDER_STATE_INDEX = 'STA1'
+	WHERE order_index = '221007_2022039_1';
+	
+-- 주문관리 검색기능
 SELECT *
 FROM (
       SELECT m.*, FLOOR((ROWNUM -1) / 8 + 1) PAGE  
@@ -49,7 +62,7 @@ FROM (
       ) m
 ) WHERE PAGE = 1;
 
--- LSE 관리자-주문관리-검색기능 paging records 수량 계산
+-- 주문관리 검색 후 paging 전체 레코드 수
 SELECT count(*) 
 FROM (
 		SELECT * from ORDER_TBL 
@@ -65,22 +78,5 @@ FROM (
 		    ON order_tbl.ORDER_INDEX = C.order_index
 		    )
 			WHERE order_name LIKE '%민%';
-
--- LSE 관리자-주문관리-상품명-주문에 포함되는 모든 제품명 출력 ('제품명 외 N개' 출력용)
-SELECT product_name FROM PRODUCT_TBL
-WHERE product_index IN (
-						SELECT product_index FROM ORDER_PRODUCT_TBL 
-						WHERE order_product_index like '221007_2022039_1%'
-					   );	
-
--- LSE 관리자-주문관리-selectBox- 주문상태번호수정(selectBox 제어)
-UPDATE ORDER_TBL SET
-	ORDER_STATE_INDEX = 'STA1'
-	WHERE order_index = '221007_2022039_1';
-
--- LSE 관리자-주문관리-selectBox-주문번호 존재확인 (selectBox 제어)(log 출력용)
-SELECT COUNT(*) 
-	FROM ORDER_TBL 
-	WHERE ORDER_INDEX = '221007_2022039_1';	
-
+		
 	

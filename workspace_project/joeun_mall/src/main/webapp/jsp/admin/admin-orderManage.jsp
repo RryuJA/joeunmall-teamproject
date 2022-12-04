@@ -91,6 +91,7 @@
         <div id="top-menu-manage">
             <form method="get" action="<c:url value = '/admin/admin-orderManageSearch.do' />" >
                 <input type="search" id="search" name="searchWord" placeholder="고객명" />
+                <a href="123"><img id="icon_search" src="<c:url value ='/images/icon/icon_search.png' />" alt="돋보기"></a>
            	</form>
         </div>
         <!-- 테이블 -->
