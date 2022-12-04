@@ -14,10 +14,9 @@ import com.joeun.joeunmall.vo.ProductVO;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author TJ
+ * @author LSE
  *
  */
-
 @Service
 @Slf4j
 public class ProductManageServiceImpl implements ProductManageService {
@@ -44,14 +43,38 @@ public class ProductManageServiceImpl implements ProductManageService {
 		return productManageDAO.selectProductInfo(productIndex);
 	}
 
+	@Transactional(readOnly=true, rollbackFor=Exception.class)
 	@Override
 	public List<ProductImageVO> selectProductImage(String productIndex) {
 		return productManageDAO.selectProductImage(productIndex);
 	}
 
+	@Transactional(readOnly=true, rollbackFor=Exception.class)
 	@Override
 	public List<ProductOptionVO> selectProductOption(String productIndex) {
 		return productManageDAO.selectProductOption(productIndex);
 	}
-			
+
+	@Override
+	public List<ProductVO> getProductSearchByPage(int currentPage, int recordsPerPage, String searchWord) {
+		return productManageDAO.getProductSearchByPage(currentPage, recordsPerPage, searchWord);
+	}
+
+	@Override
+	public int getAllProductRecordNumSearch(String searchWord) {
+		return productManageDAO.getAllProductRecordNumSearch(searchWord);
+	}
+
+	@Override
+	public List<ProductVO> selectProductsByPagingAndCategory(int currentPage, int recordsPerPage,
+			String productCategoryIndex) {
+		log.info("selectProductsByPagingAndCategory");
+		return productManageDAO.selectProductsByPagingAndCategory(currentPage, recordsPerPage, productCategoryIndex);
+	}
+
+	@Override
+	public int selectProductsCountByCategory(String productCategoryIndex) {
+		log.info("selectProductsCountByCategory");
+		return productManageDAO.selectProductsCountByCategory(productCategoryIndex);
+	}
 }
