@@ -50,7 +50,6 @@
         <div id="top-menu-manage">
         	<form method="get" action="<c:url value = '/admin/admin-inquiryManageSearch.do' />" >
                 <input type="search" id="search" name="searchWord" placeholder="고객명" />
-                <a href="123"><img id="icon_search" src="<c:url value ='/images/icon/icon_search.png' />" alt="돋보기"></a>
            	</form>
         </div>
         <!-- 테이블 -->
@@ -74,8 +73,15 @@
 	                            <td><fmt:formatDate value = "${inquiryVO.inquiryDate}" pattern="yyyy-MM-dd" /></td>     
 	                            <td>${inquiryVO.userName}</td>
 	                            <td>${inquiryVO.inquiryCategory}</td>
-	                            <td>${inquiryVO.inquiryTitle}</td>
-	                            <td><div class="box-red">문의접수</div></td>
+	                            <td><a href="<%=request.getContextPath()%>/admin/admin-inquiryDetails.do?inquiryIndex=${inquiryVO.inquiryIndex}">${inquiryVO.inquiryTitle}</a></td>
+		                        <td>
+		                        	<c:if test="${inquiryVO.inquiryState == '문의접수'}">
+		                        	<div class="box-red">${inquiryVO.inquiryState}</div>
+		                        	</c:if>
+		                        	<c:if test="${inquiryVO.inquiryState != '문의접수'}">
+		                        	<div class="box-blue">${inquiryVO.inquiryState}</div>
+		                        	</c:if>
+		                        </td>
 	                        </tr>
                         </c:forEach>
                     </tbody>

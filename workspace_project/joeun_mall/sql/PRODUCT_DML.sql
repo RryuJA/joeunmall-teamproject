@@ -59,9 +59,9 @@ ORDER BY product_index DESC;
 -- RJA 상품번호로 상품정보 조회
 SELECT * FROM product_tbl WHERE product_index = '22_05_050';
 
---상품 정보 수정
+-- CGS 상품 정보 수정
 
---INSERT INTO PRODUCT_TBL VALUES(#{productIndex},#{productCategoryIndex},#{productStateInfo},#{productName},#{productPrice},#{updateFile1Filename},sysdate,#{productInfo})
+-- CGS INSERT INTO PRODUCT_TBL VALUES(#{productIndex},#{productCategoryIndex},#{productStateInfo},#{productName},#{productPrice},#{updateFile1Filename},sysdate,#{productInfo})
 UPDATE product_tbl SET
 product_name = '',
 product_price = '',
@@ -70,16 +70,16 @@ product_date = sysdate,
 product_info = ''
 WHERE product_index = '';
 
---상품 이미지 수정
+-- CGS 상품 이미지 수정
 UPDATE product_image_tbl SET
 product_index = '',
 product_detail_image = ''
 WHERE product_image_index = '';
 
---상품 이미지 조회 
+-- CGS 상품 이미지 조회 
 SELECT COUNT()
 
---상품 이미지 삭제 
+-- CGS 상품 이미지 삭제 
 DELETE product_image_tbl 
 WHERE product_image_index ='';
 		

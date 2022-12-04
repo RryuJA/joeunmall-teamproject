@@ -85,4 +85,19 @@ public class AdminInquiryManageController {
 		
 		return "/admin/admin-inquiryManage";
 	}
+	
+	//1:1문의 상세페이지
+	@GetMapping("/admin/admin-inquiryDetails.do")
+	public String adminInquiryDetails(@RequestParam(value="inquiryIndex") String inquiryIndex, 
+			Model model) {
+		log.info("admin-InquiryDetails");
+	
+		InquiryVO inquiryVO = inquiryManageService.selectInquiryData(inquiryIndex);
+		
+		model.addAttribute("inquiryVO", inquiryVO);
+		
+		return "/admin/admin-inquiryDetails";
+	}
+
+	
 }
